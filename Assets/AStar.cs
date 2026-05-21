@@ -6,7 +6,7 @@ public class AStar : MonoBehaviour
 {
     public static AStar instance;
     
-    private Dictionary<Vector3, Tile> _tiles = new Dictionary<Vector3, Tile>();
+    public Dictionary<Vector3, Tile> tiles = new Dictionary<Vector3, Tile>();
 
     private void Awake()
     {
@@ -27,10 +27,10 @@ public class AStar : MonoBehaviour
     {
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
-            _tiles.Add(tile.GridPosition, tile);
+            tiles.Add(tile.GridPosition, tile);
         }
 
-        foreach (var tile in _tiles.Values)
+        foreach (var tile in tiles.Values)
         {
             SetNeighbors(tile);
         }
@@ -53,7 +53,7 @@ public class AStar : MonoBehaviour
                 tile.GridPosition.x + offset.x,
                 tile.GridPosition.y + offset.y,
                 tile.GridPosition.z + offset.z);
-            if (_tiles.TryGetValue(keyToTest, out Tile nextNeighbor))
+            if (tiles.TryGetValue(keyToTest, out Tile nextNeighbor))
             {
                 neighbors.Add(nextNeighbor);
             }
@@ -69,7 +69,7 @@ public class AStar : MonoBehaviour
     {
         List<Tile> neighbors = new List<Tile>();
         
-        foreach (var tile in _tiles.Values)
+        foreach (var tile in tiles.Values)
         {
             if (Manhattan(tile, start) <= radius)
             {
@@ -83,8 +83,8 @@ public class AStar : MonoBehaviour
     public List<Tile> CalculatePath(Tile start, Tile goal, out Tile reachableGoal)
     {
         Tile tileClosestToGoal = start;
-        start = _tiles[start.GridPosition];
-        goal = _tiles[goal.GridPosition];
+        start = tiles[start.GridPosition];
+        goal = tiles[goal.GridPosition];
 
         var openList = new List<Tile> { start };
         var closedList = new List<Tile>();
@@ -123,7 +123,7 @@ public class AStar : MonoBehaviour
             
             foreach (var neighbor in current.Neighbors.Values)
             {
-                if (neighbor.IsOccupied) continue;
+                if (neighbor.Occupant || neighbor.isBlocked) continue;
                 if (closedList.Contains(neighbor)) continue;
                 float tentativeGScore = gScoreMap[current] + Manhattan(current, neighbor);
 

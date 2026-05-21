@@ -16,10 +16,10 @@ public class Player : MonoBehaviour
         {
             if (_occupiedTile != null)
             {
-                _occupiedTile.IsOccupied = false;
+                _occupiedTile.Occupant = null;
             }
             _occupiedTile = value;
-            _occupiedTile.IsOccupied = true;
+            _occupiedTile.Occupant = gameObject;
         }
     }
     public float speed = 2f;
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         if (path == null) return;
         currentState = PlayerState.Moving;
         _move?.Kill();
-        path[1].IsOccupied = true;
+        path[1].isBlocked = true;
         _move = transform
             .DOMove(path[1].WorldPosition, speed)
             .SetSpeedBased(true)
@@ -102,7 +102,14 @@ public class Player : MonoBehaviour
         if (!context.started) return;
         if (currentState != PlayerState.Idle) return;
         if (!currentSound) return;
-        Debug.Log($"Playing {currentSound.name}");
+        
+        var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
+        foreach (var neighbor in neighborsInRange)
+        {
+            if (!neighbor.Occupant) continue;
+            Debug.Log(neighbor.Occupant);
+            neighbor.Occupant.GetComponent<Listener>()?.Listen(currentSound);
+        }
     }
 
     public void OnListen(InputAction.CallbackContext context)

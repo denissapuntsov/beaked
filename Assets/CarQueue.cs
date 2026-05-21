@@ -55,6 +55,13 @@ public class CarQueue : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        foreach (var car in _queue)
+        {
+            car.GetComponent<Detector>().OccupiedTile = null;
+        }
+    }
 }
 
 [Serializable]

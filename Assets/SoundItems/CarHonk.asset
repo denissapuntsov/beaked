@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CarHonk
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  range: 0
+  range: 1

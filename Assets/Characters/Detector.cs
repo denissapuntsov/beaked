@@ -14,28 +14,31 @@ public class Detector : MonoBehaviour
     public Tile OccupiedTile
     {
         get => _occupiedTile;
-        private set
+        set
         {
             if (value == _occupiedTile) return;
-            if (_occupiedTile != null)
+
+            if (_occupiedTile)
             {
-                _occupiedTile.IsOccupied = false;
+                _occupiedTile.Occupant = null;
             }
             
             _occupiedTile = value;
-            _occupiedTile.IsOccupied = true;
-
             foreach (Tile tile in detectionTiles)
             {
-                tile.IsOccupied = false;
+                tile.isBlocked = false;
             }
             
-            //detectionTiles.Clear();
-            detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius);
+            if (!value)
+            {
+                return;
+            }
             
+            _occupiedTile.Occupant = gameObject;
+            detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius);
             foreach (Tile tile in detectionTiles)
             {
-                tile.IsOccupied = true;
+                tile.isBlocked = true;
             }
         }
     }
@@ -53,7 +56,8 @@ public class Detector : MonoBehaviour
         if (!Physics.Raycast(ray, out hitInfo)) return;
         if (!hitInfo.collider.transform.parent.GetComponent<Tile>()) return;
         var hitTile = hitInfo.collider.transform.parent.GetComponent<Tile>();
-        if (hitTile == OccupiedTile) return;
+        if (hitTile.Occupant == gameObject) return;
+        hitTile.Occupant = gameObject;
         OccupiedTile = hitTile;
     }
 }

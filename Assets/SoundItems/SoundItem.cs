@@ -4,5 +4,5 @@ using UnityEngine;
 public class SoundItem : ScriptableObject
 {
     public AudioClip clip;
-    [Range(1, Mathf.Infinity)] public int range;
+    [Range(1, 10)] public int range;
 }

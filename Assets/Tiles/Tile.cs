@@ -8,18 +8,22 @@ public class Tile : MonoBehaviour
     public TileData data;
     public GameObject tileNormal;
     public GameObject tileBlocked;
-    private bool _isOccupied = false;
 
-    public bool IsOccupied
+    [SerializeField] private GameObject _occupant;
+
+    public GameObject Occupant
     {
-        get => _isOccupied;
+        get => _occupant;
         set
         {
-            _isOccupied = value;
-            tileNormal.SetActive(!value);
-            tileBlocked.SetActive(value);
+            _occupant = value;
+            tileNormal.gameObject.SetActive(!value);
+            tileBlocked.gameObject.SetActive(value);
+            isBlocked = _occupant;
         }
     }
+
+    public bool isBlocked;
 
     private void Start()
     {
