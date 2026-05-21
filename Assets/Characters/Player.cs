@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [SelectionBase]
@@ -24,13 +25,18 @@ public class Player : MonoBehaviour
     public float speed = 2f;
     private Tween _move;
     
+    public UnityEvent<Tile> onTileChange;
+    
     public PlayerState currentState = PlayerState.Idle;
+
+    public SoundItem currentSound;
+    
+    public List<Speaker> speakersInRange;
     
     public void Move(Tile tile)
     {
         if (currentState != PlayerState.Idle) return;
         currentState = PlayerState.Moving;
-        
     }
     
     private void Update()
@@ -80,6 +86,7 @@ public class Player : MonoBehaviour
             .SetEase(Ease.Linear)
             .OnComplete(() =>
             {
+                onTileChange?.Invoke(OccupiedTile);
                 if (OccupiedTile == goal)
                 {
                     currentState = PlayerState.Idle;
@@ -89,7 +96,22 @@ public class Player : MonoBehaviour
                 StartPath(nextPath, reachableGoal);
             });
     }
-    
+
+    public void OnSpeak(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (currentState != PlayerState.Idle) return;
+        if (!currentSound) return;
+        Debug.Log($"Playing {currentSound.name}");
+    }
+
+    public void OnListen(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (currentState != PlayerState.Idle) return;
+        if (speakersInRange.Count == 0) return;
+        speakersInRange[0].Listen();
+    }
 }
 
 public enum PlayerState

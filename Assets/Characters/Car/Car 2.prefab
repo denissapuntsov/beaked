@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  detectionRadius: 1
+  detectionRadius: 0
 --- !u!1001 &7209910587355614797
 PrefabInstance:
   m_ObjectHideFlags: 0
