@@ -17,13 +17,22 @@ public class Tile : MonoBehaviour
         set
         {
             _occupant = value;
-            tileNormal.gameObject.SetActive(!value);
-            tileBlocked.gameObject.SetActive(value);
-            isBlocked = _occupant;
+            IsBlocked = _occupant;
         }
     }
 
-    public bool isBlocked;
+    private bool _isBlocked;
+
+    public bool IsBlocked
+    {
+        get => _isBlocked;
+        set
+        {
+            _isBlocked = value;
+            tileNormal.gameObject.SetActive(!value);
+            tileBlocked.gameObject.SetActive(value);
+        }
+    }
 
     private void Start()
     {

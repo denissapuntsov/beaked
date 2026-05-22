@@ -26,7 +26,7 @@ public class Detector : MonoBehaviour
             _occupiedTile = value;
             foreach (Tile tile in detectionTiles)
             {
-                tile.isBlocked = false;
+                tile.IsBlocked = false;
             }
             
             if (!value)
@@ -38,7 +38,7 @@ public class Detector : MonoBehaviour
             detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius);
             foreach (Tile tile in detectionTiles)
             {
-                tile.isBlocked = true;
+                tile.IsBlocked = true;
             }
         }
     }
@@ -65,6 +65,7 @@ public class Detector : MonoBehaviour
 public enum NPCState
 {
     Idle,
+    Alerted,
     Moving,
     Speaking,
     Listening

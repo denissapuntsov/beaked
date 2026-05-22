@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
         if (path == null) return;
         currentState = PlayerState.Moving;
         _move?.Kill();
-        path[1].isBlocked = true;
+        path[1].IsBlocked = true;
         _move = transform
             .DOMove(path[1].WorldPosition, speed)
             .SetSpeedBased(true)

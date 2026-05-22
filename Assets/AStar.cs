@@ -123,7 +123,7 @@ public class AStar : MonoBehaviour
             
             foreach (var neighbor in current.Neighbors.Values)
             {
-                if (neighbor.Occupant || neighbor.isBlocked) continue;
+                if (neighbor.Occupant || neighbor.IsBlocked) continue;
                 if (closedList.Contains(neighbor)) continue;
                 float tentativeGScore = gScoreMap[current] + Manhattan(current, neighbor);
 
