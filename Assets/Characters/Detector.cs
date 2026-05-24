@@ -35,7 +35,7 @@ public class Detector : MonoBehaviour
             }
             
             _occupiedTile.Occupant = gameObject;
-            detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius);
+            detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, new List<TileType> {TileType.Normal});
             foreach (Tile tile in detectionTiles)
             {
                 tile.IsBlocked = true;

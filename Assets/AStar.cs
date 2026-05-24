@@ -65,12 +65,15 @@ public class AStar : MonoBehaviour
         }
     }
 
-    public List<Tile> GetNeighborsInRange(Tile start, int radius)
+    public List<Tile> GetNeighborsInRange(Tile start, int radius) => GetNeighborsInRange(start, radius, null);
+    
+    public List<Tile> GetNeighborsInRange(Tile start, int radius, List<TileType> filter)
     {
         List<Tile> neighbors = new List<Tile>();
         
         foreach (var tile in tiles.Values)
         {
+            if (filter != null && !filter.Contains(tile.Type)) continue;
             if (Manhattan(tile, start) <= radius)
             {
                 neighbors.Add(tile);
@@ -80,7 +83,10 @@ public class AStar : MonoBehaviour
         return neighbors;
     }
 
-    public List<Tile> CalculatePath(Tile start, Tile goal, out Tile reachableGoal)
+    public List<Tile> CalculatePath(Tile start, Tile goal, out Tile reachableGoal) =>
+        CalculatePath(start, goal, out reachableGoal, null);
+    
+    public List<Tile> CalculatePath(Tile start, Tile goal, out Tile reachableGoal, List<TileType> allowedTypes)
     {
         Tile tileClosestToGoal = start;
         start = tiles[start.GridPosition];
@@ -123,6 +129,7 @@ public class AStar : MonoBehaviour
             
             foreach (var neighbor in current.Neighbors.Values)
             {
+                if (allowedTypes != null && !allowedTypes.Contains(neighbor.Type)) continue;
                 if (neighbor.Occupant || neighbor.IsBlocked) continue;
                 if (closedList.Contains(neighbor)) continue;
                 float tentativeGScore = gScoreMap[current] + Manhattan(current, neighbor);

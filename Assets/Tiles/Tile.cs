@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     public TileData data;
     public GameObject tileNormal;
     public GameObject tileBlocked;
+    public TileType Type => data.tileType;
 
     [SerializeField] private GameObject _occupant;
 
@@ -44,4 +45,10 @@ public class Tile : MonoBehaviour
     public Vector3 GridPosition => transform.localPosition;
     
     public Dictionary<Vector3, Tile> Neighbors { get; set; }
+}
+
+public enum TileType
+{
+    Normal,
+    Hideout
 }
