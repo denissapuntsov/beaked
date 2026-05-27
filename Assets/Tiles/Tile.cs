@@ -47,8 +47,10 @@ public class Tile : MonoBehaviour
     public Dictionary<Vector3, Tile> Neighbors { get; set; }
 }
 
+[Flags]
 public enum TileType
 {
-    Normal,
-    Hideout
+    Normal = 1,
+    Hideout = 2,
+    None = 10
 }

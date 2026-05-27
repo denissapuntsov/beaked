@@ -65,15 +65,15 @@ public class AStar : MonoBehaviour
         }
     }
 
-    public List<Tile> GetNeighborsInRange(Tile start, int radius) => GetNeighborsInRange(start, radius, null);
+    public List<Tile> GetNeighborsInRange(Tile start, int radius) => GetNeighborsInRange(start, radius, TileType.None);
     
-    public List<Tile> GetNeighborsInRange(Tile start, int radius, List<TileType> filter)
+    public List<Tile> GetNeighborsInRange(Tile start, int radius, TileType filter)
     {
         List<Tile> neighbors = new List<Tile>();
         
         foreach (var tile in tiles.Values)
         {
-            if (filter != null && !filter.Contains(tile.Type)) continue;
+            if ((tile.Type & filter) == tile.Type) continue;
             if (Manhattan(tile, start) <= radius)
             {
                 neighbors.Add(tile);

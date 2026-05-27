@@ -36,8 +36,6 @@ public class CarQueue : MonoBehaviour
 
             _queue.Add(nextCar);
         }
-
-        GetComponent<Speaker>().Tile = path[^1].tile;
     }
 
     public void Increment()

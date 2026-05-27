@@ -4047,8 +4047,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717082888}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37606353, y: 0.22137189, z: -0.093031615, w: 0.894939}
-  m_LocalPosition: {x: -1.9703624, y: 5.30167, z: -1.6861501}
+  m_LocalRotation: {x: 0.3796491, y: 0.25863862, z: -0.11149084, w: 0.88121647}
+  m_LocalPosition: {x: -0.8051233, y: 4.30717, z: -0.6837673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4648,13 +4648,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c728dae2c5d2f204aae6da409cf8b1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   speed: 4
   onTileChange:
     m_PersistentCalls:
       m_Calls: []
   currentState: 0
   currentSound: {fileID: 0}
-  speakersInRange: []
+  interactablesInRange: []
 --- !u!4 &992681549
 Transform:
   m_ObjectHideFlags: 0
@@ -8089,6 +8092,7 @@ GameObject:
   - component: {fileID: 1872693147}
   - component: {fileID: 1872693146}
   - component: {fileID: 1872693148}
+  - component: {fileID: 1872693149}
   m_Layer: 0
   m_Name: Queue
   m_TagString: Untagged
@@ -8133,7 +8137,7 @@ Transform:
   m_GameObject: {fileID: 1872693145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8169,6 +8173,23 @@ MonoBehaviour:
   tile: {fileID: 0}
   sound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
   range: 1
+--- !u!114 &1872693149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872693145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c701da330cdc29a4bb797fb85380b310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  detectionRadius: 1
+  onPlayerDetected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1887364313
 PrefabInstance:
   m_ObjectHideFlags: 0

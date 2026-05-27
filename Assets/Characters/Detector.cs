@@ -1,14 +1,22 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+[SelectionBase]
 public class Detector : MonoBehaviour
 {
     public NPCState currentState;
-    
+    public TileType tilesToIgnore;
+    private List<Tile> _detectionTiles = new List<Tile>();
     public int detectionRadius = 1;
+    private bool _isPlayerDetected;
+    public UnityEvent onPlayerDetected, onPlayerLost;
+
+    private Player _player;
+
+    public string detectionLine;
     
-    private List<Tile> detectionTiles = new List<Tile>();
     
     private Tile _occupiedTile;
     public Tile OccupiedTile
@@ -24,10 +32,6 @@ public class Detector : MonoBehaviour
             }
             
             _occupiedTile = value;
-            foreach (Tile tile in detectionTiles)
-            {
-                tile.IsBlocked = false;
-            }
             
             if (!value)
             {
@@ -35,17 +39,41 @@ public class Detector : MonoBehaviour
             }
             
             _occupiedTile.Occupant = gameObject;
-            detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, new List<TileType> {TileType.Normal});
-            foreach (Tile tile in detectionTiles)
-            {
-                tile.IsBlocked = true;
-            }
+            _detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, tilesToIgnore);
         }
+    }
+
+    private void Start()
+    {
+        _player = FindAnyObjectByType<Player>();
+        _player.onTileChange.AddListener(CheckPlayerTile);
+        
+        onPlayerDetected.AddListener(() =>
+        {
+            Debug.Log(detectionLine);
+        });
     }
 
     private void Update()
     {
         GetOccupiedTiles();
+    }
+    
+    private void CheckPlayerTile(Tile playerTile)
+    {
+        if (_detectionTiles.Contains(playerTile))
+        {
+            _isPlayerDetected = true;
+            _player.interactablesInRange.Add(this);
+            onPlayerDetected.Invoke();
+        }
+        else
+        {
+            if (!_isPlayerDetected) return;
+            _isPlayerDetected = false;
+            _player.interactablesInRange.Remove(this);
+            onPlayerLost.Invoke();
+        }
     }
 
     private void GetOccupiedTiles()
@@ -59,6 +87,11 @@ public class Detector : MonoBehaviour
         if (hitTile.Occupant == gameObject) return;
         hitTile.Occupant = gameObject;
         OccupiedTile = hitTile;
+    }
+
+    private void OnDisable()
+    {
+        _player.onTileChange.RemoveListener(CheckPlayerTile);
     }
 }
 

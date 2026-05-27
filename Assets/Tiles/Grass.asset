@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabNormal: {fileID: 6499584777129735098, guid: 5acc1b98fbb7c394a9c6c128a7b02905, type: 3}
   prefabBlocked: {fileID: 6499584777129735098, guid: c5e3ef5a019300e45bab8bfe0e2b95a0, type: 3}
-  tileType: 1
+  tileType: 2

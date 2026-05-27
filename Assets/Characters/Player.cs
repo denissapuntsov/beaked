@@ -8,6 +8,8 @@ using UnityEngine.InputSystem;
 [SelectionBase]
 public class Player : MonoBehaviour
 {
+    public LayerMask ignoreLayerMask;
+    
     private Tile _occupiedTile;
     public Tile OccupiedTile
     {
@@ -31,13 +33,7 @@ public class Player : MonoBehaviour
 
     public SoundItem currentSound;
     
-    public List<Speaker> speakersInRange;
-    
-    public void Move(Tile tile)
-    {
-        if (currentState != PlayerState.Idle) return;
-        currentState = PlayerState.Moving;
-    }
+    public List<Detector> interactablesInRange;
     
     private void Update()
     {
@@ -70,7 +66,7 @@ public class Player : MonoBehaviour
         if (hitTile == this.OccupiedTile) return;
     
         var path = AStar.instance.CalculatePath(this.OccupiedTile, hitTile, out Tile reachableGoal);
-        this.StartPath(path, reachableGoal);
+        StartPath(path, reachableGoal);
     }
     
     public void StartPath(List<Tile> path, Tile goal)
@@ -116,8 +112,8 @@ public class Player : MonoBehaviour
     {
         if (!context.started) return;
         if (currentState != PlayerState.Idle) return;
-        if (speakersInRange.Count == 0) return;
-        speakersInRange[0].Listen();
+        if (interactablesInRange.Count == 0) return;
+        interactablesInRange[0].GetComponent<Speaker>().Listen();
     }
 }
 
