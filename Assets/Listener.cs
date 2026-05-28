@@ -12,7 +12,11 @@ public class Listener : MonoBehaviour
         foreach (Reaction reaction in reactions)
         {
             if (item != reaction.key) continue;
-            reaction.onAcceptKey.Invoke();
+            if (reaction.isRepeatable || !reaction.isRepeatable && !reaction.isDone)
+            {
+                reaction.isDone = true;
+                reaction.onAcceptKey.Invoke();
+            }
             break;
         }
     }
@@ -23,4 +27,6 @@ public class Reaction
 {
     public SoundItem key;
     public UnityEvent onAcceptKey;
+    public bool isRepeatable = false;
+    [HideInInspector] public bool isDone = false;
 }

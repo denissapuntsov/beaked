@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 [SelectionBase]
 public class Player : MonoBehaviour
 {
-    public LayerMask ignoreLayerMask;
+    //public LayerMask ignoreLayerMask;
     
     private Tile _occupiedTile;
     public Tile OccupiedTile
