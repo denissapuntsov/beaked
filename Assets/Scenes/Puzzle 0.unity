@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -419,6 +423,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448921116479805507, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
@@ -900,7 +908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &142851175
 Transform:
   m_ObjectHideFlags: 0
@@ -1121,6 +1129,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448921116479805507, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
@@ -2013,6 +2025,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2056,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &319568315
 Transform:
   m_ObjectHideFlags: 0
@@ -2274,6 +2290,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448921116479805507, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
@@ -2813,7 +2833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &417052767
 Transform:
   m_ObjectHideFlags: 0
@@ -2921,7 +2941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &456684866
 Transform:
   m_ObjectHideFlags: 0
@@ -3138,7 +3158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &519551280
 Transform:
   m_ObjectHideFlags: 0
@@ -3246,7 +3266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &589171239
 Transform:
   m_ObjectHideFlags: 0
@@ -3354,7 +3374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &592673498
 Transform:
   m_ObjectHideFlags: 0
@@ -3617,6 +3637,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448921116479805507, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
@@ -4255,6 +4279,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -4529,7 +4557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &963528458
 Transform:
   m_ObjectHideFlags: 0
@@ -4648,9 +4676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c728dae2c5d2f204aae6da409cf8b1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
   speed: 4
   onTileChange:
     m_PersistentCalls:
@@ -4692,7 +4717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &998030392
 Transform:
   m_ObjectHideFlags: 0
@@ -5484,7 +5509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1270589608
 Transform:
   m_ObjectHideFlags: 0
@@ -5922,6 +5947,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -6091,6 +6120,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448921116479805507, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
@@ -6945,7 +6978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1560857194
 Transform:
   m_ObjectHideFlags: 0
@@ -7488,6 +7521,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -7520,7 +7557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1662349607
 Transform:
   m_ObjectHideFlags: 0
@@ -7876,6 +7913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -8155,6 +8196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2705c76c0be69824cb7b755aa097900e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSpeaking: 1
   onListen:
     m_PersistentCalls:
       m_Calls:
@@ -8170,9 +8212,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  tile: {fileID: 0}
   sound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
-  range: 1
 --- !u!114 &1872693149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8186,8 +8226,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  tilesToIgnore: 0
   detectionRadius: 1
+  detectionLine: 
   onPlayerDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerLost:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1887364313
@@ -8537,6 +8582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -8651,7 +8700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2046608250
 Transform:
   m_ObjectHideFlags: 0
@@ -8898,6 +8947,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6759229268294428146, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -8941,7 +8994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2083827329
 Transform:
   m_ObjectHideFlags: 0
@@ -9049,7 +9102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087627374
 Transform:
   m_ObjectHideFlags: 0
@@ -9351,6 +9404,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    isRepeatable: 0
+    isDone: 0
 --- !u!114 &3904315318237134389
 MonoBehaviour:
   m_ObjectHideFlags: 0

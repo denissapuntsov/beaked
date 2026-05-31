@@ -10,12 +10,13 @@ public class Detector : MonoBehaviour
     public TileType tilesToIgnore;
     private List<Tile> _detectionTiles = new List<Tile>();
     public int detectionRadius = 1;
+    public string detectionLine;
     private bool _isPlayerDetected;
+    
     public UnityEvent onPlayerDetected, onPlayerLost;
 
     private Player _player;
 
-    public string detectionLine;
     
     
     private Tile _occupiedTile;

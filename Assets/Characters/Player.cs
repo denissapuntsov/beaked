@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
                 _occupiedTile.Occupant = null;
             }
             _occupiedTile = value;
+            IsHidden = (_occupiedTile.Type & TileType.Hideout) != 0;
             _occupiedTile.Occupant = gameObject;
         }
     }
@@ -30,6 +31,18 @@ public class Player : MonoBehaviour
     public UnityEvent<Tile> onTileChange;
     
     public PlayerState currentState = PlayerState.Idle;
+
+    private bool _isHidden;
+    public bool IsHidden
+    {
+        get => _isHidden;
+        set
+        {
+            if (_isHidden == value) return;
+            _isHidden = value;
+            ToggleCrouch();
+        }
+    }
 
     public SoundItem currentSound;
     
@@ -114,6 +127,11 @@ public class Player : MonoBehaviour
         if (currentState != PlayerState.Idle) return;
         if (interactablesInRange.Count == 0) return;
         interactablesInRange[0].GetComponent<Speaker>().Listen();
+    }
+
+    private void ToggleCrouch()
+    {
+        transform.DOScaleY(IsHidden ? 0.75f : 1, 3f).SetSpeedBased(true);
     }
 }
 
