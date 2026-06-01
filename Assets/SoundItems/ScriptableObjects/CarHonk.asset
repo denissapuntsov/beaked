@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b997401dac8a6c418375263fc363897, type: 3}
   m_Name: CarHonk
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 13993d95a7bd27c48a156f9a7d5ef09d, type: 3}
   range: 1

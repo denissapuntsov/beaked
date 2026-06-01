@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Speaker))]
 public class CarQueue : MonoBehaviour
 {
+    public Tile entryTile, exitTile;
     public List<SpawnPoint> path;
     public List<GameObject> carVariants;
     private List<GameObject> _queue = new List<GameObject>();
@@ -40,7 +42,36 @@ public class CarQueue : MonoBehaviour
 
     public void Increment()
     {
-        
+        _queue[^1]
+            .transform.DOMove(exitTile.transform.position, 3).SetSpeedBased(true)
+            .OnComplete(() =>
+            {
+                _queue.RemoveAt(_queue.Count - 1);
+                List<Tween> tweens = new List<Tween>();
+                for (int i = 1; i <= _queue.Count; i++)
+                {
+                    var newTween = 
+                        _queue[^i]
+                            .transform.DOMove(path[^i].tile.transform.position, 3)
+                            .SetSpeedBased(true)
+                            .Pause();
+                    tweens.Add(newTween);
+                }
+
+                foreach (var tween in tweens)
+                {
+                    if (tweens.Count > tweens.IndexOf(tween) + 1)
+                    {
+                        tween.OnComplete(() =>
+                        {
+                            tweens[tweens.IndexOf(tween) + 1]?.Play();
+                        });
+                    }
+                }
+
+                tweens[0].Play();
+                
+            });
     }
     
     private void OnDrawGizmos()

@@ -46,7 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  tilesToIgnore: 0
   detectionRadius: 0
+  detectionLine: 
+  onPlayerDetected:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7209910587355614797
 PrefabInstance:
   m_ObjectHideFlags: 0

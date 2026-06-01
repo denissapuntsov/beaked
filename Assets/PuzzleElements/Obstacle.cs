@@ -23,6 +23,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnDisable()
     {
+        if (_occupiedTile == null) return;
         if (_occupiedTile.gameObject.activeSelf)
         {
             _occupiedTile.Occupant = null;

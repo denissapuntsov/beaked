@@ -44,7 +44,6 @@ public class PathFollower : MonoBehaviour
     }
 
     #endregion
-
     public void TraverseSequence() => TraverseSequence(0);
 
     private void TraverseSequence(int sequenceIndex)
