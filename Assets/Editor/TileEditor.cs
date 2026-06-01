@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CustomEditor(typeof(Tile))]
 [CanEditMultipleObjects]
@@ -43,6 +44,8 @@ public class TileEditor: Editor
                 if (!tile.data) return;
                 tile.tileNormal = Instantiate(tile.data.prefabNormal, tile.transform);
                 tile.tileBlocked = Instantiate(tile.data.prefabBlocked, tile.transform);
+                
+                tile.tileBlocked.gameObject.SetActive(false);
             }
             
         }
