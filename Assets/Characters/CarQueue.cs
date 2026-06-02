@@ -16,12 +16,21 @@ public class CarQueue : MonoBehaviour
     public UnityEvent onCarLeave;
 
     private Speaker _speaker;
+    private Detector _detector;
 
     private bool _isInfinite = true;
 
     private void Start()
     {
         _speaker = GetComponent<Speaker>();
+        _detector = GetComponent<Detector>();
+
+        _detector.OccupiedTile = path[^1].tile;
+        foreach (var point in path)
+        {
+            point.tile.IsBlocked = true;
+        }
+        
         Setup();
     }
 

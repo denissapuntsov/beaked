@@ -39,5 +39,14 @@ public class Barrier : MonoBehaviour
         _open.Play();
     }
 
+    public void OpenForPlayer(Obstacle obstacle)
+    {
+        barrierChild.transform.DOLocalRotate(
+                new(0, endRotationY, 0),
+                2f)
+            .SetEase(Ease.InOutElastic, 1.2f)
+            .OnComplete(() => obstacle.UnblockTile());
+    }
+
     public void Close() => _close.Restart();
 }

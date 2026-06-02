@@ -21,6 +21,11 @@ public class Obstacle : MonoBehaviour
         _occupiedTile.Occupant = gameObject;
     }
 
+    public void UnblockTile()
+    {
+        _occupiedTile.Occupant = null;
+    }
+
     private void OnDisable()
     {
         if (_occupiedTile == null) return;

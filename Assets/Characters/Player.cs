@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-[SelectionBase]
+[SelectionBase] [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
+    private AudioSource _source;
+    
     private Tile _occupiedTile;
     public Tile OccupiedTile
     {
@@ -56,6 +58,12 @@ public class Player : MonoBehaviour
         }
     }
     #endregion
+
+    private void Start()
+    {
+        _source = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         GetOccupiedTile();
@@ -95,6 +103,7 @@ public class Player : MonoBehaviour
         if (path == null) return;
         currentState = PlayerState.Moving;
         _move?.Kill();
+        OccupiedTile.Bounce();
         path[1].IsBlocked = true;
         _move = transform
             .DOJump(path[1].WorldPosition, 0.2f, 1, 1 / speed)
