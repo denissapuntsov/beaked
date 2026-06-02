@@ -15896,9 +15896,9 @@ MonoBehaviour:
   onListen:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1872693145}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 1872693146}
+        m_TargetAssemblyTypeName: CarQueue, Assembly-CSharp
+        m_MethodName: SetInfinite
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

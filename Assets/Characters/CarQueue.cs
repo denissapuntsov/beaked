@@ -17,6 +17,8 @@ public class CarQueue : MonoBehaviour
 
     private Speaker _speaker;
 
+    private bool _isInfinite = true;
+
     private void Start()
     {
         _speaker = GetComponent<Speaker>();
@@ -49,18 +51,34 @@ public class CarQueue : MonoBehaviour
     public void Increment()
     {
         _queue[^1]
-            .transform.DOMove(exitTile.transform.position, 5).SetSpeedBased(true)
+            .transform.DOMove(exitTile.transform.position, 2)
+            .SetSpeedBased(true)
+            .SetEase(Ease.InOutBack)
             .OnComplete(() =>
             {
+                _queue[^1].gameObject.SetActive(false);
                 _queue.RemoveAt(_queue.Count - 1);
+                
                 onCarLeave?.Invoke();
+                
+                if (_queue.Count == 0)
+                {
+                    foreach (var spawnPoint in path)
+                    {
+                        spawnPoint.tile.Occupant = null;
+                    }
+                    gameObject.SetActive(false);
+                    return;
+                }
+                
                 List<Tween> tweens = new List<Tween>();
                 for (int i = 1; i <= _queue.Count; i++)
                 {
                     var newTween = 
                         _queue[^i]
-                            .transform.DOMove(path[^i].tile.transform.position, 3)
+                            .transform.DOMove(path[^i].tile.transform.position, 2)
                             .SetSpeedBased(true)
+                            .SetEase(Ease.InOutBack)
                             .Pause();
                     tweens.Add(newTween);
                 }
@@ -76,11 +94,27 @@ public class CarQueue : MonoBehaviour
                     }
                 }
 
-                tweens[^1].OnComplete(() => _speaker.Speak());
+                tweens[^1].OnComplete(() =>
+                {
+                    if (_isInfinite)
+                    {
+                        SpawnNewCar();
+                    }
+                    _speaker.Speak();
+                });
                 
                 tweens[0].Play();
                 
             });
+    }
+
+    private void SpawnNewCar()
+    {
+        var nextCar = carVariants[Random.Range(0, carVariants.Count)];
+        nextCar = Instantiate(nextCar, this.transform);
+        nextCar.transform.position = path[0].tile.transform.position;
+        nextCar.transform.Rotate(0, 90, 0);
+        _queue.Insert(0, nextCar);
     }
     
     private void OnDrawGizmos()
@@ -100,6 +134,8 @@ public class CarQueue : MonoBehaviour
             car.GetComponent<Detector>().OccupiedTile = null;
         }
     }
+    
+    public void SetInfinite(bool value) => _isInfinite = value;
 }
 
 [Serializable]
