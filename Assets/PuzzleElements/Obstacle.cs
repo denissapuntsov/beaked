@@ -7,17 +7,22 @@ public class Obstacle : MonoBehaviour
     
     private void Start()
     {
+        GetOccupiedTile();
         BlockTile();
     }
 
-    private void BlockTile()
+    private void GetOccupiedTile()
     {
         Ray ray = new Ray(transform.position + new Vector3(0, 0.1f, 0), Vector3.down);
         RaycastHit hitInfo;
      
         if (!Physics.Raycast(ray, out hitInfo)) return;
-        if (!hitInfo.collider.transform.parent.GetComponent<Tile>()) return;
-        _occupiedTile = hitInfo.collider.transform.parent.GetComponent<Tile>();
+        if (!hitInfo.collider.transform.GetComponentInParent<Tile>()) return;
+        _occupiedTile = hitInfo.collider.transform.GetComponentInParent<Tile>();
+    }
+
+    public void BlockTile()
+    {
         _occupiedTile.Occupant = gameObject;
     }
 

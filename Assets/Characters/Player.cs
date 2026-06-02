@@ -90,8 +90,8 @@ public class Player : MonoBehaviour
         RaycastHit hitInfo;
 
         if (!Physics.Raycast(rayOrigin, out hitInfo)) return;
-        if (!hitInfo.collider.transform.parent.GetComponent<Tile>()) return;
-        var hitTile = hitInfo.collider.transform.parent.GetComponent<Tile>();
+        if (!hitInfo.collider.transform.GetComponentInParent<Tile>()) return;
+        var hitTile = hitInfo.collider.transform.GetComponentInParent<Tile>();
         if (hitTile == this.OccupiedTile) return;
     
         var path = AStar.instance.CalculatePath(this.OccupiedTile, hitTile, out Tile reachableGoal);

@@ -16,8 +16,6 @@ public class Detector : MonoBehaviour
     public UnityEvent onPlayerDetected, onPlayerLost;
 
     private Player _player;
-
-    
     
     private Tile _occupiedTile;
     public Tile OccupiedTile
@@ -83,8 +81,8 @@ public class Detector : MonoBehaviour
         RaycastHit hitInfo;
      
         if (!Physics.Raycast(ray, out hitInfo)) return;
-        if (!hitInfo.collider.transform.parent.GetComponent<Tile>()) return;
-        var hitTile = hitInfo.collider.transform.parent.GetComponent<Tile>();
+        if (!hitInfo.collider.transform.GetComponentInParent<Tile>()) return;
+        var hitTile = hitInfo.collider.transform.GetComponentInParent<Tile>();
         if (hitTile.Occupant == gameObject) return;
         hitTile.Occupant = gameObject;
         OccupiedTile = hitTile;

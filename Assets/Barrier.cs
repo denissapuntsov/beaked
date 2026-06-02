@@ -48,5 +48,9 @@ public class Barrier : MonoBehaviour
             .OnComplete(() => obstacle.UnblockTile());
     }
 
-    public void Close() => _close.Restart();
+    public void Close()
+    {
+        _close.Restart();
+    }
+
 }

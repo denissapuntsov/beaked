@@ -83,7 +83,7 @@ public class CarQueue : MonoBehaviour
                 List<Tween> tweens = new List<Tween>();
                 for (int i = 1; i <= _queue.Count; i++)
                 {
-                    var newTween = 
+                    var newTween =
                         _queue[^i]
                             .transform.DOMove(path[^i].tile.transform.position, 2)
                             .SetSpeedBased(true)
@@ -108,6 +108,10 @@ public class CarQueue : MonoBehaviour
                     if (_isInfinite)
                     {
                         SpawnNewCar();
+                    }
+                    else
+                    {
+                        path[0].tile.IsBlocked = false;
                     }
                     _speaker.Speak();
                 });
