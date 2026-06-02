@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Speaker))]
@@ -12,8 +13,13 @@ public class CarQueue : MonoBehaviour
     public List<GameObject> carVariants;
     private List<GameObject> _queue = new List<GameObject>();
 
+    public UnityEvent onCarLeave;
+
+    private Speaker _speaker;
+
     private void Start()
     {
+        _speaker = GetComponent<Speaker>();
         Setup();
     }
 
@@ -43,10 +49,11 @@ public class CarQueue : MonoBehaviour
     public void Increment()
     {
         _queue[^1]
-            .transform.DOMove(exitTile.transform.position, 3).SetSpeedBased(true)
+            .transform.DOMove(exitTile.transform.position, 5).SetSpeedBased(true)
             .OnComplete(() =>
             {
                 _queue.RemoveAt(_queue.Count - 1);
+                onCarLeave?.Invoke();
                 List<Tween> tweens = new List<Tween>();
                 for (int i = 1; i <= _queue.Count; i++)
                 {
@@ -69,6 +76,8 @@ public class CarQueue : MonoBehaviour
                     }
                 }
 
+                tweens[^1].OnComplete(() => _speaker.Speak());
+                
                 tweens[0].Play();
                 
             });

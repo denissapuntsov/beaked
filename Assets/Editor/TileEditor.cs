@@ -18,18 +18,31 @@ public class TileEditor: Editor
 
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
         EditorGUILayout.PropertyField(data, new GUIContent("Data"));
 
         var tiles = Selection.gameObjects.Select(go => go.GetComponent<Tile>()).ToArray();
         var so = new SerializedObject(tiles);
         so.FindProperty("data").objectReferenceValue = data.objectReferenceValue;
+
+        if (data.hasMultipleDifferentValues)
+        {
+            return;
+        }
         
         if (so.hasModifiedProperties)
         {
             so.ApplyModifiedProperties();
-
             foreach (var tile in tiles)
             {
+                if (data.objectReferenceValue == null)
+                {
+                    tile.name = "Tile (Empty)";
+                    DestroyImmediate(tile.tileNormal);
+                    DestroyImmediate(tile.tileBlocked);
+                    return;
+                }
+                
                 tile.name = $"Tile ({tile.data.name})";
                 if (tile.tileNormal)
                 {
@@ -47,7 +60,6 @@ public class TileEditor: Editor
                 
                 tile.tileBlocked.gameObject.SetActive(false);
             }
-            
         }
     }
 }
