@@ -8,8 +8,6 @@ using UnityEngine.InputSystem;
 [SelectionBase]
 public class Player : MonoBehaviour
 {
-    //public LayerMask ignoreLayerMask;
-    
     private Tile _occupiedTile;
     public Tile OccupiedTile
     {
@@ -25,13 +23,27 @@ public class Player : MonoBehaviour
             _occupiedTile.Occupant = gameObject;
         }
     }
+    
+    #region Movement
+    [Header("Movement")]
     public float speed = 2f;
     private Tween _move;
+    public AnimationCurve jumpCurve;
     
     public UnityEvent<Tile> onTileChange;
+    #endregion
     
+    #region Interaction
+    [Header("Interaction")]
+    public SoundItem currentSound;
+    
+    public List<Detector> interactablesInRange;
+    #endregion
+    
+    #region State
+    [Header("State")]
     public PlayerState currentState = PlayerState.Idle;
-
+    
     private bool _isHidden;
     public bool IsHidden
     {
@@ -43,11 +55,7 @@ public class Player : MonoBehaviour
             ToggleCrouch();
         }
     }
-
-    public SoundItem currentSound;
-    
-    public List<Detector> interactablesInRange;
-    
+    #endregion
     private void Update()
     {
         GetOccupiedTile();
@@ -89,10 +97,9 @@ public class Player : MonoBehaviour
         _move?.Kill();
         path[1].IsBlocked = true;
         _move = transform
-            .DOMove(path[1].WorldPosition, speed)
-            .SetSpeedBased(true)
+            .DOJump(path[1].WorldPosition, 0.2f, 1, 1 / speed)
             .SetAutoKill()
-            .SetEase(Ease.Linear)
+            .SetEase(jumpCurve)
             .OnComplete(() =>
             {
                 onTileChange?.Invoke(OccupiedTile);
