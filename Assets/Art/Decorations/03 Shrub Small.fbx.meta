@@ -3,7 +3,12 @@ guid: 3a6560ec361fc794f9461c77ed2655b5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shrubs.001
+    second: {fileID: 2100000, guid: acbb578e835d0094793e1d15d1d6c636, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
