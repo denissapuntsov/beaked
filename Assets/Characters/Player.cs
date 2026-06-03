@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine.InputSystem;
 [SelectionBase] [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
-    private AudioSource _source;
+    private AudioSource _audioSource;
     
     private Tile _occupiedTile;
     public Tile OccupiedTile
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _source = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -128,6 +129,18 @@ public class Player : MonoBehaviour
         if (currentState != PlayerState.Idle) return;
         if (!currentSound) return;
         
+        currentState = PlayerState.Speaking;
+        
+        _audioSource.clip = currentSound.clip;
+        _audioSource.Play();
+        StartCoroutine(InteractOnFinishedSpeaking());
+    }
+    
+    private IEnumerator InteractOnFinishedSpeaking()
+    {
+        var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
+        yield return waitForClipRemainingTime;
+        
         var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
         foreach (var neighbor in neighborsInRange)
         {
@@ -135,6 +148,7 @@ public class Player : MonoBehaviour
             Debug.Log(neighbor.Occupant);
             neighbor.Occupant.GetComponent<Listener>()?.Listen(currentSound);
         }
+        currentState = PlayerState.Idle;
     }
 
     public void OnListen(InputAction.CallbackContext context)

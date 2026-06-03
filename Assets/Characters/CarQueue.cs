@@ -76,6 +76,8 @@ public class CarQueue : MonoBehaviour
                     {
                         spawnPoint.tile.Occupant = null;
                     }
+
+                    exitTile.Occupant = null;
                     gameObject.SetActive(false);
                     return;
                 }
