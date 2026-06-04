@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(Speaker))]
 public class CarQueue : MonoBehaviour
 {
-    public Tile entryTile, exitTile;
+    public Tile exitTile;
     public List<SpawnPoint> path;
     public List<GameObject> carVariants;
     private List<GameObject> _queue = new List<GameObject>();
@@ -100,6 +100,19 @@ public class CarQueue : MonoBehaviour
                     {
                         tween.OnComplete(() =>
                         {
+                            for (int i = 1; i < _queue.Count; i++)
+                            {
+                                var rotationY = path[i].orientation switch
+                                {
+                                    Orientation.North => 0,
+                                    Orientation.East => 90,
+                                    Orientation.South => 180,
+                                    Orientation.West => -90,
+                                    _ => 0
+                                };
+                                
+                                _queue[i].transform.rotation =  Quaternion.Euler(0, rotationY, 0);
+                            }
                             tweens[tweens.IndexOf(tween) + 1]?.Play();
                         });
                     }

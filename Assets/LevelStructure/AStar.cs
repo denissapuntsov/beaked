@@ -172,5 +172,5 @@ public class AStar : MonoBehaviour
         return path;
     }
 
-    private static float Manhattan(Tile start, Tile goal) => Mathf.Abs(start.GridPosition.x - goal.GridPosition.x) + Mathf.Abs(start.GridPosition.z -  goal.GridPosition.z);
+    public static float Manhattan(Tile start, Tile goal) => Mathf.Abs(start.GridPosition.x - goal.GridPosition.x) + Mathf.Abs(start.GridPosition.z -  goal.GridPosition.z);
 }

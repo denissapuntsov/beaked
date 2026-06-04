@@ -106,6 +106,10 @@ public class Player : MonoBehaviour
         _move?.Kill();
         OccupiedTile.Bounce();
         path[1].IsBlocked = true;
+        
+        GetRotationRelativeToNextTile(path, out int yRotation);
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        
         _move = transform
             .DOJump(path[1].WorldPosition, 0.2f, 1, 1 / speed)
             .SetAutoKill()
@@ -121,6 +125,26 @@ public class Player : MonoBehaviour
                 var nextPath = AStar.instance.CalculatePath(OccupiedTile, goal, out Tile reachableGoal);
                 StartPath(nextPath, reachableGoal);
             });
+    }
+
+    private static void GetRotationRelativeToNextTile(List<Tile> path, out int yRotation)
+    {
+        switch (new Vector2(path[0].GridPosition.x - path[1].GridPosition.x,
+                    path[0].GridPosition.z - path[1].GridPosition.z))
+        {
+            case var v when v == new Vector2(0, 1):
+                yRotation = 90;
+                break;
+            case var v when v == new Vector2(0, -1):
+                yRotation = -90;
+                break;
+            case var v when v == new Vector2(1, 0):
+                yRotation = 180;
+                break;
+            default:
+                yRotation = 0;
+                break;
+        }
     }
 
     public void OnSpeak(InputAction.CallbackContext context)
