@@ -46,8 +46,26 @@ public class Player : MonoBehaviour
     #endregion
     
     #region State
-    [Header("State")]
-    public PlayerState currentState = PlayerState.Idle;
+
+    [Header("State")] 
+    
+    [SerializeField] private Animator meshAnimator;
+    private static readonly int Moving = Animator.StringToHash("Moving");
+    private static readonly int Speaking = Animator.StringToHash("Speaking");
+    
+    private PlayerState _currentState = PlayerState.Idle;
+
+    public PlayerState CurrentState
+    {
+        get => _currentState;
+        set
+        {
+            if (value == _currentState) return;
+            _currentState = value;
+            
+            meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
+        }
+    }
     
     private bool _isHidden;
     public bool IsHidden
@@ -87,7 +105,7 @@ public class Player : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (currentState is not (PlayerState.Idle or PlayerState.Moving)) return;
+        if (CurrentState is not (PlayerState.Idle or PlayerState.Moving)) return;
         if (!context.started) return;
 
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -105,7 +123,7 @@ public class Player : MonoBehaviour
     public void StartPath(List<Tile> path, Tile goal)
     {
         if (path == null) return;
-        currentState = PlayerState.Moving;
+        CurrentState = PlayerState.Moving;
         _move?.Kill();
         OccupiedTile.Bounce();
         path[1].IsBlocked = true;
@@ -119,10 +137,10 @@ public class Player : MonoBehaviour
             .SetEase(jumpCurve)
             .OnComplete(() =>
             {
+                CurrentState = PlayerState.Idle;
                 onTileChange?.Invoke(OccupiedTile);
                 if (OccupiedTile == goal)
                 {
-                    currentState = PlayerState.Idle;
                     return;
                 }
                 var nextPath = AStar.instance.CalculatePath(OccupiedTile, goal, out Tile reachableGoal);
@@ -153,10 +171,10 @@ public class Player : MonoBehaviour
     public void OnSpeak(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (currentState != PlayerState.Idle) return;
+        if (CurrentState != PlayerState.Idle) return;
         if (!currentSound) return;
         
-        currentState = PlayerState.Speaking;
+        CurrentState = PlayerState.Speaking;
         
         _popup.Display(currentSound);
         
@@ -179,13 +197,13 @@ public class Player : MonoBehaviour
             Debug.Log(neighbor.Occupant);
             neighbor.Occupant.GetComponent<Listener>()?.Listen(currentSound);
         }
-        currentState = PlayerState.Idle;
+        CurrentState = PlayerState.Idle;
     }
 
     public void OnListen(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (currentState != PlayerState.Idle) return;
+        if (CurrentState != PlayerState.Idle) return;
         if (interactablesInRange.Count == 0) return;
         interactablesInRange[0].GetComponent<Speaker>().Listen();
     }
