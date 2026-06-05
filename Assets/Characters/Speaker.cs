@@ -14,12 +14,15 @@ public class Speaker : MonoBehaviour
     
     private AudioSource _audioSource;
 
+    private ActionPopup _popup;
+
     [SerializeField] private SoundItem sound;
 
     private List<Tile> _neighbors;
 
     private void Start()
     {
+        _popup = GetComponentInChildren<ActionPopup>();
         _player = FindAnyObjectByType<Player>();
         _audioSource = GetComponent<AudioSource>();
         Speak();
@@ -37,6 +40,7 @@ public class Speaker : MonoBehaviour
         if (isSpeaking) return;
         _audioSource.clip = sound.clip;
         _audioSource.Play();
+        _popup.Display(sound);
         isSpeaking = true;
         StartCoroutine(WaitUntilEndOfAudioFile());
     }
@@ -46,6 +50,7 @@ public class Speaker : MonoBehaviour
         var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
         yield return waitForClipRemainingTime;
         onFinishSpeaking?.Invoke();
+        _popup.Hide();
         isSpeaking = false;
     }
 }
