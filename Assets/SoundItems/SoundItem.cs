@@ -5,4 +5,5 @@ public class SoundItem : ScriptableObject
 {
     public AudioClip clip;
     [Range(1, 10)] public int range;
+    public Sprite sprite;
 }

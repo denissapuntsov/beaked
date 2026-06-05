@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
     public SoundItem currentSound;
     
     public List<Detector> interactablesInRange;
+
+    private ActionPopup _popup;
     #endregion
     
     #region State
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
+        _popup = GetComponentInChildren<ActionPopup>();
     }
 
     private void Update()
@@ -155,6 +158,8 @@ public class Player : MonoBehaviour
         
         currentState = PlayerState.Speaking;
         
+        _popup.Display(currentSound);
+        
         _audioSource.clip = currentSound.clip;
         _audioSource.Play();
         StartCoroutine(InteractOnFinishedSpeaking());
@@ -164,6 +169,8 @@ public class Player : MonoBehaviour
     {
         var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
         yield return waitForClipRemainingTime;
+
+        _popup.Hide();
         
         var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
         foreach (var neighbor in neighborsInRange)
