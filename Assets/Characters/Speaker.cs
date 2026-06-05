@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,7 +41,7 @@ public class Speaker : MonoBehaviour
         if (isSpeaking) return;
         _audioSource.clip = sound.clip;
         _audioSource.Play();
-        _popup.Display(sound);
+        _popup?.Display(sound);
         isSpeaking = true;
         StartCoroutine(WaitUntilEndOfAudioFile());
     }
@@ -50,7 +51,7 @@ public class Speaker : MonoBehaviour
         var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
         yield return waitForClipRemainingTime;
         onFinishSpeaking?.Invoke();
-        _popup.Hide();
+        _popup?.Hide();
         isSpeaking = false;
     }
 }
