@@ -35,8 +35,12 @@ public class Tile : MonoBehaviour
         set
         {
             _isBlocked = value;
+            
+            #if UNITY_EDITOR
+            if (!AStar.instance.isDebugMode) return;
             tileNormal.gameObject.SetActive(!value);
             tileBlocked.gameObject.SetActive(value);
+            #endif
         }
     }
 

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class AStar : MonoBehaviour
 {
+    
     public static AStar instance;
+    public bool isDebugMode = false;
     
     public Dictionary<Vector3, Tile> tiles = new Dictionary<Vector3, Tile>();
 
