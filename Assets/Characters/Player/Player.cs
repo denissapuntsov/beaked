@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     [Header("Interaction")]
     public SoundItem currentSound;
     
-    public List<Detector> interactablesInRange;
+    public List<Detector> detectorsInRange;
 
     private ActionPopup _popup;
     #endregion
@@ -182,6 +182,20 @@ public class Player : MonoBehaviour
         _audioSource.Play();
         StartCoroutine(InteractOnFinishedSpeaking());
     }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        if (CurrentState != PlayerState.Idle) return;
+
+        CurrentState = PlayerState.Interacting;
+        
+        foreach (var detector in detectorsInRange)
+        {
+            if (!detector.GetComponent<Interactable>()) continue;
+            detector.GetComponent<Interactable>().Use();
+        }
+    }
     
     private IEnumerator InteractOnFinishedSpeaking()
     {
@@ -204,8 +218,13 @@ public class Player : MonoBehaviour
     {
         if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
-        if (interactablesInRange.Count == 0) return;
-        interactablesInRange[0].GetComponent<Speaker>().Listen();
+        if (detectorsInRange.Count == 0) return;
+
+        foreach (var detector in detectorsInRange)
+        {
+            if (!detector.GetComponent<Speaker>()) continue;
+            detector.GetComponent<Speaker>()?.Listen();
+        }
     }
 
     private void ToggleCrouch()
@@ -219,5 +238,6 @@ public enum PlayerState
     Idle,
     Moving,
     Listening,
-    Speaking
+    Speaking,
+    Interacting
 }

@@ -26,13 +26,14 @@ public class Rattlesnake : MonoBehaviour
 
     public void Appear()
     {
-        transform.DOScaleY(1, 0.2f).OnComplete(() => _speaker.isSpeaking = true);
+        _detector.currentState = NPCState.Changing;
+        transform.DOScaleY(1, 0.2f).OnComplete(() => _detector.currentState = NPCState.Idle);
     }
 
     public void Disappear()
     {
-        _speaker.isSpeaking = false;
-        transform.DOScaleY(0, 0.2f);
+        _detector.currentState = NPCState.Changing;
+        transform.DOScaleY(0, 0.2f).OnComplete(() => _detector.currentState = NPCState.Idle);
     }
 
     private void OnDisable()

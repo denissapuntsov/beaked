@@ -48,12 +48,15 @@ public class PathFollower : MonoBehaviour
 
     private void TraverseSequence(int sequenceIndex)
     {
+        _detector.currentState = NPCState.Moving;
+        
         var path = AStar.instance.CalculatePath(_detector.OccupiedTile, sequence[sequenceIndex], out Tile reachableTile);
         StartPath(path, reachableTile, () =>
         {
             Debug.Log(sequence[sequenceIndex]);
             if (sequenceIndex == sequence.Count - 1)
             {
+                _detector.currentState = NPCState.Idle;
                 return;
             }
             TraverseSequence(sequenceIndex + 1);

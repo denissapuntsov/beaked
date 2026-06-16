@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Detector))] [RequireComponent(typeof(AudioSource))]
 public class Speaker : MonoBehaviour
 {
-    public bool isSpeaking = false;
+    public bool playOnStart = true;
     
     public UnityEvent onListen, onFinishSpeaking;
     
@@ -16,6 +16,8 @@ public class Speaker : MonoBehaviour
     private AudioSource _audioSource;
 
     private ActionPopup _popup;
+
+    private Detector _detector;
 
     [SerializeField] private SoundItem sound;
 
@@ -26,23 +28,25 @@ public class Speaker : MonoBehaviour
         _popup = GetComponentInChildren<ActionPopup>();
         _player = FindAnyObjectByType<Player>();
         _audioSource = GetComponent<AudioSource>();
+        _detector = GetComponent<Detector>();
+        if (!playOnStart) return;
         Speak();
     }
 
     public void Listen()
     {
-        if (!isSpeaking) return;
+        if (_detector.currentState != NPCState.Speaking) return;
         _player.currentSound = sound;
         onListen?.Invoke();
     }
 
     public void Speak()
     {
-        if (isSpeaking) return;
+        if (_detector.currentState == NPCState.Speaking) return;
         _audioSource.clip = sound.clip;
         _audioSource.Play();
         _popup?.Display(sound);
-        isSpeaking = true;
+        _detector.currentState = NPCState.Speaking;
         StartCoroutine(WaitUntilEndOfAudioFile());
     }
 
@@ -52,6 +56,6 @@ public class Speaker : MonoBehaviour
         yield return waitForClipRemainingTime;
         onFinishSpeaking?.Invoke();
         _popup?.Hide();
-        isSpeaking = false;
+        _detector.currentState = NPCState.Idle;
     }
 }

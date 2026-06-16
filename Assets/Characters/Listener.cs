@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Detector))]
 public class Listener : MonoBehaviour
 {
+    //private Detector _detector;
+    
     public List<Reaction> reactions;
     
     public void Listen(SoundItem item)

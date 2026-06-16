@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [SelectionBase]
 public class Detector : MonoBehaviour
 {
-    public NPCState currentState;
+    public NPCState currentState = NPCState.Idle;
     public TileType tilesToIgnore;
     private List<Tile> _detectionTiles = new List<Tile>();
     public int detectionRadius = 1;
@@ -63,14 +63,14 @@ public class Detector : MonoBehaviour
         if (_detectionTiles.Contains(playerTile))
         {
             _isPlayerDetected = true;
-            _player.interactablesInRange.Add(this);
+            _player.detectorsInRange.Add(this);
             onPlayerDetected.Invoke();
         }
         else
         {
             if (!_isPlayerDetected) return;
             _isPlayerDetected = false;
-            _player.interactablesInRange.Remove(this);
+            _player.detectorsInRange.Remove(this);
             onPlayerLost.Invoke();
         }
     }
@@ -100,5 +100,6 @@ public enum NPCState
     Alerted,
     Moving,
     Speaking,
-    Listening
+    Listening,
+    Changing
 }
