@@ -49,6 +49,7 @@ public class Detector : MonoBehaviour
         
         onPlayerDetected.AddListener(() =>
         {
+            if (detectionLine == String.Empty) return;
             Debug.Log(detectionLine);
         });
     }
