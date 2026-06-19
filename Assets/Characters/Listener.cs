@@ -6,12 +6,13 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Detector))]
 public class Listener : MonoBehaviour
 {
-    //private Detector _detector;
+    public UnityEvent<SoundItem> onListen;
     
     public List<Reaction> reactions;
     
     public void Listen(SoundItem item)
     {
+        onListen.Invoke(item);
         foreach (Reaction reaction in reactions)
         {
             if (item != reaction.key) continue;

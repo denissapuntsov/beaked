@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b997401dac8a6c418375263fc363897, type: 3}
-  m_Name: Radio_01
+  m_Name: Radio_Alien
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
-  range: 1
+  range: 4
   sprite: {fileID: 21300000, guid: ea46f86be94f55c4db74db92f8ac71b8, type: 3}

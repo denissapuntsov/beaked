@@ -21,6 +21,16 @@ public class Speaker : MonoBehaviour
 
     [SerializeField] private SoundItem sound;
 
+    public SoundItem Sound
+    {
+        get => sound;
+        set
+        {
+            sound = value;
+            _popup?.Display(sound);
+        }
+    }
+
     private List<Tile> _neighbors;
 
     private void Start()
