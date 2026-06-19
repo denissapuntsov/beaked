@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        if (CurrentState is not (PlayerState.Idle or PlayerState.Moving)) return;
+        if (CurrentState is not (PlayerState.Idle /*or PlayerState.Moving*/)) return;
         if (!value.isPressed) return;
 
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
