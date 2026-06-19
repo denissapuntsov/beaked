@@ -62,7 +62,8 @@ public class Player : MonoBehaviour
         {
             if (value == _currentState) return;
             _currentState = value;
-            
+
+            if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
             meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
         }
     }
@@ -79,6 +80,14 @@ public class Player : MonoBehaviour
         }
     }
     #endregion
+
+    public static Player instance;
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        else if (instance != this) Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -103,10 +112,10 @@ public class Player : MonoBehaviour
         OccupiedTile = hitTile;
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputValue value)
     {
         if (CurrentState is not (PlayerState.Idle or PlayerState.Moving)) return;
-        if (!context.started) return;
+        if (!value.isPressed) return;
 
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
@@ -168,9 +177,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void OnSpeak(InputAction.CallbackContext context)
+    public void OnSpeak(InputValue value)
     {
-        if (!context.started) return;
+        if (!value.isPressed) return;
         if (CurrentState != PlayerState.Idle) return;
         if (!currentSound) return;
         
@@ -183,18 +192,23 @@ public class Player : MonoBehaviour
         StartCoroutine(InteractOnFinishedSpeaking());
     }
 
-    public void OnInteract(InputAction.CallbackContext context)
+    public void OnInteract(InputValue value)
     {
-        if (!context.started) return;
+        if (!value.isPressed) return;
         if (CurrentState != PlayerState.Idle) return;
 
-        CurrentState = PlayerState.Interacting;
+        Interactable interactableNeighbor = null;
         
         foreach (var detector in detectorsInRange)
         {
             if (!detector.GetComponent<Interactable>()) continue;
-            detector.GetComponent<Interactable>().Use();
+            interactableNeighbor = detector.GetComponent<Interactable>();
         }
+
+        if (!interactableNeighbor) return;
+        CurrentState = PlayerState.Interacting;
+        interactableNeighbor.Use();
+        CurrentState = PlayerState.Idle;
     }
     
     private IEnumerator InteractOnFinishedSpeaking()
@@ -214,9 +228,9 @@ public class Player : MonoBehaviour
         CurrentState = PlayerState.Idle;
     }
 
-    public void OnListen(InputAction.CallbackContext context)
+    public void OnListen(InputValue value)
     {
-        if (!context.started) return;
+        if (!value.isPressed) return;
         if (CurrentState != PlayerState.Idle) return;
         if (detectorsInRange.Count == 0) return;
 

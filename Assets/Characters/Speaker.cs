@@ -47,6 +47,7 @@ public class Speaker : MonoBehaviour
         _audioSource.Play();
         _popup?.Display(sound);
         _detector.currentState = NPCState.Speaking;
+        if (!sound.clip) return;
         StartCoroutine(WaitUntilEndOfAudioFile());
     }
 
@@ -55,6 +56,7 @@ public class Speaker : MonoBehaviour
         var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
         yield return waitForClipRemainingTime;
         onFinishSpeaking?.Invoke();
+        Debug.Log("Finished speaking");
         _popup?.Hide();
         _detector.currentState = NPCState.Idle;
     }
