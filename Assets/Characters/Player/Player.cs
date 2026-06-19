@@ -112,10 +112,10 @@ public class Player : MonoBehaviour
         OccupiedTile = hitTile;
     }
 
-    public void OnMove(InputValue value)
+    /*public void OnMove(InputAction.CallbackContext context)
     {
-        if (CurrentState is not (PlayerState.Idle /*or PlayerState.Moving*/)) return;
-        if (!value.isPressed) return;
+        if (CurrentState is not (PlayerState.Idle /*or PlayerState.Moving#1#)) return;
+        if (!context.started) return;
 
         Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
@@ -127,9 +127,46 @@ public class Player : MonoBehaviour
     
         var path = AStar.instance.CalculatePath(this.OccupiedTile, hitTile, out Tile reachableGoal);
         StartPath(path, reachableGoal);
+    }*/
+
+    public void OnWalk(InputAction.CallbackContext context)
+    {
+        if (CurrentState != PlayerState.Idle) return;
+        if (!context.performed) return;
+        
+        var input = context.ReadValue<Vector2>();
+        input = new Vector2(Mathf.Ceil(input.x), Mathf.Ceil(input.y));
+        
+
+        Vector2 nextTileCoordinates = input == new Vector2(1, 1) || input == new Vector2(0, 0) ? Vector2.zero : input;
+        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
+        var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
+
+        if (!tile) return;
+        MoveToTile(tile);
+    }
+
+    private void MoveToTile(Tile tile)
+    {
+        CurrentState = PlayerState.Moving;
+        _move?.Kill();
+        OccupiedTile.Bounce();
+        tile.IsBlocked = true;
+        
+        GetRelativeRotationToNextTile(tile, out int yRotation);
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        
+        _move = transform
+            .DOJump(tile.WorldPosition, 0.2f, 1, 1 / speed)
+            .SetAutoKill()
+            .SetEase(jumpCurve)
+            .OnComplete(() =>
+            {
+                CurrentState = PlayerState.Idle;
+            });
     }
     
-    public void StartPath(List<Tile> path, Tile goal)
+    /*public void StartPath(List<Tile> path, Tile goal)
     {
         if (path == null) return;
         CurrentState = PlayerState.Moving;
@@ -155,9 +192,29 @@ public class Player : MonoBehaviour
                 var nextPath = AStar.instance.CalculatePath(OccupiedTile, goal, out Tile reachableGoal);
                 StartPath(nextPath, reachableGoal);
             });
+    }*/
+
+    private void GetRelativeRotationToNextTile(Tile nextTile, out int yRotation)
+    {
+        switch (new Vector2(OccupiedTile.GridPosition.x - nextTile.GridPosition.x,
+                    OccupiedTile.GridPosition.z - nextTile.GridPosition.z))
+        {
+            case var v when v == new Vector2(0, 1):
+                yRotation = 90;
+                break;
+            case var v when v == new Vector2(0, -1):
+                yRotation = -90;
+                break;
+            case var v when v == new Vector2(1, 0):
+                yRotation = 180;
+                break;
+            default:
+                yRotation = 0;
+                break;
+        }
     }
 
-    private static void GetRotationRelativeToNextTile(List<Tile> path, out int yRotation)
+    /*private static void GetRotationRelativeToNextTile(List<Tile> path, out int yRotation)
     {
         switch (new Vector2(path[0].GridPosition.x - path[1].GridPosition.x,
                     path[0].GridPosition.z - path[1].GridPosition.z))
@@ -175,11 +232,11 @@ public class Player : MonoBehaviour
                 yRotation = 0;
                 break;
         }
-    }
+    }*/
 
-    public void OnSpeak(InputValue value)
+    public void OnSpeak(InputAction.CallbackContext context)
     {
-        if (!value.isPressed) return;
+        if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
         if (!currentSound) return;
         
@@ -192,9 +249,9 @@ public class Player : MonoBehaviour
         StartCoroutine(InteractOnFinishedSpeaking());
     }
 
-    public void OnInteract(InputValue value)
+    public void OnInteract(InputAction.CallbackContext context)
     {
-        if (!value.isPressed) return;
+        if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
 
         Interactable interactableNeighbor = null;
@@ -228,9 +285,9 @@ public class Player : MonoBehaviour
         CurrentState = PlayerState.Idle;
     }
 
-    public void OnListen(InputValue value)
+    public void OnListen(InputAction.CallbackContext context)
     {
-        if (!value.isPressed) return;
+        if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
         if (detectorsInRange.Count == 0) return;
 

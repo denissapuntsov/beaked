@@ -25,6 +25,12 @@ public class AStar : MonoBehaviour
         Scan();
     }
 
+    public Tile GetTileFromCoordinates(Vector3 position)
+    {
+        if (tiles.ContainsKey(position)) return tiles[position];
+        return null;
+    }
+
     private void Scan()
     {
         foreach (var tile in GetComponentsInChildren<Tile>())
