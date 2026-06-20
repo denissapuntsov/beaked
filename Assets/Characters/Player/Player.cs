@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public AnimationCurve jumpCurve;
     
     public UnityEvent<Tile> onTileChange;
+
+    private Vector2 _walkInput;
     #endregion
     
     #region Interaction
@@ -112,41 +114,28 @@ public class Player : MonoBehaviour
         OccupiedTile = hitTile;
     }
 
-    /*public void OnMove(InputAction.CallbackContext context)
-    {
-        if (CurrentState is not (PlayerState.Idle /*or PlayerState.Moving#1#)) return;
-        if (!context.started) return;
-
-        Ray rayOrigin = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitInfo;
-
-        if (!Physics.Raycast(rayOrigin, out hitInfo)) return;
-        if (!hitInfo.collider.transform.GetComponentInParent<Tile>()) return;
-        var hitTile = hitInfo.collider.transform.GetComponentInParent<Tile>();
-        if (hitTile == this.OccupiedTile) return;
-    
-        var path = AStar.instance.CalculatePath(this.OccupiedTile, hitTile, out Tile reachableGoal);
-        StartPath(path, reachableGoal);
-    }*/
-
     public void OnWalk(InputAction.CallbackContext context)
     {
+        _walkInput = context.ReadValue<Vector2>();
+        _walkInput = new Vector2(Mathf.Ceil(_walkInput.x), Mathf.Ceil(_walkInput.y));
+        
         if (CurrentState != PlayerState.Idle) return;
         if (!context.performed) return;
         
-        var input = context.ReadValue<Vector2>();
-        input = new Vector2(Mathf.Ceil(input.x), Mathf.Ceil(input.y));
-        
+        MoveToNextTile();
+    }
 
-        Vector2 nextTileCoordinates = input == new Vector2(1, 1) || input == new Vector2(0, 0) ? Vector2.zero : input;
+    private void MoveToNextTile()
+    {
+        Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
         var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
         var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
 
-        if (!tile) return;
-        MoveToTile(tile);
+        if (!tile || tile.Occupant != null) return;
+        MoveTo(tile);
     }
 
-    private void MoveToTile(Tile tile)
+    private void MoveTo(Tile tile)
     {
         CurrentState = PlayerState.Moving;
         _move?.Kill();
@@ -162,37 +151,18 @@ public class Player : MonoBehaviour
             .SetEase(jumpCurve)
             .OnComplete(() =>
             {
-                CurrentState = PlayerState.Idle;
-            });
-    }
-    
-    /*public void StartPath(List<Tile> path, Tile goal)
-    {
-        if (path == null) return;
-        CurrentState = PlayerState.Moving;
-        _move?.Kill();
-        OccupiedTile.Bounce();
-        path[1].IsBlocked = true;
-        
-        GetRotationRelativeToNextTile(path, out int yRotation);
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
-        
-        _move = transform
-            .DOJump(path[1].WorldPosition, 0.2f, 1, 1 / speed)
-            .SetAutoKill()
-            .SetEase(jumpCurve)
-            .OnComplete(() =>
-            {
-                CurrentState = PlayerState.Idle;
                 onTileChange?.Invoke(OccupiedTile);
-                if (OccupiedTile == goal)
+                CurrentState = PlayerState.Idle;
+
+                if (_walkInput == Vector2.zero)
                 {
                     return;
                 }
-                var nextPath = AStar.instance.CalculatePath(OccupiedTile, goal, out Tile reachableGoal);
-                StartPath(nextPath, reachableGoal);
+                
+                MoveToNextTile();
+                
             });
-    }*/
+    }
 
     private void GetRelativeRotationToNextTile(Tile nextTile, out int yRotation)
     {
