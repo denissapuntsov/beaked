@@ -127,7 +127,8 @@ PrefabInstance:
       value: Road_Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2404058784236610327, guid: c6879d457923b674c8e312271e18732b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6879d457923b674c8e312271e18732b, type: 3}

@@ -30,6 +30,7 @@ public class Obstacle : MonoBehaviour
     public void UnblockTile()
     {
         _occupiedTile.Occupant = null;
+        _occupiedTile = null;
     }
 
     private void OnDisable()

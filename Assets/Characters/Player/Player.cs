@@ -130,8 +130,8 @@ public class Player : MonoBehaviour
         Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
         var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
         var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
-
-        if (!tile || tile.Occupant != null) return;
+        
+        if (!tile || tile.Occupant != null) {return;}
         MoveTo(tile);
     }
 

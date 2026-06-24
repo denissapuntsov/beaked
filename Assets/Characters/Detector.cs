@@ -12,6 +12,8 @@ public class Detector : MonoBehaviour
     public int detectionRadius = 1;
     public string detectionLine;
     private bool _isPlayerDetected;
+
+	[SerializeField] private bool blocksTiles = true;
     
     public UnityEvent onPlayerDetected, onPlayerLost;
 
@@ -25,7 +27,7 @@ public class Detector : MonoBehaviour
         {
             if (value == _occupiedTile) return;
 
-            if (_occupiedTile)
+            if (_occupiedTile && blocksTiles)
             {
                 _occupiedTile.Occupant = null;
             }
@@ -36,8 +38,10 @@ public class Detector : MonoBehaviour
             {
                 return;
             }
-            
-            _occupiedTile.Occupant = gameObject;
+            if (blocksTiles) 
+			{
+            	_occupiedTile.Occupant = gameObject;
+			} 
             _detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, tilesToIgnore);
         }
     }

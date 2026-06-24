@@ -45,7 +45,11 @@ public class Barrier : MonoBehaviour
                 new(0, endRotationY, 0),
                 2f)
             .SetEase(Ease.InOutElastic, 1.2f)
-            .OnComplete(() => obstacle.UnblockTile());
+            .OnComplete(() =>
+            {
+                GetComponentInParent<Obstacle>().enabled = false;
+                obstacle.UnblockTile();
+            });
     }
 
     public void Close()

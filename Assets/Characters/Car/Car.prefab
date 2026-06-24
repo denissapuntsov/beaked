@@ -49,6 +49,7 @@ MonoBehaviour:
   tilesToIgnore: 0
   detectionRadius: 0
   detectionLine: 
+  blocksTiles: 0
   onPlayerDetected:
     m_PersistentCalls:
       m_Calls: []
