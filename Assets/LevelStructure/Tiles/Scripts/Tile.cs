@@ -28,7 +28,6 @@ public class Tile : MonoBehaviour
     }
 
     private bool _isBlocked;
-
     public bool IsBlocked
     {
         get => _isBlocked;
@@ -44,6 +43,17 @@ public class Tile : MonoBehaviour
         }
     }
 
+    public Vector3 WorldPosition => transform.position;
+    
+    public Vector3 GridPosition { get; private set; }
+    
+    public Dictionary<Vector3, Tile> Neighbors { get; set; }
+
+    private void OnEnable()
+    {
+        GridPosition = transform.localPosition;
+    }
+
     private void Start()
     {
         tileNormal.gameObject.SetActive(true);
@@ -54,15 +64,23 @@ public class Tile : MonoBehaviour
             .DOPunchPosition(new Vector3(0, -0.2f, 0), 0.5f, 2, 2)
             .Pause()
             .SetAutoKill(false)
-            .OnComplete(() => transform.localPosition = new Vector3(transform.localPosition.x, 0, transform.localPosition.z));
+            .OnComplete(() => transform.localPosition = GridPosition);
+
+        BlockTileUnder();
+    }
+
+    private void BlockTileUnder()
+    {
+        Ray ray = new Ray(transform.position - new Vector3(0, 0.5f, 0), Vector3.down);
+        RaycastHit hitInfo;
+     
+        if (!Physics.Raycast(ray, out hitInfo)) return;
+        if (!hitInfo.collider.transform.GetComponentInParent<Tile>()) return;
+        
+        hitInfo.collider.transform.GetComponentInParent<Tile>().IsBlocked = true;
     }
 
     public void Bounce() => _bounce.Restart();
-
-    public Vector3 WorldPosition => transform.position;
-    public Vector3 GridPosition => transform.localPosition;
-    
-    public Dictionary<Vector3, Tile> Neighbors { get; set; }
 }
 
 [Flags]

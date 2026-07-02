@@ -125,13 +125,33 @@ public class Player : MonoBehaviour
         MoveToNextTile();
     }
 
-    private void MoveToNextTile()
+    /*private void MoveToNextTile()
     {
         Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
-        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
+        //var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
+        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
         var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
         
         if (!tile || tile.Occupant != null) {return;}
+        MoveTo(tile);
+    }*/
+
+    private void MoveToNextTile()
+    {
+        Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
+        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
+
+        Tile tile = null;
+        foreach (float f in new List<float> { 0f, -0.5f, 0.5f })
+        {
+            tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates + new Vector3(0, f, 0));
+            if (tile && !tile.IsBlocked)
+            {
+                break;
+            }
+        }
+
+        if (!tile) return;
         MoveTo(tile);
     }
 
@@ -146,7 +166,7 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, yRotation, 0);
         
         _move = transform
-            .DOJump(tile.WorldPosition, 0.2f, 1, 1 / speed)
+            .DOJump(tile.WorldPosition, 0.3f, 1, 1 / speed)
             .SetAutoKill()
             .SetEase(jumpCurve)
             .OnComplete(() =>
