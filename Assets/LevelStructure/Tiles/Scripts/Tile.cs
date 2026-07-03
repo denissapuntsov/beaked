@@ -59,13 +59,6 @@ public class Tile : MonoBehaviour
         tileNormal.gameObject.SetActive(true);
         tileBlocked.gameObject.SetActive(false);
 
-        _bounce = transform
-            /*.DOJump(transform.position, -0.2f, 1, 1f)*/
-            .DOPunchPosition(new Vector3(0, -0.2f, 0), 0.5f, 2, 2)
-            .Pause()
-            .SetAutoKill(false)
-            .OnComplete(() => transform.localPosition = GridPosition);
-
         BlockTileUnder();
     }
 
@@ -80,7 +73,17 @@ public class Tile : MonoBehaviour
         hitInfo.collider.transform.GetComponentInParent<Tile>().IsBlocked = true;
     }
 
-    public void Bounce() => _bounce.Restart();
+    public void Bounce() => Bounce(1f);
+
+    public void Bounce(float strength)
+    {
+        _bounce = transform
+            /*.DOJump(transform.position, -0.2f, 1, 1f)*/
+            .DOPunchPosition(new Vector3(0, -0.2f * strength, 0), 0.5f, 2, 2)
+            //.Pause()
+            //.SetAutoKill(false)
+            .OnComplete(() => transform.localPosition = GridPosition);
+    }
 }
 
 [Flags]

@@ -20,7 +20,6 @@ public class AStar : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
 
         Scan();
     }
@@ -35,7 +34,9 @@ public class AStar : MonoBehaviour
     {
         foreach (var tile in GetComponentsInChildren<Tile>())
         {
+            Debug.Log(GetComponentsInChildren<Tile>().Length);
             tiles.Add(tile.GridPosition, tile);
+            tile.name += " (" + tile.GridPosition.x + ", " + tile.GridPosition.y + " , " + tile.GridPosition.z + ")";
         }
 
         foreach (var tile in tiles.Values)

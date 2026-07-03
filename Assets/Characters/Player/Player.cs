@@ -125,17 +125,6 @@ public class Player : MonoBehaviour
         MoveToNextTile();
     }
 
-    /*private void MoveToNextTile()
-    {
-        Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
-        //var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
-        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
-        var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
-        
-        if (!tile || tile.Occupant != null) {return;}
-        MoveTo(tile);
-    }*/
-
     private void MoveToNextTile()
     {
         Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
@@ -164,7 +153,7 @@ public class Player : MonoBehaviour
         
         GetRelativeRotationToNextTile(tile, out int yRotation);
         transform.rotation = Quaternion.Euler(0, yRotation, 0);
-        
+
         _move = transform
             .DOJump(tile.WorldPosition, 0.3f, 1, 1 / speed)
             .SetAutoKill()
@@ -178,10 +167,15 @@ public class Player : MonoBehaviour
                 {
                     return;
                 }
-                
+
                 MoveToNextTile();
-                
+
             });
+        /*.AppendInterval(1 / speed * 0.8f)
+        .AppendCallback(() =>
+        {
+            tile.Bounce(0.4f);
+        });*/
     }
 
     private void GetRelativeRotationToNextTile(Tile nextTile, out int yRotation)
