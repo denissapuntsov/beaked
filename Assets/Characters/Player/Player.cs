@@ -9,6 +9,8 @@ using UnityEngine.InputSystem;
 [SelectionBase] [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
+    private const int NO_ROTATION_NUMBER = 999;
+    
     private AudioSource _audioSource;
     
     private Tile _occupiedTile;
@@ -117,6 +119,8 @@ public class Player : MonoBehaviour
     public void OnWalk(InputAction.CallbackContext context)
     {
         _walkInput = context.ReadValue<Vector2>();
+        if (Mathf.Abs(_walkInput.x) < 0.8f && Mathf.Abs(_walkInput.y) < 0.8f) return;
+        
         _walkInput = new Vector2(Mathf.Ceil(_walkInput.x), Mathf.Ceil(_walkInput.y));
         
         if (CurrentState != PlayerState.Idle) return;
@@ -129,7 +133,10 @@ public class Player : MonoBehaviour
     {
         Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
         var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
-
+        
+        GetRelativeRotation(_walkInput, out int yRotation);
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        
         Tile tile = null;
         foreach (float f in new List<float> { 0f, -0.5f, 0.5f })
         {
@@ -140,8 +147,10 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (!tile) return;
-        MoveTo(tile);
+        if (tile)
+        {
+            MoveTo(tile);
+        }
     }
 
     private void MoveTo(Tile tile)
@@ -150,9 +159,6 @@ public class Player : MonoBehaviour
         _move?.Kill();
         OccupiedTile.Bounce();
         tile.IsBlocked = true;
-        
-        GetRelativeRotationToNextTile(tile, out int yRotation);
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
 
         _move = transform
             .DOJump(tile.WorldPosition, 0.3f, 1, 1 / speed)
@@ -178,18 +184,17 @@ public class Player : MonoBehaviour
         });*/
     }
 
-    private void GetRelativeRotationToNextTile(Tile nextTile, out int yRotation)
+    private void GetRelativeRotation(Vector2 walkInput, out int yRotation)
     {
-        switch (new Vector2(OccupiedTile.GridPosition.x - nextTile.GridPosition.x,
-                    OccupiedTile.GridPosition.z - nextTile.GridPosition.z))
+        switch (walkInput)
         {
-            case var v when v == new Vector2(0, 1):
+            case var v when v == new Vector2(0, -1):
                 yRotation = 90;
                 break;
-            case var v when v == new Vector2(0, -1):
+            case var v when v == new Vector2(0, 1):
                 yRotation = -90;
                 break;
-            case var v when v == new Vector2(1, 0):
+            case var v when v == new Vector2(-1, 0):
                 yRotation = 180;
                 break;
             default:
