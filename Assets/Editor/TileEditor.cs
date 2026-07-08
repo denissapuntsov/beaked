@@ -39,7 +39,6 @@ public class TileEditor: Editor
                 {
                     tile.name = "Tile (Empty)";
                     DestroyImmediate(tile.tileNormal);
-                    DestroyImmediate(tile.tileBlocked);
                     return;
                 }
                 
@@ -48,17 +47,9 @@ public class TileEditor: Editor
                 {
                     DestroyImmediate(tile.tileNormal);
                 }
-
-                if (tile.tileBlocked)
-                {
-                    DestroyImmediate(tile.tileBlocked);
-                }
-
+                
                 if (!tile.data) return;
                 tile.tileNormal = Instantiate(tile.data.prefabNormal, tile.transform);
-                tile.tileBlocked = Instantiate(tile.data.prefabBlocked, tile.transform);
-                
-                tile.tileBlocked.gameObject.SetActive(false);
             }
         }
     }

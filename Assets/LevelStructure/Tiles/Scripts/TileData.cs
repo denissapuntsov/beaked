@@ -4,6 +4,6 @@ using UnityEngine;
 public class TileData : ScriptableObject
 {
     public GameObject prefabNormal;
-    public GameObject prefabBlocked;
+    //public GameObject prefabBlocked;
     public TileType tileType;
 }

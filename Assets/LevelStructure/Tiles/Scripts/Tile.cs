@@ -10,7 +10,6 @@ public class Tile : MonoBehaviour
     
     public TileData data;
     public GameObject tileNormal;
-    public GameObject tileBlocked;
     public TileType Type => data.tileType;
 
     private Tweener _bounce;
@@ -22,6 +21,7 @@ public class Tile : MonoBehaviour
         get => _occupant;
         set
         {
+            Debug.Log(value);
             _occupant = value;
             IsBlocked = _occupant;
         }
@@ -34,12 +34,6 @@ public class Tile : MonoBehaviour
         set
         {
             _isBlocked = value;
-            
-            #if UNITY_EDITOR
-            if (!AStar.instance.isDebugMode) return;
-            tileNormal.gameObject.SetActive(!value);
-            tileBlocked.gameObject.SetActive(value);
-            #endif
         }
     }
 
@@ -57,7 +51,6 @@ public class Tile : MonoBehaviour
     private void Start()
     {
         tileNormal.gameObject.SetActive(true);
-        tileBlocked.gameObject.SetActive(false);
 
         BlockTileUnder();
     }

@@ -9,6 +9,8 @@ using UnityEngine.InputSystem;
 [SelectionBase] [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
+    public DangerPopup dangerPopup;
+    
     private const int NO_ROTATION_NUMBER = 999;
     
     private AudioSource _audioSource;
@@ -26,8 +28,14 @@ public class Player : MonoBehaviour
             _occupiedTile = value;
             IsHidden = (_occupiedTile.Type & TileType.Hideout) != 0;
             _occupiedTile.Occupant = gameObject;
+            
+            UpdateNeighbors();
+            onTileChange?.Invoke(OccupiedTile);
         }
     }
+    
+    private List<Tile> _neighbors = new List<Tile>();
+    public List<Tile> Neighbors => _neighbors;
     
     #region Movement
     [Header("Movement")]
@@ -91,17 +99,14 @@ public class Player : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(gameObject);
+        
+        GetOccupiedTile();
     }
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _popup = GetComponentInChildren<ActionPopup>();
-    }
-
-    private void Update()
-    {
-        GetOccupiedTile();
     }
 
     private void GetOccupiedTile()
@@ -135,7 +140,7 @@ public class Player : MonoBehaviour
         var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
         
         GetRelativeRotation(_walkInput, out int yRotation);
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
         
         Tile tile = null;
         foreach (float f in new List<float> { 0f, -0.5f, 0.5f })
@@ -166,7 +171,7 @@ public class Player : MonoBehaviour
             .SetEase(jumpCurve)
             .OnComplete(() =>
             {
-                onTileChange?.Invoke(OccupiedTile);
+                GetOccupiedTile();
                 CurrentState = PlayerState.Idle;
 
                 if (_walkInput == Vector2.zero)
@@ -177,11 +182,6 @@ public class Player : MonoBehaviour
                 MoveToNextTile();
 
             });
-        /*.AppendInterval(1 / speed * 0.8f)
-        .AppendCallback(() =>
-        {
-            tile.Bounce(0.4f);
-        });*/
     }
 
     private void GetRelativeRotation(Vector2 walkInput, out int yRotation)
@@ -203,25 +203,29 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*private static void GetRotationRelativeToNextTile(List<Tile> path, out int yRotation)
+    private void UpdateNeighbors()
     {
-        switch (new Vector2(path[0].GridPosition.x - path[1].GridPosition.x,
-                    path[0].GridPosition.z - path[1].GridPosition.z))
+        _neighbors = new List<Tile>();
+        foreach (Vector3 offset in new[]
+                 {
+                     new Vector3(1, 0, 0), 
+                     new Vector3(0, 0, 1), 
+                     new Vector3(0, 0, -1),
+                     new Vector3(-1, 0, 0)
+                 })
         {
-            case var v when v == new Vector2(0, 1):
-                yRotation = 90;
-                break;
-            case var v when v == new Vector2(0, -1):
-                yRotation = -90;
-                break;
-            case var v when v == new Vector2(1, 0):
-                yRotation = 180;
-                break;
-            default:
-                yRotation = 0;
-                break;
+            Tile newNeighbor = null;
+            
+            foreach (float f in new[] { 0f, -0.5f, 0.5f })
+            {
+                newNeighbor = AStar.instance.GetTileFromCoordinates(OccupiedTile.GridPosition + offset + new Vector3(0, f, 0));
+                if (newNeighbor && !newNeighbor.IsBlocked)
+                {
+                    _neighbors.Add(newNeighbor);
+                }
+            }
         }
-    }*/
+    }
 
     public void OnSpeak(InputAction.CallbackContext context)
     {
@@ -284,6 +288,7 @@ public class Player : MonoBehaviour
         {
             if (!detector.GetComponent<Speaker>()) continue;
             detector.GetComponent<Speaker>()?.Listen();
+            CurrentState = PlayerState.Listening;
         }
     }
 

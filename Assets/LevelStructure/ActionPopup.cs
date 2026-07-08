@@ -36,12 +36,13 @@ public class ActionPopup : MonoBehaviour
         _show.Rewind();
     }
 
-    public void Display(SoundItem soundItem)
-    {
-        icon.sprite = soundItem.sprite;
+	public void Display(Sprite sprite) {
+        icon.sprite = sprite;
         _show.Rewind();
         _show.PlayForward();
-    }
+	}
+    
+    public void Display(SoundItem soundItem) => Display(soundItem.sprite);
 
     public void Hide()
     {

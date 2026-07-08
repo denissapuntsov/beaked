@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private Tile _occupiedTile;
+    public Tile OccupiedTile => _occupiedTile;
     
     private void Start()
     {

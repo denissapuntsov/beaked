@@ -60,11 +60,20 @@ public class Detector : MonoBehaviour
 
     private void Update()
     {
+        if (!blocksTiles) return;
         GetOccupiedTiles();
     }
     
     private void CheckPlayerTile(Tile playerTile)
     {
+        foreach (var tile in Player.instance.Neighbors)
+        {
+            if (_detectionTiles.Contains(tile))
+            {
+                Debug.Log($"alert on {tile}");
+            }
+        }
+        
         if (_detectionTiles.Contains(playerTile))
         {
             _isPlayerDetected = true;

@@ -47,7 +47,8 @@ public class Barrier : MonoBehaviour
             .SetEase(Ease.InOutElastic, 1.2f)
             .OnComplete(() =>
             {
-                GetComponentInParent<Obstacle>().enabled = false;
+                //GetComponentInParent<Obstacle>().enabled = false;
+                Debug.Log(obstacle.OccupiedTile.name);
                 obstacle.UnblockTile();
             });
     }
