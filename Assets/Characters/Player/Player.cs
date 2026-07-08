@@ -165,6 +165,8 @@ public class Player : MonoBehaviour
         OccupiedTile.Bounce();
         tile.IsBlocked = true;
 
+        dangerPopup.ClearIndicators();
+        
         _move = transform
             .DOJump(tile.WorldPosition, 0.3f, 1, 1 / speed)
             .SetAutoKill()
@@ -263,7 +265,8 @@ public class Player : MonoBehaviour
     
     private IEnumerator InteractOnFinishedSpeaking()
     {
-        var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
+        var time = _audioSource.GetClipRemainingTime();
+        var waitForClipRemainingTime = new WaitForSeconds(time > 0 ? time : 1);
         yield return waitForClipRemainingTime;
 
         _popup.Hide();

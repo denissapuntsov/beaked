@@ -70,7 +70,7 @@ public class Detector : MonoBehaviour
         {
             if (_detectionTiles.Contains(tile))
             {
-                Debug.Log($"alert on {tile}");
+                Player.instance.dangerPopup.AddIndicatorAt(tile);
             }
         }
         

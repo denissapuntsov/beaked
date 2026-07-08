@@ -14,7 +14,7 @@ public class Tile : MonoBehaviour
 
     private Tweener _bounce;
     
-    [SerializeField] private GameObject _occupant;
+    private GameObject _occupant;
 
     public GameObject Occupant
     {
