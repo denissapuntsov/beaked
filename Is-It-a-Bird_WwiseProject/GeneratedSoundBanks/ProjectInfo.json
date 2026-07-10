@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Is-It-a-Bird_WwiseProject",
+   "GUID": "{0EB12612-20EC-4E11-B740-1A7A2C894FD8}",
+   "Generator": "2025.1.8.9170"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{67E3BA34-4E95-4184-9723-48DC4250F927}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{B0946163-BECA-4464-AFE1-72F388BE37E2}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{64E3FC23-4405-48B3-B62B-64B6715BA4CA}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{58FF6513-8370-0CFF-4AB0-2DAD1587EA18}"
+ }
+}

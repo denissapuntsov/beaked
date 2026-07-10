@@ -13,7 +13,7 @@ public class Speaker : MonoBehaviour
     
     private Player _player;
     
-    private AudioSource _audioSource;
+    //private AudioSource _audioSource;
 
     private ActionPopup _popup;
 
@@ -37,7 +37,7 @@ public class Speaker : MonoBehaviour
     {
         _popup = GetComponentInChildren<ActionPopup>();
         _player = FindAnyObjectByType<Player>();
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
         _detector = GetComponent<Detector>();
         if (!playOnStart) return;
         Speak();
@@ -53,20 +53,15 @@ public class Speaker : MonoBehaviour
     public void Speak()
     {
         if (_detector.currentState == NPCState.Speaking) return;
-        _audioSource.clip = sound.clip;
-        _audioSource.Play();
+        if (!sound) return;
         _popup?.Display(sound);
         _detector.currentState = NPCState.Speaking;
-        if (!sound.clip) return;
-        StartCoroutine(WaitUntilEndOfAudioFile());
+        sound.audioEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, FinishSpeaking);
     }
 
-    public IEnumerator WaitUntilEndOfAudioFile()
+    private void FinishSpeaking(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
-        yield return waitForClipRemainingTime;
         onFinishSpeaking?.Invoke();
-        Debug.Log("Finished speaking");
         _popup?.Hide();
         _detector.currentState = NPCState.Idle;
     }

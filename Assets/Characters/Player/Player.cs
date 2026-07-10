@@ -49,11 +49,10 @@ public class Player : MonoBehaviour
     #endregion
     
     #region Interaction
-    [Header("Interaction")]
-    public SoundItem currentSound;
-    
-    public List<Detector> detectorsInRange;
 
+    [Header("Interaction")] 
+    public SoundItem currentSound;
+    public List<Detector> detectorsInRange;
     private ActionPopup _popup;
     #endregion
     
@@ -204,7 +203,7 @@ public class Player : MonoBehaviour
                 break;
         }
     }
-
+    
     private void UpdateNeighbors()
     {
         _neighbors = new List<Tile>();
@@ -228,20 +227,17 @@ public class Player : MonoBehaviour
             }
         }
     }
-
+    
     public void OnSpeak(InputAction.CallbackContext context)
     {
         if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
+        
         if (!currentSound) return;
         
         CurrentState = PlayerState.Speaking;
-        
         _popup.Display(currentSound);
-        
-        _audioSource.clip = currentSound.clip;
-        _audioSource.Play();
-        StartCoroutine(InteractOnFinishedSpeaking());
+        currentSound.audioEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, InteractOnFinishedSpeaking);
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -263,12 +259,8 @@ public class Player : MonoBehaviour
         CurrentState = PlayerState.Idle;
     }
     
-    private IEnumerator InteractOnFinishedSpeaking()
+    private void InteractOnFinishedSpeaking(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        var time = _audioSource.GetClipRemainingTime();
-        var waitForClipRemainingTime = new WaitForSeconds(time > 0 ? time : 1);
-        yield return waitForClipRemainingTime;
-
         _popup.Hide();
         
         var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
