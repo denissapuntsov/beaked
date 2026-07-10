@@ -39,11 +39,10 @@ public class Player : MonoBehaviour
     #endregion
     
     #region Interaction
-    [Header("Interaction")]
-    public SoundItem currentSound;
-    
-    public List<Detector> detectorsInRange;
 
+    [Header("Interaction")] 
+    public SoundItem currentSound;
+    public List<Detector> detectorsInRange;
     private ActionPopup _popup;
     #endregion
     
@@ -125,17 +124,6 @@ public class Player : MonoBehaviour
         MoveToNextTile();
     }
 
-    /*private void MoveToNextTile()
-    {
-        Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
-        //var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, 0, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
-        var absoluteCoordinates = new Vector3(OccupiedTile.GridPosition.x + nextTileCoordinates.x, OccupiedTile.GridPosition.y, OccupiedTile.GridPosition.z + nextTileCoordinates.y);
-        var tile = AStar.instance.GetTileFromCoordinates(absoluteCoordinates);
-        
-        if (!tile || tile.Occupant != null) {return;}
-        MoveTo(tile);
-    }*/
-
     private void MoveToNextTile()
     {
         Vector2 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector2.zero : _walkInput;
@@ -204,39 +192,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*private static void GetRotationRelativeToNextTile(List<Tile> path, out int yRotation)
-    {
-        switch (new Vector2(path[0].GridPosition.x - path[1].GridPosition.x,
-                    path[0].GridPosition.z - path[1].GridPosition.z))
-        {
-            case var v when v == new Vector2(0, 1):
-                yRotation = 90;
-                break;
-            case var v when v == new Vector2(0, -1):
-                yRotation = -90;
-                break;
-            case var v when v == new Vector2(1, 0):
-                yRotation = 180;
-                break;
-            default:
-                yRotation = 0;
-                break;
-        }
-    }*/
-
     public void OnSpeak(InputAction.CallbackContext context)
     {
         if (!context.started) return;
         if (CurrentState != PlayerState.Idle) return;
+        
         if (!currentSound) return;
         
         CurrentState = PlayerState.Speaking;
-        
         _popup.Display(currentSound);
-        
-        _audioSource.clip = currentSound.clip;
-        _audioSource.Play();
-        StartCoroutine(InteractOnFinishedSpeaking());
+        currentSound.audioEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, InteractOnFinishedSpeaking);
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -258,11 +223,8 @@ public class Player : MonoBehaviour
         CurrentState = PlayerState.Idle;
     }
     
-    private IEnumerator InteractOnFinishedSpeaking()
+    private void InteractOnFinishedSpeaking(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        var waitForClipRemainingTime = new WaitForSeconds(_audioSource.GetClipRemainingTime());
-        yield return waitForClipRemainingTime;
-
         _popup.Hide();
         
         var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
