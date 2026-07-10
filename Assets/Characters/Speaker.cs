@@ -13,7 +13,7 @@ public class Speaker : MonoBehaviour
     
     private Player _player;
     
-    private AudioSource _audioSource;
+    //private AudioSource _audioSource;
 
     private ActionPopup _popup;
 
@@ -37,7 +37,7 @@ public class Speaker : MonoBehaviour
     {
         _popup = GetComponentInChildren<ActionPopup>();
         _player = FindAnyObjectByType<Player>();
-        _audioSource = GetComponent<AudioSource>();
+        //_audioSource = GetComponent<AudioSource>();
         _detector = GetComponent<Detector>();
         if (!playOnStart) return;
         Speak();
