@@ -283,7 +283,6 @@ public class Player : MonoBehaviour
         {
             if (!detector.GetComponent<Speaker>()) continue;
             detector.GetComponent<Speaker>()?.Listen();
-            CurrentState = PlayerState.Listening;
         }
     }
 

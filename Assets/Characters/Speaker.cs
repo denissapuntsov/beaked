@@ -46,8 +46,10 @@ public class Speaker : MonoBehaviour
     public void Listen()
     {
         if (_detector.currentState != NPCState.Speaking) return;
+        _player.CurrentState = PlayerState.Listening;
         _player.currentSound = sound;
         onListen?.Invoke();
+        _player.CurrentState = PlayerState.Idle;
     }
 
     public void Speak()
