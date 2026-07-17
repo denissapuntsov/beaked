@@ -288,5 +288,3 @@ MonoBehaviour:
     m_RotationOrder: 4
   data: {fileID: 11400000, guid: ed849c8cabf6ef640921d2f6626005db, type: 2}
   tileNormal: {fileID: 5694524721425728621}
-  tileBlocked: {fileID: 3938676178458074963}
-  _occupant: {fileID: 0}
