@@ -20,8 +20,7 @@ public class Tile : MonoBehaviour
     {
         get => _occupant;
         set
-        {
-            Debug.Log(value);
+        { 
             _occupant = value;
             IsBlocked = _occupant;
         }
