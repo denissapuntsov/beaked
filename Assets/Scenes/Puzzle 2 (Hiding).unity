@@ -7027,6 +7027,45 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211d03ae9c9efcb49a6360023fb38989, type: 3}
+--- !u!1 &417267477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8389627763020052528, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
+  m_PrefabInstance: {fileID: 777932967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &417267480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417267477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f45fd3a4dfa8a94f9eb65149bead185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onListen:
+    m_PersistentCalls:
+      m_Calls: []
+  reactions:
+  - key: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
+    onAcceptKey:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 417267477}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    isRepeatable: 0
+    isDone: 0
 --- !u!1001 &424048204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10706,7 +10745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14699,7 +14738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5302746745787410718, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5302746745787410718, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14734,6 +14773,10 @@ PrefabInstance:
       value: -0.065
       objectReference: {fileID: 0}
     - target: {fileID: 8062138761181535368, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
+      propertyPath: detectionLine
+      value: Caught!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062138761181535368, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
       propertyPath: tilesToIgnore
       value: 2
       objectReference: {fileID: 0}
@@ -14744,7 +14787,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8389627763020052528, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 417267480}
   m_SourcePrefab: {fileID: 100100000, guid: 1a8a955e81ba6c34f8c52577bbea9a0d, type: 3}
 --- !u!1 &777946475
 GameObject:
@@ -17161,7 +17207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33592,7 +33638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34019,7 +34065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4365190975793874167, guid: 69beb0b1587ed45469360648c9d19bd8, type: 3}
       propertyPath: m_LocalPosition.z

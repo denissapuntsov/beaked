@@ -263,7 +263,7 @@ public class Player : MonoBehaviour
     {
         _popup.Hide();
         
-        var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range);
+        var neighborsInRange = AStar.instance.GetNeighborsInRange(OccupiedTile, currentSound.range, false);
         foreach (var neighbor in neighborsInRange)
         {
             if (!neighbor.Occupant) continue;

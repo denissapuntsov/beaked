@@ -73,9 +73,9 @@ public class AStar : MonoBehaviour
         }
     }
 
-    public List<Tile> GetNeighborsInRange(Tile start, int radius) => GetNeighborsInRange(start, radius, TileType.None);
+    public List<Tile> GetNeighborsInRange(Tile start, int radius, bool flatOnly) => GetNeighborsInRange(start, radius, flatOnly, TileType.None);
     
-    public List<Tile> GetNeighborsInRange(Tile start, int radius, TileType filter)
+    public List<Tile> GetNeighborsInRange(Tile start, int radius, bool flatOnly, TileType filter)
     {
         List<Tile> neighbors = new List<Tile>();
         
@@ -84,7 +84,17 @@ public class AStar : MonoBehaviour
             if ((tile.Type & filter) == tile.Type) continue;
             if (Manhattan(tile, start) <= radius)
             {
-                neighbors.Add(tile);
+                if (flatOnly)
+                {
+                    if (tile.GridPosition.z == start.GridPosition.z)
+                    {
+                        neighbors.Add(tile);
+                    }
+                }
+                else
+                {
+                    neighbors.Add(tile);
+                }
             }
         }
         

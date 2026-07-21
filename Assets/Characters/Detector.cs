@@ -11,6 +11,7 @@ public class Detector : MonoBehaviour
     private List<Tile> _detectionTiles = new List<Tile>();
     public int detectionRadius = 1;
     public string detectionLine;
+    public bool flatOnly = true;
     private bool _isPlayerDetected;
 
 	[SerializeField] private bool blocksTiles = true;
@@ -42,7 +43,7 @@ public class Detector : MonoBehaviour
 			{
             	_occupiedTile.Occupant = gameObject;
 			} 
-            _detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, tilesToIgnore);
+            _detectionTiles = AStar.instance.GetNeighborsInRange(OccupiedTile, detectionRadius, flatOnly, tilesToIgnore);
         }
     }
 
