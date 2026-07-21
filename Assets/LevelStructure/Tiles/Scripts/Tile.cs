@@ -7,6 +7,8 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     public AnimationCurve animationCurve;
+
+    public bool blocksTileUnderneath = true;
     
     public TileData data;
     public GameObject tileNormal;
@@ -56,6 +58,8 @@ public class Tile : MonoBehaviour
 
     private void BlockTileUnder()
     {
+        if (!blocksTileUnderneath) return;
+        
         Ray ray = new Ray(transform.position - new Vector3(0, 0.5f, 0), Vector3.down);
         RaycastHit hitInfo;
      
