@@ -127,6 +127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile (Grass)
       objectReference: {fileID: 0}
+    - target: {fileID: 7470126235310013987, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3938676178458074963, guid: 34fde109873932a488c72036b5eb6ec3, type: 3}
