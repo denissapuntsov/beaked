@@ -287,6 +287,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  blocksTileUnderneath: 1
   data: {fileID: 11400000, guid: ed849c8cabf6ef640921d2f6626005db, type: 2}
   tileNormal: {fileID: 5694524721425728621}
 --- !u!1 &7470126235310013987
@@ -307,7 +308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1160064287842511681
 Transform:
   m_ObjectHideFlags: 0
