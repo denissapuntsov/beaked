@@ -137,11 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshAnimator: {fileID: 1033452431}
-  currentCell:
-    gridPosition: {x: 0, y: 0, z: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
-    occupyingElement: {fileID: 0}
-    isAccessible: 0
   speed: 2
   jumpCurve:
     serializedVersion: 2
@@ -176,6 +171,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  isCrouching: 0
 --- !u!1001 &304191713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -822,58 +818,178 @@ MonoBehaviour:
     worldPosition: {x: 1, y: -0.5, z: 1}
     occupyingElement: {fileID: 480632145}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 1, y: 0.5, z: 1}
     worldPosition: {x: 1, y: 0, z: 1}
     occupyingElement: {fileID: 480632145}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 0, y: 0, z: 1}
     worldPosition: {x: 0, y: -0.5, z: 1}
     occupyingElement: {fileID: 1659861104}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 0, y: 0.5, z: 1}
     worldPosition: {x: 0, y: 0, z: 1}
     occupyingElement: {fileID: 1659861104}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 0, y: 0, z: 0}
     worldPosition: {x: 0, y: -0.5, z: 0}
     occupyingElement: {fileID: 1760756282}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 0, y: 0.5, z: 0}
     worldPosition: {x: 0, y: 0, z: 0}
     occupyingElement: {fileID: 1760756282}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 1, z: 0}
+    worldPosition: {x: 0, y: 0.5, z: 0}
+    occupyingElement: {fileID: 3463496547896020482}
+    isAccessible: 1
+    isSolid: 0
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 1.5, z: 0}
+    worldPosition: {x: 0, y: 1, z: 0}
+    occupyingElement: {fileID: 3463496547896020482}
+    isAccessible: 1
+    isSolid: 0
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 1, y: -0.5, z: 0}
     worldPosition: {x: 1, y: -1, z: 0}
     occupyingElement: {fileID: 1742536731}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 1, y: 0, z: 0}
     worldPosition: {x: 1, y: -0.5, z: 0}
     occupyingElement: {fileID: 1742536731}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: -0.5, z: 0}
     worldPosition: {x: 2, y: -1, z: 0}
     occupyingElement: {fileID: 1271916878}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: 0, z: 1}
     worldPosition: {x: 2, y: -0.5, z: 1}
     occupyingElement: {fileID: 1241206885}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: 0.5, z: 1}
     worldPosition: {x: 2, y: 0, z: 1}
     occupyingElement: {fileID: 1241206885}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: 1, z: 1}
     worldPosition: {x: 2, y: 0.5, z: 1}
     occupyingElement: {fileID: 1241206885}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: 1, z: 0}
     worldPosition: {x: 2, y: 0.5, z: 0}
     occupyingElement: {fileID: 657145498}
     isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
   - gridPosition: {x: 2, y: 1.5, z: 0}
     worldPosition: {x: 2, y: 1, z: 0}
     occupyingElement: {fileID: 657145498}
     isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &1401463767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,7 +1136,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5364895729560510799, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3463496547896020481}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
 --- !u!4 &1760756281 stripped
@@ -1039,6 +1158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78521ee8466d7a44fad39fabb8a512aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1760756283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5364895729560510799, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
+  m_PrefabInstance: {fileID: 1760756280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1776023372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1385,106 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 205325885}
   m_SourcePrefab: {fileID: 100100000, guid: 2cdae849828238a44bb21ed3f2dd119c, type: 3}
+--- !u!1001 &3463496547896020478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1760756283}
+    m_Modifications:
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027737421513978364, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      propertyPath: m_Name
+      value: Hideaway
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3027737421513978364, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3463496547896020482}
+    - targetCorrespondingSourceObject: {fileID: 3027737421513978364, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3463496547896020483}
+  m_SourcePrefab: {fileID: 100100000, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+--- !u!1 &3463496547896020480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3027737421513978364, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+  m_PrefabInstance: {fileID: 3463496547896020478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3463496547896020481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
+  m_PrefabInstance: {fileID: 3463496547896020478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3463496547896020482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463496547896020480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78521ee8466d7a44fad39fabb8a512aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridPosition: {x: 0, y: 0, z: 0}
+  gridSize: {x: 1, y: 1, z: 1}
+  isSolid: 0
+--- !u!114 &3463496547896020483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463496547896020480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695d58b0379e6e8428ddb9f670b4b632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8334465551014131957
 PrefabInstance:
   m_ObjectHideFlags: 0

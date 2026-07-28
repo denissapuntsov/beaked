@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Events;
 using Vector3 = UnityEngine.Vector3;
 
 namespace NewTiles
@@ -46,15 +47,17 @@ namespace NewTiles
                     {
                         var newCell = new Cell()
                         {
-                            gridPosition = gridElement.transform.localPosition + new Vector3(x, y + 1, z),
+                            gridPosition = gridElement.transform.position + new Vector3(x, y + 1, z),
                             worldPosition = gridElement.transform.position + new Vector3(x, y + 0.5f, z),
                             occupyingElement = gridElement,
-                            isAccessible = true
+                            isAccessible = true,
+                            isSolid = gridElement.isSolid
                         };
                 
                         Cells[newCell.gridPosition] = newCell;
                         cells.Add(newCell);
 
+                        if (!newCell.isSolid) continue;
                         if (Cells.ContainsKey(newCell.gridPosition - new Vector3(0, 0.5f, 0)))
                         {
                             Cells[newCell.gridPosition - new Vector3(0, 0.5f, 0)].isAccessible = false;
@@ -68,6 +71,7 @@ namespace NewTiles
             foreach (var cell in Cells.Values)
             {
                 Gizmos.color = cell.isAccessible ? Color.green : Color.yellow;
+                Gizmos.color = cell.isSolid ? Color.green : new Color(1f, 1, 1f, 0.1f);
                 Gizmos.DrawCube(cell.gridPosition - new Vector3(0, 0.75f, 0), new Vector3(0.8f, 0.2f, 0.8f));
             }
         }
@@ -84,5 +88,9 @@ namespace NewTiles
         public Vector3 worldPosition;
         public GridElement occupyingElement;
         public bool isAccessible;
+        public bool isSolid = true;
+
+        public UnityEvent onPlayerEnter = new UnityEvent();
+        public UnityEvent onPlayerExit = new UnityEvent();
     }
 }

@@ -9,17 +9,31 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Animator meshAnimator;
-    [SerializeField] private Cell currentCell;
+    
+    private Cell _currentCell;
+    public Cell CurrentCell
+    {
+        get => _currentCell;
+        set
+        {
+            /*if (value == _currentCell) return;*/
+            _currentCell.onPlayerExit?.Invoke();
+            _currentCell = value;
+            _currentCell.onPlayerEnter?.Invoke();
+        }
+    }
     
     private Vector2 _walkInput;
     public float speed = 2f;
     private Tween _move;
     public AnimationCurve jumpCurve;
 
+    public bool isCrouching = false;
+
     private void Start()
     {
-        TileGrid.instance.GetCellWorld(transform.position, out currentCell);
-        Debug.Log(currentCell);
+        TileGrid.instance.GetCellWorld(transform.position, out _currentCell);
+        Debug.Log(_currentCell);
     }
 
     public void OnWalk(InputAction.CallbackContext context)
@@ -44,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         
         foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
-            TileGrid.instance.GetCell(nextTileCoordinates + currentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
+            TileGrid.instance.GetCell(nextTileCoordinates + CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
             if (nextCell is not { isAccessible: true })
             {
                 continue;
@@ -68,8 +82,8 @@ public class PlayerMovement : MonoBehaviour
             .OnComplete(() =>
             {
                 PlayerStateMachine.State = NewTiles.PlayerState.Idle;
-                currentCell.isAccessible = true;
-                currentCell = cell;
+                CurrentCell.isAccessible = true;
+                CurrentCell = cell;
                 if (_walkInput == Vector2.zero)
                 {
                     return;
