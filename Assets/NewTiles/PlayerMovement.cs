@@ -1,11 +1,14 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using NewTiles;
+using PlayerState = NewTiles.PlayerState;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator meshAnimator;
     [SerializeField] private Cell currentCell;
     
     private Vector2 _walkInput;
@@ -25,8 +28,9 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(_walkInput.x) < 0.8f && Mathf.Abs(_walkInput.y) < 0.8f) return;
         
         _walkInput = new Vector2(Mathf.Ceil(_walkInput.x), Mathf.Ceil(_walkInput.y));
-        
-        //if (!context.performed) return;
+
+        if (PlayerStateMachine.State != NewTiles.PlayerState.Idle) return;
+        if (!context.performed) return;
         
         MoveToNextTile();
     }
@@ -34,18 +38,26 @@ public class PlayerMovement : MonoBehaviour
     private void MoveToNextTile()
     {
         Vector3 nextTileCoordinates = _walkInput == new Vector2(1, 1) || _walkInput == new Vector2(0, 0) ? Vector3.zero : new Vector3(_walkInput.x, 0, _walkInput.y);
-
-        TileGrid.instance.GetCell(nextTileCoordinates + currentCell.gridPosition, out var nextCell);
-
-        if (nextCell != null && nextCell.isAccessible)
+        
+        GetRelativeRotation(_walkInput, out int yRotation);
+        meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        
+        foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
+            TileGrid.instance.GetCell(nextTileCoordinates + currentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
+            if (nextCell is not { isAccessible: true })
+            {
+                continue;
+            }
             MoveTo(nextCell);
+            break;
         }
     }
     
     private void MoveTo(Cell cell)
     {
         _move?.Kill();
+        PlayerStateMachine.State = NewTiles.PlayerState.Moving;
         //OccupiedTile.Bounce();
         cell.isAccessible = false;
         
@@ -55,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
             .SetEase(jumpCurve)
             .OnComplete(() =>
             {
+                PlayerStateMachine.State = NewTiles.PlayerState.Idle;
                 currentCell.isAccessible = true;
                 currentCell = cell;
                 if (_walkInput == Vector2.zero)
@@ -65,5 +78,24 @@ public class PlayerMovement : MonoBehaviour
                 MoveToNextTile();
 
             });
+    }
+    
+    private void GetRelativeRotation(Vector2 walkInput, out int yRotation)
+    {
+        switch (walkInput)
+        {
+            case var v when v == new Vector2(0, -1):
+                yRotation = 90;
+                break;
+            case var v when v == new Vector2(0, 1):
+                yRotation = -90;
+                break;
+            case var v when v == new Vector2(-1, 0):
+                yRotation = 180;
+                break;
+            default:
+                yRotation = 0;
+                break;
+        }
     }
 }
