@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _move?.Kill();
         PlayerStateMachine.State = NewTiles.PlayerState.Moving;
-        //OccupiedTile.Bounce();
+        _currentCell.occupyingElement.Bounce();
         cell.isAccessible = false;
         
         _move = transform
