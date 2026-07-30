@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -710,7 +710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -848,11 +848,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cells:
-  - gridPosition: {x: 0, y: 1, z: 1}
-    worldPosition: {x: 0, y: 0.5, z: 1}
+  - gridPosition: {x: 0, y: 2, z: 1}
+    worldPosition: {x: 0, y: 1.5, z: 1}
     occupyingElement: {fileID: 3463496547896020482}
     isAccessible: 1
     isSolid: 0
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 2.5, z: 1}
+    worldPosition: {x: 0, y: 2, z: 1}
+    occupyingElement: {fileID: 3463496547896020482}
+    isAccessible: 1
+    isSolid: 0
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 1, y: 1, z: 1}
+    worldPosition: {x: 1, y: 0.5, z: 1}
+    occupyingElement: {fileID: 480632145}
+    isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 1, y: 1.5, z: 1}
+    worldPosition: {x: 1, y: 1, z: 1}
+    occupyingElement: {fileID: 480632145}
+    isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 1, z: 1}
+    worldPosition: {x: 0, y: 0.5, z: 1}
+    occupyingElement: {fileID: 1659861104}
+    isAccessible: 0
+    isSolid: 1
     onPlayerEnter:
       m_PersistentCalls:
         m_Calls: []
@@ -861,50 +905,6 @@ MonoBehaviour:
         m_Calls: []
   - gridPosition: {x: 0, y: 1.5, z: 1}
     worldPosition: {x: 0, y: 1, z: 1}
-    occupyingElement: {fileID: 3463496547896020482}
-    isAccessible: 1
-    isSolid: 0
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 1, y: 0, z: 1}
-    worldPosition: {x: 1, y: -0.5, z: 1}
-    occupyingElement: {fileID: 480632145}
-    isAccessible: 0
-    isSolid: 1
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 1, y: 0.5, z: 1}
-    worldPosition: {x: 1, y: 0, z: 1}
-    occupyingElement: {fileID: 480632145}
-    isAccessible: 1
-    isSolid: 1
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 0, y: 0, z: 1}
-    worldPosition: {x: 0, y: -0.5, z: 1}
-    occupyingElement: {fileID: 1659861104}
-    isAccessible: 0
-    isSolid: 1
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 0, y: 0.5, z: 1}
-    worldPosition: {x: 0, y: 0, z: 1}
     occupyingElement: {fileID: 1659861104}
     isAccessible: 1
     isSolid: 1
@@ -914,8 +914,8 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 0, y: 0, z: 0}
-    worldPosition: {x: 0, y: -0.5, z: 0}
+  - gridPosition: {x: 0, y: 1, z: 0}
+    worldPosition: {x: 0, y: 0.5, z: 0}
     occupyingElement: {fileID: 1760756282}
     isAccessible: 0
     isSolid: 1
@@ -925,8 +925,8 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 0, y: 0.5, z: 0}
-    worldPosition: {x: 0, y: 0, z: 0}
+  - gridPosition: {x: 0, y: 1.5, z: 0}
+    worldPosition: {x: 0, y: 1, z: 0}
     occupyingElement: {fileID: 1760756282}
     isAccessible: 1
     isSolid: 1
@@ -936,8 +936,8 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 1, y: -0.5, z: 0}
-    worldPosition: {x: 1, y: -1, z: 0}
+  - gridPosition: {x: 1, y: 0.5, z: 0}
+    worldPosition: {x: 1, y: 0, z: 0}
     occupyingElement: {fileID: 1742536731}
     isAccessible: 0
     isSolid: 1
@@ -947,8 +947,8 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 1, y: 0, z: 0}
-    worldPosition: {x: 1, y: -0.5, z: 0}
+  - gridPosition: {x: 1, y: 1, z: 0}
+    worldPosition: {x: 1, y: 0.5, z: 0}
     occupyingElement: {fileID: 1742536731}
     isAccessible: 1
     isSolid: 1
@@ -958,32 +958,10 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 2, y: -0.5, z: 0}
-    worldPosition: {x: 2, y: -1, z: 0}
+  - gridPosition: {x: 2, y: 0.5, z: 0}
+    worldPosition: {x: 2, y: 0, z: 0}
     occupyingElement: {fileID: 1271916878}
     isAccessible: 1
-    isSolid: 1
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 2, y: 0, z: 1}
-    worldPosition: {x: 2, y: -0.5, z: 1}
-    occupyingElement: {fileID: 1241206885}
-    isAccessible: 0
-    isSolid: 1
-    onPlayerEnter:
-      m_PersistentCalls:
-        m_Calls: []
-    onPlayerExit:
-      m_PersistentCalls:
-        m_Calls: []
-  - gridPosition: {x: 2, y: 0.5, z: 1}
-    worldPosition: {x: 2, y: 0, z: 1}
-    occupyingElement: {fileID: 1241206885}
-    isAccessible: 0
     isSolid: 1
     onPlayerEnter:
       m_PersistentCalls:
@@ -994,6 +972,28 @@ MonoBehaviour:
   - gridPosition: {x: 2, y: 1, z: 1}
     worldPosition: {x: 2, y: 0.5, z: 1}
     occupyingElement: {fileID: 1241206885}
+    isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 2, y: 1.5, z: 1}
+    worldPosition: {x: 2, y: 1, z: 1}
+    occupyingElement: {fileID: 1241206885}
+    isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 2, y: 2, z: 1}
+    worldPosition: {x: 2, y: 1.5, z: 1}
+    occupyingElement: {fileID: 1241206885}
     isAccessible: 1
     isSolid: 1
     onPlayerEnter:
@@ -1002,8 +1002,8 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 2, y: 1.5, z: 0}
-    worldPosition: {x: 2, y: 1, z: 0}
+  - gridPosition: {x: 2, y: 2.5, z: 0}
+    worldPosition: {x: 2, y: 2, z: 0}
     occupyingElement: {fileID: 657145498}
     isAccessible: 1
     isSolid: 1
@@ -1013,9 +1013,53 @@ MonoBehaviour:
     onPlayerExit:
       m_PersistentCalls:
         m_Calls: []
-  - gridPosition: {x: 3, y: 2, z: 0}
-    worldPosition: {x: 3, y: 1.5, z: 0}
+  - gridPosition: {x: 3, y: 3, z: 0}
+    worldPosition: {x: 3, y: 2.5, z: 0}
     occupyingElement: {fileID: 2028547781}
+    isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 1, z: -1}
+    worldPosition: {x: 0, y: 0.5, z: -1}
+    occupyingElement: {fileID: 0}
+    isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 0, y: 1.5, z: -1}
+    worldPosition: {x: 0, y: 1, z: -1}
+    occupyingElement: {fileID: 0}
+    isAccessible: 1
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 1, y: 1.5, z: -1}
+    worldPosition: {x: 1, y: 1, z: -1}
+    occupyingElement: {fileID: 0}
+    isAccessible: 0
+    isSolid: 1
+    onPlayerEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    onPlayerExit:
+      m_PersistentCalls:
+        m_Calls: []
+  - gridPosition: {x: 1, y: 2, z: -1}
+    worldPosition: {x: 1, y: 1.5, z: -1}
+    occupyingElement: {fileID: 0}
     isAccessible: 1
     isSolid: 1
     onPlayerEnter:
@@ -1038,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1126,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1368,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6694634124440350764, guid: 2cdae849828238a44bb21ed3f2dd119c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6694634124440350764, guid: 2cdae849828238a44bb21ed3f2dd119c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1433,7 +1477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1534,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2028825100537706089, guid: 999c3856bad58e9408bdf7be8640a78d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1616,7 +1660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
