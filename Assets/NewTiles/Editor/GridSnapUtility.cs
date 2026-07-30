@@ -25,13 +25,20 @@ public class GridSnapUtility
                 {
                     return;
                 }
+                newGameObject.transform.SetParent(grid.transform);
+
+                if (!Object.FindAnyObjectByType<GridElement>())
+                {
+                    newGameObject.transform.position = grid.transform.position;
+                    return;
+                }
                 
                 var pos = newGameObject.transform.position;
+                
                 newGameObject.transform.position = new Vector3(
                     Mathf.Round(pos.x),
                     pos.y - Mathf.Floor(pos.y) > 0.5f ? Mathf.Floor(pos.y) + 0.5f : Mathf.Round(pos.y),
                     Mathf.Round(pos.z));
-                newGameObject.transform.SetParent(grid.transform);
             }
         }
     }
