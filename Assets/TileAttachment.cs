@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 namespace NewTiles
 {
+	[RequireComponent(typeof(GridElement))]
     public class TileAttachment : MonoBehaviour
     {
         public UnityEvent onEnter, onExit;

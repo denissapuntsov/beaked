@@ -6,13 +6,14 @@ using Vector3 = UnityEngine.Vector3;
 
 namespace NewTiles
 {
-    [ExecuteInEditMode]
+    //[ExecuteInEditMode]
     public class TileGrid : MonoBehaviour
     {
         public static TileGrid instance; 
         
         private Dictionary<Vector3, Cell> Cells = new Dictionary<Vector3, Cell>();
         [SerializeField] private List<Cell> cells = new List<Cell>();
+        private GridElement[] _gridElements;
         
         private void Awake()
         {
@@ -32,10 +33,14 @@ namespace NewTiles
             Cells = new Dictionary<Vector3, Cell>();
             cells.Clear();
             
-            foreach (var gridElement in GetComponentsInChildren<GridElement>())
+            _gridElements = GetComponentsInChildren<GridElement>();
+            
+            foreach (var gridElement in _gridElements)
             {
                 SetupCells(gridElement);
             }
+            
+            
         }
         private void SetupCells(GridElement gridElement)
         {
