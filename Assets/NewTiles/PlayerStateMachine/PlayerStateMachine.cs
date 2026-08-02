@@ -6,8 +6,9 @@ namespace NewTiles.PlayerStateMachine
 {
     public class PlayerStateMachine : MonoBehaviour
     {
-        public IdleState idleState;
-        public MovingState movingState;
+        public IdleState IdleState;
+        public MovingState MovingState;
+        public SpeakingState SpeakingState;
         
         private BaseState _currentState;
 
@@ -25,22 +26,35 @@ namespace NewTiles.PlayerStateMachine
 
         private void Awake()
         {
-            idleState = new IdleState(this);
-            movingState = new MovingState(this);
+            IdleState = new IdleState(this);
+            MovingState = new MovingState(this);
+            SpeakingState = new SpeakingState(this);
             
-            CurrentState = idleState;
+            CurrentState = IdleState;
         }
 
-        private void Start()
+        /*private void Start()
         {
             if (CurrentState == null) return;
             CurrentState.Enter();
-        }
+        }*/
 
         public void OnWalk(InputAction.CallbackContext context)
         {
             PlayerData.Instance.walkInput = context.ReadValue<Vector2>();
             CurrentState.OnWalk(context);
+        }
+
+        public void OnListen(InputAction.CallbackContext context)
+        {
+            if (!PlayerData.Instance.FocusedSpeaker) return;
+            CurrentState.OnListen(context);
+        }
+
+        public void OnSpeak(InputAction.CallbackContext context)
+        {
+            if (!PlayerData.Instance.currentSound) return;
+            CurrentState.OnSpeak(context);
         }
     }
 }

@@ -36,7 +36,7 @@ namespace NewTiles.PlayerStateMachine
                 return;
             }
             
-            _playerStateMachine.CurrentState = _playerStateMachine.idleState;
+            _playerStateMachine.CurrentState = _playerStateMachine.IdleState;
         }
     
         private void MoveTo(Cell cell)
@@ -57,7 +57,7 @@ namespace NewTiles.PlayerStateMachine
                     _walkInput = new Vector2(Mathf.Ceil(PlayerData.Instance.walkInput.x), Mathf.Ceil(PlayerData.Instance.walkInput.y));
                     if (_walkInput == Vector2.zero)
                     {
-                        _playerStateMachine.CurrentState = _playerStateMachine.idleState;
+                        _playerStateMachine.CurrentState = _playerStateMachine.IdleState;
                         return;
                     }
 

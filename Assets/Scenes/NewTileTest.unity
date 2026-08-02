@@ -2000,11 +2000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78521ee8466d7a44fad39fabb8a512aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5378585962224544591 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 446399724378738787, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-  m_PrefabInstance: {fileID: 5821222414082590698}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5821222414082590698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2013,29 +2008,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4686784127398220344, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6694634124740756395}
-    - target: {fileID: 4686784127398220344, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnWalk
-      objectReference: {fileID: 0}
-    - target: {fileID: 4686784127398220344, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: NewTiles.PlayerStateMachine.PlayerStateMachine, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5658796054495093728, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.863
-      objectReference: {fileID: 0}
-    - target: {fileID: 7825920092594702783, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8191227903367892905, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2077,85 +2052,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7825920092594702783, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 7972734583195626042, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6694634124740756395}
-    - targetCorrespondingSourceObject: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6694634124740756396}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
---- !u!1 &5997921610212581125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-  m_PrefabInstance: {fileID: 5821222414082590698}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6694634124740756395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997921610212581125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c17de0b8d91dee43bfb22151ad8b2f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6694634124740756396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5997921610212581125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a258e4c924af3f48b3524352bdeb41a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSound: {fileID: 0}
-  meshAnimator: {fileID: 5378585962224544591}
-  jumpCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 4.295406
-      outSlope: 4.295406
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.08506026
-    - serializedVersion: 3
-      time: 0.30950677
-      value: 0.72194624
-      inSlope: 1.4604714
-      outSlope: 1.4604714
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.0238105
-      value: 1.0000013
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  speed: 2
-  walkInput: {x: 0, y: 0}
 --- !u!1001 &8334465551014131957
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,9 +1,9 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NewTiles
 {
-    
     public class PlayerData : MonoBehaviour
     {
         public static PlayerData Instance { get; private set; }
@@ -11,6 +11,8 @@ namespace NewTiles
 
         [Header("Interactions")] 
         public SoundItem currentSound;
+        public Speaker FocusedSpeaker => nearbySpeakers[^1];
+        public List<Speaker> nearbySpeakers;
 
         [Header("Movement")] 
         public Animator meshAnimator;

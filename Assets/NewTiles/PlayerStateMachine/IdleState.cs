@@ -19,22 +19,22 @@ namespace NewTiles.PlayerStateMachine
             {
                 return;
             }
-            _playerStateMachine.CurrentState = _playerStateMachine.movingState;
+            _playerStateMachine.CurrentState = _playerStateMachine.MovingState;
         }
 
         public override void OnInteract(InputAction.CallbackContext context)
         {
-
+            
         }
 
         public override void OnListen(InputAction.CallbackContext context)
         {
-
+            
         }
 
         public override void OnSpeak(InputAction.CallbackContext context)
         {
-
+            _playerStateMachine.CurrentState = _playerStateMachine.SpeakingState;
         }
     }
 }
