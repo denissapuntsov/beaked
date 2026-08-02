@@ -4,6 +4,7 @@ using DG.Tweening;
 using NewTiles;
 using PlayerState = NewTiles.PlayerState;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,10 +17,9 @@ public class PlayerMovement : MonoBehaviour
         get => _currentCell;
         set
         {
-            /*if (value == _currentCell) return;*/
-            _currentCell.onPlayerExit?.Invoke();
+            TileGrid.instance.onPlayerCellChangeStarted?.Invoke(_currentCell);
             _currentCell = value;
-            _currentCell.onPlayerEnter?.Invoke();
+            TileGrid.instance.onPlayerCellChangeEnded?.Invoke(_currentCell);
         }
     }
     
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         
         _walkInput = new Vector2(Mathf.Ceil(_walkInput.x), Mathf.Ceil(_walkInput.y));
 
-        if (PlayerStateMachine.State != NewTiles.PlayerState.Idle) return;
+        if (NewTiles.Player.State != NewTiles.PlayerState.Idle) return;
         if (!context.performed) return;
         
         MoveToNextTile();
@@ -71,9 +71,10 @@ public class PlayerMovement : MonoBehaviour
     private void MoveTo(Cell cell)
     {
         _move?.Kill();
-        PlayerStateMachine.State = NewTiles.PlayerState.Moving;
+        NewTiles.Player.State = NewTiles.PlayerState.Moving;
         _currentCell.occupyingElement.Bounce();
         cell.isAccessible = false;
+        PopupManager.instance.HidePopup(gameObject);
         
         _move = transform
             .DOJump(cell.worldPosition, 0.3f, 1, 1 / speed)
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             .SetEase(jumpCurve)
             .OnComplete(() =>
             {
-                PlayerStateMachine.State = NewTiles.PlayerState.Idle;
+                NewTiles.Player.State = NewTiles.PlayerState.Idle;
                 CurrentCell.isAccessible = true;
                 CurrentCell = cell;
                 if (_walkInput == Vector2.zero)

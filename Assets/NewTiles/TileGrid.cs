@@ -14,6 +14,11 @@ namespace NewTiles
         private Dictionary<Vector3, Cell> Cells = new Dictionary<Vector3, Cell>();
         [SerializeField] private List<Cell> cells = new List<Cell>();
         private GridElement[] _gridElements;
+
+        #region Events
+        public UnityEvent<Cell> onPlayerCellChangeStarted, onPlayerCellChangeEnded;
+        public UnityEvent<SoundItem> onPlayerSoundStarted, onPlayerSoundEnded;
+        #endregion
         
         private void Awake()
         {
@@ -25,9 +30,18 @@ namespace NewTiles
             {
                 Destroy(gameObject);
             }
+
+            AddListeners();
             
             Scan();
         }
+
+        private void AddListeners()
+        {
+            onPlayerCellChangeStarted.AddListener(OnPlayerCellChangeStarted);
+            onPlayerCellChangeEnded.AddListener(OnPlayerCellChangeEnded);
+        }
+        
         public void Scan()
         {
             Cells = new Dictionary<Vector3, Cell>();
@@ -39,8 +53,6 @@ namespace NewTiles
             {
                 SetupCells(gridElement);
             }
-            
-            
         }
         private void SetupCells(GridElement gridElement)
         {
@@ -79,6 +91,16 @@ namespace NewTiles
                 Gizmos.color = cell.isSolid ? Color.green : new Color(1f, 1, 1f, 0.1f);
                 Gizmos.DrawCube(cell.gridPosition - new Vector3(0, 0.75f, 0), new Vector3(0.8f, 0.2f, 0.8f));
             }
+        }
+
+        private void OnPlayerCellChangeStarted(Cell cell)
+        {
+            cell.onPlayerExit.Invoke();
+        }
+
+        private void OnPlayerCellChangeEnded(Cell cell)
+        {
+            cell.onPlayerEnter.Invoke();
         }
         
         public void GetCell(Vector3 gridPosition, out Cell cell) => Cells.TryGetValue(gridPosition, out cell);

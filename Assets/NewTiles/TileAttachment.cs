@@ -31,6 +31,7 @@ namespace NewTiles
         private void OnPlayerEnter() => onEnter?.Invoke();
 
         private void OnPlayerExit() => onExit?.Invoke();
+
         private void OnDisable()
         {
             _parentCell?.onPlayerEnter.RemoveListener(OnPlayerEnter);
