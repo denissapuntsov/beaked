@@ -8,6 +8,7 @@ namespace NewTiles
     {
         public static PlayerData Instance { get; private set; }
         
+        #region Interactions
         [Header("Interactions")] 
         public SoundItem currentSound;
         public Speaker FocusedSpeaker => nearbySpeakers[^1];
@@ -15,13 +16,14 @@ namespace NewTiles
         
         public Interactable FocusedInteractable => nearbyInteractables[^1];
         public List<Interactable> nearbyInteractables;
+        #endregion
 
+        #region Movement
         [Header("Movement")] 
         public Animator meshAnimator;
         public AnimationCurve jumpCurve;
         public float speed;
         public Vector2 walkInput;
-        
         private Cell _currentCell;
         public Cell CurrentCell
         {
@@ -33,6 +35,22 @@ namespace NewTiles
                 TileGrid.instance.onPlayerCellChangeEnded?.Invoke(_currentCell);
             }
         }
+        #endregion
+        
+        #region Animation
+        [Header("Animation")]
+
+        public PlayerAnimationState AnimationState
+        {
+            set
+            {
+                if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
+                meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
+            }
+        }
+        
+        #endregion
+        
         private void Awake()
         {
             if (Instance == null)
@@ -49,5 +67,13 @@ namespace NewTiles
         {
             TileGrid.instance.GetCellWorld(transform.position, out _currentCell);
         }
+    }
+
+    public enum PlayerAnimationState
+    {
+        Idle,
+        Moving,
+        Speaking,
+        Intro
     }
 }

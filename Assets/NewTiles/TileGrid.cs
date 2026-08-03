@@ -16,7 +16,9 @@ namespace NewTiles
         private GridElement[] _gridElements;
 
         #region Events
+        [HideInInspector]
         public UnityEvent<Cell> onPlayerCellChangeStarted, onPlayerCellChangeEnded;
+        [HideInInspector]
         public UnityEvent<SoundItem> onPlayerSoundStarted, onPlayerSoundEnded;
         #endregion
         

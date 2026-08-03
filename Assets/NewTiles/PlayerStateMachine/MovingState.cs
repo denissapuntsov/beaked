@@ -40,6 +40,8 @@ namespace NewTiles.PlayerStateMachine
     
         private void MoveTo(Cell cell)
         {
+            PlayerData.Instance.AnimationState = PlayerAnimationState.Moving;
+            _playerStateMachine.transform.SetParent(cell.occupyingElement.transform);
             _move?.Kill();
             PlayerData.Instance.CurrentCell.occupyingElement.Bounce();
             cell.isAccessible = false;
@@ -59,9 +61,9 @@ namespace NewTiles.PlayerStateMachine
                         _playerStateMachine.CurrentState = _playerStateMachine.IdleState;
                         return;
                     }
+                    _playerStateMachine.transform.SetParent(null);
 
                     MoveToNextTile();
-
                 });
         }
         

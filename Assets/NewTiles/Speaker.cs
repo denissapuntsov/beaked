@@ -39,7 +39,7 @@ namespace NewTiles
             IsSpeaking = true;
             if (PlayerData.Instance.nearbySpeakers.Contains(this))
             {
-                PopupManager.instance.ShowPopup(Player.instance.gameObject, "Q");
+                PopupManager.instance.ShowPopup(PlayerData.Instance.gameObject, "Q");
             }
             soundItem.audioEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, OnFinishedSpeaking);
         }

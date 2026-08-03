@@ -12,6 +12,11 @@ namespace NewTiles.PlayerStateMachine
         private Vector2 _walkInput;
         private Tween _move;
 
+        public override void Enter()
+        {
+            PlayerData.Instance.AnimationState = PlayerAnimationState.Idle;
+        }
+
         public override void OnWalk(InputAction.CallbackContext context)
         {
             _walkInput = new Vector2(Mathf.Ceil(PlayerData.Instance.walkInput.x), Mathf.Ceil(PlayerData.Instance.walkInput.y));

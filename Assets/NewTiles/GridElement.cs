@@ -9,8 +9,8 @@ namespace NewTiles
     public class GridElement : MonoBehaviour
     {
         public Transform pivot;
-        
-        public Vector3 GridPosition => transform.localPosition;
+
+        public Vector3 GridPosition { get; private set; }
         public Vector3/*Int*/ gridSize = Vector3/*Int*/.one;
         public bool isSolid = true;
         
@@ -22,32 +22,39 @@ namespace NewTiles
             pivot.localScale = gridSize;
         }
 
-        private void Start()
+        private void Awake()
         {
             Setup();
         }
 
         public void Setup()
         {
+            var position = transform.position;
+            GridPosition = transform.localPosition;
+            
             var yPos = transform.localPosition.y;
             var xPos = transform.position.x;
             var zPos = transform.position.z;
             transform.localPosition = new Vector3(transform.localPosition.x, yPos + 20 + zPos * 15 + xPos * 10, transform.localPosition.z);
             transform
-                .DOLocalMoveY(yPos, 40f)
+                .DOMoveY(position.y, 40f)
                 .SetSpeedBased()
                 .SetEase(Ease.OutBack, 0.2f);
         }
         
-        public void Bounce() => Bounce(1f);
+        public void Bounce() => Bounce(1f, null);
 
-        public void Bounce(float strength)
+        public void Bounce(float strength, Action onComplete)
         {
             var gridPosition = GridPosition;
             _bounce.Kill();
             _bounce = transform
-                .DOPunchPosition(new Vector3(0, -0.2f * strength, 0), 0.5f, 2, 2)
-                .OnComplete(() => transform.localPosition = gridPosition);
+                .DOPunchPosition(new Vector3(0, -0.2f * strength, 0), 0.5f * strength, 2, 2)
+                .OnComplete(() =>
+                {
+                    transform.position = gridPosition;
+                    onComplete?.Invoke();
+                });
         }
     }
 }

@@ -25,12 +25,12 @@ namespace NewTiles
                 return;
             }
             PlayerData.Instance.nearbyInteractables.Add(this);
-            PopupManager.instance.ShowPopup(Player.instance.gameObject, "F");
+            PopupManager.instance.ShowPopup(PlayerData.Instance.gameObject, "F");
         }
         
         public void Interact()
         {
-            PopupManager.instance.HidePopup(Player.instance.gameObject);
+            PopupManager.instance.HidePopup(PlayerData.Instance.gameObject);
             onInteract.Invoke();
         }
     }
