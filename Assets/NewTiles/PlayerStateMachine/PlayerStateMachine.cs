@@ -9,6 +9,7 @@ namespace NewTiles.PlayerStateMachine
         public IdleState IdleState;
         public MovingState MovingState;
         public SpeakingState SpeakingState;
+        public InteractingState InteractingState;
         
         private BaseState _currentState;
 
@@ -29,15 +30,10 @@ namespace NewTiles.PlayerStateMachine
             IdleState = new IdleState(this);
             MovingState = new MovingState(this);
             SpeakingState = new SpeakingState(this);
+            InteractingState = new InteractingState(this);
             
             CurrentState = IdleState;
         }
-
-        /*private void Start()
-        {
-            if (CurrentState == null) return;
-            CurrentState.Enter();
-        }*/
 
         public void OnWalk(InputAction.CallbackContext context)
         {
@@ -47,14 +43,23 @@ namespace NewTiles.PlayerStateMachine
 
         public void OnListen(InputAction.CallbackContext context)
         {
+            if (!context.started) return;
             if (!PlayerData.Instance.FocusedSpeaker) return;
             CurrentState.OnListen(context);
         }
 
         public void OnSpeak(InputAction.CallbackContext context)
         {
+            if (!context.started) return;
             if (!PlayerData.Instance.currentSound) return;
             CurrentState.OnSpeak(context);
+        }
+
+        public void OnInteract(InputAction.CallbackContext context)
+        {
+            if (!context.started) return;
+            if (!PlayerData.Instance.FocusedInteractable) return;
+            CurrentState.OnInteract(context);
         }
     }
 }

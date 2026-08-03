@@ -28,12 +28,11 @@ namespace NewTiles.PlayerStateMachine
             foreach (float f in new List<float> { 0, -0.5f, 0.5f })
             {
                 TileGrid.instance.GetCell(nextTileCoordinates + PlayerData.Instance.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
-                if (nextCell is not { isAccessible: true })
+                if (nextCell is { isAccessible: true, isSolid: true })
                 {
-                    continue;
+                    MoveTo(nextCell);
+                    return;
                 }
-                MoveTo(nextCell);
-                return;
             }
             
             _playerStateMachine.CurrentState = _playerStateMachine.IdleState;

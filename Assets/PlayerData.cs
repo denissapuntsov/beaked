@@ -7,12 +7,14 @@ namespace NewTiles
     public class PlayerData : MonoBehaviour
     {
         public static PlayerData Instance { get; private set; }
-
-
+        
         [Header("Interactions")] 
         public SoundItem currentSound;
         public Speaker FocusedSpeaker => nearbySpeakers[^1];
         public List<Speaker> nearbySpeakers;
+        
+        public Interactable FocusedInteractable => nearbyInteractables[^1];
+        public List<Interactable> nearbyInteractables;
 
         [Header("Movement")] 
         public Animator meshAnimator;

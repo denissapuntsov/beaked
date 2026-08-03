@@ -9,6 +9,10 @@ namespace NewTiles
 		[SerializeField] private SoundItem soundItem;     
         public SoundItem SoundItem => soundItem;
 
+        public bool IsSpeaking
+        {
+            get; private set;
+        }
         private TileAttachment _attachment;
         
         private void Start()
@@ -27,7 +31,28 @@ namespace NewTiles
                 return;
             }
             PlayerData.Instance.nearbySpeakers.Add(this);
-            PopupManager.instance.ShowPopup(Player.instance.gameObject, "Q");
+        }
+
+        public void Speak()
+        {
+            PopupManager.instance.ShowPopup(gameObject, "!");
+            IsSpeaking = true;
+            if (PlayerData.Instance.nearbySpeakers.Contains(this))
+            {
+                PopupManager.instance.ShowPopup(Player.instance.gameObject, "Q");
+            }
+            soundItem.audioEvent.Post(gameObject, (uint)AkCallbackType.AK_EndOfEvent, OnFinishedSpeaking);
+        }
+        
+        private void OnFinishedSpeaking(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
+        {
+            IsSpeaking = false;
+            PopupManager.instance.HidePopup(gameObject);
+            
+            if (PlayerData.Instance.nearbySpeakers.Contains(this))
+            {
+                PopupManager.instance.HidePopup(Player.instance.gameObject);
+            }
         }
 
         private void OnDisable()

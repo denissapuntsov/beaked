@@ -24,7 +24,7 @@ namespace NewTiles.PlayerStateMachine
 
         public override void OnInteract(InputAction.CallbackContext context)
         {
-            
+            _playerStateMachine.CurrentState = _playerStateMachine.InteractingState;
         }
 
         public override void OnListen(InputAction.CallbackContext context)
