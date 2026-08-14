@@ -513,8 +513,6 @@ GameObject:
   - component: {fileID: 4686784127398220344}
   - component: {fileID: 3723476915961258744}
   - component: {fileID: 3478323085418142034}
-  - component: {fileID: 5931573525266857627}
-  - component: {fileID: 5526150621935992975}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -823,8 +821,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.08506026
     - serializedVersion: 3
-      time: 0.30950677
-      value: 0.72194624
+      time: 0.30706915
+      value: 0.8086327
       inSlope: 1.4604714
       outSlope: 1.4604714
       tangentMode: 0
@@ -834,137 +832,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1.0238105
       value: 1.0000013
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.33754638
+      outSlope: -0.33754638
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.27548173
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   speed: 2
   walkInput: {x: 0, y: 0}
---- !u!114 &5931573525266857627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5572630391542153015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 803e9f88b850e5643953bf5881d9c773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  zoomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.009525299
-      value: 0.011253357
-      inSlope: 0.053227384
-      outSlope: 0.053227384
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.29047623
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.06699467
-      outSlope: 0.06699467
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.14047618
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &5526150621935992975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5572630391542153015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 803e9f88b850e5643953bf5881d9c773, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  zoomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.009525299
-      value: 0.011253357
-      inSlope: 0.053227384
-      outSlope: 0.053227384
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.29047623
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.06699467
-      outSlope: 0.06699467
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.14047618
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &6636382191868862616
 GameObject:
   m_ObjectHideFlags: 0

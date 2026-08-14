@@ -11,7 +11,7 @@ namespace NewTiles
         #region Interactions
         [Header("Interactions")] 
         public SoundItem currentSound;
-        public Speaker FocusedSpeaker => nearbySpeakers[^1];
+        public Speaker FocusedSpeaker => nearbySpeakers?[^1];
         public List<Speaker> nearbySpeakers;
         
         public Interactable FocusedInteractable => nearbyInteractables[^1];

@@ -26,7 +26,7 @@ public class PlayerEnterAnimator : MonoBehaviour
             })
             .AppendCallback(() =>
             {
-                Camera.main.transform.DOMove(new Vector3(-7.23413658f, 12.28f, -6.44097137f), 0.5f).SetEase(cameraCurve)
+                Camera.main.transform.DOMove(new Vector3(-7.42999983f,12.2799997f,-6.44097137f), 0.5f).SetEase(cameraCurve)
                     .OnComplete(() =>
                     {
                         Camera.main.DOOrthoSize(1f, 0.5f).SetEase(zoomCurve);

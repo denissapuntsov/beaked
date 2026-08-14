@@ -12,7 +12,6 @@ namespace NewTiles
         public static TileGrid instance; 
         
         private Dictionary<Vector3, Cell> Cells = new Dictionary<Vector3, Cell>();
-        [SerializeField] private List<Cell> cells = new List<Cell>();
         private GridElement[] _gridElements;
 
         #region Events
@@ -47,7 +46,6 @@ namespace NewTiles
         public void Scan()
         {
             Cells = new Dictionary<Vector3, Cell>();
-            cells.Clear();
             
             _gridElements = GetComponentsInChildren<GridElement>();
             
@@ -58,6 +56,7 @@ namespace NewTiles
         }
         private void SetupCells(GridElement gridElement)
         {
+            gridElement.occupiedCells.Clear();
             for (int x = 0; x < gridElement.gridSize.x; x++)
             {
                 for (float y = 0; y < gridElement.gridSize.y; y += 0.5f)
@@ -72,9 +71,10 @@ namespace NewTiles
                             isAccessible = true,
                             isSolid = gridElement.isSolid
                         };
+                        
+                        gridElement.occupiedCells.Add(newCell);
                 
                         Cells[newCell.gridPosition] = newCell;
-                        cells.Add(newCell);
 
                         if (!newCell.isSolid) continue;
                         if (Cells.ContainsKey(newCell.gridPosition - new Vector3(0, 0.5f, 0)))
@@ -93,6 +93,11 @@ namespace NewTiles
                 Gizmos.color = cell.isSolid ? Color.green : new Color(1f, 1, 1f, 0.1f);
                 Gizmos.DrawCube(cell.gridPosition - new Vector3(0, 0.75f, 0), new Vector3(0.8f, 0.2f, 0.8f));
             }
+        }
+
+        public void PlaySound(SoundItem sound, Cell cell)
+        {
+            
         }
 
         private void OnPlayerCellChangeStarted(Cell cell)
@@ -115,11 +120,11 @@ namespace NewTiles
     {
         public Vector3 gridPosition;
         public Vector3 worldPosition;
-        public GridElement occupyingElement;
+        [HideInInspector] public GridElement occupyingElement;
         public bool isAccessible;
         public bool isSolid = true;
 
-        public UnityEvent onPlayerEnter = new UnityEvent();
-        public UnityEvent onPlayerExit = new UnityEvent();
+        [HideInInspector] public UnityEvent onPlayerEnter = new UnityEvent();
+        [HideInInspector] public UnityEvent onPlayerExit = new UnityEvent();
     }
 }

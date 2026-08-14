@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/NewTiles/Editor/MovingElement/MovingElementInspector.uss?fileID=7433441132597879392&amp;guid=3a61e4b6284dcc94caed5ba60a5cdac7&amp;type=3#MovingElementInspector" />
+    <ui:Label text="Label" />
+    <ui:FloatField label="Speed" value="2" password="false" max-length="10" binding-path="speed" />
+    <uie:PropertyField binding-path="path" label="Path" />
+</ui:UXML>
