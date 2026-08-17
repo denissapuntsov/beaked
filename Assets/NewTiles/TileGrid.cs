@@ -95,11 +95,6 @@ namespace NewTiles
             }
         }
 
-        public void PlaySound(SoundItem sound, Cell cell)
-        {
-            
-        }
-
         private void OnPlayerCellChangeStarted(Cell cell)
         {
             cell.onPlayerExit.Invoke();

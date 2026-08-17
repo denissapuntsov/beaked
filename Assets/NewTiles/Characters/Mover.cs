@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -49,3 +50,4 @@ public class Mover : MonoBehaviour
         StartPath(path, reachableTile, () => onPathComplete?.Invoke());
     }
 }
+*/

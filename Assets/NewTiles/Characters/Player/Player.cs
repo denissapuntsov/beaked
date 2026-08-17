@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -292,7 +293,7 @@ public class Player : MonoBehaviour
     }
 }
 
-public enum PlayerState
+public enum PlayerStateEnum
 {
     Idle,
     Moving,
@@ -300,3 +301,4 @@ public enum PlayerState
     Speaking,
     Interacting
 }
+*/

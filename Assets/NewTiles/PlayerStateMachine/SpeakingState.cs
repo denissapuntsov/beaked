@@ -13,15 +13,12 @@ namespace NewTiles.PlayerStateMachine
 
         private void Speak()
         {
-            TileGrid.instance.onPlayerSoundStarted?.Invoke(PlayerData.Instance.currentSound);
-            PopupManager.instance.ShowPopup(_playerStateMachine.gameObject, "!");
-            PlayerData.Instance.currentSound.audioEvent.Post(_playerStateMachine.gameObject, (uint)AkCallbackType.AK_EndOfEvent, OnFinishedSpeaking);
+            SoundManager.instance.PlaySound(PlayerData.Instance.currentSound, PlayerData.Instance.CurrentCell, OnFinishedSpeaking);
         }
 
         private void OnFinishedSpeaking(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
         {
             TileGrid.instance.onPlayerSoundEnded?.Invoke(PlayerData.Instance.currentSound);
-            PopupManager.instance.HidePopup(_playerStateMachine.gameObject);
             _playerStateMachine.CurrentState = _playerStateMachine.IdleState;
         }
     }

@@ -1,3 +1,4 @@
+/*
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,3 +16,4 @@ public class Collectible : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+*/

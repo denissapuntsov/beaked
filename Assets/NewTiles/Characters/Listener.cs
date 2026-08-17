@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,3 +35,4 @@ public class Reaction
     public bool isRepeatable = false;
     [HideInInspector] public bool isDone = false;
 }
+*/

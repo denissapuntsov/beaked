@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -180,3 +181,4 @@ public enum Orientation
     South,
     West
 }
+*/

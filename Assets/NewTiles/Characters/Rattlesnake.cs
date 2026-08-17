@@ -1,3 +1,4 @@
+/*
 using System;
 using UnityEngine;
 using DG.Tweening;
@@ -42,3 +43,4 @@ public class Rattlesnake : MonoBehaviour
         _detector.onPlayerLost.RemoveListener(Disappear);
     }
 }
+*/
