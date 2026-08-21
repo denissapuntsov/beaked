@@ -39,7 +39,6 @@ namespace NewTiles
 
             transform.SetParent(ParentCell.occupyingElement.pivot);
             var localPos = transform.localPosition;
-            Debug.Log(gameObject.name + " " + localPos);
             localPos.y = 1f;
             transform.localPosition = localPos;
         }

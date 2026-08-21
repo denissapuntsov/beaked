@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class GameStateManager : MonoBehaviour
 {
+    [SerializeField] private GameController gameController;
+    
     private PlayerInputActions _actions;
     private GameplayStateMachine _gameplayStateMachine;
     

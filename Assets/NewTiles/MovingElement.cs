@@ -45,7 +45,7 @@ namespace NewTiles
                 return;
             }
             Turn(path[index].orientation);
-            TileGrid.instance.GetCell(path[index].gridElement.GridPosition + new Vector3(0, 1.5f, 0), out var nextCell);
+            TileGrid.instance.GetCellAt(path[index].gridElement.GridPosition + new Vector3(0, 1.5f, 0), out var nextCell);
             if (nextCell is { isAccessible: true, isSolid: true })
             {
                 MoveTo(nextCell);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class FiniteStateMachine : GameState
 {
-    public GameState CurrentState  { get; protected set; }
+    public GameState CurrentState { get; protected set; }
 
     public FiniteStateMachine() : base()
     {
@@ -14,24 +14,8 @@ public abstract class FiniteStateMachine : GameState
     public virtual void ChangeState(GameState newState)
     {
         CurrentState?.Exit();
-        
+        Debug.Log(this + ": " + newState);
         CurrentState = newState;
         CurrentState?.Enter();
-    }
-
-    public override void Complete()
-    {
-        base.Complete();
-        ChangeState(null);
-    }
-}
-
-public abstract class GameplayState : FiniteStateMachine
-{
-    protected GameplayStateMachine Machine;
-    
-    protected GameplayState(GameplayStateMachine machine)
-    {
-        Machine = machine;
     }
 }

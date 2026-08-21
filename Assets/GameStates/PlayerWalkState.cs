@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using NewTiles;
+using Cell = NewTiles.Cell;
+// TODO: change to work with MVC TileGrid architecture
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -42,7 +44,7 @@ public class PlayerWalkState : GameState
             
         foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
-            TileGrid.instance.GetCell(nextTileCoordinates + PlayerData.Instance.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
+            TileGrid.instance.GetCellAt(nextTileCoordinates + PlayerData.Instance.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
             if (nextCell is { isAccessible: true, isSolid: true })
             {
                 MoveTo(nextCell);
@@ -53,7 +55,7 @@ public class PlayerWalkState : GameState
         Complete();
     }
     
-    private void MoveTo(Cell cell)
+    private void MoveTo(NewTiles.Cell cell)
     {
         PlayerData.Instance.AnimationState = PlayerAnimationState.Moving;
         PlayerData.Instance.transform.SetParent(cell.occupyingElement.transform);

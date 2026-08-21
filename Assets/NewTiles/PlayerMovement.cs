@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         
         foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
-            TileGrid.instance.GetCell(nextTileCoordinates + CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
+            TileGrid.instance.GetCellAt(nextTileCoordinates + CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
             if (!nextCell.isAccessible || !nextCell.isSolid)
             {
                 continue;
@@ -114,3 +115,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+*/

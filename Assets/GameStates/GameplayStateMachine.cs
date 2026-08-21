@@ -1,63 +1,48 @@
 using System.Collections.Generic;
-using System.Security.Cryptography;
+using NewTiles;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 public class GameplayStateMachine : FiniteStateMachine
 {
-    protected List<GameObject> ListenersToTrigger;
+    #region States
     
-    public PlayerIdleState PlayerIdleState { get; protected set; }
-    public PlayerWalkState PlayerWalkState { get; protected set; }
-    public ReactionStateMachine ReactionState { get; protected set; }
+    public PlayerStepStateMachine PlayerStepState { get; protected set; }
+    public ReactionStepStateMachine ReactionStepState { get; protected set; }
+    
+    #endregion
+    
     public GameplayStateMachine(PlayerInputActions actions) : base()
     {
-        PlayerIdleState = new PlayerIdleState(actions)
+        PlayerStepState = new PlayerStepStateMachine(actions)
         {
-            OnComplete = HandlePlayerIdleStateComplete
+            OnComplete = HandlePlayerStepStateComplete
         };
 
-        PlayerWalkState = new PlayerWalkState(actions)
-        {
-            OnComplete = HandlePlayerWalkStateComplete
-        };
-        
-        ReactionState = new ReactionStateMachine(ListenersToTrigger)
+        ReactionStepState = new ReactionStepStateMachine()
         {
             OnComplete = HandleReactionStepComplete
         };
     }
 
-    public override void ChangeState(GameState newState)
-    {
-        base.ChangeState(newState);
-        Debug.Log("TEST: " + newState);
-    }
-
     public override void Enter()
     {
         base.Enter();
-        ChangeState(PlayerIdleState);
+        ChangeState(PlayerStepState);
     }
 
-    protected void HandlePlayerIdleStateComplete()
+    #region Handlers
+
+    private void HandlePlayerStepStateComplete()
     {
-        switch (PlayerIdleState.ExitState)
-        {
-            case ExitState.Walking:
-                ChangeState(PlayerWalkState);
-                break;
-        }
+        ReactionStepState.EntryState = PlayerStepState.ExitState;
+        ChangeState(ReactionStepState);
+    }
+
+    private void HandleReactionStepComplete()
+    {
+        ChangeState(PlayerStepState);
     }
     
-    protected void HandleReactionStepComplete()
-    {
-        ChangeState(PlayerIdleState);
-    }
-
-    protected void HandlePlayerWalkStateComplete()
-    {
-        ChangeState(PlayerIdleState);
-    }
+    #endregion
 }

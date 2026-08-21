@@ -8,18 +8,18 @@ namespace NewTiles.PlayerStateMachine
         {
             PlayerData.Instance.AnimationState = PlayerAnimationState.Speaking;
 
-            Speak();
+            /*Speak();*/
         }
 
-        private void Speak()
+        /*private void Speak()
         {
             SoundManager.instance.PlaySound(PlayerData.Instance.currentSound, PlayerData.Instance.CurrentCell, OnFinishedSpeaking);
-        }
+        }*/
 
-        private void OnFinishedSpeaking(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
+        /*private void OnFinishedSpeaking(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
         {
             TileGrid.instance.onPlayerSoundEnded?.Invoke(PlayerData.Instance.currentSound);
             _playerStateMachine.CurrentState = _playerStateMachine.IdleState;
-        }
+        }*/
     }
 }

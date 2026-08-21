@@ -2,6 +2,7 @@ using System;
 using NewTiles;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.UI;
 using UnityEngine.UIElements;
 
 public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
@@ -16,23 +17,28 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 
     public override void Enter()
     {
-        _actions.Player.AddCallbacks(this);
         _actions.Player.Enable();
+        _actions.Player.SetCallbacks(this);
     }
 
     public void OnListen(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        ExitState = ExitState.Listening;
+        Complete();
     }
 
     public void OnSpeak(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        if (!PlayerData.Instance.currentSound) return;
+        ExitState = ExitState.Speaking;
+        Complete();
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        if (!context.started) return;
+        ExitState = ExitState.Interacting;
+        Complete();
     }
 
     public void OnWalk(InputAction.CallbackContext context)

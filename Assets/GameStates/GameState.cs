@@ -10,9 +10,9 @@ public abstract class GameState
     {
     }
 
-    public virtual void Update()
+    /*public virtual void Update()
     {
-    }
+    }*/
 
     public virtual void Exit()
     {

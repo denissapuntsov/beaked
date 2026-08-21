@@ -105,9 +105,9 @@ namespace NewTiles
             cell.onPlayerEnter.Invoke();
         }
         
-        public void GetCell(Vector3 gridPosition, out Cell cell) => Cells.TryGetValue(gridPosition, out cell);
+        public void GetCellAt(Vector3 gridPosition, out Cell cell) => Cells.TryGetValue(gridPosition, out cell);
 
-        public void GetCellWorld(Vector3 worldPosition, out Cell cell) => GetCell(worldPosition + new Vector3(0, 0.5f, 0), out cell);
+        public void GetCellWorld(Vector3 worldPosition, out Cell cell) => GetCellAt(worldPosition + new Vector3(0, 0.5f, 0), out cell);
     }
     
     [System.Serializable]
