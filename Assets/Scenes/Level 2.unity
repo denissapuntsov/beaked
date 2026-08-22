@@ -1475,6 +1475,7 @@ GameObject:
   - component: {fileID: 2028825102106453177}
   - component: {fileID: 3027737422092706605}
   - component: {fileID: 3027737422092706606}
+  - component: {fileID: 3027737422092706607}
   m_Layer: 0
   m_Name: Hideaway (1)
   m_TagString: Untagged
@@ -1513,10 +1514,10 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3027737422092706604}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 3027737422092706607}
+          m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+          m_MethodName: Move
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1525,6 +1526,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &3027737422092706607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027737422092706604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c6a3ea12624a04ba97b561158d396a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

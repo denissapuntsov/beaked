@@ -14,7 +14,7 @@ namespace LevelStructure
 
         public Action<GridElement> OnDestroyOrDisable;
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             OnDestroyOrDisable?.Invoke(this);
         }
