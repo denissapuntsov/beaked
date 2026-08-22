@@ -1,3 +1,4 @@
+/*
 using System;
 using DG.Tweening;
 using NewTiles;
@@ -34,3 +35,4 @@ public class PlayerEnterAnimator : MonoBehaviour
             });
     }
 }
+*/

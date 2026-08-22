@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace NewTiles
+/*namespace NewTiles
 {
     [RequireComponent(typeof(TileAttachment))]
     public class Speaker : MonoBehaviour
@@ -60,4 +60,4 @@ namespace NewTiles
             TileGrid.instance.onPlayerCellChangeEnded.RemoveListener(CheckForPlayerCell);
         }
     }
-}
+}*/

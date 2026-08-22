@@ -2,22 +2,22 @@
 using NewTiles;
 public class PlayerSpeakState : GameState
 {
-    public PlayerSpeakState() : base()
+    private PlayerData _data;
+    public PlayerSpeakState(PlayerData data) : base()
     {
-
+        _data = data;
     }
 
     public override void Enter()
     {
         base.Enter();
-        PlayerData.Instance.AnimationState = PlayerAnimationState.Speaking;
-        SoundManager.instance.PlaySound(PlayerData.Instance.currentSound, PlayerData.Instance.CurrentCell,
-            HandleSoundComplete);
+        _data.AnimationState = PlayerAnimationState.Speaking;
+        SoundManager.instance.PlaySound(_data.currentSound, _data.gameObject, HandleSoundComplete);
     }
 
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
     {
-        PlayerData.Instance.AnimationState = PlayerAnimationState.Idle;
+        _data.AnimationState = PlayerAnimationState.Idle;
         Complete();
     }
 }

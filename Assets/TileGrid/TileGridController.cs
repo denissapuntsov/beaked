@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,33 +9,46 @@ namespace LevelStructure
     {
         private TileGridModel _model;
         private TileGridView _view;
+        private PlayerData _data;
         private Dictionary<Cell, GridElement> _cellToElementMap = new();
+
+        private void Awake()
+        {
+            _data = FindAnyObjectByType<PlayerData>();
+        }
 
         private void Start()
         {
-            Setup();
+            SetupGrid();
+            AssignPlayerCell();
         }
 
-        public void Setup()
+        public void SetupGrid()
         {
             _model = new TileGridModel();
             _view = new TileGridView();
-            
+
             _view.GridElements = FindObjectsByType<GridElement>(
                 FindObjectsInactive.Exclude,
                 FindObjectsSortMode.None).ToList();
 
             foreach (var gridElement in _view.GridElements)
             {
+                gridElement.OnDestroyOrDisable = RemoveElement;
                 AssignCells(gridElement);
             }
-            
+
             UnlockExposedCells();
+        }
+
+        private void AssignPlayerCell()
+        {
+            _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position + new Vector3(0, 0.5f, 0));
         }
 
         private void AssignCells(GridElement gridElement)
         {
-            var cells = new List<Cell>();
+            //var cells = new List<Cell>();
             for (int x = 0; x < gridElement.GridSize.x; x++)
             {
                 for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
@@ -59,10 +73,63 @@ namespace LevelStructure
             foreach (var cell in _cellToElementMap.Keys)
             {
                 cell.IsAccessible = _model.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0)) == null;
-                /*if (cell.IsAccessible)
+            }
+        }
+
+        public Cell TryGetCellAtLocation(Vector3 location) => _model.TryGetCellAtLocation(location);
+
+        public GridElement GetElementFromCell(Cell cell)
+        {
+            _cellToElementMap.TryGetValue(cell, out var element);
+            return element;
+        }
+
+        public void BounceCell(Cell cell)
+        {
+            List<Cell> cellRow = new List<Cell>();
+
+            var topCell = cell;
+            cellRow.Add(topCell);
+            while (_model.TryGetCellAtLocation(topCell.GridPosition - new Vector3(0, 0.5f, 0)) != null)
+            {
+                topCell = _model.TryGetCellAtLocation(topCell.GridPosition - new Vector3(0, 0.5f, 0));
+                cellRow.Add(topCell);
+            }
+
+            foreach (var cellInRow in cellRow)
+            {
+                _view.BounceGridElement(_cellToElementMap[cellInRow]);
+            }
+        }
+
+        public void RemoveElement(GridElement gridElement)
+        {
+            for (int x = 0; x < gridElement.GridSize.x; x++)
+            {
+                for (int z = 0; z < gridElement.GridSize.z; z++)
                 {
-                    Debug.Log($"{cell.GridPosition} is accessible!");
-                }*/
+                    var cellUnderneath = _model.TryGetCellAtLocation(
+                        gridElement.transform.position + new Vector3(x, 0.5f, z));
+                    
+                    if (cellUnderneath != null)
+                    {
+                        cellUnderneath.IsAccessible = true;
+                    }
+                }
+            }
+            
+            _view.GridElements.Remove(gridElement);
+            for (int x = 0; x < gridElement.GridSize.x; x++)
+            {
+                for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
+                {
+                    for (int z = 0; z < gridElement.GridSize.z; z++)
+                    {
+                        _cellToElementMap.Remove(
+                            _model.GridLocationToCell[gridElement.transform.position + new Vector3(x, y + 1, z)]);
+                        _model.GridLocationToCell.Remove(gridElement.transform.position + new Vector3(x, y + 1, z));
+                    }
+                }
             }
         }
     }

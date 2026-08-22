@@ -1,79 +1,66 @@
 using System;
 using System.Collections.Generic;
+using LevelStructure;
 using UnityEngine;
 
-namespace NewTiles
+
+public class PlayerData : MonoBehaviour
 {
-    public class PlayerData : MonoBehaviour
-    {
-        public static PlayerData Instance { get; private set; }
-        
-        #region Interactions
+    #region Interactions
         [Header("Interactions")] 
         public SoundItem currentSound;
-        public Speaker FocusedSpeaker => nearbySpeakers?[^1];
-        public List<Speaker> nearbySpeakers;
         
         public Interactable FocusedInteractable => nearbyInteractables[^1];
         public List<Interactable> nearbyInteractables;
+
+        [field: SerializeField]
+        private Cell currentCell;
+        public Cell CurrentCell
+        {
+            get => currentCell;
+            set
+            {
+                currentCell.IsAccessible = true;
+                currentCell = value;
+                currentCell.IsAccessible = false;
+            }
+        }
         #endregion
 
-        #region Movement
+    #region Movement
         [Header("Movement")] 
         public Animator meshAnimator;
         public AnimationCurve jumpCurve;
         public float speed;
         public Vector2 walkInput;
-        private Cell _currentCell;
-        public Cell CurrentCell
-        {
-            get => _currentCell;
-            set
-            {
-                TileGrid.instance.onPlayerCellChangeStarted?.Invoke(_currentCell);
-                _currentCell = value;
-                TileGrid.instance.onPlayerCellChangeEnded?.Invoke(_currentCell);
-            }
-        }
-        #endregion
-        
-        #region Animation
-        [Header("Animation")]
-
-        public PlayerAnimationState AnimationState
-        {
-            set
-            {
-                if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
-                meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
-            }
-        }
         
         #endregion
         
-        private void Awake()
-        {
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
+    #region Animation
+    [Header("Animation")]
 
-        private void Start()
+    public PlayerAnimationState AnimationState
+    {
+        set
         {
-            TileGrid.instance.GetCellWorld(transform.position, out _currentCell);
+            if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
+            meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
         }
     }
+        
+    #endregion
 
-    public enum PlayerAnimationState
-    {
-        Idle,
-        Moving,
-        Speaking,
-        Intro
+    private void Start()
+    { 
+        
     }
 }
+
+public enum PlayerAnimationState
+{
+    Idle,
+    Moving,
+    Speaking,
+    Intro
+}
+

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using LevelStructure;
 using UnityEngine;
 
 public class SpeakReactionStateMachine : FiniteStateMachine
@@ -8,13 +9,13 @@ public class SpeakReactionStateMachine : FiniteStateMachine
     // consider a PrimeListenersState in between?
     public TriggerListenersState TriggerListenersState { get; protected set; }
     
-    public SpeakReactionStateMachine() : base()
+    public SpeakReactionStateMachine(PlayerData data, TileGridController controller) : base()
     {
-        CheckForListenersState = new CheckForListenersState()
+        CheckForListenersState = new CheckForListenersState(data, controller)
         {
             OnComplete = HandleCheckForListenersStateComplete
         };
-        TriggerListenersState = new TriggerListenersState()
+        TriggerListenersState = new TriggerListenersState(data)
         {
             OnComplete = HandleTriggerListenersStateComplete
         };

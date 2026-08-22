@@ -1,3 +1,4 @@
+using LevelStructure;
 using UnityEngine;
 
 public class PlayerStepStateMachine : FiniteStateMachine
@@ -9,19 +10,19 @@ public class PlayerStepStateMachine : FiniteStateMachine
         public PlayerSpeakState PlayerSpeakState { get; protected set; }
         public PlayerInteractState PlayerInteractState { get; protected set; }
         
-        public PlayerStepStateMachine(PlayerInputActions actions) : base()
+        public PlayerStepStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
         {
-                PlayerIdleState = new PlayerIdleState(actions)
+                PlayerIdleState = new PlayerIdleState(actions, data)
                 {
                         OnComplete = HandlePlayerIdleStateComplete
                 };
 
-                PlayerWalkState = new PlayerWalkState(actions)
+                PlayerWalkState = new PlayerWalkState(actions, data, controller)
                 {
                         OnComplete = HandlePlayerWalkStateComplete
                 };
 
-                PlayerSpeakState = new PlayerSpeakState()
+                PlayerSpeakState = new PlayerSpeakState(data)
                 {
                         OnComplete = HandlePlayerSpeakStateComplete
                 };

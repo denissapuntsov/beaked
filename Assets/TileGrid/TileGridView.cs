@@ -6,7 +6,6 @@ namespace LevelStructure
 {
     public class TileGridView
     {
-        // not sure if this is even needed
         public List<GridElement> GridElements;
 
         public void BounceGridElement(GridElement gridElement)
@@ -17,7 +16,6 @@ namespace LevelStructure
                 .OnComplete(() =>
                 {
                     gridElement.transform.position = startingPosition;
-                    //onComplete?.Invoke();
                 });
         }
     }

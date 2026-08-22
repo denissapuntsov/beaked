@@ -1,14 +1,16 @@
-using NewTiles;
-using Cell = NewTiles.Cell;
+using LevelStructure;
 using UnityEngine;
 
 public class CheckForInteractableState : GameState
 {
         public Interactable FoundInteractable { get; private set; }
+        private PlayerData _data;
+        private TileGridController _controller;
         
-        public CheckForInteractableState() : base()
+        public CheckForInteractableState(PlayerData data, TileGridController controller) : base()
         {
-                
+                _data = data;
+                _controller = controller;
         }
 
         public override void Enter()
@@ -28,22 +30,20 @@ public class CheckForInteractableState : GameState
                 FoundInteractable = null;
         }
 
-        private NewTiles.Cell GetCellInFrontOfPlayer()
+        private Cell GetCellInFrontOfPlayer()
         {
-                NewTiles.Cell cellInFront;
-                TileGrid.instance.GetCellAt(
-                        PlayerData.Instance.CurrentCell.gridPosition + new Vector3(1, 0, 0),
-                        out cellInFront);
+                Cell cellInFront =
+                        _controller.TryGetCellAtLocation(_data.CurrentCell.GridPosition + new Vector3(1, 0, 0));
                 
                 return cellInFront;
         }
 
-        private Interactable FindInteractable(NewTiles.Cell cell)
+        private Interactable FindInteractable(Cell cell)
         {
-                TileGrid.instance.GetCellAt(cell.gridPosition + new Vector3(0, 0.5f, 0), out var foundCell);
-                if (foundCell == null || !foundCell.occupyingElement) return null;
+                var foundCell = _controller.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0));
+                if (foundCell == null || !foundCell.OccupyingElement) return null;
                 
-                var interactable = foundCell.occupyingElement.gameObject.GetComponent<Interactable>();
+                var interactable = foundCell.OccupyingElement.gameObject.GetComponent<Interactable>();
                 return interactable ? interactable : null;
         }
 }

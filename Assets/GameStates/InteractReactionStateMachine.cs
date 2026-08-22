@@ -1,3 +1,4 @@
+using LevelStructure;
 using NewTiles;
 using UnityEngine;
 using UnityEngine.XR;
@@ -7,9 +8,9 @@ public class InteractReactionStateMachine : FiniteStateMachine
     public CheckForInteractableState CheckForInteractableState { get; protected set; }
     public TriggerInteractableState TriggerInteractableState { get; protected set; }
     
-    public InteractReactionStateMachine() : base()
+    public InteractReactionStateMachine(PlayerData data, TileGridController controller) : base()
     {
-        CheckForInteractableState = new CheckForInteractableState()
+        CheckForInteractableState = new CheckForInteractableState(data, controller)
         {
             OnComplete = HandleCheckForInteractableComplete
         };

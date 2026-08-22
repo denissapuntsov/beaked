@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
-using NewTiles;
-using Cell = NewTiles.Cell;
+using LevelStructure;
 // TODO: change to work with MVC TileGrid architecture
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,18 +8,22 @@ using UnityEngine.InputSystem;
 public class PlayerWalkState : GameState
 {
     private PlayerInputActions _actions;
+    private PlayerData _data;
+    private TileGridController _controller;
     private Tween _move;
     
-    public PlayerWalkState(PlayerInputActions actions) : base()
+    public PlayerWalkState(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
     {
         _actions = actions;
+        _data = data;
+        _controller = controller;
     }
     
     public override void Enter()
     {
         _actions.Player.Walk.performed += OnWalk;
-        var walkInput = new Vector2(Mathf.Ceil(PlayerData.Instance.walkInput.x), Mathf.Ceil(PlayerData.Instance.walkInput.y));
-        TryTileAtInput(walkInput);
+        var walkInput = new Vector2(Mathf.Ceil(_data.walkInput.x), Mathf.Ceil(_data.walkInput.y));
+        TryCellAtInput(walkInput);
     }
 
     public override void Exit()
@@ -30,22 +33,23 @@ public class PlayerWalkState : GameState
         _actions.Player.Walk.performed -= OnWalk;
     }
 
-    public void OnWalk(InputAction.CallbackContext context)
+    private void OnWalk(InputAction.CallbackContext context)
     {
-        PlayerData.Instance.walkInput = context.ReadValue<Vector2>();
+        _data.walkInput = context.ReadValue<Vector2>();
     }
     
-    private void TryTileAtInput(Vector2 input)
+    private void TryCellAtInput(Vector2 input)
     {
-        Vector3 nextTileCoordinates = input == new Vector2(1, 1) || input == new Vector2(0, 0) ? Vector3.zero : new Vector3(input.x, 0, input.y);
+        Vector3 nextCellCoordinates = input == new Vector2(1, 1) || input == new Vector2(0, 0) ? Vector3.zero : new Vector3(input.x, 0, input.y);
             
         GetRelativeRotation(input, out int yRotation);
-        PlayerData.Instance.meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        _data.meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
             
         foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
-            TileGrid.instance.GetCellAt(nextTileCoordinates + PlayerData.Instance.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
-            if (nextCell is { isAccessible: true, isSolid: true })
+            var nextCell = _controller.TryGetCellAtLocation(nextCellCoordinates + _data.CurrentCell.GridPosition + new Vector3(0, f, 0));
+            //TileGrid.instance.GetCellAt(nextTileCoordinates + _data.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
+            if (nextCell is { IsAccessible: true, IsSolid: true })
             {
                 MoveTo(nextCell);
                 return;
@@ -55,31 +59,30 @@ public class PlayerWalkState : GameState
         Complete();
     }
     
-    private void MoveTo(NewTiles.Cell cell)
+    private void MoveTo(Cell cell)
     {
-        PlayerData.Instance.AnimationState = PlayerAnimationState.Moving;
-        PlayerData.Instance.transform.SetParent(cell.occupyingElement.transform);
+        _data.AnimationState = PlayerAnimationState.Moving;
         _move?.Kill();
-        PlayerData.Instance.CurrentCell.occupyingElement.Bounce();
-        cell.isAccessible = false;
-        PopupManager.instance.HidePopup(PlayerData.Instance.gameObject);
+        cell.IsAccessible = false;
+        PopupManager.instance.HidePopup(_data.gameObject);
+        _controller.BounceCell(_data.CurrentCell);
             
-        _move = PlayerData.Instance.gameObject.transform
-            .DOJump(cell.worldPosition, 0.3f, 1, 1 / PlayerData.Instance.speed)
+        _move = _data.gameObject.transform
+            .DOJump(cell.WorldPosition, 0.3f, 1, 1 / _data.speed)
             .SetAutoKill()
-            .SetEase(PlayerData.Instance.jumpCurve)
+            .SetEase(_data.jumpCurve)
             .OnComplete(() =>
             {
-                PlayerData.Instance.CurrentCell.isAccessible = true;
-                PlayerData.Instance.CurrentCell = cell;
-                var walkInput = new Vector2(Mathf.Ceil(PlayerData.Instance.walkInput.x), Mathf.Ceil(PlayerData.Instance.walkInput.y));
+                _data.CurrentCell.IsAccessible = true;
+                _data.CurrentCell = cell;
+                var walkInput = new Vector2(Mathf.Ceil(_data.walkInput.x), Mathf.Ceil(_data.walkInput.y));
                 if (walkInput == Vector2.zero)
                 {
                     Complete();
                     return;
                 }
-                PlayerData.Instance.transform.SetParent(null);
-                TryTileAtInput(walkInput);
+                _data.transform.SetParent(null);
+                TryCellAtInput(walkInput);
             });
     }
     

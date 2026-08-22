@@ -1,25 +1,24 @@
 using System.Collections.Generic;
-using NewTiles;
+using LevelStructure;
 using UnityEngine;
 
 
 public class GameplayStateMachine : FiniteStateMachine
 {
     #region States
-    
     public PlayerStepStateMachine PlayerStepState { get; protected set; }
     public ReactionStepStateMachine ReactionStepState { get; protected set; }
     
     #endregion
     
-    public GameplayStateMachine(PlayerInputActions actions) : base()
+    public GameplayStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
     {
-        PlayerStepState = new PlayerStepStateMachine(actions)
+        PlayerStepState = new PlayerStepStateMachine(actions, data, controller)
         {
             OnComplete = HandlePlayerStepStateComplete
         };
 
-        ReactionStepState = new ReactionStepStateMachine()
+        ReactionStepState = new ReactionStepStateMachine(data, controller)
         {
             OnComplete = HandleReactionStepComplete
         };

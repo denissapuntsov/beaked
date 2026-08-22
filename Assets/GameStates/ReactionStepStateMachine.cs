@@ -1,4 +1,5 @@
 using System;
+using LevelStructure;
 using UnityEngine;
 
 public class ReactionStepStateMachine : FiniteStateMachine
@@ -8,14 +9,14 @@ public class ReactionStepStateMachine : FiniteStateMachine
         public SpeakReactionStateMachine SpeakReactionState { get; protected set; }
         public InteractReactionStateMachine InteractReactionState { get; protected set; }
         
-        public ReactionStepStateMachine() : base()
+        public ReactionStepStateMachine(PlayerData data, TileGridController controller) : base()
         {
-                SpeakReactionState = new SpeakReactionStateMachine()
+                SpeakReactionState = new SpeakReactionStateMachine(data, controller)
                 {
                         OnComplete = HandleSpeakReactionStepComplete
                 };
 
-                InteractReactionState = new InteractReactionStateMachine()
+                InteractReactionState = new InteractReactionStateMachine(data, controller)
                 {
                         OnComplete = HandleInteractReactionStateComplete
                 };

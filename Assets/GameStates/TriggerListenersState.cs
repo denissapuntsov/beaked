@@ -5,10 +5,11 @@ using UnityEngine;
 public class TriggerListenersState : GameState
 {
     public Listener[] Listeners = new Listener[4];
+    private PlayerData _data;
     
-    public TriggerListenersState() : base()
+    public TriggerListenersState(PlayerData data) : base()
     {
-        
+        _data = data;
     }
 
     public override void Enter()
@@ -16,10 +17,10 @@ public class TriggerListenersState : GameState
         foreach (var listener in Listeners)
         {
             if (!listener) continue;
-            if (listener.CheckForSound(PlayerData.Instance.currentSound))
+            if (listener.CheckForSound(_data.currentSound))
             {
                 Debug.Log(listener.gameObject);
-                listener.Trigger(PlayerData.Instance.currentSound);
+                listener.Trigger(_data.currentSound);
             }
         }
 
