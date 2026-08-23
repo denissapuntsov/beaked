@@ -11,19 +11,26 @@ namespace LevelStructure
         private TileGridView _view;
         private PlayerData _data;
         private Dictionary<Cell, GridElement> _cellToElementMap = new();
+        
+        public List<GridElement> GridElements => _view.GridElements;
 
         private void Awake()
         {
             _data = FindAnyObjectByType<PlayerData>();
         }
 
-        private void Start()
+        public void Setup()
         {
             SetupGrid();
             AssignPlayerCell();
         }
 
-        public void SetupGrid()
+        public void AnimateGridSetup(Action onComplete)
+        {
+            _view.AnimateGrid(onComplete);
+        }
+
+        private void SetupGrid()
         {
             _model = new TileGridModel();
             _view = new TileGridView();
@@ -125,9 +132,13 @@ namespace LevelStructure
                 {
                     for (int z = 0; z < gridElement.GridSize.z; z++)
                     {
-                        _cellToElementMap.Remove(
-                            _model.GridLocationToCell[gridElement.transform.position + new Vector3(x, y + 1, z)]);
-                        _model.GridLocationToCell.Remove(gridElement.transform.position + new Vector3(x, y + 1, z));
+                        var key = gridElement.transform.position + new Vector3(x, y + 1, z);
+                        if (!_model.GridLocationToCell.TryGetValue(key, out var value))
+                        {
+                            return;
+                        }
+                        _cellToElementMap.Remove(value);
+                        _model.GridLocationToCell.Remove(key);
                     }
                 }
             }

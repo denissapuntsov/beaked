@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class GameStateManager : MonoBehaviour
 {
+    [SerializeField] [InspectorName("Skip Setup animation?")] private bool isSetupSkipped = false;
     [SerializeField] private PlayerData data;
     [SerializeField] private TileGridController gridController;
     
@@ -14,7 +15,7 @@ public class GameStateManager : MonoBehaviour
     private void Awake()
     {
         _actions = new PlayerInputActions();
-        _globalStateMachine = new GlobalStateMachine(_actions, data, gridController);
+        _globalStateMachine = new GlobalStateMachine(_actions, data, gridController, isSetupSkipped);
     }
 
     private void Start()

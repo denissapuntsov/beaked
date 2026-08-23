@@ -4,14 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Listener : MonoBehaviour
+public class Listener : MonoBehaviour, IChainableAction
 {
-    public Action<Listener> OnComplete { get; set; }
+    public Action<IChainableAction> OnComplete { get; set; }
+    public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();
     
     [SerializeField] private List<Reaction> reactions = new();
     
-    private Dictionary<IReactionType, bool> _reactionCompletionMap = new();
-
     public bool CheckForSound(SoundItem sound)
     {
         foreach (var reaction in reactions)
@@ -35,27 +34,27 @@ public class Listener : MonoBehaviour
         }
     }
 
-    public void AddReaction(IReactionType reactionType)
+    public void AddReaction(IChainableAction chainableAction)
     {
-        _reactionCompletionMap.Add(reactionType, false);
-        reactionType.OnComplete += MarkReactionAsComplete;
+        ActionsCompleteMap.Add(chainableAction, false);
+        chainableAction.OnComplete += MarkReactionComplete;
     }
 
-    private void MarkReactionAsComplete(IReactionType reactionType)
+    private void MarkReactionComplete(IChainableAction chainableAction)
     {
-        _reactionCompletionMap[reactionType] = true;
+        ActionsCompleteMap[chainableAction] = true;
         CheckForCompletion();
     }
     
-    private void CheckForCompletion()
+    public void CheckForCompletion()
     {
-        if (_reactionCompletionMap.Values.Contains(false)) return;
+        if (ActionsCompleteMap.Values.Contains(false)) return;
         
-        foreach (var reactionType in _reactionCompletionMap.Keys)
+        foreach (var reactionType in ActionsCompleteMap.Keys)
         {
-            reactionType.OnComplete -= MarkReactionAsComplete;
+            reactionType.OnComplete -= MarkReactionComplete;
         }
-        _reactionCompletionMap.Clear();
+        ActionsCompleteMap.Clear();
         OnComplete?.Invoke(this);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using NewTiles;
@@ -7,7 +8,7 @@ public class TriggerListenersState : GameState
 {
     public Listener[] Listeners = new Listener[4];
     private PlayerData _data;
-    private Dictionary<Listener, bool> _listenerCompletionMap = new();
+    private readonly Dictionary<IChainableAction, bool> _listenerCompletionMap = new();
     
     public TriggerListenersState(PlayerData data) : base()
     {
@@ -27,13 +28,13 @@ public class TriggerListenersState : GameState
         }
     }
 
-    private void AddListener(Listener listener)
+    private void AddListener(IChainableAction listener)
     {
         _listenerCompletionMap.Add(listener, false);
         listener.OnComplete += MarkListenerAsComplete;
     }
 
-    private void MarkListenerAsComplete(Listener listener)
+    private void MarkListenerAsComplete(IChainableAction listener)
     {
         _listenerCompletionMap[listener] = true;
         CheckForCompletion();
