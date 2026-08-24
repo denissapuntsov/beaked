@@ -92,15 +92,19 @@ public class PlayerWalkState : GameState
         {
             case var v when v == new Vector2(0, -1):
                 yRotation = 90;
+                _data.orientation = Orientation.South;
                 break;
             case var v when v == new Vector2(0, 1):
                 yRotation = -90;
+                _data.orientation = Orientation.North;
                 break;
             case var v when v == new Vector2(-1, 0):
                 yRotation = 180;
+                _data.orientation = Orientation.West;
                 break;
             default:
                 yRotation = 0;
+                _data.orientation = Orientation.East;
                 break;
         }
     }

@@ -32,6 +32,7 @@ public class InteractReactionStateMachine : FiniteStateMachine
         if (!CheckForInteractableState.FoundInteractable)
         {
             Complete();
+            Debug.Log("nothing");
             return;
         }
         TriggerInteractableState.Interactable = CheckForInteractableState.FoundInteractable;

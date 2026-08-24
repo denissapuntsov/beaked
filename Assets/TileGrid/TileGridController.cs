@@ -132,9 +132,11 @@ namespace LevelStructure
                 {
                     for (int z = 0; z < gridElement.GridSize.z; z++)
                     {
-                        var key = gridElement.transform.position + new Vector3(x, y + 1, z);
-                        if (!_model.GridLocationToCell.TryGetValue(key, out var value))
+                        var key = gridElement.transform.position + new Vector3(x, y + 1f, z);
+                        _model.GridLocationToCell.TryGetValue(key, out var value);
+                        if (value == null)
                         {
+                            Debug.Log(gridElement.transform.position + new Vector3(x, y + 1, z));
                             return;
                         }
                         _cellToElementMap.Remove(value);
@@ -142,6 +144,26 @@ namespace LevelStructure
                     }
                 }
             }
+        }
+
+        public void AddElement(GridElement gridElement)
+        {
+            for (int x = 0; x < gridElement.GridSize.x; x++)
+            {
+                for (int z = 0; z < gridElement.GridSize.z; z++)
+                {
+                    var cellUnderneath = _model.TryGetCellAtLocation(
+                        gridElement.transform.position + new Vector3(x, 0.5f, z));
+                    
+                    if (cellUnderneath != null)
+                    {
+                        cellUnderneath.IsAccessible = false;
+                    }
+                }
+            }
+            
+            _view.GridElements.Add(gridElement);
+            AssignCells(gridElement);
         }
     }
 }

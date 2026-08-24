@@ -33,6 +33,7 @@ public class PlayerData : MonoBehaviour
         public AnimationCurve jumpCurve;
         public float speed;
         public Vector2 walkInput;
+        public Orientation orientation;
         
         #endregion
         
@@ -62,5 +63,13 @@ public enum PlayerAnimationState
     Moving,
     Speaking,
     Intro
+}
+
+public enum Orientation
+{
+    North,
+    East,
+    South,
+    West
 }
 

@@ -46,6 +46,7 @@ namespace LevelStructure
                     .SetEase(Ease.OutBack, 0.2f)
                     .OnComplete(() =>
                     {
+                        element.transform.position = startingPosition;
                         SetElementAnimationComplete(element);
                     });
             }

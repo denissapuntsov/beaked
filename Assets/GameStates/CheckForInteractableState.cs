@@ -1,3 +1,4 @@
+using System;
 using LevelStructure;
 using UnityEngine;
 
@@ -32,18 +33,25 @@ public class CheckForInteractableState : GameState
 
         private Cell GetCellInFrontOfPlayer()
         {
-                Cell cellInFront =
-                        _controller.TryGetCellAtLocation(_data.CurrentCell.GridPosition + new Vector3(1, 0, 0));
-                
-                return cellInFront;
+                var front = _data.orientation switch
+                {
+                        Orientation.North => new Vector3(0, 0, 1),
+                        Orientation.East => new Vector3(1, 0, 0),
+                        Orientation.South => new Vector3(0, 0, -1),
+                        Orientation.West => new Vector3(-1, 0, 0),
+                        _ => throw new ArgumentOutOfRangeException()
+                };
+                var foundCell = _controller.TryGetCellAtLocation(_data.CurrentCell.GridPosition + front);
+                return foundCell;
         }
 
         private Interactable FindInteractable(Cell cell)
         {
                 var foundCell = _controller.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0));
-                if (foundCell == null || !foundCell.OccupyingElement) return null;
+                var element = _controller.GetElementFromCell(foundCell);
+                if (foundCell == null || !element) return null;
                 
-                var interactable = foundCell.OccupyingElement.gameObject.GetComponent<Interactable>();
+                var interactable = element.GetComponent<Interactable>();
                 return interactable ? interactable : null;
         }
 }
