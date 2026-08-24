@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3416748437984204114, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcfe4ecb8f2ace48a17e4a2fba4909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSetupSkipped: 1
+  isSetupSkipped: 0
   data: {fileID: 1623517026}
   gridController: {fileID: 1421833017}
 --- !u!4 &849549312
@@ -2042,7 +2042,6 @@ MonoBehaviour:
   - {x: 0, y: 2.5, z: 11}
   - {x: 0, y: 3, z: 12}
   - {x: 0, y: 2.5, z: 13}
-  - {x: 0, y: 4.5, z: 14}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

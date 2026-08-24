@@ -163,7 +163,23 @@ namespace LevelStructure
             }
             
             _view.GridElements.Add(gridElement);
-            AssignCells(gridElement);
+            for (int x = 0; x < gridElement.GridSize.x; x++)
+            {
+                for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
+                {
+                    for (int z = 0; z < gridElement.GridSize.z; z++)
+                    {
+                        var newCell = new Cell
+                        {
+                            GridPosition = gridElement.transform.position + new Vector3(x, y + 1, z),
+                        };
+                        newCell.IsAccessible = _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) == null;
+                        
+                        _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
+                        _cellToElementMap.Add(newCell, gridElement);
+                    }
+                }
+            }
         }
     }
 }

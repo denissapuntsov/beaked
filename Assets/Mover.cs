@@ -10,7 +10,7 @@ using GridElement = LevelStructure.GridElement;
 public class Mover : MonoBehaviour, IChainableAction
 {
     [SerializeField] private float speed = 1;
-    [SerializeField] private List<Vector3> path = new List<Vector3>();
+    public List<Vector3> path = new List<Vector3>();
     private TileGridController _controller;
     private GridElement _gridElement;
     
