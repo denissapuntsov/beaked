@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using LevelStructure;
-using NewTiles;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
+using UnityEngine.Events;
 using GridElement = LevelStructure.GridElement;
 
-public class Mover : MonoBehaviour, IChainableAction
+public class Mover : ChainableAction
 {
     [SerializeField] private float speed = 1;
     public List<Vector3> path = new List<Vector3>();
@@ -15,10 +14,12 @@ public class Mover : MonoBehaviour, IChainableAction
     private GridElement _gridElement;
     
     private int _currentPathIndex = 0;
-    public Action<IChainableAction> OnComplete { get; set; }
+    /*public Action<IChainableAction> OnComplete { get; set; }
     
-    public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();
+    public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();*/
 
+    [SerializeField] private UnityEvent<ChainableAction> onCompletePath;
+    
     private void Start()
     {
         _controller = FindAnyObjectByType<TileGridController>();
@@ -38,26 +39,18 @@ public class Mover : MonoBehaviour, IChainableAction
         return true;
     }
 
-    public void AddReaction(IChainableAction reaction) { }
-
-    public void Move(IChainableAction source)
+    public void Move(ChainableAction source)
     {
-        source.AddReaction(this);
+        source.AddAction(this);
         
         if (!CheckPathForValidity())
         {
-            OnComplete?.Invoke(this);
+            Complete();
             return;
         }
         
         _controller.RemoveElement(_gridElement);
         MoveTo(_currentPathIndex);
-        
-        /*transform.DOJump(
-            transform.position, 
-            0.5f,
-            1,
-            1 / speed).onComplete += () => OnComplete?.Invoke(this);*/
     }
 
     private void MoveTo(int index)
@@ -74,20 +67,20 @@ public class Mover : MonoBehaviour, IChainableAction
 
         move.onComplete = CheckForPathComplete;
     }
-
+    
     private void CheckForPathComplete()
     {
         if (_currentPathIndex == path.Count - 1)
         {
             _controller.AddElement(_gridElement);
-            OnComplete?.Invoke(this);
+            onCompletePath?.Invoke(this);
+            Complete();
             return;
         }
 
         _currentPathIndex++;
         MoveTo(_currentPathIndex);
     }
-
     private void OnDrawGizmosSelected()
     {
         for (int i = 0; i < path.Count; i++)
@@ -99,4 +92,32 @@ public class Mover : MonoBehaviour, IChainableAction
             Gizmos.DrawCube(path[i] - new Vector3(0, 0.3f, 0), new Vector3(0.6f, 0.15f, 0.6f));
         }
     }
+    
+    /*public void AddAction(IChainableAction action)
+    {
+        ActionsCompleteMap.Add(action, false);
+        action.OnComplete += MarkActionAsComplete;
+    }
+
+    public void MarkActionAsComplete(IChainableAction action)
+    {
+        ActionsCompleteMap[action] = true;
+        Complete();
+    }
+    
+    public void Complete()
+    {
+        if (ActionsCompleteMap.ContainsValue(false))
+        {
+            return;
+        }
+        
+        foreach (var action in ActionsCompleteMap.Keys)
+        {
+            action.OnComplete -= MarkActionAsComplete;
+        }
+        ActionsCompleteMap.Clear();
+        
+        OnComplete?.Invoke(this);
+    }*/
 }

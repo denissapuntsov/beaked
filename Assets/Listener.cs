@@ -4,11 +4,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Listener : MonoBehaviour, IChainableAction
+public class Listener : ChainableAction
 {
-    public Action<IChainableAction> OnComplete { get; set; }
-    public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();
-    
     [SerializeField] private List<Reaction> reactions = new();
     
     public bool CheckForSound(SoundItem sound)
@@ -32,30 +29,6 @@ public class Listener : MonoBehaviour, IChainableAction
             reaction.Response.Invoke(this);
             break;
         }
-    }
-
-    public void AddReaction(IChainableAction chainableAction)
-    {
-        ActionsCompleteMap.Add(chainableAction, false);
-        chainableAction.OnComplete += MarkReactionComplete;
-    }
-
-    private void MarkReactionComplete(IChainableAction chainableAction)
-    {
-        ActionsCompleteMap[chainableAction] = true;
-        CheckForCompletion();
-    }
-    
-    public void CheckForCompletion()
-    {
-        if (ActionsCompleteMap.Values.Contains(false)) return;
-        
-        foreach (var reactionType in ActionsCompleteMap.Keys)
-        {
-            reactionType.OnComplete -= MarkReactionComplete;
-        }
-        ActionsCompleteMap.Clear();
-        OnComplete?.Invoke(this);
     }
 }
 

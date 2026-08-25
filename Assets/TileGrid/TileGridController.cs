@@ -177,7 +177,6 @@ namespace LevelStructure
                         };
                         bool isCellAboveOccupied =
                             _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
-                        //Debug.Log(newCell.GridPosition + new Vector3(0, 0.5f, 0) + ": " + isCellAboveOccupied);
                         newCell.IsAccessible = !isCellAboveOccupied;
                         
                         _model.GridLocationToCell.Add(newCell.GridPosition, newCell);

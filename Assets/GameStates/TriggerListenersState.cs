@@ -8,7 +8,7 @@ public class TriggerListenersState : GameState
 {
     public Listener[] Listeners = new Listener[4];
     private PlayerData _data;
-    private readonly Dictionary<IChainableAction, bool> _listenerCompletionMap = new();
+    private readonly Dictionary<ChainableAction, bool> _listenerCompletionMap = new();
     
     public TriggerListenersState(PlayerData data) : base()
     {
@@ -28,13 +28,13 @@ public class TriggerListenersState : GameState
         }
     }
 
-    private void AddListener(IChainableAction listener)
+    private void AddListener(ChainableAction listener)
     {
         _listenerCompletionMap.Add(listener, false);
         listener.OnComplete += MarkListenerAsComplete;
     }
 
-    private void MarkListenerAsComplete(IChainableAction listener)
+    private void MarkListenerAsComplete(ChainableAction listener)
     {
         _listenerCompletionMap[listener] = true;
         CheckForCompletion();
