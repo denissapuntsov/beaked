@@ -43,17 +43,16 @@ public class PlayerWalkState : GameState
         Vector3 nextCellCoordinates = input == new Vector2(1, 1) || input == new Vector2(0, 0) ? Vector3.zero : new Vector3(input.x, 0, input.y);
             
         GetRelativeRotation(input, out int yRotation);
+        
         _data.meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
             
         foreach (float f in new List<float> { 0, -0.5f, 0.5f })
         {
             var nextCell = _controller.TryGetCellAtLocation(nextCellCoordinates + _data.CurrentCell.GridPosition + new Vector3(0, f, 0));
             //TileGrid.instance.GetCellAt(nextTileCoordinates + _data.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
-            if (nextCell is { IsAccessible: true, IsSolid: true })
-            {
-                MoveTo(nextCell);
-                return;
-            }
+            if (nextCell is not { IsAccessible: true, IsSolid: true }) continue;
+            MoveTo(nextCell);
+            return;
         }
 
         Complete();

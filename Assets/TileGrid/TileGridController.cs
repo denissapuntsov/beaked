@@ -10,7 +10,7 @@ namespace LevelStructure
         private TileGridModel _model;
         private TileGridView _view;
         private PlayerData _data;
-        private Dictionary<Cell, GridElement> _cellToElementMap = new();
+        public Dictionary<Cell, GridElement> CellToElementMap { get; private set; } = new();
         
         public List<GridElement> GridElements => _view.GridElements;
 
@@ -32,6 +32,7 @@ namespace LevelStructure
 
         private void SetupGrid()
         {
+            CellToElementMap = new Dictionary<Cell, GridElement>();
             _model = new TileGridModel();
             _view = new TileGridView();
 
@@ -50,6 +51,7 @@ namespace LevelStructure
 
         private void AssignPlayerCell()
         {
+            if (!_data) return;
             _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position + new Vector3(0, 0.5f, 0));
         }
 
@@ -69,7 +71,7 @@ namespace LevelStructure
                             IsAccessible = false,
                         };
                         _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
-                        _cellToElementMap.Add(newCell, gridElement);
+                        CellToElementMap.Add(newCell, gridElement);
                     }
                 }
             }
@@ -77,7 +79,7 @@ namespace LevelStructure
 
         private void UnlockExposedCells()
         {
-            foreach (var cell in _cellToElementMap.Keys)
+            foreach (var cell in CellToElementMap.Keys)
             {
                 cell.IsAccessible = _model.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0)) == null;
             }
@@ -87,7 +89,7 @@ namespace LevelStructure
 
         public GridElement GetElementFromCell(Cell cell)
         {
-            _cellToElementMap.TryGetValue(cell, out var element);
+            CellToElementMap.TryGetValue(cell, out var element);
             return element;
         }
 
@@ -105,7 +107,7 @@ namespace LevelStructure
 
             foreach (var cellInRow in cellRow)
             {
-                _view.BounceGridElement(_cellToElementMap[cellInRow]);
+                _view.BounceGridElement(CellToElementMap[cellInRow]);
             }
         }
 
@@ -136,10 +138,9 @@ namespace LevelStructure
                         _model.GridLocationToCell.TryGetValue(key, out var value);
                         if (value == null)
                         {
-                            Debug.Log(gridElement.transform.position + new Vector3(x, y + 1, z));
                             return;
                         }
-                        _cellToElementMap.Remove(value);
+                        CellToElementMap.Remove(value);
                         _model.GridLocationToCell.Remove(key);
                     }
                 }
@@ -165,18 +166,22 @@ namespace LevelStructure
             _view.GridElements.Add(gridElement);
             for (int x = 0; x < gridElement.GridSize.x; x++)
             {
-                for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
+                for (float y = gridElement.GridSize.y; y > 0; y -= 0.5f)
                 {
                     for (int z = 0; z < gridElement.GridSize.z; z++)
                     {
+                        Debug.Log(x + " " +  y + " " + z);
                         var newCell = new Cell
                         {
-                            GridPosition = gridElement.transform.position + new Vector3(x, y + 1, z),
+                            GridPosition = gridElement.transform.position + new Vector3(x, y + 0.5f, z),
                         };
-                        newCell.IsAccessible = _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) == null;
+                        bool isCellAboveOccupied =
+                            _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
+                        //Debug.Log(newCell.GridPosition + new Vector3(0, 0.5f, 0) + ": " + isCellAboveOccupied);
+                        newCell.IsAccessible = !isCellAboveOccupied;
                         
                         _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
-                        _cellToElementMap.Add(newCell, gridElement);
+                        CellToElementMap.Add(newCell, gridElement);
                     }
                 }
             }
