@@ -55,6 +55,8 @@ public class Mover : ChainableAction
 
     private void MoveTo(int index)
     {
+        var distance = Vector3.Distance(transform.position, path[index]);
+        
         Tween move;
         if (Mathf.Abs(path[index].y - 0.5f - transform.position.y) > 0.1f)
         {
@@ -62,9 +64,10 @@ public class Mover : ChainableAction
         }
         else
         {
-            move = transform.DOMove(path[index] - new Vector3(0, 0.5f, 0), 0.5f);
+            move = transform.DOMove(path[index] - new Vector3(0, 0.5f, 0), distance / speed);
         }
 
+        move.SetEase(Ease.Linear);
         move.onComplete = CheckForPathComplete;
     }
     
