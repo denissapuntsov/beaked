@@ -11,6 +11,7 @@ namespace LevelStructure
     {
         [field: SerializeField] public Vector3 GridSize { get; private set; } = Vector3.one;
         [field: SerializeField] public bool IsSolid { get; private set; } = true;
+		[field: SerializeField] public bool IsClimbable { get; private set; } = true;
 
         public Action<GridElement> OnDestroyOrDisable;
 

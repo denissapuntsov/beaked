@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace LevelStructure
@@ -11,8 +10,6 @@ namespace LevelStructure
         private TileGridView _view;
         private PlayerData _data;
         public Dictionary<Cell, GridElement> CellToElementMap { get; private set; } = new();
-        
-        public List<GridElement> GridElements => _view.GridElements;
 
         private void Awake()
         {
@@ -36,53 +33,20 @@ namespace LevelStructure
             _model = new TileGridModel();
             _view = new TileGridView();
 
-            _view.GridElements = FindObjectsByType<GridElement>(
+            var gridElements = FindObjectsByType<GridElement>(
                 FindObjectsInactive.Exclude,
-                FindObjectsSortMode.None).ToList();
+                FindObjectsSortMode.None);
 
-            foreach (var gridElement in _view.GridElements)
+            foreach (var gridElement in gridElements)
             {
-                gridElement.OnDestroyOrDisable = RemoveElement;
-                AssignCells(gridElement);
+                AddElement(gridElement);
             }
-
-            UnlockExposedCells();
         }
 
         private void AssignPlayerCell()
         {
             if (!_data) return;
             _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position + new Vector3(0, 0.5f, 0));
-        }
-
-        private void AssignCells(GridElement gridElement)
-        {
-            //var cells = new List<Cell>();
-            for (int x = 0; x < gridElement.GridSize.x; x++)
-            {
-                for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
-                {
-                    // I don't like using a triple for loop, yeesh
-                    for (int z = 0; z < gridElement.GridSize.z; z++)
-                    {
-                        var newCell = new Cell()
-                        {
-                            GridPosition = gridElement.transform.position + new Vector3(x, y + 1, z),
-                            IsAccessible = false,
-                        };
-                        _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
-                        CellToElementMap.Add(newCell, gridElement);
-                    }
-                }
-            }
-        }
-
-        private void UnlockExposedCells()
-        {
-            foreach (var cell in CellToElementMap.Keys)
-            {
-                cell.IsAccessible = _model.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0)) == null;
-            }
         }
 
         public Cell TryGetCellAtLocation(Vector3 location) => _model.TryGetCellAtLocation(location);
@@ -149,6 +113,30 @@ namespace LevelStructure
 
         public void AddElement(GridElement gridElement)
         {
+            _view.GridElements.Add(gridElement);
+            for (int x = 0; x < gridElement.GridSize.x; x++)
+            {
+                for (float y = gridElement.GridSize.y; y > 0; y -= 0.5f)
+                {
+                    for (int z = 0; z < gridElement.GridSize.z; z++)
+                    {
+                        var newCell = new Cell
+                        {
+                            GridPosition = gridElement.transform.position + new Vector3(x, y + 0.5f, z),
+                        };
+                        bool isCellAboveOccupied =
+                            _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
+                        newCell.IsAccessible =
+                            y == gridElement.GridSize.y 
+                                ? !isCellAboveOccupied && gridElement.IsClimbable 
+                                : !isCellAboveOccupied;
+                        
+                        _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
+                        CellToElementMap.Add(newCell, gridElement);
+                    }
+                }
+            }
+            
             for (int x = 0; x < gridElement.GridSize.x; x++)
             {
                 for (int z = 0; z < gridElement.GridSize.z; z++)
@@ -163,27 +151,7 @@ namespace LevelStructure
                 }
             }
             
-            _view.GridElements.Add(gridElement);
-            for (int x = 0; x < gridElement.GridSize.x; x++)
-            {
-                for (float y = gridElement.GridSize.y; y > 0; y -= 0.5f)
-                {
-                    for (int z = 0; z < gridElement.GridSize.z; z++)
-                    {
-                        Debug.Log(x + " " +  y + " " + z);
-                        var newCell = new Cell
-                        {
-                            GridPosition = gridElement.transform.position + new Vector3(x, y + 0.5f, z),
-                        };
-                        bool isCellAboveOccupied =
-                            _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
-                        newCell.IsAccessible = !isCellAboveOccupied;
-                        
-                        _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
-                        CellToElementMap.Add(newCell, gridElement);
-                    }
-                }
-            }
+            gridElement.OnDestroyOrDisable = RemoveElement;
         }
     }
 }

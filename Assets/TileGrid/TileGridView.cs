@@ -8,7 +8,7 @@ namespace LevelStructure
 {
     public class TileGridView
     {
-        public List<GridElement> GridElements;
+        public List<GridElement> GridElements = new();
 
         private Dictionary<GridElement, bool> _elementsAnimationCompleteMap = new();
 
