@@ -7,7 +7,6 @@ namespace LevelStructure
     public class Cell
     {
         public Vector3 GridPosition;
-        public Vector3 WorldPosition => GridPosition - new Vector3(0, 0.5f, 0);
 
         [HideInInspector] public GridElement OccupyingElement;
         public bool IsAccessible;

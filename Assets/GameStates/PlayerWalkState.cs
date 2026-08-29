@@ -67,7 +67,7 @@ public class PlayerWalkState : GameState
         _controller.BounceCell(_data.CurrentCell);
             
         _move = _data.gameObject.transform
-            .DOJump(cell.WorldPosition, 0.3f, 1, 1 / _data.speed)
+            .DOJump(cell.GridPosition, 0.3f, 1, 1 / _data.speed)
             .SetAutoKill()
             .SetEase(_data.jumpCurve)
             .OnComplete(() =>

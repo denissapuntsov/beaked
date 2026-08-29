@@ -22,7 +22,7 @@ public class TileGridControllerEditor : Editor
                 cell.IsAccessible 
                 ? Color.yellow
                 : Color.red;
-            Handles.DrawWireCube(cell.GridPosition - new Vector3(0, 0.75f, 0), new Vector3(0.8f, 0.3f, 0.8f));
+            Handles.DrawWireCube(cell.GridPosition - new Vector3(0, 0.25f, 0), new Vector3(0.8f, 0.3f, 0.8f));
         }
     }
 

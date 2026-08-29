@@ -46,7 +46,7 @@ namespace LevelStructure
         private void AssignPlayerCell()
         {
             if (!_data) return;
-            _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position + new Vector3(0, 0.5f, 0));
+            _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position);
         }
 
         public Cell TryGetCellAtLocation(Vector3 location) => _model.TryGetCellAtLocation(location);
@@ -124,7 +124,7 @@ namespace LevelStructure
                     {
                         var newCell = new Cell
                         {
-                            GridPosition = startingPosition + new Vector3(x, y + 0.5f, z),
+                            GridPosition = startingPosition + new Vector3(x, y, z),
                         };
                         bool isCellAboveOccupied =
                             _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
@@ -144,7 +144,7 @@ namespace LevelStructure
                 for (int z = 0; z < gridElement.GridSize.z; z++)
                 {
                     var cellUnderneath = _model.TryGetCellAtLocation(
-                        gridElement.transform.position + new Vector3(x, 0.5f, z));
+                        gridElement.transform.position);
                     
                     if (cellUnderneath != null)
                     {
