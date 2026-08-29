@@ -30,7 +30,7 @@ public class Mover : ChainableAction
     {
         foreach (var location in path)
         {
-            var cell = _controller.TryGetCellAtLocation(location);
+            var cell = _controller.TryGetCellAtLocation(location - _gridElement.GridOffset);
             if (cell != null) continue;
             Debug.LogError($"No cell found at {location}!");
             return false;
@@ -92,7 +92,7 @@ public class Mover : ChainableAction
             Gizmos.DrawLine(i == 0 ? transform.position : path[i-1] - new Vector3(0, 0.3f, 0), path[i] - new Vector3(0, 0.3f, 0));
             
             Gizmos.color = i < path.Count - 1 ? Color.yellow : Color.red;
-            Gizmos.DrawCube(path[i] - new Vector3(0, 0.3f, 0), new Vector3(0.6f, 0.15f, 0.6f));
+            Gizmos.DrawCube(path[i] - new Vector3(0, 0.3f, 0), new Vector3(0.6f, 0.15f, 0.6f * GetComponent<GridElement>().GridSize.z));
         }
     }
     

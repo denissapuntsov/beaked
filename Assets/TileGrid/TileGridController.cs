@@ -114,6 +114,8 @@ namespace LevelStructure
         public void AddElement(GridElement gridElement)
         {
             _view.GridElements.Add(gridElement);
+            Vector3 startingPosition = gridElement.transform.position - gridElement.GridOffset;
+            
             for (int x = 0; x < gridElement.GridSize.x; x++)
             {
                 for (float y = gridElement.GridSize.y; y > 0; y -= 0.5f)
@@ -122,7 +124,7 @@ namespace LevelStructure
                     {
                         var newCell = new Cell
                         {
-                            GridPosition = gridElement.transform.position + new Vector3(x, y + 0.5f, z),
+                            GridPosition = startingPosition + new Vector3(x, y + 0.5f, z),
                         };
                         bool isCellAboveOccupied =
                             _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;

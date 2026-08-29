@@ -12,6 +12,8 @@ namespace LevelStructure
         [field: SerializeField] public Vector3 GridSize { get; private set; } = Vector3.one;
         [field: SerializeField] public bool IsSolid { get; private set; } = true;
 		[field: SerializeField] public bool IsClimbable { get; private set; } = true;
+        
+        public Vector3 GridOffset => new ((GridSize.x - 1) / 2, (GridSize.y - 1) / 2, (GridSize.z - 1) / 2);
 
         public Action<GridElement> OnDestroyOrDisable;
 
