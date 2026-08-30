@@ -26,7 +26,8 @@ public class Mover : ChainableAction
         _gridElement = GetComponent<GridElement>();
     }
 
-    private bool CheckPathForValidity()
+    // TODO: falls apart due to rounding errors, fix
+    /*private bool CheckPathForValidity()
     {
         foreach (var location in path)
         {
@@ -37,17 +38,17 @@ public class Mover : ChainableAction
         }
 
         return true;
-    }
+    }*/
 
     public void Move(ChainableAction source)
     {
         source.AddAction(this);
         
-        if (!CheckPathForValidity())
+        /*if (!CheckPathForValidity())
         {
             Complete();
             return;
-        }
+        }*/
         
         _controller.RemoveElement(_gridElement);
         MoveTo(_currentPathIndex);
@@ -58,13 +59,13 @@ public class Mover : ChainableAction
         var distance = Vector3.Distance(transform.position, path[index]);
         
         Tween move;
-        if (Mathf.Abs(path[index].y - 0.5f - transform.position.y) > 0.1f)
+        if (Mathf.Abs(path[index].y - transform.position.y) > 0.1f)
         {
-            move = transform.DOJump(path[index] - new Vector3(0, 0.5f, 0), 0.5f, 1, 1 / speed);
+            move = transform.DOJump(path[index], 0.5f, 1, 1 / speed);
         }
         else
         {
-            move = transform.DOMove(path[index] - new Vector3(0, 0.5f, 0), distance / speed);
+            move = transform.DOMove(path[index], distance / speed);
         }
 
         move.SetEase(Ease.Linear);
@@ -89,10 +90,10 @@ public class Mover : ChainableAction
         for (int i = 0; i < path.Count; i++)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(i == 0 ? transform.position : path[i-1] - new Vector3(0, 0.3f, 0), path[i] - new Vector3(0, 0.3f, 0));
+            Gizmos.DrawLine((i == 0 ? transform.position : path[i-1]) + new Vector3(0, 0.2f, 0), path[i] + new Vector3(0, 0.2f, 0));
             
             Gizmos.color = i < path.Count - 1 ? Color.yellow : Color.red;
-            Gizmos.DrawCube(path[i] - new Vector3(0, 0.3f, 0), new Vector3(0.6f, 0.15f, 0.6f * GetComponent<GridElement>().GridSize.z));
+            Gizmos.DrawCube(path[i] + new Vector3(0, 0.2f, 0), new Vector3(0.6f, 0.15f, 0.6f * GetComponent<GridElement>().GridSize.z));
         }
     }
     

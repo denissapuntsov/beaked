@@ -35,7 +35,7 @@ namespace LevelStructure
 
             var gridElements = FindObjectsByType<GridElement>(
                 FindObjectsInactive.Exclude,
-                FindObjectsSortMode.None);
+                FindObjectsSortMode.InstanceID);
 
             foreach (var gridElement in gridElements)
             {
@@ -77,78 +77,69 @@ namespace LevelStructure
 
         public void RemoveElement(GridElement gridElement)
         {
-            for (int x = 0; x < gridElement.GridSize.x; x++)
+            foreach (var cell in gridElement.cells)
             {
-                for (int z = 0; z < gridElement.GridSize.z; z++)
-                {
-                    var cellUnderneath = _model.TryGetCellAtLocation(
-                        gridElement.transform.position + new Vector3(x, 0.5f, z));
+                var cellUnderneath = _model.TryGetCellAtLocation(cell.GridPosition - new Vector3(0, 0.5f, 0));
                     
-                    if (cellUnderneath != null)
-                    {
-                        cellUnderneath.IsAccessible = true;
-                    }
+                if (cellUnderneath != null)
+                {
+                    cellUnderneath.IsAccessible = true;
                 }
+                
+                CellToElementMap.Remove(cell);
+                _model.GridLocationToCell.Remove(cell.GridPosition);
             }
             
             _view.GridElements.Remove(gridElement);
-            for (int x = 0; x < gridElement.GridSize.x; x++)
-            {
-                for (float y = 0; y < gridElement.GridSize.y; y += 0.5f)
-                {
-                    for (int z = 0; z < gridElement.GridSize.z; z++)
-                    {
-                        var key = gridElement.transform.position + new Vector3(x, y + 1f, z);
-                        _model.GridLocationToCell.TryGetValue(key, out var value);
-                        if (value == null)
-                        {
-                            return;
-                        }
-                        CellToElementMap.Remove(value);
-                        _model.GridLocationToCell.Remove(key);
-                    }
-                }
-            }
         }
 
         public void AddElement(GridElement gridElement)
         {
+            gridElement.cells.Clear();
             _view.GridElements.Add(gridElement);
             Vector3 startingPosition = gridElement.transform.position - gridElement.GridOffset;
             
-            for (int x = 0; x < gridElement.GridSize.x; x++)
+            List<Cell> cells = new List<Cell>();
+            
+            for (var x = 0f; x < gridElement.GridSize.x; x++)
             {
-                for (float y = gridElement.GridSize.y; y > 0; y -= 0.5f)
+                for (var y = gridElement.GridSize.y; y > 0; y -= 0.5f)
                 {
-                    for (int z = 0; z < gridElement.GridSize.z; z++)
+                    for (var z = 0f; z < gridElement.GridSize.z; z++)
                     {
+                        var gridPosition = 
+                            startingPosition +
+                            x * gridElement.transform.right +
+                            y * gridElement.transform.up +
+                            z * gridElement.transform.forward;
+                        
+                        var roundedPosition = new Vector3(
+                            (float)Math.Round(gridPosition.x, 2),
+                            (float)Math.Round(gridPosition.y, 2),
+                            (float)Math.Round(gridPosition.z, 2));
+                        
                         var newCell = new Cell
                         {
-                            GridPosition = startingPosition + new Vector3(x, y, z),
+                            GridPosition = roundedPosition,
+                            IsAccessible = gridElement.IsClimbable
                         };
-                        bool isCellAboveOccupied =
-                            _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0)) != null;
-                        newCell.IsAccessible =
-                            y == gridElement.GridSize.y 
-                                ? !isCellAboveOccupied && gridElement.IsClimbable 
-                                : !isCellAboveOccupied;
+                        cells.Add(newCell);
+                        gridElement.cells.Add(newCell);
+
+                        var cellAbove = _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0));
+                        if (cellAbove != null && gridElement.IsClimbable)
+                        {
+                            newCell.IsAccessible = false;
+                        }
+                        
+                        var cellBelow = _model.TryGetCellAtLocation(newCell.GridPosition - new Vector3(0, 0.5f, 0));
+                        if (cellBelow != null)
+                        {
+                            cellBelow.IsAccessible = false;
+                        }
                         
                         _model.GridLocationToCell.Add(newCell.GridPosition, newCell);
                         CellToElementMap.Add(newCell, gridElement);
-                    }
-                }
-            }
-            
-            for (int x = 0; x < gridElement.GridSize.x; x++)
-            {
-                for (int z = 0; z < gridElement.GridSize.z; z++)
-                {
-                    var cellUnderneath = _model.TryGetCellAtLocation(
-                        gridElement.transform.position);
-                    
-                    if (cellUnderneath != null)
-                    {
-                        cellUnderneath.IsAccessible = false;
                     }
                 }
             }
