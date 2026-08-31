@@ -9,11 +9,11 @@ using GridElement = LevelStructure.GridElement;
 public class Mover : ChainableAction
 {
     [SerializeField] private float speed = 1;
-    public List<Vector3> path = new List<Vector3>();
+    public List<Vector3> path = new();
     private TileGridController _controller;
     private GridElement _gridElement;
     
-    private int _currentPathIndex = 0;
+    private int _currentPathIndex;
     /*public Action<IChainableAction> OnComplete { get; set; }
     
     public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();*/
@@ -44,6 +44,7 @@ public class Mover : ChainableAction
     {
         source.AddAction(this);
         
+        // TODO: see above
         /*if (!CheckPathForValidity())
         {
             Complete();
@@ -96,32 +97,4 @@ public class Mover : ChainableAction
             Gizmos.DrawCube(path[i] + new Vector3(0, 0.2f, 0), new Vector3(0.6f, 0.15f, 0.6f * GetComponent<GridElement>().GridSize.z));
         }
     }
-    
-    /*public void AddAction(IChainableAction action)
-    {
-        ActionsCompleteMap.Add(action, false);
-        action.OnComplete += MarkActionAsComplete;
-    }
-
-    public void MarkActionAsComplete(IChainableAction action)
-    {
-        ActionsCompleteMap[action] = true;
-        Complete();
-    }
-    
-    public void Complete()
-    {
-        if (ActionsCompleteMap.ContainsValue(false))
-        {
-            return;
-        }
-        
-        foreach (var action in ActionsCompleteMap.Keys)
-        {
-            action.OnComplete -= MarkActionAsComplete;
-        }
-        ActionsCompleteMap.Clear();
-        
-        OnComplete?.Invoke(this);
-    }*/
 }

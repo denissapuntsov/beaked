@@ -79,6 +79,8 @@ namespace LevelStructure
         {
             foreach (var cell in gridElement.cells)
             {
+                cell.IsAccessible = true;
+                
                 var cellUnderneath = _model.TryGetCellAtLocation(cell.GridPosition - new Vector3(0, 0.5f, 0));
                     
                 if (cellUnderneath != null)
@@ -95,7 +97,7 @@ namespace LevelStructure
 
         public void AddElement(GridElement gridElement)
         {
-            gridElement.cells.Clear();
+            gridElement.cells?.Clear();
             _view.GridElements.Add(gridElement);
             Vector3 startingPosition = gridElement.transform.position - gridElement.GridOffset;
             
