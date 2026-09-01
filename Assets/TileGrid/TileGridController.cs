@@ -99,7 +99,7 @@ namespace LevelStructure
 
         public void AddElement(GridElement gridElement)
         {
-            gridElement.cells?.Clear();
+            gridElement.cells = new List<Cell>();
             _view.GridElements.Add(gridElement);
             Vector3 startingPosition = gridElement.transform.position - gridElement.GridOffset;
             

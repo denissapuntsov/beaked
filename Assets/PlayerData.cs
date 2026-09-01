@@ -35,6 +35,7 @@ public class PlayerData : MonoBehaviour
         public float speed;
         public Vector2 walkInput;
         public Orientation orientation;
+        public GridElement gridElement;
         
         #endregion
         

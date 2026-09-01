@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using LevelStructure;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(GridElement))]
 public class Speaker : ChainableAction
 {
-    [SerializeField] private Vector3 cellLocation;
-    
     private List<Listener> _neighboringListeners;
     private GridElement _element;
     private TileGridController _gridController;
+    private PlayerData _playerData;
     
     [SerializeField] private SoundItem sound;
 
@@ -22,34 +22,68 @@ public class Speaker : ChainableAction
     public void Speak(ChainableAction source)
     {
         source.AddAction(this);
-        _neighboringListeners = FindListeners(GetNeighboringCells());
+        
+        var neighboringCells = GetNeighboringCells();
+        if (CheckForPlayer(neighboringCells))
+        {
+            _playerData.currentSound = sound;
+        }
+        
+        _neighboringListeners = FindListeners(neighboringCells);
         
         if (_neighboringListeners == null || _neighboringListeners.Count == 0)
         {
             Debug.Log("no listeners");
             Complete();
-            SoundManager.instance.PlaySound(sound, gameObject, OnSoundOver);
-            return;
         }
         SoundManager.instance.PlaySound(sound, gameObject, HandleSoundComplete);
     }
 
-    private void OnSoundOver(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
+    private bool CheckForPlayer(List<Cell> cells)
     {
-        
+        foreach (var cell in cells)
+        {
+            if (_gridController.GetElementFromCell(cell).GetComponent<PlayerData>())
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
     {
+        if (_neighboringListeners.Count == 0) return;
         TriggerReactionsInNeighbors();
     }
 
     private List<Cell> GetNeighboringCells()
     {
-        return new List<Cell>
+        var offsets = new Vector3[]
         {
-            _gridController.TryGetCellAtLocation(cellLocation) // new Vector3(0, 3, 10)
+            new (0, 0, 1),
+            new (0, 0, -1),
+            new (1, 0, 0),
+            new (-1, 0, 0)
         };
+
+        var neighboringCells = new List<Cell>();
+        var cells = _element.cells;
+        foreach (var cell in cells)
+        {
+            foreach (var offset in offsets)
+            {
+                var neighbor = _gridController.TryGetCellAtLocation(cell.GridPosition + offset);
+                if (neighbor == null || cells.Contains(neighbor))
+                {
+                    continue;
+                }
+                neighboringCells.Add(neighbor);
+            }
+        }
+
+        return neighboringCells;
     }
     
     private List<Listener> FindListeners(List<Cell> cellsAroundElement)
@@ -59,7 +93,7 @@ public class Speaker : ChainableAction
         foreach (var cell in cellsAroundElement)
         {
             var listener = _gridController.GetElementFromCell(cell)?.GetComponent<Listener>();
-            if (listener)
+            if (listener && !listeners.Contains(listener))
             {
                 listeners.Add(listener);
             }
