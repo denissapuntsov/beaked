@@ -27,7 +27,7 @@ public class PlayerStepStateMachine : FiniteStateMachine
                         OnComplete = HandlePlayerSpeakStateComplete
                 };
 
-                PlayerInteractState = new PlayerInteractState()
+                PlayerInteractState = new PlayerInteractState(data)
                 {
                         OnComplete = HandlePlayerInteractStateComplete
                 };

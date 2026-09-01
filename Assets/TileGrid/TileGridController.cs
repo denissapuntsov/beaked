@@ -46,13 +46,15 @@ namespace LevelStructure
         private void AssignPlayerCell()
         {
             if (!_data) return;
-            _data.CurrentCell = TryGetCellAtLocation(_data.gameObject.transform.position);
+            var playerCell = TryGetCellAtLocation(_data.gameObject.transform.position);
+            _data.CurrentCell = playerCell;
         }
 
         public Cell TryGetCellAtLocation(Vector3 location) => _model.TryGetCellAtLocation(location);
 
         public GridElement GetElementFromCell(Cell cell)
         {
+            if (cell == null) return null;
             CellToElementMap.TryGetValue(cell, out var element);
             return element;
         }

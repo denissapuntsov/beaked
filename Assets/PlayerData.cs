@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using LevelStructure;
 using UnityEngine;
 
-
+[SelectionBase]
 public class PlayerData : MonoBehaviour
 {
     #region Interactions
@@ -22,6 +22,7 @@ public class PlayerData : MonoBehaviour
             {
                 currentCell.IsAccessible = true;
                 currentCell = value;
+                /*Debug.Log(value);*/
                 currentCell.IsAccessible = false;
             }
         }
@@ -50,11 +51,6 @@ public class PlayerData : MonoBehaviour
     }
         
     #endregion
-
-    private void Start()
-    { 
-        
-    }
 }
 
 public enum PlayerAnimationState
@@ -62,6 +58,7 @@ public enum PlayerAnimationState
     Idle,
     Moving,
     Speaking,
+    Interacting,
     Intro
 }
 

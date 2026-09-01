@@ -14,9 +14,6 @@ public class Mover : ChainableAction
     private GridElement _gridElement;
     
     private int _currentPathIndex;
-    /*public Action<IChainableAction> OnComplete { get; set; }
-    
-    public Dictionary<IChainableAction, bool> ActionsCompleteMap { get; set; } = new();*/
 
     [SerializeField] private UnityEvent<ChainableAction> onCompletePath;
     

@@ -10,6 +10,7 @@ public class ChainableAction : MonoBehaviour
 
     public void AddAction(ChainableAction action)
     {
+        if (ActionsCompleteMap.ContainsKey(action)) return;
         ActionsCompleteMap.Add(action, false);
         action.OnComplete += MarkActionAsComplete;
     }

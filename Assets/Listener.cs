@@ -20,6 +20,12 @@ public class Listener : ChainableAction
 
         return false;
     }
+
+    public void Trigger(ChainableAction source, SoundItem sound)
+    {
+        source.AddAction(this);
+        Trigger(sound);
+    }
     
     public void Trigger(SoundItem sound)
     {
@@ -36,5 +42,5 @@ public class Listener : ChainableAction
 public class Reaction
 {
     public SoundItem SoundItem;
-    public UnityEvent<Listener> Response;
+    public UnityEvent<ChainableAction> Response;
 }
