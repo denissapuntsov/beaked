@@ -87,7 +87,7 @@ public class AkSoundEngineController
 #if !(AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES)
 		AkBankManager.DoUnloadBanks();
 #elif WWISE_ADDRESSABLES_24_1_OR_LATER
-		if (AkAddressableBankManager.Instance != null) ;
+		if (AkAddressableBankManager.Instance != null)
 		{
 			AkAddressableBankManager.Instance.DoUnloadBank();
 		}
@@ -150,6 +150,10 @@ public class AkSoundEngineController
 			if (!UnityEditor.EditorApplication.isPlaying)
 			{
 				OnEnableEditorListener(akInitializer.gameObject);
+			}
+			if (AkUnitySoundEngineInitialization.Instance.ShouldKeepSoundEngineEnabled())
+			{
+				return;
 			}
 			if (AkUnitySoundEngineInitialization.Instance.ResetSoundEngine(UnityEngine.Application.isPlaying || UnityEditor.BuildPipeline.isBuildingPlayer))
 			{

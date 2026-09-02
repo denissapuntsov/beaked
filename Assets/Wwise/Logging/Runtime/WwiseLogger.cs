@@ -16,47 +16,41 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2026 Audiokinetic Inc.
 *******************************************************************************/
 
+using System.Diagnostics;
+
 namespace AK.Wwise.Unity.Logging
 {
-    public class WwiseLogger
+    /// <summary>
+    /// The logging class for the Wwise Unity Integration plugin.
+    /// Messages will be logged/swallowed according to the log level set in <see cref="WwiseLoggerSettings"/>.
+    ///
+    /// Log calls are stripped out entirely in release builds.
+    /// To re-enable logging in a release build, add the WWISE_ENABLE_LOGS_IN_RELEASE scripting define.
+    /// </summary>
+    public static class WwiseLogger
     {
         private const string WwiseUnityMessagePrefix = "WwiseUnity: ";
 
-        private static WwiseLogger _msInstance;
+        #region Deprecation Strings
 
-        private WwiseLogger()
-        {
-            if (_msInstance == null)
-            {
-                _msInstance = this;
-            }
-        }
+        private const string DeprecationNotice = "This functionality is deprecated and will be removed in a future major release.";
+        #endregion
 
-        /// <summary>
-        /// Get the AkLogger singleton
-        /// </summary>
-        public static WwiseLogger Instance
-        {
-            get { return _msInstance ??= new WwiseLogger(); }
-        }
+        private static LogLevel s_logLevel = LogLevel.Log;
 
-        private LogLevel logLevel
+        [UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+        public static void RefreshLogLevel()
         {
-            get => WwiseLoggerSettings.Instance.LogLevel;
-        }
-
-        ~WwiseLogger()
-        {
-            if (_msInstance == this)
-            {
-                _msInstance = null;
-            }
+            s_logLevel = WwiseLoggerSettings.Instance.LogLevel;
         }
 
         /// <summary>
         /// Log a WwiseUnity error message.
         /// </summary>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void Error(string message)
         {
             Log(LogLevel.Error, message);
@@ -66,6 +60,9 @@ namespace AK.Wwise.Unity.Logging
         /// Log a WwiseUnity warning message.
         /// </summary>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void Warning(string message)
         {
             Log(LogLevel.Warning, message);
@@ -75,6 +72,9 @@ namespace AK.Wwise.Unity.Logging
         /// Log a WwiseUnity message.
         /// </summary>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void Log(string message)
         {
             Log(LogLevel.Log, message);
@@ -84,15 +84,21 @@ namespace AK.Wwise.Unity.Logging
         /// Log a WwiseUnity message.
         /// </summary>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void Verbose(string message)
         {
             Log(LogLevel.Verbose, message);
         }
-        
+
         /// <summary>
         /// Log a WwiseUnity very verbose message.
         /// </summary>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void VeryVerbose(string message)
         {
             Log(LogLevel.VeryVerbose, message);
@@ -103,6 +109,10 @@ namespace AK.Wwise.Unity.Logging
         /// </summary>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [System.Obsolete(DeprecationNotice + " Use LogFormat(LogLevel.Error, format, args) instead.")]
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void ErrorFormat(string format, params object[] args)
         {
             LogFormat(LogLevel.Error, format, args);
@@ -113,6 +123,10 @@ namespace AK.Wwise.Unity.Logging
         /// </summary>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [System.Obsolete(DeprecationNotice + " Use LogFormat(LogLevel.Warning, format, args) instead.")]
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void WarningFormat(string format, params object[] args)
         {
             LogFormat(LogLevel.Warning, format, args);
@@ -123,26 +137,38 @@ namespace AK.Wwise.Unity.Logging
         /// </summary>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [System.Obsolete(DeprecationNotice + " Use LogFormat(LogLevel.Log, format, args) instead.")]
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void LogFormat(string format, params object[] args)
         {
             LogFormat(LogLevel.Log, format, args);
         }
-        
+
         /// <summary>
         /// Log a formatted WwiseUnity verbose message.
         /// </summary>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [System.Obsolete(DeprecationNotice + " Use LogFormat(LogLevel.Log, LogLevel.Verbose, format, args) instead.")]
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void VerboseFormat(string format, params object[] args)
         {
             LogFormat(LogLevel.Verbose, format, args);
         }
-        
+
         /// <summary>
         /// Log a formatted WwiseUnity very verbose message.
         /// </summary>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [System.Obsolete(DeprecationNotice + " Use LogFormat(LogLevel.Log, LogLevel.VeryVerbose, format, args) instead.")]
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void VeryVerboseFormat(string format, params object[] args)
         {
             LogFormat(LogLevel.VeryVerbose, format, args);
@@ -153,10 +179,12 @@ namespace AK.Wwise.Unity.Logging
         /// </summary>
         /// <param name="logLevel">Log verbosity</param>
         /// <param name="message">Message to log</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void Log(LogLevel logLevel, string message)
         {
-#if (DEVELOPMENT_BUILD || UNITY_EDITOR) || !WWISE_SILENCE_LOGS_IN_RELEASE
-            if (Instance.logLevel >= logLevel)
+            if (s_logLevel >= logLevel)
             {
                 switch (logLevel)
                 {
@@ -179,42 +207,344 @@ namespace AK.Wwise.Unity.Logging
                         break;
                 }
             }
-#endif
         }
 
         /// <summary>
-        /// Log a formatted WwiseUnity message.
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// This is a fallback for when the number args exceeds the generic versions' number of args.
         /// </summary>
         /// <param name="logLevel">Log verbosity</param>
         /// <param name="format">Formatting string</param>
         /// <param name="args">Formatting arguments</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
         public static void LogFormat(LogLevel logLevel, string format, params object[] args)
         {
-#if (DEVELOPMENT_BUILD || UNITY_EDITOR) || !WWISE_SILENCE_LOGS_IN_RELEASE
-            if (Instance.logLevel >= logLevel)
+            if (s_logLevel >= logLevel)
             {
-                switch (logLevel)
-                {
-                    case LogLevel.None:
-                        break;
-                    case LogLevel.Error:
-                        UnityEngine.Debug.LogErrorFormat(WwiseUnityMessagePrefix + "(ERROR) "+ format, args);
-                        break;
-                    case LogLevel.Warning:
-                        UnityEngine.Debug.LogWarningFormat(WwiseUnityMessagePrefix + "(WARNING) "+ format, args);
-                        break;
-                    case LogLevel.Log:
-                        UnityEngine.Debug.LogFormat(WwiseUnityMessagePrefix + "(LOG) "+ format, args);
-                        break;
-                    case LogLevel.Verbose:
-                        UnityEngine.Debug.LogFormat(WwiseUnityMessagePrefix + "(VERBOSE) "+ format, args);
-                        break;
-                    case LogLevel.VeryVerbose:
-                        UnityEngine.Debug.LogFormat(WwiseUnityMessagePrefix + "(VERYVERBOSE) "+ format, args);
-                        break;
-                }
+                LogToUnity(logLevel, format, args);
             }
-#endif
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1>(LogLevel logLevel, string format, T1 arg1)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2>(LogLevel logLevel, string format, T1 arg1, T2 arg2)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        /// <param name="arg8">8th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7, T8>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        /// <param name="arg8">8th arg</param>
+        /// <param name="arg9">9th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        /// <param name="arg8">8th arg</param>
+        /// <param name="arg9">9th arg</param>
+        /// <param name="arg10">10th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        /// <param name="arg8">8th arg</param>
+        /// <param name="arg9">9th arg</param>
+        /// <param name="arg10">10th arg</param>
+        /// <param name="arg11">11th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
+            }
+        }
+
+        /// <summary>
+        /// Log a formatted WwiseUnity message, using the Unity logger.
+        /// Messages are prefixed with "WwiseUnity: "
+        /// Uses the same formatting conventions as Unity.
+        /// </summary>
+        /// <param name="logLevel">Log verbosity</param>
+        /// <param name="format">Formatting string</param>
+        /// <param name="arg1">1st arg</param>
+        /// <param name="arg2">2nd arg</param>
+        /// <param name="arg3">3rd arg</param>
+        /// <param name="arg4">4th arg</param>
+        /// <param name="arg5">5th arg</param>
+        /// <param name="arg6">6th arg</param>
+        /// <param name="arg7">7th arg</param>
+        /// <param name="arg8">8th arg</param>
+        /// <param name="arg9">9th arg</param>
+        /// <param name="arg10">10th arg</param>
+        /// <param name="arg11">11th arg</param>
+        /// <param name="arg12">12th arg</param>
+        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_EDITOR")]
+        [Conditional("WWISE_ENABLE_LOGS_IN_RELEASE")]
+        public static void LogFormat<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(LogLevel logLevel, string format, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12)
+        {
+            if (s_logLevel >= logLevel)
+            {
+                LogToUnity(logLevel, format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
+            }
+        }
+
+        private static void LogToUnity(LogLevel logLevel, string format, params object[] args)
+        {
+            switch (logLevel)
+            {
+                case LogLevel.None:
+                    break;
+                case LogLevel.Error:
+                    UnityEngine.Debug.LogErrorFormat(WwiseUnityMessagePrefix + "(ERROR) " + format, args);
+                    break;
+                case LogLevel.Warning:
+                    UnityEngine.Debug.LogWarningFormat(WwiseUnityMessagePrefix + "(WARNING) " + format, args);
+                    break;
+                case LogLevel.Log:
+                    UnityEngine.Debug.LogFormat(WwiseUnityMessagePrefix + "(LOG) " + format, args);
+                    break;
+                case LogLevel.Verbose:
+                    UnityEngine.Debug.LogFormat( WwiseUnityMessagePrefix + "(VERBOSE) " + format, args);
+                    break;
+                case LogLevel.VeryVerbose:
+                    UnityEngine.Debug.LogFormat(WwiseUnityMessagePrefix + "(VERYVERBOSE) " + format, args);
+                    break;
+            }
         }
     }
 }

@@ -295,13 +295,13 @@ public class WwiseSetupWizard
 			// migration loop, we need to get a valid array of MonoBehaviours again, because it might
 			// have been invalidated by the call to MigrateObject. We then migrate the objects that
 			// need migration by making sure their InstanceID is in the list of unmigrated MonoBehaviours.
-			var instanceIds = new System.Collections.Generic.List<int>();
+			var instanceIds = new System.Collections.Generic.List<ulong>();
 			foreach (var obj in objects)
 			{
 				if (obj == null)
 					continue;
 
-				var id = obj.GetInstanceID();
+				var id = AkUnitySoundEngine.GetAkGameObjectID(obj);
 				if (!instanceIds.Contains(id))
 					instanceIds.Add(id);
 			}
@@ -309,8 +309,14 @@ public class WwiseSetupWizard
 			for (; instanceIds.Count > 0; instanceIds.RemoveAt(0))
 			{
 				var id = instanceIds[0];
-				var obj = UnityEditor.EditorUtility.InstanceIDToObject(id);
-				if (obj && obj.GetInstanceID() == id)
+#if UNITY_6000_4_OR_NEWER
+				var obj = UnityEditor.EditorUtility.EntityIdToObject(EntityId.FromULong(id));
+#elif UNITY_6000_3_OR_NEWER
+				var obj = UnityEditor.EditorUtility.EntityIdToObject((int)id);
+#else
+				var obj = UnityEditor.EditorUtility.InstanceIDToObject((int)id);
+#endif
+				if (obj && AkUnitySoundEngine.GetAkGameObjectID(obj) == id)
 				{
 					MigrateObject(obj);
 				}
@@ -415,13 +421,13 @@ public class WwiseSetupWizard
 			// migration loop, we need to get a valid array of MonoBehaviours again, because it might
 			// have been invalidated by the call to MigrateObject. We then migrate the objects that
 			// need migration by making sure their InstanceID is in the list of unmigrated MonoBehaviours.
-			var instanceIds = new System.Collections.Generic.List<int>();
+			var instanceIds = new System.Collections.Generic.List<ulong>();
 			foreach (var obj in objects)
 			{
 				if (obj == null)
 					continue;
 
-				var id = obj.GetInstanceID();
+				var id = AkUnitySoundEngine.GetAkGameObjectID(obj);
 				if (!instanceIds.Contains(id))
 					instanceIds.Add(id);
 			}
@@ -429,8 +435,14 @@ public class WwiseSetupWizard
 			for (; instanceIds.Count > 0; instanceIds.RemoveAt(0))
 			{
 				var id = instanceIds[0];
-				var obj = UnityEditor.EditorUtility.InstanceIDToObject(id);
-				if (obj && obj.GetInstanceID() == id)
+#if UNITY_6000_4_OR_NEWER
+				var obj = UnityEditor.EditorUtility.EntityIdToObject(EntityId.FromULong(id));
+#elif UNITY_6000_3_OR_NEWER
+				var obj = UnityEditor.EditorUtility.EntityIdToObject((int)id);
+#else
+				var obj = UnityEditor.EditorUtility.InstanceIDToObject((int)id);
+#endif
+				if (obj && AkUnitySoundEngine.GetAkGameObjectID(obj) == id)
 				{
 					MigrateObject(obj);
 				}

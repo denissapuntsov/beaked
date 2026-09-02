@@ -48,16 +48,16 @@ public class AkWwiseBrowser : UnityEditor.EditorWindow
 	[UnityEditor.MenuItem("Window/Wwise Browser", false, (int)AkWwiseWindowOrder.WwisePicker)]
 	public static void InitBrowserWindow()
 	{
-		AkWwiseBrowser window = (AkWwiseBrowser)EditorWindow.GetWindow(typeof(AkWwiseBrowser));
-
-		if (window == null)
+		if (!EditorWindow.HasOpenInstances<AkWwiseBrowser>())
 		{
-			window = GetWindow<AkWwiseBrowser>("Wwise Browser", true,typeof(EditorWindow).Assembly.GetType("UnityEditor.ConsoleWindow"));
+			AkWwiseBrowser window = (AkWwiseBrowser)EditorWindow.GetWindow(typeof(AkWwiseBrowser));
+			
+			if (window != null)
+			{
+				LoadWindowTexture(window);
+				window.Show();
+			}
 		}
-
-		LoadWindowTexture(window);
-
-		window.Show();
 	}
 
 	private static void LoadWindowTexture(AkWwiseBrowser window)
@@ -66,16 +66,7 @@ public class AkWwiseBrowser : UnityEditor.EditorWindow
 
 		if (originalIcon != null)
 		{
-			int newWidth = 32;
-			int newHeight = 32;
-        
-			Texture2D scaledIcon = ScaleTexture(originalIcon, newWidth, newHeight); 
-
-			window.titleContent = new GUIContent("Wwise Browser", scaledIcon);
-		}
-		else
-		{
-			window.titleContent = new GUIContent("Wwise Browser");
+			window.titleContent = new GUIContent("Wwise Browser", originalIcon);
 		}
 	}
 
@@ -100,10 +91,13 @@ public class AkWwiseBrowser : UnityEditor.EditorWindow
 			m_treeViewState = new WwiseTreeViewState();
 		}
 		
-		AkWwiseBrowser window = (AkWwiseBrowser)EditorWindow.GetWindow(typeof(AkWwiseBrowser));
-		if (window != null)
+		if (EditorWindow.HasOpenInstances<AkWwiseBrowser>())
 		{
-			LoadWindowTexture(window);
+			AkWwiseBrowser window = (AkWwiseBrowser)EditorWindow.GetWindow(typeof(AkWwiseBrowser), false, null, false);
+			if (window != null)
+			{
+				LoadWindowTexture(window);
+			}
 		}
 
 		var multiColumnHeaderState = AkWwiseTreeView.CreateDefaultMultiColumnHeaderState();

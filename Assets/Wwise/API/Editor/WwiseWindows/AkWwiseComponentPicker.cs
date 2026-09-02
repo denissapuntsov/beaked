@@ -139,8 +139,6 @@ public class AkWwiseComponentPicker : UnityEditor.EditorWindow
 			m_WwiseObjectReference.objectReferenceValue = reference;
 			m_serializedObject.ApplyModifiedProperties();
 		}
-		
-		AkWwiseBrowser.SelectInWwiseBrowser(in_element.objectGuid);
 
 		m_close = true;
 	}

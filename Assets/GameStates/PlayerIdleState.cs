@@ -1,9 +1,5 @@
-using System;
-using NewTiles;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.UI;
-using UnityEngine.UIElements;
 
 public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 {

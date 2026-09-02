@@ -4778,7 +4778,7 @@ public partial class AkUnitySoundEngine {
   public static AKRESULT StopProfilerCapture() { return (AKRESULT)AkUnitySoundEnginePINVOKE.CSharp_StopProfilerCapture(); }
 
   ///  Sets the offline rendering frame time in seconds.
-  ///  When offline rendering is enabled, every call to \ref RenderAudio() will generate sample data as if this much time has elapsed. If the frame time argument is less than or equal to zero, every call to RenderAudio() will generate one audio buffer.
+  ///  When offline rendering is enabled, every call to \ref AK::SoundEngine::RenderAudio() will generate sample data as if this much time has elapsed. If the frame time argument is less than or equal to zero, every call to RenderAudio() will generate one audio buffer.
   ///
   /// <seealso cref="\ref goingfurther_offlinerendering"/>
   /// <returns>Always returns AK_Success</returns> 
@@ -4929,7 +4929,7 @@ public partial class AkUnitySoundEngine {
 
   ///  This function should be called to put the sound engine in background mode, where audio isn't processed anymore. This needs to be called if the console has a background mode or some suspended state.
   ///  Call ``WakeupFromSuspend`` when your application receives the message from the OS that the process is back in foreground.
-  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref RenderAudio() is called.
+  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref AK::SoundEngine::RenderAudio is called.
   ///  It is recommended to match the **in_bRenderAnyway** parameter with the behavior of the rest of your game:
   ///  if your game still runs in background and you must keep some kind of coherent state between the audio engine and game, then allow rendering.
   ///  If you want to minimize CPU when in background, then don't allow rendering and never call RenderAudio from the game.
@@ -4942,7 +4942,7 @@ public partial class AkUnitySoundEngine {
 
   ///  This function should be called to put the sound engine in background mode, where audio isn't processed anymore. This needs to be called if the console has a background mode or some suspended state.
   ///  Call ``WakeupFromSuspend`` when your application receives the message from the OS that the process is back in foreground.
-  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref RenderAudio() is called.
+  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref AK::SoundEngine::RenderAudio is called.
   ///  It is recommended to match the **in_bRenderAnyway** parameter with the behavior of the rest of your game:
   ///  if your game still runs in background and you must keep some kind of coherent state between the audio engine and game, then allow rendering.
   ///  If you want to minimize CPU when in background, then don't allow rendering and never call RenderAudio from the game.
@@ -4954,7 +4954,7 @@ public partial class AkUnitySoundEngine {
 
   ///  This function should be called to put the sound engine in background mode, where audio isn't processed anymore. This needs to be called if the console has a background mode or some suspended state.
   ///  Call ``WakeupFromSuspend`` when your application receives the message from the OS that the process is back in foreground.
-  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref RenderAudio() is called.
+  ///  When suspended, the sound engine will process API messages (like PostEvent and SetSwitch) only when \ref AK::SoundEngine::RenderAudio is called.
   ///  It is recommended to match the **in_bRenderAnyway** parameter with the behavior of the rest of your game:
   ///  if your game still runs in background and you must keep some kind of coherent state between the audio engine and game, then allow rendering.
   ///  If you want to minimize CPU when in background, then don't allow rendering and never call RenderAudio from the game.

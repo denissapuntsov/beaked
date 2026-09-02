@@ -259,7 +259,7 @@ public class AkEvent : AkDragDropTriggerHandler
 			data.FindPropertyRelative("GameObject").objectReferenceValue = oldCallbackData.callbackGameObj[i];
 			data.FindPropertyRelative("FunctionName").stringValue = oldCallbackData.callbackFunc[i];
 			data.FindPropertyRelative("Flags.value").intValue = oldCallbackData.callbackFlags[i];
-			WwiseLogger.Log("Migrated Callback for function \"" + oldCallbackData.callbackFunc[i] + "\" on <" + oldCallbackData.callbackGameObj[i] + "> with flags <" + (AkCallbackType)oldCallbackData.callbackFlags[i] + ">.");
+			WwiseLogger.LogFormat(LogLevel.Log, "Migrated Callback for function \"{0}\" on <{1}> with flags <{2}>.", oldCallbackData.callbackFunc[i], oldCallbackData.callbackGameObj[i], (AkCallbackType)oldCallbackData.callbackFlags[i]);
 		}
 
 		return true;

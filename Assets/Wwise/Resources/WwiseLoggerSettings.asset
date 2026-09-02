@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cde145586563eaf4e9ddd44c74d1e593, type: 3}
   m_Name: WwiseLoggerSettings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.Logging::AK.Wwise.Unity.Logging.WwiseLoggerSettings
   m_logLevel: 3
