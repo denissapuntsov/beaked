@@ -17,6 +17,7 @@ public class Speaker : ChainableAction
     {
         _element = GetComponent<GridElement>();
         _gridController = FindAnyObjectByType<TileGridController>();
+        _playerData = FindAnyObjectByType<PlayerData>();
     }
 
     public void Speak(ChainableAction source)

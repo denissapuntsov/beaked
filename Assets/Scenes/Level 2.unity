@@ -183,7 +183,6 @@ MonoBehaviour:
   <IsClimbable>k__BackingField: 0
   cells:
   - GridPosition: {x: 1, y: 4, z: 14}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
 --- !u!4 &18061984
@@ -291,19 +290,15 @@ MonoBehaviour:
   <IsClimbable>k__BackingField: 1
   cells:
   - GridPosition: {x: -0, y: 3, z: 10}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 1
     IsSolid: 1
   - GridPosition: {x: 0, y: 3, z: 9}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 1
     IsSolid: 1
   - GridPosition: {x: -0, y: 2.5, z: 10}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
   - GridPosition: {x: 0, y: 2.5, z: 9}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
 --- !u!4 &56702374
@@ -420,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a45cbc915716041a3685647680858a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellLocation: {x: 0, y: 3, z: 6}
   sound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
 --- !u!1 &112301918
 GameObject:
@@ -763,88 +757,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
---- !u!1001 &338062070
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2028825102106453177}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.93409
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.91445
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.036000013
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1439730007547781893, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4f1ef37ae953c484bbc5d5e4049147e5, type: 2}
-    - target: {fileID: 919132149155446097, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: m_Name
-      value: car
-      objectReference: {fileID: 0}
-    - target: {fileID: 7071182760956848314, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 764f33c471a0c6344823c0d5100f17cb, type: 2}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
---- !u!4 &338062071 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0bb9a9fcd7ea7b44bbee9daceff6783c, type: 3}
-  m_PrefabInstance: {fileID: 338062070}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &353887785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1009,11 +921,9 @@ MonoBehaviour:
   <IsClimbable>k__BackingField: 0
   cells:
   - GridPosition: {x: 0, y: 3, z: 6}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
   - GridPosition: {x: 0, y: 2.5, z: 6}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
 --- !u!114 &650481625
@@ -1709,11 +1619,9 @@ MonoBehaviour:
   <IsClimbable>k__BackingField: 0
   cells:
   - GridPosition: {x: -1, y: 3, z: 6}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
   - GridPosition: {x: -1, y: 2.5, z: 6}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
 --- !u!4 &1129043558
@@ -2169,19 +2077,15 @@ MonoBehaviour:
   <IsClimbable>k__BackingField: 1
   cells:
   - GridPosition: {x: -0, y: 3, z: 12}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 1
     IsSolid: 1
   - GridPosition: {x: 0, y: 3, z: 11}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 1
     IsSolid: 1
   - GridPosition: {x: -0, y: 2.5, z: 12}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
   - GridPosition: {x: 0, y: 2.5, z: 11}
-    OccupyingElement: {fileID: 0}
     IsAccessible: 0
     IsSolid: 1
 --- !u!4 &1380036877
@@ -2212,7 +2116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a45cbc915716041a3685647680858a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellLocation: {x: 0, y: 3, z: 10}
   sound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
 --- !u!114 &1380036879
 MonoBehaviour:
@@ -3233,121 +3136,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2028825102106453177
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3027737422092706604}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5, y: 2, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 338062071}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &3027737422092706604
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2028825102106453177}
-  - component: {fileID: 3027737422092706605}
-  - component: {fileID: 3027737422092706606}
-  - component: {fileID: 3027737422092706607}
-  m_Layer: 0
-  m_Name: Listener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &3027737422092706605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3027737422092706604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5235827124a404da871a8fd7f32bc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <GridSize>k__BackingField: {x: 1, y: 1, z: 2}
-  <IsSolid>k__BackingField: 1
-  <IsClimbable>k__BackingField: 1
-  cells:
-  - GridPosition: {x: -0, y: 3, z: 10}
-    OccupyingElement: {fileID: 0}
-    IsAccessible: 1
-    IsSolid: 1
-  - GridPosition: {x: 1, y: 3, z: 10}
-    OccupyingElement: {fileID: 0}
-    IsAccessible: 1
-    IsSolid: 1
-  - GridPosition: {x: -0, y: 2.5, z: 10}
-    OccupyingElement: {fileID: 0}
-    IsAccessible: 0
-    IsSolid: 1
-  - GridPosition: {x: 1, y: 2.5, z: 10}
-    OccupyingElement: {fileID: 0}
-    IsAccessible: 0
-    IsSolid: 1
---- !u!114 &3027737422092706606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3027737422092706604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2f8b7919260e2f4396c951c357508c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reactions:
-  - SoundItem: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
-    Response:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 3027737422092706607}
-          m_TargetAssemblyTypeName: Mover, Assembly-CSharp
-          m_MethodName: Move
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &3027737422092706607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3027737422092706604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c6a3ea12624a04ba97b561158d396a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  path:
-  - {x: 0, y: 2, z: 8.5}
-  - {x: 0, y: 2, z: 6.5}
-  onCompletePath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3363,7 +3151,6 @@ SceneRoots:
   - {fileID: 2097108111}
   - {fileID: 1243103769}
   - {fileID: 1421833018}
-  - {fileID: 2028825102106453177}
   - {fileID: 1380036877}
   - {fileID: 56702374}
   - {fileID: 1714651326}
