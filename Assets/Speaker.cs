@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using LevelStructure;
 using TMPro;
@@ -12,6 +13,7 @@ public class Speaker : ChainableAction
     private PlayerData _playerData;
     
     [SerializeField] private SoundItem sound;
+    public Action<GridElement> OnSoundStarted, OnSoundComplete;
 
     private void Start()
     {
@@ -37,6 +39,7 @@ public class Speaker : ChainableAction
             Debug.Log("no listeners");
             Complete();
         }
+        
         SoundManager.instance.PlaySound(sound, gameObject, HandleSoundComplete);
     }
 

@@ -1,49 +1,54 @@
 using System;
 using System.Collections.Generic;
-using NewTiles;
+using DG.Tweening;
+using JetBrains.Annotations;
 using UnityEngine;
+using LevelStructure;
+using UnityEngine.UIElements;
 
 public class PopupManager : MonoBehaviour
 {
-    public static PopupManager instance;
-    
     [SerializeField] private GameObject popupPrefab;
-    
-    private Dictionary<GameObject, Popup> _popups = new();
+    private Dictionary<GridElement, GameObject> _elementToPopupMap = new();
+
+    public static PopupManager instance;
 
     private void Awake()
     {
-        if (instance == null) instance = this;
-        else if (instance != this) Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void ShowPopup(GameObject parent, string text)
+    public void RegisterPopup(GridElement origin)
     {
-        GameObject newPopup;
-        if (!_popups.TryGetValue(parent, out var popupComponent))
+        var panel = origin.gameObject.GetComponentInChildren<PanelRenderer>();
+        if (panel)
         {
-            newPopup = Instantiate(popupPrefab.gameObject, transform, true);
-            _popups.Add(parent, newPopup.GetComponent<Popup>());
+            _elementToPopupMap.TryAdd(origin, panel.gameObject);
         }
-        else
-        {
-            newPopup = popupComponent.gameObject;
-        }
-        
-        var rectTransform = newPopup.GetComponent<RectTransform>();
-        var screenPointPosition = Camera.main.WorldToScreenPoint(parent.transform.position);
-            
-        rectTransform.position = screenPointPosition + new Vector3(0, Screen.height * 0.1f, 0);
-        rectTransform.localScale = Vector3.one;
-        
-        _popups[parent].SetActive(true);
-        _popups[parent].Text = text;
     }
 
-    public void HidePopup(GameObject parent)
+    public void OpenPopup(GridElement origin)
     {
-        if (!_popups.ContainsKey(parent)) return;
-        _popups[parent].gameObject.SetActive(false);
+        _elementToPopupMap.TryGetValue(origin, out var popup);
+        if (!popup) return;
+        
+        popup.transform.localPosition = Vector3.up * (origin.GridSize.y + 0.25f);
+        
+        popup.transform.DOScale(new Vector3(0.75f, 0.75f, 0.75f), 0.1f);
+    }
+
+    public void ClosePopup(GridElement origin)
+    {
+        _elementToPopupMap.TryGetValue(origin, out var popup);
+        if (!popup) return;
+        
+        popup.transform.DOScale(Vector3.zero, 0.1f);
     }
 }

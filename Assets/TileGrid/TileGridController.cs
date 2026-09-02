@@ -34,8 +34,7 @@ namespace LevelStructure
             _view = new TileGridView();
 
             var gridElements = FindObjectsByType<GridElement>(
-                FindObjectsInactive.Exclude,
-                FindObjectsSortMode.InstanceID);
+                FindObjectsInactive.Exclude);
 
             foreach (var gridElement in gridElements)
             {

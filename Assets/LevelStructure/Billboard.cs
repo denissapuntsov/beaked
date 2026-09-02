@@ -10,8 +10,15 @@ public class Billboard : MonoBehaviour
         _mainCameraTransform = Camera.main?.transform;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        transform.LookAt(transform.position + _mainCameraTransform.forward);
+        Vector3 direction = transform.position - _mainCameraTransform.position;
+
+        if (direction.sqrMagnitude < 0.0001f)
+        {
+            return;
+        }
+        
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 }

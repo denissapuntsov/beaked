@@ -65,7 +65,6 @@ public class PlayerWalkState : GameState
         
         _controller.RemoveElement(_data.gridElement);
         cell.IsAccessible = false;
-        PopupManager.instance.HidePopup(_data.gameObject);
         _controller.BounceCell(_data.CurrentCell);
             
         _move = _data.gameObject.transform

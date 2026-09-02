@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -192,3 +193,4 @@ public class AStar : MonoBehaviour
 
     public static float Manhattan(Tile start, Tile goal) => Mathf.Abs(start.GridPosition.x - goal.GridPosition.x) + Mathf.Abs(start.GridPosition.z -  goal.GridPosition.z);
 }
+*/
