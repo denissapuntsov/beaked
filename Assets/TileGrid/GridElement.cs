@@ -22,20 +22,11 @@ namespace LevelStructure
         public Action<GridElement> OnDestroyOrDisable;
         public Action<GridElement> OnChangeSize;
         
-        private PopupManager _popupManager;
-
-        private void Start()
-        {
-            _popupManager = FindAnyObjectByType<PopupManager>();
-        }
 
         private void OnDisable()
         {
             OnDestroyOrDisable?.Invoke(this);
         }
-
-        public void OpenPopup() => _popupManager.OpenPopup(this);
-        public void ClosePopup() => _popupManager.ClosePopup(this);
 
         public void SetGridSize(int x = 0, float y = 0f, int z = 0)
         {
