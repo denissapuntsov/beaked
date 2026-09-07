@@ -12,7 +12,9 @@ public class Speaker : ChainableAction
     private TileGridController _gridController;
     private PlayerData _playerData;
     
-    [SerializeField] private SoundItem sound;
+    [SerializeField] private SoundItem nativeSound;
+    private SoundItem _transmittedSound;
+    
     public Action<GridElement> OnSoundStarted, OnSoundComplete;
 
     private void Start()
@@ -22,6 +24,22 @@ public class Speaker : ChainableAction
         _playerData = FindAnyObjectByType<PlayerData>();
     }
 
+    public void Transmit(ChainableAction source, SoundItem newSound)
+    {
+        source.AddAction(this);
+        
+        var neighboringCells = GetNeighboringCells();
+        _neighboringListeners = FindListeners(neighboringCells);
+        if (_neighboringListeners == null || _neighboringListeners.Count == 0)
+        {
+            Debug.Log("no listeners");
+            Complete();
+        }
+        
+        _transmittedSound = newSound;
+        SoundManager.instance.PlaySound(newSound, gameObject, HandleSoundComplete);
+    }
+
     public void Speak(ChainableAction source)
     {
         source.AddAction(this);
@@ -29,7 +47,7 @@ public class Speaker : ChainableAction
         var neighboringCells = GetNeighboringCells();
         if (CheckForPlayer(neighboringCells))
         {
-            _playerData.currentSound = sound;
+            _playerData.currentSound = nativeSound;
         }
         
         _neighboringListeners = FindListeners(neighboringCells);
@@ -39,8 +57,9 @@ public class Speaker : ChainableAction
             Debug.Log("no listeners");
             Complete();
         }
-        
-        SoundManager.instance.PlaySound(sound, gameObject, HandleSoundComplete);
+
+        _transmittedSound = nativeSound;
+        SoundManager.instance.PlaySound(nativeSound, gameObject, HandleSoundComplete);
     }
 
     private bool CheckForPlayer(List<Cell> cells)
@@ -58,8 +77,12 @@ public class Speaker : ChainableAction
 
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
     {
-        if (_neighboringListeners.Count == 0) return;
-        TriggerReactionsInNeighbors();
+        if (_neighboringListeners.Count == 0)
+        {
+            Debug.Log("No neighboring listeners!");
+            return;
+        }
+        TriggerReactionsInNeighbors(_transmittedSound);
     }
 
     private List<Cell> GetNeighboringCells()
@@ -106,14 +129,14 @@ public class Speaker : ChainableAction
         return listeners;
     }
 
-    private void TriggerReactionsInNeighbors()
+    private void TriggerReactionsInNeighbors(SoundItem transmittedSound)
     {
         foreach (var listener in _neighboringListeners)
         {
             if (!listener) continue;
-            if (listener.CheckForSound(sound))
+            if (listener.CheckForSound(transmittedSound))
             {
-                listener.Trigger(this, sound);
+                listener.Trigger(this, transmittedSound);
                 AddAction(listener);
             }
         }

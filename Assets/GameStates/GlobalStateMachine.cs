@@ -6,6 +6,8 @@ public class GlobalStateMachine : FiniteStateMachine
       public SetupStateMachine SetupStateMachine { get; private set; }
       public GameplayStateMachine GameplayStateMachine { get; protected set; }
       
+      public LevelCompleteStateMachine LevelCompleteStateMachine { get; protected set; }
+      
       public GlobalStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller, bool isSetupSkipped)
       {
             SetupStateMachine = new SetupStateMachine(controller, isSetupSkipped)
@@ -14,6 +16,8 @@ public class GlobalStateMachine : FiniteStateMachine
             };
             
             GameplayStateMachine = new GameplayStateMachine(actions, data, controller);
+
+            LevelCompleteStateMachine = new LevelCompleteStateMachine();
       }
 
       public override void Enter()

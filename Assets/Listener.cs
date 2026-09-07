@@ -6,6 +6,10 @@ using UnityEngine.Events;
 
 public class Listener : ChainableAction
 {
+    public bool IsATransmitter;
+    
+    [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
+    
     [SerializeField] private List<Reaction> reactions = new();
     
     public bool CheckForSound(SoundItem sound)
@@ -29,12 +33,24 @@ public class Listener : ChainableAction
     
     public void Trigger(SoundItem sound)
     {
-        foreach (var reaction in reactions)
+        if (!sound) return;
+
+        if (IsATransmitter)
         {
-            if (reaction.SoundItem != sound) continue;
-            reaction.Response.Invoke(this);
-            break;
+            onAnySound?.Invoke(this, sound);
         }
+        else
+        {
+            foreach (var reaction in reactions)
+            {
+                if (reaction.SoundItem != sound) continue;
+                Debug.Log(reaction.SoundItem.name);
+                reaction.Response.Invoke(this);
+                break;
+            }
+        }
+        
+        Complete();
     }
 }
 

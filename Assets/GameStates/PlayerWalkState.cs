@@ -63,7 +63,7 @@ public class PlayerWalkState : GameState
         _data.AnimationState = PlayerAnimationState.Moving;
         _move?.Kill();
         
-        _controller.RemoveElement(_data.gridElement);
+        //_controller.RemoveElement(_data.gridElement);
         cell.IsAccessible = false;
         _controller.BounceCell(_data.CurrentCell);
             
@@ -75,7 +75,7 @@ public class PlayerWalkState : GameState
             {
                 _data.CurrentCell.IsAccessible = true;
                 
-                _controller.AddElement(_data.gridElement);
+                //_controller.AddElement(_data.gridElement);
                 _data.CurrentCell = cell;
                 var walkInput = new Vector2(Mathf.Ceil(_data.walkInput.x), Mathf.Ceil(_data.walkInput.y));
                 if (walkInput == Vector2.zero)

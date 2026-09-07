@@ -20,11 +20,8 @@ public class TriggerListenersState : GameState
         foreach (var listener in Listeners)
         {
             if (!listener) continue;
-            if (listener.CheckForSound(_data.currentSound))
-            {
-                AddListener(listener);
-                listener.Trigger(_data.currentSound);
-            }
+            AddListener(listener);
+            listener.Trigger(_data.currentSound);
         }
     }
 

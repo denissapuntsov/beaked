@@ -9,7 +9,11 @@ using UnityEngine.Events;
         
         public void Interact()
         {
-            onInteract.Invoke(this);
+            if (onInteract.GetPersistentEventCount() < 1)
+            {
+                Complete();
+            }
+            onInteract?.Invoke(this);
         }
     }
 

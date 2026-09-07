@@ -22,4 +22,9 @@ public class GameStateManager : MonoBehaviour
     {
         _globalStateMachine.Enter();
     }
+
+    public void CompleteLevel()
+    {
+        _globalStateMachine.ChangeState(_globalStateMachine.LevelCompleteStateMachine);
+    }
 }

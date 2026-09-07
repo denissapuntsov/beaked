@@ -33,12 +33,31 @@ public class GridElementEditor : Editor
         {
             foreach (var cell in child.cells)
             {
-                Handles.color = 
-                    cell.IsAccessible 
-                        ? Color.yellow
-                        : Color.red;
+                if (!cell.IsSolid)
+                {
+                    Handles.color = Color.gray;
+                }
+                else
+                {
+                    Handles.color = 
+                        cell.IsAccessible 
+                            ? Color.yellow
+                            : Color.red;
+                }
                 Handles.DrawWireCube(cell.GridPosition - new Vector3(0, 0.25f, 0), new Vector3(0.8f, 0.3f, 0.8f));
             }
+        }
+    }
+    
+    public override void OnInspectorGUI()
+    {
+        if (!_element) return;
+        DrawDefaultInspector();
+        if (GUILayout.Button("Rescan"))
+        {
+            var controller = FindAnyObjectByType<TileGridController>();
+            if (!controller) return;
+            controller.Setup();
         }
     }
 }

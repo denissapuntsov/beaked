@@ -124,21 +124,23 @@ namespace LevelStructure
                         var newCell = new Cell
                         {
                             GridPosition = roundedPosition,
-                            IsAccessible = gridElement.IsClimbable
+                            IsAccessible = gridElement.IsClimbable,
+                            IsSolid = gridElement.IsSolid
                         };
+                        
                         cells.Add(newCell);
                         gridElement.cells.Add(newCell);
 
                         var cellAbove = _model.TryGetCellAtLocation(newCell.GridPosition + new Vector3(0, 0.5f, 0));
                         if (cellAbove != null && gridElement.IsClimbable)
                         {
-                            newCell.IsAccessible = false;
+                            newCell.IsAccessible = !cellAbove.IsSolid;
                         }
                         
                         var cellBelow = _model.TryGetCellAtLocation(newCell.GridPosition - new Vector3(0, 0.5f, 0));
                         if (cellBelow != null)
                         {
-                            cellBelow.IsAccessible = false;
+                            cellBelow.IsAccessible = !newCell.IsSolid;
                         }
                         
                         _model.GridLocationToCell.Add(newCell.GridPosition, newCell);

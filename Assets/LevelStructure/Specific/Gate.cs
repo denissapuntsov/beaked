@@ -30,7 +30,7 @@ public class Gate : ChainableAction
         if (IsOpen) return;
         source.AddAction(this);
         armTransform
-            .DORotate(armTransform.rotation.eulerAngles + new Vector3(0, 0, -90), 0.5f)
+            .DORotate(armTransform.rotation.eulerAngles + new Vector3(90, 0, 0), 0.5f)
             .OnComplete(() =>
             {
                 IsOpen = true;
@@ -43,7 +43,7 @@ public class Gate : ChainableAction
         if (!IsOpen) return;
         source.AddAction(this);
         armTransform
-            .DORotate(armTransform.rotation.eulerAngles + new Vector3(0, 0, 90), 0.5f)
+            .DORotate(armTransform.rotation.eulerAngles + new Vector3(-90, 0, 0), 0.5f)
             .OnComplete(() =>
             {
                 IsOpen = false;
