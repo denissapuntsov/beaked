@@ -17,7 +17,10 @@ public class GlobalStateMachine : FiniteStateMachine
             
             GameplayStateMachine = new GameplayStateMachine(actions, data, controller);
 
-            LevelCompleteStateMachine = new LevelCompleteStateMachine();
+            LevelCompleteStateMachine = new LevelCompleteStateMachine()
+            {
+                  OnComplete = LevelCompleteStateComplete
+            };
       }
 
       public override void Enter()
@@ -29,5 +32,10 @@ public class GlobalStateMachine : FiniteStateMachine
       private void HandleSetupStateComplete()
       {
             ChangeState(GameplayStateMachine);
+      }
+
+      private void LevelCompleteStateComplete()
+      {
+            Complete();
       }
 }

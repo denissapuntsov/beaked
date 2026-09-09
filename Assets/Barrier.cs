@@ -1,3 +1,4 @@
+/*
 using DG.Tweening;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -59,3 +60,4 @@ public class Barrier : MonoBehaviour
     }
 
 }
+*/

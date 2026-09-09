@@ -9,14 +9,19 @@ using GridElement = LevelStructure.GridElement;
 public class Mover : ChainableAction
 {
     [SerializeField] private float speed = 1;
-    public List<Vector3> path = new();
+    public List<Vector3> path = new() {};
     private TileGridController _controller;
     private GridElement _gridElement;
     
     private int _currentPathIndex;
 
     [SerializeField] private UnityEvent<ChainableAction> onCompletePath;
-    
+
+    private void Reset()
+    {
+        path.Add(transform.position);
+    }
+
     private void Start()
     {
         _controller = FindAnyObjectByType<TileGridController>();
