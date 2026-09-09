@@ -13,7 +13,6 @@ public class ListenerEditor : Editor
     {
         _listener = target as Listener;
         _onAnySoundProperty = serializedObject.FindProperty("onAnySound");
-        _reactionsProperty = serializedObject.FindProperty("reactions");
     }
 
     public override void OnInspectorGUI()
@@ -23,10 +22,6 @@ public class ListenerEditor : Editor
         if (_listener.isTransmitter)
         {
             EditorGUILayout.PropertyField(_onAnySoundProperty, new GUIContent("On Transmit Any Sound"));
-        }
-        else
-        {
-            EditorGUILayout.PropertyField(_reactionsProperty, new GUIContent("Reactions"));
         }
         
         serializedObject.ApplyModifiedProperties();

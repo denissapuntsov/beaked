@@ -28,7 +28,7 @@ public class Speaker : ChainableAction
     {
         source.AddAction(this);
         
-        var neighboringCells = GetNeighboringCells();
+        var neighboringCells = GetNeighboringCells(out _);
         _neighboringListeners = FindListeners(neighboringCells);
         if (_neighboringListeners == null || _neighboringListeners.Count == 0)
         {
@@ -44,8 +44,8 @@ public class Speaker : ChainableAction
     {
         source.AddAction(this);
         
-        var neighboringCells = GetNeighboringCells();
-        if (CheckForPlayer(neighboringCells))
+        var neighboringCells = GetNeighboringCells(out var isNearPlayer);
+        if (isNearPlayer)
         {
             _playerData.currentSound = nativeSound;
         }
@@ -62,19 +62,6 @@ public class Speaker : ChainableAction
         SoundManager.instance.PlaySound(nativeSound, gameObject, HandleSoundComplete);
     }
 
-    private bool CheckForPlayer(List<Cell> cells)
-    {
-        foreach (var cell in cells)
-        {
-            if (_gridController.GetElementFromCell(cell).GetComponent<PlayerData>())
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
     {
         if (_neighboringListeners.Count == 0)
@@ -84,9 +71,11 @@ public class Speaker : ChainableAction
         }
         TriggerReactionsInNeighbors(_transmittedSound);
     }
-
-    private List<Cell> GetNeighboringCells()
+    
+    private List<Cell> GetNeighboringCells(out bool doesNeighborPlayer)
     {
+        doesNeighborPlayer = false;
+        
         var offsets = new Vector3[]
         {
             new (0, 0, 1),
@@ -101,6 +90,14 @@ public class Speaker : ChainableAction
         {
             foreach (var offset in offsets)
             {
+                if (!doesNeighborPlayer)
+                {
+                    if (_playerData.CurrentCell.GridPosition == cell.GridPosition + offset - new  Vector3(0, 0.5f, 0))
+                    {
+                        doesNeighborPlayer = true;
+                    }
+                }
+                
                 var neighbor = _gridController.TryGetCellAtLocation(cell.GridPosition + offset);
                 if (neighbor == null || cells.Contains(neighbor))
                 {

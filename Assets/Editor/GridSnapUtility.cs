@@ -1,5 +1,4 @@
-/*
-using NewTiles;
+using LevelStructure;
 using UnityEngine;
 using UnityEditor;
 
@@ -9,7 +8,6 @@ public class GridSnapUtility
     static GridSnapUtility()
     {
         ObjectChangeEvents.changesPublished += ChangesPublished;
-
     }
     private static void ChangesPublished(ref ObjectChangeEventStream stream)
     {
@@ -17,20 +15,10 @@ public class GridSnapUtility
         {
             if (stream.GetEventType(i) == ObjectChangeKind.CreateGameObjectHierarchy)
             {
-                var grid = Object.FindAnyObjectByType<TileGrid>();
-                if (!grid) return;
-                
                 stream.GetCreateGameObjectHierarchyEvent(i, out var createGameObjectHierarchyEvent);
-                var newGameObject = EditorUtility.InstanceIDToObject(createGameObjectHierarchyEvent.instanceId) as GameObject;
+                var newGameObject = EditorUtility.EntityIdToObject(createGameObjectHierarchyEvent.entityId) as GameObject;
                 if (!newGameObject || !newGameObject.GetComponent<GridElement>())
                 {
-                    return;
-                }
-                newGameObject.transform.SetParent(grid.transform);
-
-                if (!Object.FindAnyObjectByType<GridElement>())
-                {
-                    newGameObject.transform.position = grid.transform.position;
                     return;
                 }
                 
@@ -44,4 +32,3 @@ public class GridSnapUtility
         }
     }
 }
-*/

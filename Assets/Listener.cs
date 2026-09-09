@@ -10,7 +10,7 @@ public class Listener : ChainableAction
     
     [HideInInspector] [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
     
-    [HideInInspector] [SerializeField] private List<Reaction> reactions = new();
+    [SerializeField] private List<Reaction> reactions = new();
     
     public bool CheckForSound(SoundItem sound)
     {
