@@ -6,7 +6,7 @@ using UnityEngine;
 public class Gate : ChainableAction
 {
     [SerializeField] private Transform armTransform;
-    [SerializeField] private GridElement invisibleWall;
+    [SerializeField] private GridElement invisibleWallClosed, invisibleWallOpen;
 
     private bool _isOpen;
     private GridElement _gridElement;
@@ -16,13 +16,15 @@ public class Gate : ChainableAction
         set 
         {
             _isOpen = value;
-            invisibleWall.gameObject.SetActive(!_isOpen);
+            invisibleWallClosed.SetSolid(!_isOpen);
+            invisibleWallOpen.SetSolid(_isOpen);
         }
     }
 
     private void Start()
     {
         _gridElement = GetComponent<GridElement>();
+        IsOpen = false;
     }
 
     public void Open(ChainableAction source)
@@ -30,7 +32,7 @@ public class Gate : ChainableAction
         if (IsOpen) return;
         source.AddAction(this);
         armTransform
-            .DORotate(armTransform.rotation.eulerAngles + new Vector3(90, 0, 0), 0.5f)
+            .DORotate(armTransform.rotation.eulerAngles + new Vector3(180, 0, 0), 1f)
             .OnComplete(() =>
             {
                 IsOpen = true;
@@ -43,7 +45,7 @@ public class Gate : ChainableAction
         if (!IsOpen) return;
         source.AddAction(this);
         armTransform
-            .DORotate(armTransform.rotation.eulerAngles + new Vector3(-90, 0, 0), 0.5f)
+            .DORotate(armTransform.rotation.eulerAngles + new Vector3(-180, 0, 0), 1f)
             .OnComplete(() =>
             {
                 IsOpen = false;

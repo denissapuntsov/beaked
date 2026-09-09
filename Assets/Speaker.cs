@@ -43,6 +43,7 @@ public class Speaker : ChainableAction
     public void Speak(ChainableAction source)
     {
         source.AddAction(this);
+        OnSoundStarted?.Invoke(_element);
         
         var neighboringCells = GetNeighboringCells(out var isNearPlayer);
         if (isNearPlayer)
@@ -64,6 +65,7 @@ public class Speaker : ChainableAction
 
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
     {
+        OnSoundComplete?.Invoke(_element);
         if (_neighboringListeners.Count == 0)
         {
             Debug.Log("No neighboring listeners!");

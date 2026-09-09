@@ -10,8 +10,8 @@ public class PlayerData : MonoBehaviour
         [Header("Interactions")] 
         public SoundItem currentSound;
         
-        public Interactable FocusedInteractable => nearbyInteractables[^1];
-        public List<Interactable> nearbyInteractables;
+        //public Interactable FocusedInteractable => nearbyInteractables[^1];
+        //public List<Interactable> nearbyInteractables;
 
         [field: SerializeField]
         private Cell currentCell;

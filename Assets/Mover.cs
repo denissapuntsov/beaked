@@ -44,7 +44,7 @@ public class Mover : ChainableAction
 
     public void Move(ChainableAction source)
     {
-        source.AddAction(this);
+        source?.AddAction(this);
         
         // TODO: see above
         /*if (!CheckPathForValidity())

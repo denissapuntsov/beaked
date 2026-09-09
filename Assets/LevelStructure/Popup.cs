@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Popup : MonoBehaviour
 {
-    private Tweener _open, _close;
+    /*private Tweener _open, _close;
 
     private void OnEnable()
     {
@@ -15,5 +15,7 @@ public class Popup : MonoBehaviour
     public void Open()
     {
         
-    }
+    }*/
+    
+    
 }

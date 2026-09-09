@@ -19,23 +19,24 @@ namespace LevelStructure
         public List<Cell> cells;
         public Vector3 GridOffset => (GridSize.x - 1) / 2 * transform.right + (GridSize.z - 1) / 2 * transform.forward;
 
+        public Action<GridElement> OnReenable;
         public Action<GridElement> OnDestroyOrDisable;
-        public Action<GridElement> OnChangeSize;
-        
+
+        private void OnEnable()
+        {
+            OnReenable?.Invoke(this);
+        }
 
         private void OnDisable()
         {
             OnDestroyOrDisable?.Invoke(this);
         }
 
-        public void SetGridSize(int x = 0, float y = 0f, int z = 0)
+        public void SetSolid(bool isSolid)
         {
-            var newX = x == 0 ? GridSize.x : x;
-            var newY = y == 0f ? GridSize.y : y;
-            var newZ = z == 0 ? GridSize.z : z;
-            
-            GridSize = new Vector3(newX, newY, newZ);
-            OnChangeSize?.Invoke(this);
+            IsSolid = isSolid;
+            OnDestroyOrDisable?.Invoke(this);
+            OnReenable?.Invoke(this);
         }
     }
 }

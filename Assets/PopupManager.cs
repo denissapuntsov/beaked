@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Numerics;
 using DG.Tweening;
 using JetBrains.Annotations;
 using UnityEngine;
 using LevelStructure;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Vector3 = UnityEngine.Vector3;
 
 public class PopupManager : MonoBehaviour
 {
@@ -23,11 +26,25 @@ public class PopupManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        SceneManager.sceneLoaded += RegisterSpeakers;
+    }
+
+    private void RegisterSpeakers(Scene scene, LoadSceneMode mode)
+    {
+        foreach (var speaker in FindObjectsByType<Speaker>())
+        {
+            _elementToPopupMap.Clear();
+            RegisterPopup(speaker.GetComponent<GridElement>());
+            speaker.OnSoundStarted += OpenPopup;
+            speaker.OnSoundComplete += ClosePopup;
+        }
     }
 
     public void RegisterPopup(GridElement origin)
     {
-        var panel = origin.gameObject.GetComponentInChildren<PanelRenderer>();
+        var panel = Instantiate(popupPrefab, origin.transform);
+        panel.transform.localScale = Vector3.zero;
         if (panel)
         {
             _elementToPopupMap.TryAdd(origin, panel.gameObject);
@@ -37,7 +54,7 @@ public class PopupManager : MonoBehaviour
     public void OpenPopup(GridElement origin)
     {
         _elementToPopupMap.TryGetValue(origin, out var popup);
-        if (!popup) return;
+        if (!popup) {return;}
         
         popup.transform.localPosition = Vector3.up * (origin.GridSize.y + 0.25f);
         
