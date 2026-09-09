@@ -3896,6 +3896,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5713210453370468711, guid: cdb8dd4d4c2db3a4181edd1f06c502b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 986758727387351277}
+    - targetCorrespondingSourceObject: {fileID: 5713210453370468711, guid: cdb8dd4d4c2db3a4181edd1f06c502b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 986758727387351278}
   m_SourcePrefab: {fileID: 100100000, guid: cdb8dd4d4c2db3a4181edd1f06c502b7, type: 3}
 --- !u!1 &986758727387351276 stripped
 GameObject:
@@ -3920,6 +3923,23 @@ MonoBehaviour:
   onCompletePath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &986758727387351278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986758727387351276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f8b7919260e2f4396c951c357508c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Listener
+  isTransmitter: 0
+  onAnySound:
+    m_PersistentCalls:
+      m_Calls: []
+  reactions: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

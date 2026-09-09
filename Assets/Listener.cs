@@ -6,11 +6,11 @@ using UnityEngine.Events;
 
 public class Listener : ChainableAction
 {
-    public bool IsATransmitter;
+    public bool isTransmitter;
     
-    [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
+    [HideInInspector] [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
     
-    [SerializeField] private List<Reaction> reactions = new();
+    [HideInInspector] [SerializeField] private List<Reaction> reactions = new();
     
     public bool CheckForSound(SoundItem sound)
     {
@@ -35,7 +35,7 @@ public class Listener : ChainableAction
     {
         if (!sound) return;
 
-        if (IsATransmitter)
+        if (isTransmitter)
         {
             onAnySound?.Invoke(this, sound);
         }
