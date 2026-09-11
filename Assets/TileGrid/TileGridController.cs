@@ -38,9 +38,15 @@ namespace LevelStructure
 
             foreach (var gridElement in gridElements)
             {
-                gridElement.OnReenable = AddElement;
                 AddElement(gridElement);
+                gridElement.OnChange = Rescan;
             }
+        }
+
+        private void Rescan(GridElement gridElement)
+        {
+            RemoveElement(gridElement);
+            AddElement(gridElement);
         }
 
         private void AssignPlayerCell()

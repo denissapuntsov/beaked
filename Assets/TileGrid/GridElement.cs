@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace LevelStructure
 {
@@ -19,13 +20,8 @@ namespace LevelStructure
         public List<Cell> cells;
         public Vector3 GridOffset => (GridSize.x - 1) / 2 * transform.right + (GridSize.z - 1) / 2 * transform.forward;
 
-        public Action<GridElement> OnReenable;
+        public Action<GridElement> OnChange;
         public Action<GridElement> OnDestroyOrDisable;
-
-        private void OnEnable()
-        {
-            OnReenable?.Invoke(this);
-        }
 
         private void OnDisable()
         {
@@ -35,8 +31,12 @@ namespace LevelStructure
         public void SetSolid(bool isSolid)
         {
             IsSolid = isSolid;
-            OnDestroyOrDisable?.Invoke(this);
-            OnReenable?.Invoke(this);
+            foreach (var cell in cells)
+            {
+                cell.IsSolid = isSolid;
+            }
+
+            OnChange?.Invoke(this);
         }
     }
 }
