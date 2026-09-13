@@ -15,6 +15,7 @@ public class Mover : ChainableAction
     
     private int _currentPathIndex;
 
+    public UnityEvent onStartPath;
     [SerializeField] private UnityEvent<ChainableAction> onCompletePath;
 
     private void Reset()
@@ -28,30 +29,9 @@ public class Mover : ChainableAction
         _gridElement = GetComponent<GridElement>();
     }
 
-    // TODO: falls apart due to rounding errors, fix
-    /*private bool CheckPathForValidity()
-    {
-        foreach (var location in path)
-        {
-            var cell = _controller.TryGetCellAtLocation(location - _gridElement.GridOffset);
-            if (cell != null) continue;
-            Debug.LogError($"No cell found at {location}!");
-            return false;
-        }
-
-        return true;
-    }*/
-
     public void Move(ChainableAction source)
     {
         source?.AddAction(this);
-        
-        // TODO: see above
-        /*if (!CheckPathForValidity())
-        {
-            Complete();
-            return;
-        }*/
         
         _controller.RemoveElement(_gridElement);
         MoveTo(_currentPathIndex);

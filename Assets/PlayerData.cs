@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using LevelStructure;
 using UnityEngine;
+using UnityEngine.Events;
 
 [SelectionBase]
 public class PlayerData : MonoBehaviour
@@ -36,6 +37,7 @@ public class PlayerData : MonoBehaviour
         public Vector2 walkInput;
         public Orientation orientation;
         public GridElement gridElement;
+        public UnityEvent onStepBegin;
         
         #endregion
         
@@ -46,6 +48,7 @@ public class PlayerData : MonoBehaviour
     {
         set
         {
+            onStepBegin?.Invoke();
             if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
             meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
         }

@@ -577,6 +577,9 @@ MonoBehaviour:
   speed: 3
   path:
   - {x: -2, y: 2, z: 5.5}
+  onStartPath:
+    m_PersistentCalls:
+      m_Calls: []
   onCompletePath:
     m_PersistentCalls:
       m_Calls:
@@ -689,9 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3494963c0718f4c42a0254294a1af160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _mover: {fileID: 0}
-  wheels: []
-  _isDriving: 0
 --- !u!1 &75607967
 GameObject:
   m_ObjectHideFlags: 0
