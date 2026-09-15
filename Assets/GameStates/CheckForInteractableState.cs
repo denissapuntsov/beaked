@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using LevelStructure;
 using UnityEngine;
 
@@ -16,6 +17,11 @@ public class CheckForInteractableState : GameState
 
         public override void Enter()
         {
+                Check();
+        }
+
+        private void Check()
+        {
                 var cellToCheck = GetCellInFrontOfPlayer();
                 if (cellToCheck == null)
                 { 
@@ -23,6 +29,7 @@ public class CheckForInteractableState : GameState
                         return;
                 }
                 FoundInteractable = FindInteractable(cellToCheck);
+                
                 Complete();
         }
 

@@ -16,8 +16,8 @@ public class PlayerSpeakState : GameState
     }
 
     private void HandleSoundComplete(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
-    {
-        _data.AnimationState = PlayerAnimationState.Idle;
+    { 
+        //_data.AnimationState = PlayerAnimationState.Idle;
         Complete();
     }
 }

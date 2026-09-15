@@ -7,7 +7,7 @@ public class SpeakReactionStateMachine : FiniteStateMachine
     public CheckForListenersState CheckForListenersState { get; protected set; }
     
     // consider a PrimeListenersState in between?
-    public TriggerListenersState TriggerListenersState { get; protected set; }
+    public TriggerListenerState TriggerListenerState { get; protected set; }
     
     public SpeakReactionStateMachine(PlayerData data, TileGridController controller) : base()
     {
@@ -15,7 +15,7 @@ public class SpeakReactionStateMachine : FiniteStateMachine
         {
             OnComplete = HandleCheckForListenersStateComplete
         };
-        TriggerListenersState = new TriggerListenersState(data)
+        TriggerListenerState = new TriggerListenerState(data)
         {
             OnComplete = HandleTriggerListenersStateComplete
         };
@@ -29,13 +29,13 @@ public class SpeakReactionStateMachine : FiniteStateMachine
 
     private void HandleCheckForListenersStateComplete()
     {
-        if (CheckForListenersState.listenersFound.Count == 0)
+        if (!CheckForListenersState.FoundListener)
         {
             Complete();
             return;
         }
-        CheckForListenersState.listenersFound.CopyTo(TriggerListenersState.Listeners);
-        ChangeState(TriggerListenersState);
+        TriggerListenerState.Listener = CheckForListenersState.FoundListener;
+        ChangeState(TriggerListenerState);
     }
 
     private void HandleTriggerListenersStateComplete()

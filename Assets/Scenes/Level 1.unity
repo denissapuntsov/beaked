@@ -257,49 +257,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: gridElement
-      value: 
+    - target: {fileID: 1350573415150624257, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2693
       objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: currentSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[1].time
-      value: 0.38018978
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].value
-      value: -0.0014648438
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[1].value
-      value: 0.8080795
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].inSlope
-      value: 3.1140366
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].outSlope
-      value: 3.1140366
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].outWeight
-      value: 0.09946562
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onStepBegin.m_PersistentCalls.m_Calls.Array.size
+    - target: {fileID: 3580125929362778499, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onStepBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8076368248980999029, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8191227903367892905, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -344,10 +316,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1448112721}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
 --- !u!1001 &154114475
 PrefabInstance:
@@ -3598,30 +3567,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1448112718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-  m_PrefabInstance: {fileID: 84464645}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1448112721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448112718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff5235827124a404da871a8fd7f32bc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelStructure.GridElement
-  <GridSize>k__BackingField: {x: 1, y: 0.5, z: 1}
-  <IsSolid>k__BackingField: 0
-  <IsClimbable>k__BackingField: 0
-  cells:
-  - GridPosition: {x: 3, y: 2.5, z: 3}
-    IsAccessible: 0
-    IsSolid: 0
 --- !u!1001 &1480441267
 PrefabInstance:
   m_ObjectHideFlags: 0

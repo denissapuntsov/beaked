@@ -36,8 +36,8 @@ public class PopupManager : MonoBehaviour
         {
             _elementToPopupMap.Clear();
             RegisterPopup(speaker.GetComponent<GridElement>());
-            speaker.OnSoundStarted += OpenPopup;
-            speaker.OnSoundComplete += ClosePopup;
+            speaker.OnSoundStarted.AddListener(OpenPopup);
+            speaker.OnSoundComplete.AddListener(ClosePopup);
         }
     }
 

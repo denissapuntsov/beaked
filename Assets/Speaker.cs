@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LevelStructure;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(GridElement))]
 public class Speaker : ChainableAction
@@ -15,7 +16,7 @@ public class Speaker : ChainableAction
     [SerializeField] private SoundItem nativeSound;
     private SoundItem _transmittedSound;
     
-    public Action<GridElement> OnSoundStarted, OnSoundComplete;
+    public UnityEvent<GridElement> OnSoundStarted, OnSoundComplete;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class Speaker : ChainableAction
     public void Transmit(ChainableAction source, SoundItem newSound)
     {
         source.AddAction(this);
+        OnSoundStarted?.Invoke(_element);
         
         var neighboringCells = GetNeighboringCells(out _);
         _neighboringListeners = FindListeners(neighboringCells);
@@ -132,12 +134,13 @@ public class Speaker : ChainableAction
     {
         foreach (var listener in _neighboringListeners)
         {
-            if (!listener) continue;
+            if (!listener || listener.isTransmitter) continue;
             if (listener.CheckForSound(transmittedSound))
             {
                 listener.Trigger(this, transmittedSound);
                 AddAction(listener);
             }
         }
+        Complete();
     }
 }

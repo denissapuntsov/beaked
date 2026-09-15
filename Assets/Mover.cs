@@ -9,10 +9,13 @@ using GridElement = LevelStructure.GridElement;
 public class Mover : ChainableAction
 {
     [SerializeField] private float speed = 1;
-    public List<Vector3> path = new() {};
+    [HideInInspector] public List<Vector3> path = new() { };
+    [HideInInspector] public List<Vector3> offsets = new() { };
     private TileGridController _controller;
     private GridElement _gridElement;
-    
+    private PlayerData _data;
+    public Color color;
+
     private int _currentPathIndex;
 
     public UnityEvent onStartPath;
@@ -27,12 +30,13 @@ public class Mover : ChainableAction
     {
         _controller = FindAnyObjectByType<TileGridController>();
         _gridElement = GetComponent<GridElement>();
+        _data = GetComponent<PlayerData>();
     }
 
     public void Move(ChainableAction source)
     {
         source?.AddAction(this);
-        
+
         _controller.RemoveElement(_gridElement);
         MoveTo(_currentPathIndex);
     }
@@ -72,10 +76,10 @@ public class Mover : ChainableAction
     {
         for (int i = 0; i < path.Count; i++)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = color;
             Gizmos.DrawLine((i == 0 ? transform.position : path[i-1]) + new Vector3(0, 0.2f, 0), path[i] + new Vector3(0, 0.2f, 0));
             
-            Gizmos.color = i < path.Count - 1 ? Color.yellow : Color.red;
+            Gizmos.color = i < path.Count - 1 ? color : Color.grey * color;
             Gizmos.DrawCube(path[i] + new Vector3(0, 0.2f, 0), new Vector3(0.6f, 0.15f, 0.6f * GetComponent<GridElement>().GridSize.z));
         }
     }

@@ -1,73 +1,65 @@
+using System;
 using System.Collections.Generic;
 using LevelStructure;
 using UnityEngine;
 
 public class CheckForListenersState : GameState
 {
-    public List<Listener> listenersFound = new();
+    public Listener FoundListener { get; private set; }
     private PlayerData _data;
-    private TileGridController _gridController;
+    private TileGridController _controller;
     
     public CheckForListenersState(PlayerData data, TileGridController controller) : base()
     {
         _data = data;
-        _gridController = controller;
+        _controller = controller;
     }
 
     public override void Enter()
     {
-        var surroundingCells = GetSurroundingCells();
-        listenersFound = FindListeners(surroundingCells);
-
+        Check();
+    }
+    
+    private void Check()
+    {
+        var cellToCheck = GetCellInFrontOfPlayer();
+        if (cellToCheck == null)
+        { 
+            Complete();
+            return;
+        }
+        FoundListener = FindListener(cellToCheck);
+                
         Complete();
     }
 
-    private List<Cell> GetSurroundingCells()
+    
+    private Cell GetCellInFrontOfPlayer()
     {
-        var cellsAroundPlayer = new List<Cell>();
-
-        var offsets = new List<Vector3>
+        var front = _data.orientation switch
         {
-            new (0, 0, 1),
-            new (0, 0, -1),
-            new (-1, 0, 0),
-            new (1, 0, 0)
+            Orientation.North => new Vector3(0, 0, 1),
+            Orientation.East => new Vector3(1, 0, 0),
+            Orientation.South => new Vector3(0, 0, -1),
+            Orientation.West => new Vector3(-1, 0, 0),
+            _ => throw new ArgumentOutOfRangeException()
         };
-
-        for (var index = 0; index < offsets.Count; index++)
-        {
-            var offset = offsets[index];
-
-            var newCell = _gridController.TryGetCellAtLocation(_data.CurrentCell.GridPosition + offset);
-            if (newCell != null)
-            {
-                cellsAroundPlayer.Add(newCell);
-            }
-        }
-
-        return cellsAroundPlayer;
+        var foundCell = _controller.TryGetCellAtLocation(_data.CurrentCell.GridPosition + front);
+        return foundCell;
     }
 
-    private List<Listener> FindListeners(List<Cell> cellsAroundPlayer)
+    private Listener FindListener(Cell cell)
     {
-        var listeners = new List<Listener>();
-
-        foreach (var cell in cellsAroundPlayer)
-        {
-            var foundCell = _gridController.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0));
-            if (foundCell == null || !_gridController.GetElementFromCell(foundCell)) continue;
-            var listener = _gridController.GetElementFromCell(foundCell).GetComponent<Listener>();
-            if (listener)
-            {
-                listeners.Add(listener);
-            }
-        }
-
-        return listeners;
+        var foundCell = _controller.TryGetCellAtLocation(cell.GridPosition + new Vector3(0, 0.5f, 0));
+        var element = _controller.GetElementFromCell(foundCell);
+        if (foundCell == null || !element) return null;
+                
+        var listener = element.GetComponent<Listener>();
+        return listener ? listener : null;
     }
 
     public override void Exit()
     {
-        listenersFound.Clear();
+        FoundListener = null;
     }
 }

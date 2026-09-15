@@ -15,6 +15,8 @@ public class PlayerInteractState : GameState
         { 
                 base.Enter();
                 _data.AnimationState = PlayerAnimationState.Interacting;
-                _wait = _data.transform.DOMoveX(_data.transform.position.x, 0.2f).OnComplete(Complete);
+                Sequence animationDelay = DOTween.Sequence();
+                animationDelay.AppendInterval(0.3f);
+                animationDelay.OnComplete(Complete);
         }
 }

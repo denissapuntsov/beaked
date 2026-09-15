@@ -27,6 +27,8 @@ public class PlayerData : MonoBehaviour
                 currentCell.IsAccessible = false;
             }
         }
+
+        public UnityEvent onPeckBegin;
         #endregion
 
     #region Movement
@@ -48,7 +50,6 @@ public class PlayerData : MonoBehaviour
     {
         set
         {
-            onStepBegin?.Invoke();
             if (!meshAnimator.HasState(0, Animator.StringToHash(value.ToString()))) return;
             meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
         }
@@ -59,7 +60,7 @@ public class PlayerData : MonoBehaviour
 
 public enum PlayerAnimationState
 {
-    Idle,
+    //Idle,
     Moving,
     Speaking,
     Interacting,

@@ -60,6 +60,7 @@ public class PlayerWalkState : GameState
     
     private void MoveTo(Cell cell)
     {
+        _data.onStepBegin?.Invoke();
         _data.AnimationState = PlayerAnimationState.Moving;
         _move?.Kill();
         

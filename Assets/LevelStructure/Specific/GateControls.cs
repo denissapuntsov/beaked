@@ -7,16 +7,34 @@ public class GateControls : ChainableAction
 {
     [SerializeField] private Transform armTransform;
     [SerializeField] private GridElement invisibleWallClosed, invisibleWallOpen;
+    private PlayerData _data;
 
     private bool _isOpen;
-    private bool IsOpen
+    public bool IsOpen
     {
         get => _isOpen;
-        set 
+        private set 
         {
             _isOpen = value;
             invisibleWallClosed.SetSolid(!_isOpen);
             invisibleWallOpen.SetSolid(_isOpen);
+        }
+    }
+
+    private void Start()
+    {
+        _data = FindAnyObjectByType<PlayerData>();
+    }
+
+    public void Toggle(ChainableAction source)
+    {
+        if (!IsOpen)
+        {
+            Open(source);
+        }
+        else
+        {
+            Close(source);
         }
     }
 
@@ -35,6 +53,10 @@ public class GateControls : ChainableAction
 
     public void Close(ChainableAction source)
     {
+        foreach (var cell in invisibleWallClosed.cells)
+        {
+            if (CheckCell(cell.GridPosition)) return;
+        }
         if (!IsOpen) return;
         source.AddAction(this);
         armTransform
@@ -44,5 +66,10 @@ public class GateControls : ChainableAction
                 IsOpen = false;
                 Complete();
             });
+    }
+
+    private bool CheckCell(Vector3 cellPosition)
+    {
+        return _data?.CurrentCell.GridPosition == cellPosition - new Vector3(0, 0.5f, 0);
     }
 }
