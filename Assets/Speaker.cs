@@ -132,15 +132,18 @@ public class Speaker : ChainableAction
 
     private void TriggerReactionsInNeighbors(SoundItem transmittedSound)
     {
+        ActionsCompleteMap.Clear();
         foreach (var listener in _neighboringListeners)
         {
-            if (!listener || listener.isTransmitter) continue;
-            if (listener.CheckForSound(transmittedSound))
+            if (!listener) continue;
+            if (listener.isTransmitter || listener.CheckForSound(transmittedSound))
             {
                 listener.Trigger(this, transmittedSound);
                 AddAction(listener);
             }
         }
+        print(ActionsCompleteMap.Count);
+        
         Complete();
     }
 }
