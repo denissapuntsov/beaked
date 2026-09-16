@@ -14,6 +14,8 @@ public class AnimationControls : MonoBehaviour
         Debug.Log(value);
         animator.Play(Animator.StringToHash(value.ToString()), 0, 0);
     }
-
+    
+    
+    
     public void StopAnimation() => PlayAnimation("Idle");
 }
