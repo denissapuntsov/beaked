@@ -18,6 +18,7 @@ public class GateControls : ChainableAction
             _isOpen = value;
             invisibleWallClosed.SetSolid(!_isOpen);
             invisibleWallOpen.SetSolid(_isOpen);
+            armTransform.localScale = new Vector3(armTransform.localScale.x, _isOpen ? 0.5f : 0.573f, armTransform.localScale.z);
         }
     }
 
@@ -43,6 +44,8 @@ public class GateControls : ChainableAction
         if (IsOpen) return;
         source.AddAction(this);
         armTransform
+            .DOScaleY(0.5f, 1f);
+        armTransform
             .DORotate(armTransform.rotation.eulerAngles + new Vector3(90, 0, 0), 1f)
             .OnComplete(() =>
             {
@@ -59,6 +62,8 @@ public class GateControls : ChainableAction
         }
         if (!IsOpen) return;
         source.AddAction(this);
+        armTransform
+            .DOScaleY(0.573f, 1f);
         armTransform
             .DORotate(armTransform.rotation.eulerAngles + new Vector3(-90, 0, 0), 1f)
             .OnComplete(() =>
