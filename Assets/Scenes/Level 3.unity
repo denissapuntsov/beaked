@@ -658,6 +658,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &122229059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+  m_PrefabInstance: {fileID: 1749781883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
 --- !u!1 &145459694
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,7 +2423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcfe4ecb8f2ace48a17e4a2fba4909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSetupSkipped: 0
+  isSetupSkipped: 1
 --- !u!4 &849549312
 Transform:
   m_ObjectHideFlags: 0
@@ -5159,6 +5170,54 @@ PrefabInstance:
       propertyPath: currentSound
       value: 
       objectReference: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 122229059}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioEventTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: peck
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: audioEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: audioEvents.Array.data[1].name
+      value: peck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: audioEvents.Array.data[0].audioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: d0035bf8c22bac84fa262cf018c71364, type: 2}
+    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: audioEvents.Array.data[1].audioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 443186a6517e5694e8047c47007c354d, type: 2}
     - target: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_Name
       value: Player

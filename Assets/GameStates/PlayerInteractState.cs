@@ -15,6 +15,7 @@ public class PlayerInteractState : GameState
         { 
                 base.Enter();
                 _data.AnimationState = PlayerAnimationState.Interacting;
+                _data.onPeckBegin?.Invoke();
                 Sequence animationDelay = DOTween.Sequence();
                 animationDelay.AppendInterval(0.3f);
                 animationDelay.OnComplete(Complete);

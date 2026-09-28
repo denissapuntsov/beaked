@@ -14,6 +14,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Player_Step_01" ID="{627A35A9-335A-4D7E-A9DB-C8B863B1649B}">
+					<ChildrenList>
+						<Action Name="" ID="{7C22BA54-5A61-45D2-804F-858F65D4FE25}" ShortID="948460639">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Step_Random" ID="{58FA7810-943A-4D28-B3FD-49AFB20454F9}" WorkUnitID="{FDEF8A0A-6564-40F1-82DD-F25B106460D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Peck_Random" ID="{ECB737E2-F52B-486E-86A6-4D318CEBC7AD}">
+					<ChildrenList>
+						<Action Name="" ID="{20683241-BB34-4C7E-A744-8C0A90057195}" ShortID="122292211">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Peck_Random" ID="{F61C7EF0-9AA1-4540-844B-AA97EF4739B8}" WorkUnitID="{FDEF8A0A-6564-40F1-82DD-F25B106460D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
