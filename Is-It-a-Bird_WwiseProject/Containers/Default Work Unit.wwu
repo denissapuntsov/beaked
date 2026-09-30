@@ -25,204 +25,6 @@
 						<ActiveSource Name="pickup" ID="{B4519E1D-A02C-425D-8949-DE9B3CD76948}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="PECK_V1-001" ID="{DE9F1FE9-546C-4F7C-8FCA-617CD4927772}" ShortID="63393692">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-001" ID="{F7D3798B-5EDC-4527-A8DE-7684A7E43933}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1049938636"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-001" ID="{F7D3798B-5EDC-4527-A8DE-7684A7E43933}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-002" ID="{09984C10-C3BB-48D5-94AC-E51E6D30522C}" ShortID="348633396">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-002" ID="{7FAC6890-002D-4A91-A1A8-9EEF79CB85FC}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="43687680"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-002" ID="{7FAC6890-002D-4A91-A1A8-9EEF79CB85FC}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-003" ID="{6BD2CCDE-CB77-4833-B534-6E1B6580135C}" ShortID="781354346">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-003" ID="{809FFDC6-9215-497E-B5F2-C7ABFFDEF580}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="317766704"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-003" ID="{809FFDC6-9215-497E-B5F2-C7ABFFDEF580}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-004" ID="{2A87E133-20E0-41CA-8B47-BDED4937959D}" ShortID="679983678">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-004" ID="{CE7492D4-6E89-4E0B-A551-8878158968DC}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-004.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1064158335"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-004" ID="{CE7492D4-6E89-4E0B-A551-8878158968DC}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-005" ID="{85FD9C47-8639-4E45-976D-91CC117837B5}" ShortID="99840049">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-005" ID="{02BE5B27-5768-441C-B69F-06FFC2B9F7BC}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-005.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="816318383"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-005" ID="{02BE5B27-5768-441C-B69F-06FFC2B9F7BC}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-006" ID="{D834006C-BEBF-4C88-B392-EC06A1B4A7DD}" ShortID="535849242">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-006" ID="{32956239-B8FF-4D0D-8FAA-F230023FBF04}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-006.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="666688049"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-006" ID="{32956239-B8FF-4D0D-8FAA-F230023FBF04}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-007" ID="{9D99A9B0-A725-4B63-BE34-3D928CA18D4F}" ShortID="952206421">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-007" ID="{16250D3D-36D7-470B-AF14-750F93574EDF}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-007.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="432716966"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-007" ID="{16250D3D-36D7-470B-AF14-750F93574EDF}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-008" ID="{D36E1853-9AFE-46B6-AB9B-9975B56FA26F}" ShortID="117704742">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-008" ID="{1E6763C5-C9F2-48C2-B65D-A0D1C6B17E0B}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-008.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="857722191"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-008" ID="{1E6763C5-C9F2-48C2-B65D-A0D1C6B17E0B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_V1-009" ID="{12EC8267-75ED-4271-9D8F-F691EB546883}" ShortID="347141139">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_V1-009" ID="{5F88B945-CEB7-43CA-92CC-17D34688DD19}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_V1-009.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="70191264"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_V1-009" ID="{5F88B945-CEB7-43CA-92CC-17D34688DD19}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<RandomSequenceContainer Name="Step_Random" ID="{58FA7810-943A-4D28-B3FD-49AFB20454F9}" ShortID="894269923">
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
@@ -645,6 +447,33 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="Whistle" ID="{611F602C-C178-4B52-9895-F1A5B48C8C3B}" ShortID="1062209797">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="sports-whistle-blow-short-ni-sound-1-00-00" ID="{5B4C0116-0696-4D09-AB3A-1313E32D76AE}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.402473834443387"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>sports-whistle-blow-short-ni-sound-1-00-00.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="754623439"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="sports-whistle-blow-short-ni-sound-1-00-00" ID="{5B4C0116-0696-4D09-AB3A-1313E32D76AE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

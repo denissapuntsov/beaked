@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2693257580",
+    "Type": "Event",
+    "GUID": "{15A4A0E2-0202-4CE3-8B42-B30F46302EB4}",
+    "Language": "SFX",
+    "Hash": "{8EDF5372-F199-0F05-9D85-903E5962CA2C}",
+    "ObjectPath": "Play_Whistle",
+    "ShortName": "Play_Whistle",
+    "Path": "Event/Play_Whistle.bnk",
+    "Media": [
+     {
+      "Id": "754623439",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "sports-whistle-blow-short-ni-sound-1-00-00.wav",
+      "Path": "Media/754623439.wem",
+      "CachePath": "DE/{DEB66532-BCD8-239B-B29F-5F9E453CEBDC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2693257580",
+      "Name": "Play_Whistle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Whistle",
+      "GUID": "{15A4A0E2-0202-4CE3-8B42-B30F46302EB4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.40247384",
+      "DurationMax": "0.40247384",
+      "MediaRefs": [
+       {
+        "Id": "754623439"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D81B7697-6128-9C50-875D-1431936F988B}"
+ }
+}

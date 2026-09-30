@@ -288,11 +288,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1201200273415926969}
   - component: {fileID: 940413241980976353}
-  - component: {fileID: 2491675487443199600}
   - component: {fileID: 7014208929450999652}
   - component: {fileID: 5185493954351929327}
   - component: {fileID: 6077095700347231270}
   - component: {fileID: 495349101468254265}
+  - component: {fileID: 1422814044693798105}
+  - component: {fileID: 11746507791971643}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -338,25 +339,6 @@ MonoBehaviour:
   - GridPosition: {x: 4, y: 2.5, z: -1}
     IsAccessible: 0
     IsSolid: 1
---- !u!114 &2491675487443199600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750963950177078850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a45cbc915716041a3685647680858a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Speaker
-  nativeSound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
-  OnSoundStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSoundComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7014208929450999652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,17 +351,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c6a3ea12624a04ba97b561158d396a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mover
-  speed: 3
+  speed: 2
   path:
-  - {x: 4, y: 2, z: 3}
-  offsets: []
+  - {x: 0, y: 2, z: 2}
+  offsets:
+  - {x: 0, y: 0, z: 2}
   color: {r: 1, g: 0.9913155, b: 0, a: 1}
   onStartPath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1422814044693798105}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Moving
+          m_BoolArgument: 0
+        m_CallState: 2
   onCompletePath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1422814044693798105}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: StopAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5185493954351929327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   reactions:
-  - SoundItem: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
+  - SoundItem: {fileID: 11400000, guid: 9d9e2e7cfdf99ad4fbd260d97e6a6bf3, type: 2}
     Response:
       m_PersistentCalls:
         m_Calls:
@@ -425,10 +432,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8c7400328db684ea39f953e6e2f90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  preReactionTime: 0
+  preReactionTime: 0.6
   onPreInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 495349101468254265}
+        m_TargetAssemblyTypeName: PersonControls, Assembly-CSharp
+        m_MethodName: ReactToPeck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -445,6 +464,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bodyPivot: {fileID: 3361022432290154776}
+--- !u!114 &1422814044693798105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750963950177078850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe7dcc91729bb340a17739700e9dd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationControls
+  animator: {fileID: 11746507791971643}
+--- !u!95 &11746507791971643
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750963950177078850}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd0fb3b72be3ac54384c6840988c6999, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9060169816900278723
 GameObject:
   m_ObjectHideFlags: 0

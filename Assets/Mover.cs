@@ -38,6 +38,7 @@ public class Mover : ChainableAction
         source?.AddAction(this);
 
         _controller.RemoveElement(_gridElement);
+        onStartPath?.Invoke();
         MoveTo(_currentPathIndex);
     }
 
