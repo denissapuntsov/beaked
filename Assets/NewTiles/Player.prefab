@@ -1294,14 +1294,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a258e4c924af3f48b3524352bdeb41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSound: {fileID: 0}
+  currentSound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
   currentCell:
     GridPosition: {x: 0, y: 0, z: 0}
     IsAccessible: 0
     IsSolid: 1
   onPeckBegin:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4943366409551258485}
+        m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: peck
+          m_BoolArgument: 0
+        m_CallState: 2
   meshAnimator: {fileID: 432431912884906052}
   jumpCurve:
     serializedVersion: 2
@@ -1391,7 +1403,12 @@ MonoBehaviour:
     audioEvent:
       idInternal: 0
       valueGuidInternal: 
-      WwiseObjectReference: {fileID: 11400000, guid: 91af13f1a0c4fab428b4df60c2cd00ef, type: 2}
+      WwiseObjectReference: {fileID: 11400000, guid: d0035bf8c22bac84fa262cf018c71364, type: 2}
+  - name: peck
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 443186a6517e5694e8047c47007c354d, type: 2}
 --- !u!114 &4886562514694158170
 MonoBehaviour:
   m_ObjectHideFlags: 0

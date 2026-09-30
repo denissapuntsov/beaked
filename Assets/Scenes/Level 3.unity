@@ -658,17 +658,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &122229059 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-  m_PrefabInstance: {fileID: 1749781883}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
 --- !u!1 &145459694
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,12 +783,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180229709}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000016147086, y: -0.00000042536922, z: -0.37229517, w: 0.92811435}
-  m_LocalPosition: {x: -0.5031644, y: -0.014612145, z: -0.37105635}
+  m_LocalRotation: {x: -0.0000016093254, y: -0.00000044703484, z: -0.3722952, w: 0.9281144}
+  m_LocalPosition: {x: -0.5031643, y: -0.014612049, z: -0.37105638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1788574083}
+  m_Father: {fileID: 1088210458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -43.714}
 --- !u!23 &180229711
 MeshRenderer:
@@ -1714,12 +1703,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559424419}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.7763568e-15, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.50377244, y: -0.014612177, z: 0.37105167}
+  m_LocalRotation: {x: 0.000000021855696, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5037724, y: -0.014612287, z: 0.37105173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1788574083}
+  m_Father: {fileID: 1088210458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &559424421
 MeshRenderer:
@@ -2497,12 +2486,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953355877}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.7763568e-15, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.50377244, y: -0.014612177, z: 0.37105167}
+  m_LocalRotation: {x: 0.000000021855696, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5037724, y: -0.014612287, z: 0.3710518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1788574083}
+  m_Father: {fileID: 1088210458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &953355879
 MeshRenderer:
@@ -2994,6 +2983,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1788574083}
+  - {fileID: 180229710}
+  - {fileID: 1793211041}
+  - {fileID: 953355878}
+  - {fileID: 559424420}
   m_Father: {fileID: 56702374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1103766674 stripped
@@ -3635,6 +3628,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8c7400328db684ea39f953e6e2f90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  preReactionTime: 0.6
+  onPreInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1278749209}
+        m_TargetAssemblyTypeName: CarControls, Assembly-CSharp
+        m_MethodName: ReactToPeck
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -3671,6 +3680,7 @@ MonoBehaviour:
   - {fileID: 2133770605}
   - {fileID: 768371724}
   - {fileID: 1389842956}
+  carBody: {fileID: 1788574083}
   forward: {fileID: 1278749206}
   backward: {fileID: 1278749210}
 --- !u!114 &1278749210
@@ -5166,58 +5176,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: currentSound
-      value: 
-      objectReference: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 122229059}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioEventTrigger, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: peck
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: onPeckBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: audioEvents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: audioEvents.Array.data[1].name
-      value: peck
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: audioEvents.Array.data[0].audioEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: d0035bf8c22bac84fa262cf018c71364, type: 2}
-    - target: {fileID: 4943366409551258485, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
-      propertyPath: audioEvents.Array.data[1].audioEvent.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 443186a6517e5694e8047c47007c354d, type: 2}
     - target: {fileID: 5572630391542153015, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5279,7 +5237,7 @@ GameObject:
   - component: {fileID: 1788574085}
   - component: {fileID: 1788574084}
   m_Layer: 0
-  m_Name: Car.004
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5293,15 +5251,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788574082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 180229710}
-  - {fileID: 1793211041}
-  - {fileID: 953355878}
-  - {fileID: 559424420}
+  m_Children: []
   m_Father: {fileID: 1088210458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1788574084
@@ -5448,12 +5402,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793211040}
   serializedVersion: 2
-  m_LocalRotation: {x: 1.7763568e-15, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.50377244, y: -0.014612145, z: -0.37105635}
+  m_LocalRotation: {x: 0.000000021855696, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.50377274, y: -0.014612049, z: -0.37105632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1788574083}
+  m_Father: {fileID: 1088210458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1793211042
 MeshRenderer:

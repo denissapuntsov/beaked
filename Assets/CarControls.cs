@@ -1,21 +1,19 @@
+using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using LevelStructure;
+using Unity.VisualScripting;
 using UnityEngine;
+using Sequence = DG.Tweening.Sequence;
 
-public class CarControls : ChainableAction
+public class CarControls : GridElementControls
 {
     [SerializeField] private bool isByGate;
     public List<GridElement> tilesToCheckForward, tilesToCheckBackward;
     private GateControls _gateControls;
+    [SerializeField] private Transform carBody;
 
     [SerializeField] private Mover forward, backward;
-    
-    private PlayerData _data;
-    
-    private void Start()
-    {
-        _data = FindAnyObjectByType<PlayerData>();
-    }
 
     public void Move(ChainableAction source)
     {
@@ -45,7 +43,27 @@ public class CarControls : ChainableAction
 
         source.AddAction(this);
         forward.Move(this);
-        OnComplete += action => isByGate = true;
+        OnComplete += action =>
+        {
+            isByGate = true;
+        };
+    }
+
+    public override void ReactToPeck()
+    {
+        var turnDirection = Data.orientation switch
+        {
+            Orientation.North => new Vector3(0, 0, 1),
+            Orientation.East => new Vector3(-1, 0, 0),
+            Orientation.South => new Vector3(0, 0, -1),
+            Orientation.West => new Vector3(1, 0, 0),
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        var turnVector = turnDirection * 5;
+
+        carBody.DOBlendableLocalRotateBy(turnVector, 0.2f)
+            .OnComplete(() => { carBody.DOBlendableLocalRotateBy(-turnVector, 0.4f); });
     }
 
     private void MoveBackward(ChainableAction source)
@@ -68,6 +86,6 @@ public class CarControls : ChainableAction
     
     private bool CheckCell(Vector3 cellPosition)
     {
-        return _data?.CurrentCell.GridPosition == cellPosition;
+        return Data?.CurrentCell.GridPosition == cellPosition;
     }
 }
