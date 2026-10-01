@@ -132,7 +132,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3dc5b58090e358f4d9999eea46d2d868, type: 2}
+  - {fileID: 2100000, guid: 7637ea3d3172f614897ac4b2d9ebb3d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,7 +255,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3dc5b58090e358f4d9999eea46d2d868, type: 2}
+  - {fileID: 2100000, guid: d8b5977cf96ab124bb91e8da300ea5b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -354,9 +354,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Mover
   speed: 2
   path:
-  - {x: 0, y: 2, z: 2}
+  - {x: 1, y: 3, z: 5}
+  - {x: 1, y: 3, z: 6}
   offsets:
-  - {x: 0, y: 0, z: 2}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
   color: {r: 1, g: 0.9913155, b: 0, a: 1}
   onStartPath:
     m_PersistentCalls:
@@ -653,7 +655,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e878f289967d062479ffb44c385cb7c5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3dc5b58090e358f4d9999eea46d2d868, type: 2}
+      objectReference: {fileID: 2100000, guid: ebabf9193adcd9449a53315b6201684d, type: 2}
     - target: {fileID: 919132149155446097, guid: e878f289967d062479ffb44c385cb7c5, type: 3}
       propertyPath: m_Name
       value: blockhead 2
