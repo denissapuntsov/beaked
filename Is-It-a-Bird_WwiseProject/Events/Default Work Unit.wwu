@@ -47,6 +47,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Honk" ID="{20B87619-4649-4AF2-9302-E9FE1A720CC9}">
+					<ChildrenList>
+						<Action Name="" ID="{1BAA3F74-345E-453D-A0CD-89C65814E3A0}" ShortID="229985050">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="honk_v_3" ID="{95BCE556-2A56-4255-BF34-47B184CD5502}" WorkUnitID="{FDEF8A0A-6564-40F1-82DD-F25B106460D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

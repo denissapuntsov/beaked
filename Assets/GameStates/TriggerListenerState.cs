@@ -16,12 +16,18 @@ public class TriggerListenerState : GameState
 
     public override void Enter()
     {
-        Listener.OnComplete = HandleListenerComplete;
+        Listener.OnComplete += HandleListenerComplete;
         Listener.Trigger(_data.currentSound);
     }
 
     private void HandleListenerComplete(ChainableAction listener)
     {
         Complete();
+    }
+
+    public override void Exit()
+    {
+        Listener.OnComplete -= HandleListenerComplete;
+        Listener = null;
     }
 }

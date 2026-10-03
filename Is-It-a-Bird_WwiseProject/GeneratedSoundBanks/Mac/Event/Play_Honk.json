@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2486471960",
+    "Type": "Event",
+    "GUID": "{20B87619-4649-4AF2-9302-E9FE1A720CC9}",
+    "Language": "SFX",
+    "Hash": "{6BC06D27-1ACD-CE84-8A63-4407C78171F1}",
+    "ObjectPath": "Play_Honk",
+    "ShortName": "Play_Honk",
+    "Path": "Event/Play_Honk.bnk",
+    "Media": [
+     {
+      "Id": "441467430",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "honk_v_3.wav",
+      "Path": "Media/441467430.wem",
+      "CachePath": "BC/{BC333843-59B0-ABA5-9149-11CE1D3AEA8A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2486471960",
+      "Name": "Play_Honk",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Honk",
+      "GUID": "{20B87619-4649-4AF2-9302-E9FE1A720CC9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.50959",
+      "DurationMax": "0.50959",
+      "MediaRefs": [
+       {
+        "Id": "441467430"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C73EF5E9-EECF-D218-DE38-1D5A19DAC85B}"
+ }
+}

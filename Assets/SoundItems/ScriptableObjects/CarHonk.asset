@@ -15,6 +15,6 @@ MonoBehaviour:
   audioEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 91af13f1a0c4fab428b4df60c2cd00ef, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3ad4ce4203d76c746a41055c7c8674a2, type: 2}
   range: 1
   sprite: {fileID: 21300000, guid: 6320654b1267dd348a971a609f9c3613, type: 3}

@@ -1,16 +1,27 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LevelStructure;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Listener : ChainableAction
 {
     public bool isTransmitter;
+    private GridElement _element;
+
+    public UnityEvent<GridElement> onListeningStarted, onListeningComplete;
     
     [HideInInspector] [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
     
     [SerializeField] private List<Reaction> reactions = new();
+    
+    private void Start()
+    {
+        _element = GetComponent<GridElement>();
+        
+        OnComplete += action => { onListeningComplete?.Invoke(_element); };
+    }
     
     public bool CheckForSound(SoundItem sound)
     {
@@ -48,6 +59,8 @@ public class Listener : ChainableAction
                 reaction.Response.Invoke(this);
                 break;
             }
+
+            onListeningStarted?.Invoke(_element);
         }
         
         Complete();

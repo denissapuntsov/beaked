@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LevelStructure;
 using UnityEngine;
 
 public class ChainableAction : MonoBehaviour
@@ -21,7 +22,7 @@ public class ChainableAction : MonoBehaviour
         Complete();
     }
 
-    public void Complete()
+    protected virtual void Complete()
     {
         if (ActionsCompleteMap.Values.Contains(false)) return;
         

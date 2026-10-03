@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Is-It-a-Bird_WwiseProject",
    "GUID": "{0EB12612-20EC-4E11-B740-1A7A2C894FD8}",
-   "Generator": "2025.1.5.9095"
+   "Generator": "2025.1.10.9233"
   },
   "CacheRoot": "../.cache",
   "Platforms": [
@@ -31,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{3808AFB8-4465-993A-59F1-3BCE4217CE24}"
+  "FileHash": "{B88A7DAD-5BEB-CB0D-3258-0FF5AA13AF96}"
  }
 }

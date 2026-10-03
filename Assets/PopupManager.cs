@@ -11,8 +11,13 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PopupManager : MonoBehaviour
 {
-    [SerializeField] private GameObject popupPrefab;
-    private Dictionary<GridElement, GameObject> _elementToPopupMap = new();
+    [SerializeField] private Transform gameplayGroup;
+    [SerializeField] private GameObject speechPopupPrefab, alertPopupPrefab;
+    private PlayerData _playerData;
+    private Camera _mainCamera;
+    [SerializeField] private List<GridElement> elements = new List<GridElement>();
+    private Dictionary<GridElement, GameObject> _speechPopups = new Dictionary<GridElement, GameObject>();
+    private Dictionary<GridElement, GameObject> _alertPopups = new Dictionary<GridElement, GameObject>();
 
     public static PopupManager instance;
 
@@ -27,45 +32,105 @@ public class PopupManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        SceneManager.sceneLoaded += RegisterSpeakers;
+        _playerData = FindAnyObjectByType<PlayerData>();
+        _mainCamera = Camera.main;
+        
+        
+        SceneManager.sceneLoaded += RegisterElements;
     }
 
-    private void RegisterSpeakers(Scene scene, LoadSceneMode mode)
+    private void RegisterElements(Scene scene, LoadSceneMode mode)
+    {
+        elements.Clear();
+
+        RegisterListeners();
+        RegisterSpeakers();
+        RegisterPlayer();
+    }
+
+    private void RegisterPlayer()
+    {
+        var playerElement = _playerData?.GetComponent<GridElement>();
+        elements.Add(playerElement);
+    }
+
+    private void RegisterSpeakers()
     {
         foreach (var speaker in FindObjectsByType<Speaker>())
         {
-            _elementToPopupMap.Clear();
-            RegisterPopup(speaker.GetComponent<GridElement>());
-            speaker.OnSoundStarted.AddListener(OpenPopup);
-            speaker.OnSoundComplete.AddListener(ClosePopup);
+            var newElement = speaker.GetComponent<GridElement>();
+            if (!elements.Contains(newElement)) 
+            {
+                elements.Add(newElement);
+            }
+            
+            var newPopup = Instantiate(speechPopupPrefab, gameplayGroup);
+            _speechPopups.TryAdd(newElement, newPopup);
+            
+            speaker.OnSoundStarted.AddListener(ShowSpeechPopup);
+            speaker.OnSoundComplete.AddListener(HideSpeechPopup);
+            
+            newPopup.SetActive(false);
         }
     }
 
-    public void RegisterPopup(GridElement origin)
+    private void RegisterListeners()
     {
-        var panel = Instantiate(popupPrefab, origin.transform);
-        panel.transform.localScale = Vector3.zero;
-        if (panel)
+        foreach (var listener in FindObjectsByType<Listener>())
         {
-            _elementToPopupMap.TryAdd(origin, panel.gameObject);
+            var newElement = listener.GetComponent<GridElement>();
+            if (!elements.Contains(newElement))
+            {
+                elements.Add(newElement);
+            }
+
+            var newPopup = Instantiate(alertPopupPrefab, gameplayGroup);
+            _alertPopups.TryAdd(newElement, newPopup);
+
+            listener.onListeningStarted.AddListener(ShowAlertPopup);
+            listener.onListeningComplete.AddListener(HideAlertPopup);
+            
+            newPopup.SetActive(false);
         }
     }
 
-    public void OpenPopup(GridElement origin)
+    private void ShowSpeechPopup(GridElement element)
     {
-        _elementToPopupMap.TryGetValue(origin, out var popup);
-        if (!popup) {return;}
-        
-        popup.transform.localPosition = Vector3.up * (origin.GridSize.y + 0.25f);
-        
-        popup.transform.DOScale(new Vector3(0.75f, 0.75f, 0.75f), 0.1f);
+        _speechPopups[element].SetActive(true);
     }
 
-    public void ClosePopup(GridElement origin)
+    private void HideSpeechPopup(GridElement element)
     {
-        _elementToPopupMap.TryGetValue(origin, out var popup);
-        if (!popup) return;
-        
-        popup.transform.DOScale(Vector3.zero, 0.1f);
+        _speechPopups[element].SetActive(false);
+    }
+
+    private void ShowAlertPopup(GridElement element)
+    {
+        _alertPopups[element].SetActive(true);
+    }
+
+    private void HideAlertPopup(GridElement element)
+    {
+        _alertPopups[element].SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!_mainCamera) return;
+        foreach (var (element, popup) in _speechPopups)
+        {
+            popup.transform.position = 
+                _mainCamera.WorldToScreenPoint(
+                    element.transform.position + 
+                    element.transform.up * (element.GridSize.y + 0.5f));
+        }
+
+        foreach (var (element, popup) in _alertPopups)
+        {
+            popup.transform.position = 
+                _mainCamera.WorldToScreenPoint(
+                    element.transform.position + 
+                    element.transform.up * (element.GridSize.y + 0.5f));
+        }
     }
 }
