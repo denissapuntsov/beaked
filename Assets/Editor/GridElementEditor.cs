@@ -2,6 +2,7 @@ using LevelStructure;
 using UnityEditor;
 using UnityEngine;
 
+[CanEditMultipleObjects]
 [CustomEditor(typeof(GridElement))]
 public class GridElementEditor : Editor
 {
