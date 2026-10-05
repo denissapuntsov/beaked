@@ -1,5 +1,3 @@
-using System;
-using Unity.Cinemachine.Editor;
 using UnityEngine;
 
 public abstract class FiniteStateMachine : GameState

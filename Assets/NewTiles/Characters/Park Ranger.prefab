@@ -99,7 +99,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97acc017366a27e48bc738f589486e54, type: 2}
+  - {fileID: 2100000, guid: 8db61aa4a2a21fd47883ecb2961bc670, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -598,9 +598,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 87b9216449cf25645a16778014a9e1e3, type: 2}
+      objectReference: {fileID: 2100000, guid: 8db61aa4a2a21fd47883ecb2961bc670, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8db61aa4a2a21fd47883ecb2961bc670, type: 2}
     - target: {fileID: 919132149155446097, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
       propertyPath: m_Name
       value: park_ranger_head 1
