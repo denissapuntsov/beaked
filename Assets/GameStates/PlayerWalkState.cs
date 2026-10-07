@@ -46,7 +46,7 @@ public class PlayerWalkState : GameState
         
         _data.meshAnimator.transform.rotation = Quaternion.Euler(0, yRotation, 0);
             
-        foreach (float f in new List<float> { 0, -0.5f, 0.5f })
+        foreach (float f in new List<float> { 0, 0.5f, -0.5f })
         {
             var nextCell = _controller.TryGetCellAtLocation(nextCellCoordinates + _data.CurrentCell.GridPosition + new Vector3(0, f, 0));
             //TileGrid.instance.GetCellAt(nextTileCoordinates + _data.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
