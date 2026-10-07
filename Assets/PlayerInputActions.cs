@@ -93,16 +93,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""df70fa95-8a34-4494-b137-73ab6b9c7d37"",
             ""actions"": [
                 {
-                    ""name"": ""Listen"",
-                    ""type"": ""Button"",
-                    ""id"": ""821f7eee-8e85-4f90-aec1-436806959df1"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false,
-                    ""priority"": 0
-                },
-                {
                     ""name"": ""Speak"",
                     ""type"": ""Button"",
                     ""id"": ""d20b7416-e3ce-4d08-8345-0890aec34442"",
@@ -146,30 +136,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""28ed46f3-e791-46d9-ad87-2e1c00ec8dae"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Listen"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""df9caa49-180f-4634-96d4-a1bb9d6d27bc"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Listen"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""57d38748-7175-46f1-b4f9-830947286661"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -191,7 +159,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3d5d93ab-1503-44c0-a3a4-b8df57934bda"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -991,7 +959,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Listen = m_Player.FindAction("Listen", throwIfNotFound: true);
         m_Player_Speak = m_Player.FindAction("Speak", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Walk = m_Player.FindAction("Walk", throwIfNotFound: true);
@@ -1089,7 +1056,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Listen;
     private readonly InputAction m_Player_Speak;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Walk;
@@ -1105,10 +1071,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Listen".
-        /// </summary>
-        public InputAction @Listen => m_Wrapper.m_Player_Listen;
         /// <summary>
         /// Provides access to the underlying input action "Player/Speak".
         /// </summary>
@@ -1151,9 +1113,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Listen.started += instance.OnListen;
-            @Listen.performed += instance.OnListen;
-            @Listen.canceled += instance.OnListen;
             @Speak.started += instance.OnSpeak;
             @Speak.performed += instance.OnSpeak;
             @Speak.canceled += instance.OnSpeak;
@@ -1177,9 +1136,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="PlayerActions" />
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Listen.started -= instance.OnListen;
-            @Listen.performed -= instance.OnListen;
-            @Listen.canceled -= instance.OnListen;
             @Speak.started -= instance.OnSpeak;
             @Speak.performed -= instance.OnSpeak;
             @Speak.canceled -= instance.OnSpeak;
@@ -1492,13 +1448,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
     public interface IPlayerActions
     {
-        /// <summary>
-        /// Method invoked when associated input action "Listen" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnListen(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Speak" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761098599395267043}
-  - component: {fileID: 4477600141310056079}
-  - component: {fileID: 1785020692757393326}
   - component: {fileID: 8613956538046310789}
   m_Layer: 0
   m_Name: Rock
@@ -35,42 +33,6 @@ Transform:
   - {fileID: 404510523730357872}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4477600141310056079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678951628205768407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8c7400328db684ea39f953e6e2f90a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  preReactionTime: 0
-  onPreInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1785020692757393326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8678951628205768407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0456077545db706499f75aafb3d1a130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicGridElementControls
-  bodyPivot: {fileID: 0}
-  westMovement: {x: 0, y: -1, z: 0}
-  southMovement: {x: -1, y: 0, z: 0}
-  eastMovement: {x: 0, y: 1, z: 0}
-  northMovement: {x: 1, y: 0, z: 0}
 --- !u!114 &8613956538046310789
 MonoBehaviour:
   m_ObjectHideFlags: 0
