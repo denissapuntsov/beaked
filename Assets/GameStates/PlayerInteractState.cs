@@ -4,7 +4,6 @@ using NewTiles;
 public class PlayerInteractState : GameState
 {
         private PlayerData _data;
-        Tweener _wait;
         
         public PlayerInteractState(PlayerData data) : base()
         {

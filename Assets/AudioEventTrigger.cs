@@ -12,7 +12,7 @@ public class AudioEventTrigger : MonoBehaviour
         foreach (var audioEvent in audioEvents)
         {
             if (audioEvent.name != eventName) continue;
-            audioEvent.audioEvent.Post(gameObject);
+            audioEvent.audioEvent.Post(SoundManager.instance.gameObject);
             return;
         }
     }

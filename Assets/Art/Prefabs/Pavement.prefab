@@ -233,6 +233,8 @@ MonoBehaviour:
   <GridSize>k__BackingField: {x: 1, y: 1, z: 1}
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 1
+  elementType: 0
+  blockMaterial: 3
   cells: []
 --- !u!1 &9113979536803840273
 GameObject:

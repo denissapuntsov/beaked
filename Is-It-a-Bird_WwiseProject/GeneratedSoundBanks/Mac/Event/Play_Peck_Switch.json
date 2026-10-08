@@ -1,0 +1,300 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3320958968",
+    "Type": "Event",
+    "GUID": "{0111C99D-7A20-4DFC-8B53-AD1865F46B76}",
+    "Language": "SFX",
+    "Hash": "{17E0CA47-0FF6-1207-E86A-C7D819FEAB2D}",
+    "ObjectPath": "Play_Peck_Switch",
+    "ShortName": "Play_Peck_Switch",
+    "Path": "Event/Play_Peck_Switch.bnk",
+    "Media": [
+     {
+      "Id": "98656245",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-009.wav",
+      "Path": "Media/98656245.wem",
+      "CachePath": "4E/{4E75C778-93B5-9497-20DA-A143D39528AB}.wem"
+     },
+     {
+      "Id": "130762466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-003.wav",
+      "Path": "Media/130762466.wem",
+      "CachePath": "FC/{FC646F7B-FBEF-F3B1-3399-959350180F47}.wem"
+     },
+     {
+      "Id": "237365610",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-007.wav",
+      "Path": "Media/237365610.wem",
+      "CachePath": "73/{73EFB586-CC49-C95D-F8F1-31904FFF374C}.wem"
+     },
+     {
+      "Id": "286664223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-006.wav",
+      "Path": "Media/286664223.wem",
+      "CachePath": "0D/{0DC36A80-C0B7-89F1-777D-3E0E48802902}.wem"
+     },
+     {
+      "Id": "404993273",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-004.wav",
+      "Path": "Media/404993273.wem",
+      "CachePath": "A5/{A568E070-8334-008E-CAD4-8CBBD546E57A}.wem"
+     },
+     {
+      "Id": "471721142",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-008.wav",
+      "Path": "Media/471721142.wem",
+      "CachePath": "B5/{B591D750-B989-E0D9-2746-45B1E8AF59FC}.wem"
+     },
+     {
+      "Id": "475915618",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-007.wav",
+      "Path": "Media/475915618.wem",
+      "CachePath": "BF/{BFE76EE5-150E-4FE1-7DF7-5E19AFD34D92}.wem"
+     },
+     {
+      "Id": "526252915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-009.wav",
+      "Path": "Media/526252915.wem",
+      "CachePath": "9A/{9A986E0B-9BA1-1870-E1BE-BFE6B2A9764D}.wem"
+     },
+     {
+      "Id": "548477465",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-005.wav",
+      "Path": "Media/548477465.wem",
+      "CachePath": "E9/{E94CE607-BDD4-1597-CF0C-C759D862919F}.wem"
+     },
+     {
+      "Id": "582251971",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-001.wav",
+      "Path": "Media/582251971.wem",
+      "CachePath": "9B/{9B986996-AD01-7203-A109-23ADE24C24D6}.wem"
+     },
+     {
+      "Id": "601766000",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-003.wav",
+      "Path": "Media/601766000.wem",
+      "CachePath": "C4/{C42B7874-16C5-8BE7-DD3C-3601F64EA27B}.wem"
+     },
+     {
+      "Id": "635640276",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-004.wav",
+      "Path": "Media/635640276.wem",
+      "CachePath": "9D/{9D275D57-48C8-871A-EB93-58B5C34C7FBA}.wem"
+     },
+     {
+      "Id": "709342882",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-002.wav",
+      "Path": "Media/709342882.wem",
+      "CachePath": "AE/{AEF071E4-7C23-8597-4603-6598641DB678}.wem"
+     },
+     {
+      "Id": "806322810",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-006.wav",
+      "Path": "Media/806322810.wem",
+      "CachePath": "E2/{E210260C-BDD2-4DA8-0147-442378F154CC}.wem"
+     },
+     {
+      "Id": "897788015",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-005.wav",
+      "Path": "Media/897788015.wem",
+      "CachePath": "70/{70504EB1-4FB8-9A88-3C64-6AECB797C763}.wem"
+     },
+     {
+      "Id": "994237788",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_METAL-008.wav",
+      "Path": "Media/994237788.wem",
+      "CachePath": "9F/{9F33DCA7-37BE-8F8E-7051-16813A4325D8}.wem"
+     },
+     {
+      "Id": "1024998418",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-001.wav",
+      "Path": "Media/1024998418.wem",
+      "CachePath": "5D/{5DC1C10B-E98D-F9DA-DB6A-2810DB4A9E5E}.wem"
+     },
+     {
+      "Id": "1040040393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "PECK_ROCK-002.wav",
+      "Path": "Media/1040040393.wem",
+      "CachePath": "47/{47492233-9AB2-A33D-E9AF-00B7AC4E582B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3320958968",
+      "Name": "Play_Peck_Switch",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Peck_Switch",
+      "GUID": "{0111C99D-7A20-4DFC-8B53-AD1865F46B76}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.66833335",
+      "DurationMax": "0.66833335",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "733203937",
+         "Id": "2144363834",
+         "GUID": "{A3E4C44D-DACB-44BE-82D2-C7BCC97E937D}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "98656245"
+         },
+         {
+          "Id": "286664223"
+         },
+         {
+          "Id": "471721142"
+         },
+         {
+          "Id": "475915618"
+         },
+         {
+          "Id": "601766000"
+         },
+         {
+          "Id": "635640276"
+         },
+         {
+          "Id": "897788015"
+         },
+         {
+          "Id": "1024998418"
+         },
+         {
+          "Id": "1040040393"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "733203937",
+         "Id": "2473969246",
+         "GUID": "{8E466659-A7CA-40CD-830E-39F8C742CEBE}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "130762466"
+         },
+         {
+          "Id": "237365610"
+         },
+         {
+          "Id": "404993273"
+         },
+         {
+          "Id": "526252915"
+         },
+         {
+          "Id": "548477465"
+         },
+         {
+          "Id": "582251971"
+         },
+         {
+          "Id": "709342882"
+         },
+         {
+          "Id": "806322810"
+         },
+         {
+          "Id": "994237788"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "733203937",
+      "Name": "PeckMaterial",
+      "ObjectPath": "\\Switches\\Default Work Unit\\PeckMaterial",
+      "GUID": "{9E746A06-2722-4145-A9D5-77DE0C64E3AF}",
+      "Switches": [
+       {
+        "Id": "1291433366",
+        "Name": "Base",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PeckMaterial\\Base",
+        "GUID": "{F2F5F6D4-D748-4E70-8249-B94CC007652A}"
+       },
+       {
+        "Id": "2144363834",
+        "Name": "Rock",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PeckMaterial\\Rock",
+        "GUID": "{A3E4C44D-DACB-44BE-82D2-C7BCC97E937D}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\PeckMaterial\\Metal",
+        "GUID": "{8E466659-A7CA-40CD-830E-39F8C742CEBE}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DC161360-279E-70F2-8F93-8B1A5A1DC02A}"
+ }
+}

@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3320958968	Play_Peck_Switch			\Default Work Unit\Play_Peck_Switch	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	733203937	PeckMaterial			\Default Work Unit\PeckMaterial	
+
+Switch	ID	Name	Switch Group			Notes
+	1291433366	Base	PeckMaterial			
+	2144363834	Rock	PeckMaterial			
+	2473969246	Metal	PeckMaterial			
+

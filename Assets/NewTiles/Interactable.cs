@@ -7,6 +7,7 @@ using UnityEngine.Events;
     {
         private GridElementControls _controls;
         [SerializeField] private float preReactionTime = 0f;
+        public PeckMaterial interactableMaterial;
         public UnityEvent onPreInteract;
         public UnityEvent<ChainableAction> onInteract;
 
@@ -17,6 +18,7 @@ using UnityEngine.Events;
 
         public void Interact()
         {
+            SoundManager.instance.SetPeckMaterial(interactableMaterial);
             _controls?.ReactToPeck();
             onPreInteract?.Invoke();
             Invoke(nameof(OnInitialReactionOver), preReactionTime);
@@ -32,3 +34,9 @@ using UnityEngine.Events;
         }
     }
 
+    public enum PeckMaterial
+    {
+        Base,
+        Rock,
+        Metal
+    }

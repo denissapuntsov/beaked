@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3461836331	Player_Step			\Default Work Unit\Player_Step	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3205339368	StepMaterial			\Default Work Unit\StepMaterial	
+
+Switch	ID	Name	Switch Group			Notes
+	1291433366	Base	StepMaterial			
+	2110808655	Road	StepMaterial			
+	2195636714	Dirt	StepMaterial			
+	2953019946	Barrier	StepMaterial			
+	4248645337	Grass	StepMaterial			
+

@@ -443,600 +443,6 @@
 						<ActiveSource Name="honk_v_3" ID="{86B771A1-8091-43A3-90E3-14BB13893D68}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Car Moving-001" ID="{1F121A39-2B0C-4A6E-BD58-3BB2996A06BA}" ShortID="628792031">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Car Moving-001" ID="{E3A877F9-18BC-498B-9DA3-4EF77487CFA7}">
-							<Language>SFX</Language>
-							<AudioFile>Car Moving-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="825667733"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Car Moving-001" ID="{E3A877F9-18BC-498B-9DA3-4EF77487CFA7}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Car Moving-002" ID="{751D09AA-B18D-4E6E-A8B0-9A10CBD485CE}" ShortID="1044784278">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Car Moving-002" ID="{D6E38E67-DE47-4E58-A03C-EBBF8E9D735B}">
-							<Language>SFX</Language>
-							<AudioFile>Car Moving-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="739487438"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Car Moving-002" ID="{D6E38E67-DE47-4E58-A03C-EBBF8E9D735B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Car Moving-003" ID="{09A69EFF-C1BC-49BB-AD36-6BDB44307ECB}" ShortID="335032226">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Car Moving-003" ID="{703C8042-F9D2-4A84-B916-4189776A12B4}">
-							<Language>SFX</Language>
-							<AudioFile>Car Moving-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="459029038"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Car Moving-003" ID="{703C8042-F9D2-4A84-B916-4189776A12B4}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_CLOSE-001" ID="{C27F8F93-E9A2-4415-A8A8-D69DF913CC06}" ShortID="317266362">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_CLOSE-001" ID="{4F8F012F-A032-466F-AEC7-22D5C8CAD80A}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_CLOSE-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="808296855"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_CLOSE-001" ID="{4F8F012F-A032-466F-AEC7-22D5C8CAD80A}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_CLOSE-002" ID="{FF4B2FBB-BB37-4C69-96AE-D7FBFB819781}" ShortID="385596575">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_CLOSE-002" ID="{C9A98A8D-7A82-49DF-9909-E6916C8EC645}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_CLOSE-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1031187617"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_CLOSE-002" ID="{C9A98A8D-7A82-49DF-9909-E6916C8EC645}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_CLOSE-003" ID="{DAAFECF4-4A0C-4F0B-B678-DA8D3ECB4171}" ShortID="275677779">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_CLOSE-003" ID="{3586E58B-2822-49F3-926D-C7CE9DD54097}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_CLOSE-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="563487411"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_CLOSE-003" ID="{3586E58B-2822-49F3-926D-C7CE9DD54097}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_OPEN-001" ID="{84313FE9-A221-4D3B-B9B6-895FB430473F}" ShortID="705189813">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_OPEN-001" ID="{5219ED5E-4508-4483-8314-A5AE64AEE3B1}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_OPEN-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="124863007"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_OPEN-001" ID="{5219ED5E-4508-4483-8314-A5AE64AEE3B1}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_OPEN-002" ID="{0E93EB3A-5D1B-4755-A834-42313CF96A97}" ShortID="872962446">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_OPEN-002" ID="{F7AE25AC-A0C3-426D-802C-20941BB67049}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_OPEN-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="241659698"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_OPEN-002" ID="{F7AE25AC-A0C3-426D-802C-20941BB67049}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="GATE_OPEN-003" ID="{811D05C0-8A48-4283-8290-ECF5C909CA7D}" ShortID="1000037694">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="GATE_OPEN-003" ID="{017A72A8-21CE-411A-B539-7976A958BA16}">
-							<Language>SFX</Language>
-							<AudioFile>GATE_OPEN-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="743240556"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="GATE_OPEN-003" ID="{017A72A8-21CE-411A-B539-7976A958BA16}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-001" ID="{360DCEF5-DF3C-4E39-9C5B-E118CD2708C5}" ShortID="889866611">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-001" ID="{25A33C19-BAAD-4DEA-82AA-9DDEC7C87D26}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="582251971"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-001" ID="{25A33C19-BAAD-4DEA-82AA-9DDEC7C87D26}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-002" ID="{74DECA8F-50AA-4B08-8116-4C2CB6BA6E11}" ShortID="914515016">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-002" ID="{32D2A1DE-BDD5-4A7D-B0AE-435372432D86}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="709342882"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-002" ID="{32D2A1DE-BDD5-4A7D-B0AE-435372432D86}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-003" ID="{68C4E946-4436-4617-BFD4-1E534CC08A14}" ShortID="1015146742">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-003" ID="{787E99F2-F26B-4560-A3CE-EE8071EC4660}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="130762466"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-003" ID="{787E99F2-F26B-4560-A3CE-EE8071EC4660}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-004" ID="{04BA1940-3FC3-4DF6-B9A7-77535F4C3C0B}" ShortID="1023559496">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-004" ID="{24689AC5-6030-46AA-9C49-CD9E12599092}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-004.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="404993273"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-004" ID="{24689AC5-6030-46AA-9C49-CD9E12599092}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-005" ID="{7BEDD91E-1FB0-42D9-A6B3-4F22BAE7AA55}" ShortID="404134203">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-005" ID="{FDC5F841-E03D-4E4E-BEBE-426603F23347}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-005.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="548477465"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-005" ID="{FDC5F841-E03D-4E4E-BEBE-426603F23347}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-006" ID="{AD6CF921-3438-4067-A609-73A4EAE019F1}" ShortID="635542820">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-006" ID="{EB8493FD-F6B5-4E46-B00B-007D4E231310}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-006.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="806322810"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-006" ID="{EB8493FD-F6B5-4E46-B00B-007D4E231310}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-007" ID="{034B1E4A-4FE0-49F0-B2C7-EF732F6249DD}" ShortID="576576452">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-007" ID="{06E69145-7259-4764-B9AF-3FE2A3C3D5B2}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-007.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="237365610"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-007" ID="{06E69145-7259-4764-B9AF-3FE2A3C3D5B2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-008" ID="{1ACCF8D3-37E4-4AC0-A24F-47C2C302EF1F}" ShortID="793131674">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-008" ID="{FF7BC3F8-D7D3-41B5-B22D-F71C5CE0F1AA}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-008.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="994237788"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-008" ID="{FF7BC3F8-D7D3-41B5-B22D-F71C5CE0F1AA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_METAL-009" ID="{E086F2E4-BB63-499B-B4F1-98DCD318D508}" ShortID="204712203">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_METAL-009" ID="{0FD93444-CE1B-41BB-9DCA-02D7E974CF3B}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_METAL-009.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="526252915"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_METAL-009" ID="{0FD93444-CE1B-41BB-9DCA-02D7E974CF3B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-001" ID="{86ABC4B7-49AD-4E7E-B21B-C1DA663AB485}" ShortID="172918355">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-001" ID="{D2738E27-C849-4754-BCDC-5AF7834FDB6C}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1024998418"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-001" ID="{D2738E27-C849-4754-BCDC-5AF7834FDB6C}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-002" ID="{CE78DC90-D3FD-4B57-8F9D-1D351A6FD91A}" ShortID="972778148">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-002" ID="{23641E5A-219A-45F3-92EA-C99486957F19}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1040040393"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-002" ID="{23641E5A-219A-45F3-92EA-C99486957F19}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-003" ID="{19770D12-A6A9-4B21-BA84-2A3A5B855FD4}" ShortID="1020089546">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-003" ID="{BECCC183-EBEC-42EA-BD57-E02D4277B604}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="601766000"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-003" ID="{BECCC183-EBEC-42EA-BD57-E02D4277B604}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-004" ID="{C27BC432-CB61-4B92-B00A-174C224A721B}" ShortID="911802535">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-004" ID="{C172A238-BCF4-4082-89D5-E40D076D21FD}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-004.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="635640276"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-004" ID="{C172A238-BCF4-4082-89D5-E40D076D21FD}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-005" ID="{D0E51653-98DF-49C6-8E30-2C0EAE20BBF9}" ShortID="1067504262">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-005" ID="{2E593E5F-BE56-432F-916A-F99CD59211A5}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-005.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="897788015"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-005" ID="{2E593E5F-BE56-432F-916A-F99CD59211A5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-006" ID="{EA7B816C-6537-4FF0-A552-93C1FB56E75A}" ShortID="605356000">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-006" ID="{476B13D4-8664-449A-83A7-42888BFC5CD4}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-006.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="286664223"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-006" ID="{476B13D4-8664-449A-83A7-42888BFC5CD4}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-007" ID="{F182CEAF-FEC3-4F61-8EC9-F2B894C7E093}" ShortID="95613302">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-007" ID="{B56FFD11-BEEE-4724-9DD1-A8915FD2D51F}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-007.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="475915618"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-007" ID="{B56FFD11-BEEE-4724-9DD1-A8915FD2D51F}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-008" ID="{D82B53C5-F8C3-427D-8023-4C9B564DF9FD}" ShortID="805730666">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-008" ID="{659CF15E-9D07-4215-B3E3-CB7D4EF741D2}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-008.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="471721142"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-008" ID="{659CF15E-9D07-4215-B3E3-CB7D4EF741D2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="PECK_ROCK-009" ID="{FE7ABECA-F3D4-40EA-ACAA-AE80266F68C4}" ShortID="909980168">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="PECK_ROCK-009" ID="{BAE70ED5-4F23-4A87-AF04-0BAB9A492E1B}">
-							<Language>SFX</Language>
-							<AudioFile>PECK_ROCK-009.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="98656245"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="PECK_ROCK-009" ID="{BAE70ED5-4F23-4A87-AF04-0BAB9A492E1B}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="WIND_LOOP_V1" ID="{76A85D11-034B-4F83-9D52-3761FB1C3297}" ShortID="345479887">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1063,6 +469,9 @@
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Base" ID="{800125FC-6121-49E4-87A1-F3ABAF98DFA9}" WorkUnitID="{4F46A931-5063-4909-9216-ADD987B3C246}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
@@ -1604,6 +1013,755 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<SwitchContainer Name="Peck_Switch" ID="{89682A5B-7FAC-446F-9D68-AF9798281617}" ShortID="906114135">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="PeckMaterial" ID="{9E746A06-2722-4145-A9D5-77DE0C64E3AF}" WorkUnitID="{4F46A931-5063-4909-9216-ADD987B3C246}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Peck_Rock" ID="{BAA59738-3B5D-4196-8F46-70AE336D4499}" ShortID="735806615">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="PECK_ROCK-001" ID="{86ABC4B7-49AD-4E7E-B21B-C1DA663AB485}" ShortID="172918355">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-001" ID="{D2738E27-C849-4754-BCDC-5AF7834FDB6C}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1024998418"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-001" ID="{D2738E27-C849-4754-BCDC-5AF7834FDB6C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-002" ID="{CE78DC90-D3FD-4B57-8F9D-1D351A6FD91A}" ShortID="972778148">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-002" ID="{23641E5A-219A-45F3-92EA-C99486957F19}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1040040393"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-002" ID="{23641E5A-219A-45F3-92EA-C99486957F19}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-003" ID="{19770D12-A6A9-4B21-BA84-2A3A5B855FD4}" ShortID="1020089546">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-003" ID="{BECCC183-EBEC-42EA-BD57-E02D4277B604}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="601766000"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-003" ID="{BECCC183-EBEC-42EA-BD57-E02D4277B604}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-004" ID="{C27BC432-CB61-4B92-B00A-174C224A721B}" ShortID="911802535">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-004" ID="{C172A238-BCF4-4082-89D5-E40D076D21FD}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="635640276"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-004" ID="{C172A238-BCF4-4082-89D5-E40D076D21FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-005" ID="{D0E51653-98DF-49C6-8E30-2C0EAE20BBF9}" ShortID="1067504262">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-005" ID="{2E593E5F-BE56-432F-916A-F99CD59211A5}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="897788015"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-005" ID="{2E593E5F-BE56-432F-916A-F99CD59211A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-006" ID="{EA7B816C-6537-4FF0-A552-93C1FB56E75A}" ShortID="605356000">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-006" ID="{476B13D4-8664-449A-83A7-42888BFC5CD4}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-006.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="286664223"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-006" ID="{476B13D4-8664-449A-83A7-42888BFC5CD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-007" ID="{F182CEAF-FEC3-4F61-8EC9-F2B894C7E093}" ShortID="95613302">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-007" ID="{B56FFD11-BEEE-4724-9DD1-A8915FD2D51F}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-007.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="475915618"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-007" ID="{B56FFD11-BEEE-4724-9DD1-A8915FD2D51F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-008" ID="{D82B53C5-F8C3-427D-8023-4C9B564DF9FD}" ShortID="805730666">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-008" ID="{659CF15E-9D07-4215-B3E3-CB7D4EF741D2}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-008.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="471721142"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-008" ID="{659CF15E-9D07-4215-B3E3-CB7D4EF741D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_ROCK-009" ID="{FE7ABECA-F3D4-40EA-ACAA-AE80266F68C4}" ShortID="909980168">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_ROCK-009" ID="{BAE70ED5-4F23-4A87-AF04-0BAB9A492E1B}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_ROCK-009.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="98656245"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_ROCK-009" ID="{BAE70ED5-4F23-4A87-AF04-0BAB9A492E1B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Peck_Metal" ID="{CB111DDF-15CC-47D7-84BB-19106B967182}" ShortID="245692031">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="PECK_METAL-001" ID="{360DCEF5-DF3C-4E39-9C5B-E118CD2708C5}" ShortID="889866611">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-001" ID="{25A33C19-BAAD-4DEA-82AA-9DDEC7C87D26}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.29109"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="582251971"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-001" ID="{25A33C19-BAAD-4DEA-82AA-9DDEC7C87D26}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-002" ID="{74DECA8F-50AA-4B08-8116-4C2CB6BA6E11}" ShortID="914515016">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-002" ID="{32D2A1DE-BDD5-4A7D-B0AE-435372432D86}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="709342882"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-002" ID="{32D2A1DE-BDD5-4A7D-B0AE-435372432D86}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-003" ID="{68C4E946-4436-4617-BFD4-1E534CC08A14}" ShortID="1015146742">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-003" ID="{787E99F2-F26B-4560-A3CE-EE8071EC4660}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="130762466"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-003" ID="{787E99F2-F26B-4560-A3CE-EE8071EC4660}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-004" ID="{04BA1940-3FC3-4DF6-B9A7-77535F4C3C0B}" ShortID="1023559496">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-004" ID="{24689AC5-6030-46AA-9C49-CD9E12599092}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="404993273"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-004" ID="{24689AC5-6030-46AA-9C49-CD9E12599092}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-005" ID="{7BEDD91E-1FB0-42D9-A6B3-4F22BAE7AA55}" ShortID="404134203">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-005" ID="{FDC5F841-E03D-4E4E-BEBE-426603F23347}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="548477465"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-005" ID="{FDC5F841-E03D-4E4E-BEBE-426603F23347}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-006" ID="{AD6CF921-3438-4067-A609-73A4EAE019F1}" ShortID="635542820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-006" ID="{EB8493FD-F6B5-4E46-B00B-007D4E231310}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-006.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="806322810"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-006" ID="{EB8493FD-F6B5-4E46-B00B-007D4E231310}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-007" ID="{034B1E4A-4FE0-49F0-B2C7-EF732F6249DD}" ShortID="576576452">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-007" ID="{06E69145-7259-4764-B9AF-3FE2A3C3D5B2}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-007.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="237365610"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-007" ID="{06E69145-7259-4764-B9AF-3FE2A3C3D5B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-008" ID="{1ACCF8D3-37E4-4AC0-A24F-47C2C302EF1F}" ShortID="793131674">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-008" ID="{FF7BC3F8-D7D3-41B5-B22D-F71C5CE0F1AA}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-008.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="994237788"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-008" ID="{FF7BC3F8-D7D3-41B5-B22D-F71C5CE0F1AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="PECK_METAL-009" ID="{E086F2E4-BB63-499B-B4F1-98DCD318D508}" ShortID="204712203">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="PECK_METAL-009" ID="{0FD93444-CE1B-41BB-9DCA-02D7E974CF3B}">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="0.29"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>PECK_METAL-009.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="526252915"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="PECK_METAL-009" ID="{0FD93444-CE1B-41BB-9DCA-02D7E974CF3B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Peck_Rock" ID="{BAA59738-3B5D-4196-8F46-70AE336D4499}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Peck_Metal" ID="{CB111DDF-15CC-47D7-84BB-19106B967182}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Rock" ID="{A3E4C44D-DACB-44BE-82D2-C7BCC97E937D}"/>
+								<ItemList>
+									<ItemRef Name="Peck_Rock" ID="{BAA59738-3B5D-4196-8F46-70AE336D4499}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{8E466659-A7CA-40CD-830E-39F8C742CEBE}"/>
+								<ItemList>
+									<ItemRef Name="Peck_Metal" ID="{CB111DDF-15CC-47D7-84BB-19106B967182}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<RandomSequenceContainer Name="Gate_Close" ID="{2FA6B014-245D-4F93-BAA8-6E01BA76F8C0}" ShortID="410304908">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="GATE_CLOSE-001" ID="{C27F8F93-E9A2-4415-A8A8-D69DF913CC06}" ShortID="317266362">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_CLOSE-001" ID="{4F8F012F-A032-466F-AEC7-22D5C8CAD80A}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_CLOSE-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="808296855"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_CLOSE-001" ID="{4F8F012F-A032-466F-AEC7-22D5C8CAD80A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GATE_CLOSE-002" ID="{FF4B2FBB-BB37-4C69-96AE-D7FBFB819781}" ShortID="385596575">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_CLOSE-002" ID="{C9A98A8D-7A82-49DF-9909-E6916C8EC645}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_CLOSE-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1031187617"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_CLOSE-002" ID="{C9A98A8D-7A82-49DF-9909-E6916C8EC645}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GATE_CLOSE-003" ID="{DAAFECF4-4A0C-4F0B-B678-DA8D3ECB4171}" ShortID="275677779">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_CLOSE-003" ID="{3586E58B-2822-49F3-926D-C7CE9DD54097}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_CLOSE-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="563487411"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_CLOSE-003" ID="{3586E58B-2822-49F3-926D-C7CE9DD54097}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Gate_Open" ID="{15D41882-972B-40D0-B3A7-7046A87D50F7}" ShortID="469991319">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="GATE_OPEN-001" ID="{84313FE9-A221-4D3B-B9B6-895FB430473F}" ShortID="705189813">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_OPEN-001" ID="{5219ED5E-4508-4483-8314-A5AE64AEE3B1}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_OPEN-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="124863007"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_OPEN-001" ID="{5219ED5E-4508-4483-8314-A5AE64AEE3B1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GATE_OPEN-002" ID="{0E93EB3A-5D1B-4755-A834-42313CF96A97}" ShortID="872962446">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_OPEN-002" ID="{F7AE25AC-A0C3-426D-802C-20941BB67049}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_OPEN-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="241659698"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_OPEN-002" ID="{F7AE25AC-A0C3-426D-802C-20941BB67049}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="GATE_OPEN-003" ID="{811D05C0-8A48-4283-8290-ECF5C909CA7D}" ShortID="1000037694">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GATE_OPEN-003" ID="{017A72A8-21CE-411A-B539-7976A958BA16}">
+									<Language>SFX</Language>
+									<AudioFile>GATE_OPEN-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="743240556"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="GATE_OPEN-003" ID="{017A72A8-21CE-411A-B539-7976A958BA16}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Car_Moving" ID="{FF88EE6C-56F6-487D-AC29-585D88CC4D9C}" ShortID="740477679">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Car Moving-001" ID="{1F121A39-2B0C-4A6E-BD58-3BB2996A06BA}" ShortID="628792031">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Car Moving-001" ID="{E3A877F9-18BC-498B-9DA3-4EF77487CFA7}">
+									<Language>SFX</Language>
+									<AudioFile>Car Moving-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="825667733"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Car Moving-001" ID="{E3A877F9-18BC-498B-9DA3-4EF77487CFA7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Car Moving-002" ID="{751D09AA-B18D-4E6E-A8B0-9A10CBD485CE}" ShortID="1044784278">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Car Moving-002" ID="{D6E38E67-DE47-4E58-A03C-EBBF8E9D735B}">
+									<Language>SFX</Language>
+									<AudioFile>Car Moving-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="739487438"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Car Moving-002" ID="{D6E38E67-DE47-4E58-A03C-EBBF8E9D735B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Car Moving-003" ID="{09A69EFF-C1BC-49BB-AD36-6BDB44307ECB}" ShortID="335032226">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Car Moving-003" ID="{703C8042-F9D2-4A84-B916-4189776A12B4}">
+									<Language>SFX</Language>
+									<AudioFile>Car Moving-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="459029038"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Car Moving-003" ID="{703C8042-F9D2-4A84-B916-4189776A12B4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

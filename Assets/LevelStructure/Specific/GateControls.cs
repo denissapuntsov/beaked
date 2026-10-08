@@ -2,12 +2,15 @@ using System;
 using DG.Tweening;
 using LevelStructure;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GateControls : ChainableAction
 {
     [SerializeField] private Transform armTransform;
     [SerializeField] private GridElement invisibleWallClosed, invisibleWallOpen;
     private PlayerData _data;
+    
+    [SerializeField] private UnityEvent onOpen, onClose;
 
     private bool _isOpen;
     public bool IsOpen
@@ -42,6 +45,7 @@ public class GateControls : ChainableAction
     public void Open(ChainableAction source)
     {
         if (IsOpen) return;
+        onOpen?.Invoke();
         source.AddAction(this);
         armTransform
             .DOScaleY(0.5f, 1f);
@@ -61,6 +65,8 @@ public class GateControls : ChainableAction
             if (CheckCell(cell.GridPosition)) return;
         }
         if (!IsOpen) return;
+
+        onClose?.Invoke();
         source.AddAction(this);
         armTransform
             .DOScaleY(0.573f, 1f);

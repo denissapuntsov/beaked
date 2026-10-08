@@ -9,6 +9,14 @@
 						<Switch Name="Grass" ID="{8116B1E8-AAAB-4AD8-99D0-B6120B6410B1}"/>
 						<Switch Name="Dirt" ID="{D227F1EE-A619-4BDA-A9CD-CBB451E2DE72}"/>
 						<Switch Name="Barrier" ID="{5A296AEC-9F76-401D-A3FC-9589E9E08450}"/>
+						<Switch Name="Base" ID="{800125FC-6121-49E4-87A1-F3ABAF98DFA9}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PeckMaterial" ID="{9E746A06-2722-4145-A9D5-77DE0C64E3AF}">
+					<ChildrenList>
+						<Switch Name="Base" ID="{F2F5F6D4-D748-4E70-8249-B94CC007652A}"/>
+						<Switch Name="Rock" ID="{A3E4C44D-DACB-44BE-82D2-C7BCC97E937D}"/>
+						<Switch Name="Metal" ID="{8E466659-A7CA-40CD-830E-39F8C742CEBE}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

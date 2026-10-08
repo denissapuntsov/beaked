@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 761098599395267043}
   - component: {fileID: 8613956538046310789}
+  - component: {fileID: 8142611696775940541}
+  - component: {fileID: 4744013340826939053}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -48,10 +50,62 @@ MonoBehaviour:
   <GridSize>k__BackingField: {x: 1, y: 0.5, z: 1}
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 1
+  elementType: 1
+  stepMaterial: 0
   cells:
   - GridPosition: {x: 1, y: 2.5, z: 2}
     IsAccessible: 1
     IsSolid: 1
+--- !u!114 &8142611696775940541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678951628205768407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8c7400328db684ea39f953e6e2f90a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  preReactionTime: 0.6
+  interactableMaterial: 1
+  onPreInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4744013340826939053}
+        m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: peck
+          m_BoolArgument: 0
+        m_CallState: 2
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4744013340826939053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8678951628205768407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: peck
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 68ffde95c517a15459cecdd20fddb7a8, type: 2}
 --- !u!1001 &150770879388158363
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -60,6 +60,8 @@ public class PlayerWalkState : GameState
     
     private void MoveTo(Cell cell)
     {
+        ChangeFootstepSound();
+
         _data.onStepBegin?.Invoke();
         _data.AnimationState = PlayerAnimationState.Moving;
         _move?.Kill();
@@ -88,7 +90,13 @@ public class PlayerWalkState : GameState
                 TryCellAtInput(walkInput);
             });
     }
-    
+
+    private void ChangeFootstepSound()
+    {
+        var tileBelow = _controller.CellToElementMap[_data.CurrentCell];
+        SoundManager.instance.SetFootstepMaterial(tileBelow.stepMaterial);
+    }
+
     private void GetRelativeRotation(Vector2 walkInput, out int yRotation)
     {
         switch (walkInput)

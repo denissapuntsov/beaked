@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "115854669",
+    "Type": "Event",
+    "GUID": "{FABC6E2F-17A7-4328-A4E0-B34F9E4D0982}",
+    "Language": "SFX",
+    "Hash": "{B2D2A391-CD3E-773B-B62A-D2904E0DC372}",
+    "ObjectPath": "Play_Car_Moving",
+    "ShortName": "Play_Car_Moving",
+    "Path": "Event/Play_Car_Moving.bnk",
+    "Media": [
+     {
+      "Id": "459029038",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Car Moving-003.wav",
+      "Path": "Media/459029038.wem",
+      "CachePath": "D2/{D215A329-AD44-8912-248C-A041791C66B6}.wem"
+     },
+     {
+      "Id": "739487438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Car Moving-002.wav",
+      "Path": "Media/739487438.wem",
+      "CachePath": "50/{50BE0292-7EB3-8DB5-A7ED-4F816B944CD5}.wem"
+     },
+     {
+      "Id": "825667733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Car Moving-001.wav",
+      "Path": "Media/825667733.wem",
+      "CachePath": "C2/{C21D0BE0-356C-F3BE-D80E-361E44AC13B1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "115854669",
+      "Name": "Play_Car_Moving",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Car_Moving",
+      "GUID": "{FABC6E2F-17A7-4328-A4E0-B34F9E4D0982}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "459029038"
+       },
+       {
+        "Id": "739487438"
+       },
+       {
+        "Id": "825667733"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F6C91F9F-BFB2-A970-6A75-652C56BC5BC9}"
+ }
+}

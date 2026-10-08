@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4089264814",
+    "Type": "Event",
+    "GUID": "{2A2A093D-1561-41D3-88CB-32045B018942}",
+    "Language": "SFX",
+    "Hash": "{98D15FD5-73CF-D9C4-7F25-06565F9CF855}",
+    "ObjectPath": "Play_Gate_Open",
+    "ShortName": "Play_Gate_Open",
+    "Path": "Event/Play_Gate_Open.bnk",
+    "Media": [
+     {
+      "Id": "124863007",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GATE_OPEN-001.wav",
+      "Path": "Media/124863007.wem",
+      "CachePath": "0E/{0E89E2CD-D58B-AC88-3017-55481FA212B2}.wem"
+     },
+     {
+      "Id": "241659698",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GATE_OPEN-002.wav",
+      "Path": "Media/241659698.wem",
+      "CachePath": "27/{278FCE52-BADE-65F7-BB3C-B368F63B205A}.wem"
+     },
+     {
+      "Id": "743240556",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GATE_OPEN-003.wav",
+      "Path": "Media/743240556.wem",
+      "CachePath": "D1/{D1F35E33-23FB-D454-72EB-656A54796DF1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4089264814",
+      "Name": "Play_Gate_Open",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Gate_Open",
+      "GUID": "{2A2A093D-1561-41D3-88CB-32045B018942}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5",
+      "DurationMax": "1.5",
+      "MediaRefs": [
+       {
+        "Id": "124863007"
+       },
+       {
+        "Id": "241659698"
+       },
+       {
+        "Id": "743240556"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3CB8CAE8-0FA7-CD6B-45E7-0AE00B2E09C2}"
+ }
+}

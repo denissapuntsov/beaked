@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	4175325535	Player_Step_01			\Default Work Unit\Player_Step_01	
-

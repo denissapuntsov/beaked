@@ -18,6 +18,7 @@ namespace LevelStructure
         [field: SerializeField] public bool IsClimbable { get; private set; } = true;
 
         public ElementType elementType;
+        public StepMaterial stepMaterial;
         
         public List<Cell> cells;
         public Vector3 GridOffset => (GridSize.x - 1) / 2 * transform.right + (GridSize.z - 1) / 2 * transform.forward;
@@ -49,4 +50,13 @@ public enum ElementType
     Decoration,
     Person,
     Player
+}
+
+public enum StepMaterial
+{
+    Base,
+    Dirt,
+    Grass,
+    Road,
+    Barrier
 }
