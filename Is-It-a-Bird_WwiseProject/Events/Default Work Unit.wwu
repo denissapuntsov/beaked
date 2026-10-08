@@ -14,12 +14,19 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Player_Step_01" ID="{627A35A9-335A-4D7E-A9DB-C8B863B1649B}">
+				<Event Name="Player_Step" ID="{627A35A9-335A-4D7E-A9DB-C8B863B1649B}">
 					<ChildrenList>
 						<Action Name="" ID="{7C22BA54-5A61-45D2-804F-858F65D4FE25}" ShortID="948460639">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Step_Random" ID="{58FA7810-943A-4D28-B3FD-49AFB20454F9}" WorkUnitID="{FDEF8A0A-6564-40F1-82DD-F25B106460D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{58E2DCA8-D518-49E3-9579-1AC730D53889}" ShortID="362022413">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Step_Switch" ID="{8C3A91EF-7098-416B-B1F9-63A6E600376D}" WorkUnitID="{FDEF8A0A-6564-40F1-82DD-F25B106460D9}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
