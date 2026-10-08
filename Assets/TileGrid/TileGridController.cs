@@ -31,7 +31,7 @@ namespace LevelStructure
         {
             CellToElementMap = new Dictionary<Cell, GridElement>();
             _model = new TileGridModel();
-            _view = new TileGridView();
+            _view = new TileGridView(_data);
 
             var gridElements = FindObjectsByType<GridElement>(
                 FindObjectsInactive.Include);
