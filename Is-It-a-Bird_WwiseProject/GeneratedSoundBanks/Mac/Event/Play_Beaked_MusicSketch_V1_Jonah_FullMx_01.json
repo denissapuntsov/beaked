@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4154561170",
+    "Type": "Event",
+    "GUID": "{673C6178-47BC-4064-85A6-EA5DB5AC67AF}",
+    "Language": "SFX",
+    "Hash": "{95441207-0D64-4765-92A2-7BC7477945D6}",
+    "ObjectPath": "Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
+    "ShortName": "Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
+    "Path": "Event/Play_Beaked_MusicSketch_V1_Jonah_FullMx_01.bnk",
+    "Media": [
+     {
+      "Id": "100088677",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Beaked_MusicSketch_V1_Jonah_FullMx.wav",
+      "Path": "Media/100088677.wem",
+      "CachePath": "3C/{3C54DC3B-4A4E-3026-38C3-0F744A1AF865}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4154561170",
+      "Name": "Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
+      "GUID": "{673C6178-47BC-4064-85A6-EA5DB5AC67AF}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "100088677"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D7D0C85A-4EFC-C31C-1608-814FC778AFD6}"
+ }
+}

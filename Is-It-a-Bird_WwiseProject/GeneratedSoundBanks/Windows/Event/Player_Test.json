@@ -29,7 +29,7 @@
      {
       "Id": "2791944829",
       "Name": "Player_Test",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player_Test",
+      "ObjectPath": "\\Events\\SFX\\Player_Test",
       "GUID": "{65A2E21F-CD83-4DAF-A118-4961A08F1487}",
       "DurationType": "OneShot",
       "DurationMin": "0.48",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{C9DDC4B9-AA17-D16A-3289-6767FA2597D0}"
+  "FileHash": "{9BB1979E-2C92-7CDB-7814-5BF1C398182F}"
  }
 }

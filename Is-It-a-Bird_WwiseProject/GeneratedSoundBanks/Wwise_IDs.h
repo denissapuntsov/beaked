@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BEAKED_MUSICSKETCH_V1_JONAH_FULLMX_01 = 4154561170U;
         static const AkUniqueID PLAY_CAR_MOVING = 115854669U;
         static const AkUniqueID PLAY_GATE_CLOSE = 1676603786U;
         static const AkUniqueID PLAY_GATE_OPEN = 4089264814U;

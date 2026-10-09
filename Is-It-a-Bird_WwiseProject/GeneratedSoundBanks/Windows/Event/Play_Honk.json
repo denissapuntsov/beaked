@@ -29,7 +29,7 @@
      {
       "Id": "2486471960",
       "Name": "Play_Honk",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Honk",
+      "ObjectPath": "\\Events\\SFX\\Play_Honk",
       "GUID": "{20B87619-4649-4AF2-9302-E9FE1A720CC9}",
       "DurationType": "OneShot",
       "DurationMin": "0.50959",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{53E17682-F787-ACDB-53CF-BBE95BAB0182}"
+  "FileHash": "{49166208-EBF2-D1C4-B485-8CC2DC6CB36E}"
  }
 }

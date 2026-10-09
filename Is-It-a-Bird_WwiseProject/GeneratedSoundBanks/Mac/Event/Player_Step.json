@@ -245,7 +245,7 @@
      {
       "Id": "3461836331",
       "Name": "Player_Step",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player_Step",
+      "ObjectPath": "\\Events\\SFX\\Player_Step",
       "GUID": "{627A35A9-335A-4D7E-A9DB-C8B863B1649B}",
       "DurationType": "OneShot",
       "DurationMin": "0.5416667",
@@ -413,6 +413,6 @@
     ]
    }
   ],
-  "FileHash": "{59362974-8295-BA89-7F1D-FF94D0627510}"
+  "FileHash": "{AF48F549-B929-8ACE-33DF-70DB03CBAE82}"
  }
 }

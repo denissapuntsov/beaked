@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D9B86AAC-3EDF-4B26-8D43-243036037CDC}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="SFX" ID="{D9B86AAC-3EDF-4B26-8D43-243036037CDC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Car_Moving" ID="{FABC6E2F-17A7-4328-A4E0-B34F9E4D0982}">
+					<ChildrenList>
+						<Action Name="" ID="{D8C5444F-F8A5-4F4C-8844-80A7F14DD5B3}" ShortID="563164200">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car_Moving" ID="{FF88EE6C-56F6-487D-AC29-585D88CC4D9C}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gate_Close" ID="{C1AD8505-3EA5-432C-887B-8F29F09257E3}">
+					<ChildrenList>
+						<Action Name="" ID="{E9AEF316-8B4C-4409-960E-0F0054C8F119}" ShortID="287803355">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Close" ID="{2FA6B014-245D-4F93-BAA8-6E01BA76F8C0}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Gate_Open" ID="{2A2A093D-1561-41D3-88CB-32045B018942}">
+					<ChildrenList>
+						<Action Name="" ID="{97A9E2AE-3D6C-45D3-AF34-AEED7799E71F}" ShortID="494827505">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gate_Open" ID="{15D41882-972B-40D0-B3A7-7046A87D50F7}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Honk" ID="{20B87619-4649-4AF2-9302-E9FE1A720CC9}">
+					<ChildrenList>
+						<Action Name="" ID="{1BAA3F74-345E-453D-A0CD-89C65814E3A0}" ShortID="229985050">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="honk_v_3" ID="{95BCE556-2A56-4255-BF34-47B184CD5502}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Peck_Random" ID="{ECB737E2-F52B-486E-86A6-4D318CEBC7AD}">
+					<ChildrenList>
+						<Action Name="" ID="{20683241-BB34-4C7E-A744-8C0A90057195}" ShortID="122292211">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Peck_Random" ID="{F61C7EF0-9AA1-4540-844B-AA97EF4739B8}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Peck_Switch" ID="{0111C99D-7A20-4DFC-8B53-AD1865F46B76}">
+					<ChildrenList>
+						<Action Name="" ID="{468245FD-444C-4E42-9945-C06BC04C9597}" ShortID="411692695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Peck_Switch" ID="{89682A5B-7FAC-446F-9D68-AF9798281617}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Whistle" ID="{15A4A0E2-0202-4CE3-8B42-B30F46302EB4}">
+					<ChildrenList>
+						<Action Name="" ID="{56764684-6E2A-4475-AAE8-42947D8B9B61}" ShortID="257321315">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whistle" ID="{611F602C-C178-4B52-9895-F1A5B48C8C3B}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Step" ID="{627A35A9-335A-4D7E-A9DB-C8B863B1649B}">
+					<ChildrenList>
+						<Action Name="" ID="{7C22BA54-5A61-45D2-804F-858F65D4FE25}" ShortID="948460639">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Step_Random" ID="{58FA7810-943A-4D28-B3FD-49AFB20454F9}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{58E2DCA8-D518-49E3-9579-1AC730D53889}" ShortID="362022413">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Step_Switch" ID="{8C3A91EF-7098-416B-B1F9-63A6E600376D}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Test" ID="{65A2E21F-CD83-4DAF-A118-4961A08F1487}">
+					<ChildrenList>
+						<Action Name="" ID="{582F2D19-8E70-4389-981E-34F95B8DCE06}" ShortID="408564937">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pickup" ID="{BCA72925-C18A-499F-8FBB-BC688E89B7AC}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

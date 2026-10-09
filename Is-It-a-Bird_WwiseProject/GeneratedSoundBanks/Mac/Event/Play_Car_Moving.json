@@ -47,7 +47,7 @@
      {
       "Id": "115854669",
       "Name": "Play_Car_Moving",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Car_Moving",
+      "ObjectPath": "\\Events\\SFX\\Play_Car_Moving",
       "GUID": "{FABC6E2F-17A7-4328-A4E0-B34F9E4D0982}",
       "DurationType": "OneShot",
       "DurationMin": "0.5",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{F6C91F9F-BFB2-A970-6A75-652C56BC5BC9}"
+  "FileHash": "{85DD4EF3-9DAA-B742-8E28-9D56326F134D}"
  }
 }

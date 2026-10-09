@@ -29,7 +29,7 @@
      {
       "Id": "2693257580",
       "Name": "Play_Whistle",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Whistle",
+      "ObjectPath": "\\Events\\SFX\\Play_Whistle",
       "GUID": "{15A4A0E2-0202-4CE3-8B42-B30F46302EB4}",
       "DurationType": "OneShot",
       "DurationMin": "0.4361905",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{D2A86892-86C1-B782-13FE-E55F9036E23D}"
+  "FileHash": "{4DCC8065-84DE-0F85-7D70-0A97645D1D07}"
  }
 }

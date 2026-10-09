@@ -47,7 +47,7 @@
      {
       "Id": "1676603786",
       "Name": "Play_Gate_Close",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Gate_Close",
+      "ObjectPath": "\\Events\\SFX\\Play_Gate_Close",
       "GUID": "{C1AD8505-3EA5-432C-887B-8F29F09257E3}",
       "DurationType": "OneShot",
       "DurationMin": "1.5",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{1840E88A-93B0-155D-6794-A41B11017E1F}"
+  "FileHash": "{751E80A2-E3E2-CC97-4790-3837AB6CD829}"
  }
 }

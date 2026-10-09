@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
 {
     private const string FootstepSwitch = "StepMaterial";
     private const string PeckSwitch = "PeckMaterial";
+
+    [SerializeField] private AK.Wwise.Event musicEvent;
     
     public static SoundManager instance;
 
@@ -36,4 +38,14 @@ public class SoundManager : MonoBehaviour
     { 
         sound.audioEvent.Post(source, (uint)AkCallbackType.AK_EndOfEvent, onFinishedSpeaking);
     }
+
+    public void SetMusic(MusicMode mode)
+    {
+        musicEvent.Post(gameObject);
+    }
+}
+
+public enum MusicMode
+{
+    Gameplay
 }

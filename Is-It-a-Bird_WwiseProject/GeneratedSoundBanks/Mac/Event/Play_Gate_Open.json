@@ -47,7 +47,7 @@
      {
       "Id": "4089264814",
       "Name": "Play_Gate_Open",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Gate_Open",
+      "ObjectPath": "\\Events\\SFX\\Play_Gate_Open",
       "GUID": "{2A2A093D-1561-41D3-88CB-32045B018942}",
       "DurationType": "OneShot",
       "DurationMin": "1.5",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{3CB8CAE8-0FA7-CD6B-45E7-0AE00B2E09C2}"
+  "FileHash": "{AB5639C1-F21B-A1CF-F0F1-9D15307369EC}"
  }
 }

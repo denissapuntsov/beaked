@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4154561170	Play_Beaked_MusicSketch_V1_Jonah_FullMx_01			\Default Work Unit\Play_Beaked_MusicSketch_V1_Jonah_FullMx_01	
+

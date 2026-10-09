@@ -101,7 +101,7 @@
      {
       "Id": "3013440353",
       "Name": "Play_Peck_Random",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Peck_Random",
+      "ObjectPath": "\\Events\\SFX\\Play_Peck_Random",
       "GUID": "{ECB737E2-F52B-486E-86A6-4D318CEBC7AD}",
       "DurationType": "OneShot",
       "DurationMin": "0.9583333",
@@ -139,6 +139,6 @@
     ]
    }
   ],
-  "FileHash": "{2C3C28F7-A4B0-B654-1D59-CA4DC2D3477F}"
+  "FileHash": "{2CFFFBE3-D9DB-AEC1-A645-2F705AC0CC90}"
  }
 }

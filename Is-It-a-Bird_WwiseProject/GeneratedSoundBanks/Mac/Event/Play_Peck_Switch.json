@@ -182,7 +182,7 @@
      {
       "Id": "3320958968",
       "Name": "Play_Peck_Switch",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Peck_Switch",
+      "ObjectPath": "\\Events\\SFX\\Play_Peck_Switch",
       "GUID": "{0111C99D-7A20-4DFC-8B53-AD1865F46B76}",
       "DurationType": "OneShot",
       "DurationMin": "0.66833335",
@@ -295,6 +295,6 @@
     ]
    }
   ],
-  "FileHash": "{DC161360-279E-70F2-8F93-8B1A5A1DC02A}"
+  "FileHash": "{DD5BB348-2016-B2D4-C430-1DD748CCD256}"
  }
 }
