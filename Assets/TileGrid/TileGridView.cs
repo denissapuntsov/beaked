@@ -85,6 +85,7 @@ namespace LevelStructure
 
         private void DropNextGroup()
         {
+            Debug.Log(_groups.Count);
             if (_groups.Count == 0)
             {
                 _onGridAnimationComplete?.Invoke();

@@ -1659,6 +1659,11 @@
 				</SwitchContainer>
 				<Sound Name="honk_v_3" ID="{95BCE556-2A56-4255-BF34-47B184CD5502}" ShortID="851545210">
 					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>7</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>8</Value>
@@ -1676,7 +1681,7 @@
 					<ChildrenList>
 						<AudioFileSource Name="honk_v_3" ID="{86B771A1-8091-43A3-90E3-14BB13893D68}">
 							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.34034"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.195021099402576"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 								<Property Name="TrimEnd" Type="Real64" Value="0.50959"/>
 							</PropertyList>

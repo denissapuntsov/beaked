@@ -3614,7 +3614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcfe4ecb8f2ace48a17e4a2fba4909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSetupSkipped: 1
+  isSetupSkipped: 0
 --- !u!4 &849549312
 Transform:
   m_ObjectHideFlags: 0
@@ -4447,7 +4447,7 @@ MonoBehaviour:
   <GridSize>k__BackingField: {x: 1, y: 0.5, z: 1}
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 1
-  elementType: 0
+  elementType: 1
   stepMaterial: 4
   cells:
   - GridPosition: {x: -1, y: 2.5, z: 7}
@@ -4734,6 +4734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3757c3b8be1347bf05701b8079bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b9ab9d2e332f39343adf78fe64c98ab7, type: 2}
 --- !u!4 &1243103769
 Transform:
   m_ObjectHideFlags: 0
@@ -4958,7 +4962,7 @@ MonoBehaviour:
   <GridSize>k__BackingField: {x: 1, y: 0.5, z: 2}
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 0
-  elementType: 0
+  elementType: 2
   stepMaterial: 0
   cells:
   - GridPosition: {x: -2, y: 2.5, z: 6}
@@ -5761,6 +5765,10 @@ PrefabInstance:
     - target: {fileID: 6201311436833978186, guid: 99844f005149be54cbc163475d9d17f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657776770060116694, guid: 99844f005149be54cbc163475d9d17f4, type: 3}
+      propertyPath: elementType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6657776770060116694, guid: 99844f005149be54cbc163475d9d17f4, type: 3}
       propertyPath: cells.Array.data[0].GridPosition.x
@@ -7442,6 +7450,7 @@ GameObject:
   - component: {fileID: 1852107493}
   - component: {fileID: 1852107492}
   - component: {fileID: 1852107491}
+  - component: {fileID: 1852107496}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -7600,6 +7609,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1852107496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852107490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c471366a3afd78549bd2770f24ecb65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
 --- !u!1 &1882952222
 GameObject:
   m_ObjectHideFlags: 0
@@ -8119,6 +8140,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6657776770060116694, guid: 99844f005149be54cbc163475d9d17f4, type: 3}
+      propertyPath: elementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657776770060116694, guid: 99844f005149be54cbc163475d9d17f4, type: 3}
       propertyPath: cells.Array.data[0].GridPosition.x
       value: -1
       objectReference: {fileID: 0}
@@ -8574,6 +8599,10 @@ PrefabInstance:
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 849549311}
+    - target: {fileID: 3377070944097918505, guid: c5b86a29a884e0d4eaf1b590717cda40, type: 3}
+      propertyPath: elementType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3816218251900032961, guid: c5b86a29a884e0d4eaf1b590717cda40, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2

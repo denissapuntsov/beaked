@@ -1,3 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2693257580	Play_Whistle			\Default Work Unit\Play_Whistle	
+	2693257580	Play_Whistle			\SFX\Play_Whistle	
 

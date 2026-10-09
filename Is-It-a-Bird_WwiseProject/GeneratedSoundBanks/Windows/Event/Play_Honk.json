@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{20B87619-4649-4AF2-9302-E9FE1A720CC9}",
     "Language": "SFX",
-    "Hash": "{6BC06D27-1ACD-CE84-8A63-4407C78171F1}",
+    "Hash": "{0D56A6AA-3034-A8C8-7D63-713C619AFAC4}",
     "ObjectPath": "Play_Honk",
     "ShortName": "Play_Honk",
     "Path": "Event/Play_Honk.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "honk_v_3.wav",
       "Path": "Media/441467430.wem",
-      "CachePath": "BC/{BC333843-59B0-ABA5-9149-11CE1D3AEA8A}.wem"
+      "CachePath": "CF/{CF2D640A-3455-DF01-F8E5-E4B765DAB167}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{49166208-EBF2-D1C4-B485-8CC2DC6CB36E}"
+  "FileHash": "{C91D9ECE-ABD9-D8BF-700E-4A40BB1F1A78}"
  }
 }

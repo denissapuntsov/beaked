@@ -25,23 +25,6 @@ public class Speaker : ChainableAction
         _playerData = FindAnyObjectByType<PlayerData>();
     }
 
-    public void Transmit(ChainableAction source, SoundItem newSound)
-    {
-        source.AddAction(this);
-        OnSoundStarted?.Invoke(_element);
-        
-        var neighboringCells = GetNeighboringCells(out _);
-        _neighboringListeners = FindListeners(neighboringCells);
-        if (_neighboringListeners == null || _neighboringListeners.Count == 0)
-        {
-            Debug.Log("no listeners");
-            Complete();
-        }
-        
-        _transmittedSound = newSound;
-        SoundManager.instance.PlaySound(newSound, gameObject, HandleSoundComplete);
-    }
-
     public void Speak(ChainableAction source)
     {
         source.AddAction(this);

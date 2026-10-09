@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{15A4A0E2-0202-4CE3-8B42-B30F46302EB4}",
     "Language": "SFX",
-    "Hash": "{EA729A45-7841-FEB4-6922-40CD3CBB4953}",
+    "Hash": "{DBE7142E-2168-E635-28BB-9EFA75601F97}",
     "ObjectPath": "Play_Whistle",
     "ShortName": "Play_Whistle",
     "Path": "Event/Play_Whistle.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{CBCAE886-DDB3-356E-9FF6-6870A8D3D7B7}"
+  "FileHash": "{678A9F1A-75FE-81C0-EF69-629CD3DE5231}"
  }
 }
