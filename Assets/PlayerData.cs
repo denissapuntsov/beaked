@@ -7,9 +7,17 @@ using UnityEngine.Events;
 [SelectionBase]
 public class PlayerData : MonoBehaviour
 {
+    #region Inventory
+
+    public List<SoundItem> soundHistory = new();
+    
+    #endregion
+    
     #region Interactions
-        [Header("Interactions")] 
-        public SoundItem currentSound;
+
+    [Header("Interactions")] 
+    
+    public SoundItem currentSound;
         
         //public Interactable FocusedInteractable => nearbyInteractables[^1];
         //public List<Interactable> nearbyInteractables;
@@ -64,6 +72,7 @@ public enum PlayerAnimationState
     Moving,
     Speaking,
     Interacting,
+    Learning,
     Intro
 }
 

@@ -5,18 +5,32 @@ using UnityEngine.Events;
 
     public class Interactable : ChainableAction
     {
+        public InteractableStateMachine StateMachine;
+
+        public UnityEvent<ChainableAction> onPeck;
+        public UnityEvent<ChainableAction, SoundItem> onListen;
+        
         private GridElementControls _controls;
         [SerializeField] private float preReactionTime = 0f;
         public PeckMaterial interactableMaterial;
-        public UnityEvent onPreInteract;
-        public UnityEvent<ChainableAction> onInteract;
-
+        
         private void Awake()
         {
             _controls = GetComponent<GridElementControls>();
+            StateMachine = new InteractableStateMachine();
         }
 
-        public void Interact()
+        public void OnPeck()
+        {
+            onPeck?.Invoke(this);
+        }
+
+        public void OnListen(SoundItem sound)
+        {
+            onListen?.Invoke(this, sound);
+        }
+
+        /*public void Interact()
         {
             SoundManager.instance.SetPeckMaterial(interactableMaterial);
             _controls?.ReactToPeck();
@@ -31,7 +45,7 @@ using UnityEngine.Events;
                 Complete();
             }
             onInteract?.Invoke(this);
-        }
+        }*/
     }
 
     public enum PeckMaterial

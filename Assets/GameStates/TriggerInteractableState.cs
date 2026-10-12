@@ -12,7 +12,7 @@ public class TriggerInteractableState : GameState
     public override void Enter()
     {
         Interactable.OnComplete = HandleInteractableComplete;
-        Interactable.Interact();
+        Interactable.OnPeck();
     }
 
     private void HandleInteractableComplete(ChainableAction interactable)

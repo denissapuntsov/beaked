@@ -7,5 +7,5 @@ public abstract class GridElementControls : ChainableAction
                 Data = FindAnyObjectByType<PlayerData>();
         }
         
-        public virtual void ReactToPeck() {}
+        public virtual void ReactToPeck(ChainableAction parent) {}
 }

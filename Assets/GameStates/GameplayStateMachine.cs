@@ -7,7 +7,9 @@ public class GameplayStateMachine : FiniteStateMachine
 {
     #region States
     public PlayerStepStateMachine PlayerStepState { get; protected set; }
-    public ReactionStepStateMachine ReactionStepState { get; protected set; }
+    public WorldReactionStepState WorldReactionStepState { get; protected set; }
+    
+    public PlayerReactionStepState PlayerReactionStepState { get; protected set; }
     
     #endregion
     
@@ -18,9 +20,14 @@ public class GameplayStateMachine : FiniteStateMachine
             OnComplete = HandlePlayerStepStateComplete
         };
 
-        ReactionStepState = new ReactionStepStateMachine(data, controller)
+        WorldReactionStepState = new WorldReactionStepState(data, controller)
         {
-            OnComplete = HandleReactionStepComplete
+            OnComplete = HandleWorldReactionStepComplete
+        };
+
+        PlayerReactionStepState = new PlayerReactionStepState(data, controller)
+        {
+            OnComplete = HandlePlayerReactionStepComplete
         };
     }
 
@@ -34,12 +41,20 @@ public class GameplayStateMachine : FiniteStateMachine
 
     private void HandlePlayerStepStateComplete()
     {
-        ReactionStepState.EntryState = PlayerStepState.ExitState;
-        ChangeState(ReactionStepState);
+        // analyse the world to see if our action has reached a Peckable or a Listener
+        WorldReactionStepState.EntryState = PlayerStepState.ExitState;
+        ChangeState(WorldReactionStepState);
+    }
+    
+    private void HandleWorldReactionStepComplete()
+    {
+        // if the player has a new sound, react to acquisition
+        ChangeState(PlayerReactionStepState);
     }
 
-    private void HandleReactionStepComplete()
+    private void HandlePlayerReactionStepComplete()
     {
+        // have we reached the end?
         ChangeState(PlayerStepState);
     }
     

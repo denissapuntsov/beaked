@@ -5,7 +5,6 @@ public class GlobalStateMachine : FiniteStateMachine
       
       public SetupStateMachine SetupStateMachine { get; private set; }
       public GameplayStateMachine GameplayStateMachine { get; protected set; }
-      
       public LevelCompleteStateMachine LevelCompleteStateMachine { get; protected set; }
       
       public GlobalStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller, bool isSetupSkipped)
@@ -14,12 +13,15 @@ public class GlobalStateMachine : FiniteStateMachine
             {
                   OnComplete = HandleSetupStateComplete
             };
-            
-            GameplayStateMachine = new GameplayStateMachine(actions, data, controller);
+
+            GameplayStateMachine = new GameplayStateMachine(actions, data, controller)
+            {
+                  OnComplete = HandleGameplayerStateComplete
+            };
 
             LevelCompleteStateMachine = new LevelCompleteStateMachine()
             {
-                  OnComplete = LevelCompleteStateComplete
+                  OnComplete = HandleLevelCompleteStateComplete
             };
       }
 
@@ -35,7 +37,12 @@ public class GlobalStateMachine : FiniteStateMachine
             ChangeState(GameplayStateMachine);
       }
 
-      private void LevelCompleteStateComplete()
+      private void HandleGameplayerStateComplete()
+      {
+            ChangeState(LevelCompleteStateMachine);
+      }
+
+      private void HandleLevelCompleteStateComplete()
       {
             Complete();
       }

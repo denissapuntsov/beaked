@@ -49,8 +49,10 @@ public class CarControls : GridElementControls
         };
     }
 
-    public override void ReactToPeck()
+    public override void ReactToPeck(ChainableAction parent)
     {
+        parent.AddAction(this);
+        
         var turnDirection = Data.orientation switch
         {
             Orientation.North => new Vector3(0, 0, 1),

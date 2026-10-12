@@ -27,6 +27,10 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 
     public void OnSpeak(InputAction.CallbackContext context)
     {
+        if (!context.started)
+        {
+            return;
+        }
         if (!_data.currentSound) return;
         ExitState = ExitState.Speaking;
         Complete();

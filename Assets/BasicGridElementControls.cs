@@ -15,14 +15,23 @@ public class BasicGridElementControls : GridElementControls
     [SerializeField] private Vector3 northMovement = new Vector3(1, 0, 0);
     
     private Animator _animator;
+    private Interactable _interactable;
+    private ParticleSystem _particles;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _interactable = GetComponent<Interactable>();
+        _particles = GetComponentInChildren<ParticleSystem>();
+        
+        _interactable.onPeck.AddListener(ReactToPeck);
     }
 
-    public override void ReactToPeck()
+    public override void ReactToPeck(ChainableAction parent)
     {
+        parent.AddAction(this);
+        _particles?.Play();
+        
         if (_animator)
         {
             _animator.enabled = false;
@@ -52,6 +61,8 @@ public class BasicGridElementControls : GridElementControls
                         {
                             _animator.enabled = true;
                         }
+
+                        Complete();
                     });
             });
     }

@@ -4,10 +4,11 @@ using UnityEngine.InputSystem;
 
 public abstract class GameState
 {
-    public Action OnComplete;
+    public Action OnEnter, OnComplete;
     
     public virtual void Enter()
     {
+        OnEnter?.Invoke();
     }
 
     /*public virtual void Update()
@@ -18,8 +19,8 @@ public abstract class GameState
     {
         
     }
-    
-    public virtual void Complete()
+
+    protected virtual void Complete()
     {
         OnComplete?.Invoke();
     }

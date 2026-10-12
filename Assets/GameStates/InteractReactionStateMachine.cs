@@ -8,7 +8,7 @@ public class InteractReactionStateMachine : FiniteStateMachine
     public CheckForInteractableState CheckForInteractableState { get; protected set; }
     public TriggerInteractableState TriggerInteractableState { get; protected set; }
     
-    public InteractReactionStateMachine(PlayerData data, TileGridController controller) : base()
+    public  InteractReactionStateMachine(PlayerData data, TileGridController controller) : base()
     {
         CheckForInteractableState = new CheckForInteractableState(data, controller)
         {

@@ -41,8 +41,6 @@ public class ActionPopup : MonoBehaviour
         _show.Rewind();
         _show.PlayForward();
 	}
-    
-    public void Display(SoundItem soundItem) => Display(soundItem.sprite);
 
     public void Hide()
     {

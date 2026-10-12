@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[ExecuteAlways]
 public class Billboard : MonoBehaviour
 {
     private Transform _mainCameraTransform;
@@ -8,17 +9,11 @@ public class Billboard : MonoBehaviour
     private void Start()
     {
         _mainCameraTransform = Camera.main?.transform;
+        transform.rotation = Quaternion.LookRotation(-_mainCameraTransform.forward);
     }
 
-    private void LateUpdate()
+    /*private void LateUpdate()
     {
-        Vector3 direction = transform.position - _mainCameraTransform.position;
-
-        if (direction.sqrMagnitude < 0.0001f)
-        {
-            return;
-        }
-        
-        transform.rotation = Quaternion.LookRotation(direction);
-    }
+        transform.rotation = Quaternion.LookRotation(-_mainCameraTransform.forward);
+    }*/
 }
