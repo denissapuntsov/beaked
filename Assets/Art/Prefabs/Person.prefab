@@ -427,12 +427,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1201200273415926969}
   - component: {fileID: 940413241980976353}
-  - component: {fileID: 7014208929450999652}
   - component: {fileID: 5185493954351929327}
   - component: {fileID: 6077095700347231270}
   - component: {fileID: 495349101468254265}
   - component: {fileID: 1422814044693798105}
   - component: {fileID: 11746507791971643}
+  - component: {fileID: 323369742788129819}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -480,58 +480,6 @@ MonoBehaviour:
   - GridPosition: {x: 4, y: 2.5, z: -1}
     IsAccessible: 0
     IsSolid: 1
---- !u!114 &7014208929450999652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6750963950177078850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c6a3ea12624a04ba97b561158d396a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mover
-  speed: 2
-  path:
-  - {x: 3, y: 2, z: 0}
-  - {x: 3, y: 2, z: 1}
-  - {x: 3, y: 2, z: 2}
-  offsets:
-  - {x: 0, y: 0, z: 1}
-  - {x: 0, y: 0, z: 1}
-  - {x: 0, y: 0, z: 1}
-  color: {r: 1, g: 0.9913155, b: 0, a: 1}
-  onStartPath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1422814044693798105}
-        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Moving
-          m_BoolArgument: 0
-        m_CallState: 2
-  onCompletePath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1422814044693798105}
-        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
-        m_MethodName: StopAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5185493954351929327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +507,20 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7014208929450999652}
-          m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+        - m_Target: {fileID: 323369742788129819}
+          m_TargetAssemblyTypeName: SmartMover, Assembly-CSharp
+          m_MethodName: SelectPath
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: forward
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 323369742788129819}
+          m_TargetAssemblyTypeName: SmartMover, Assembly-CSharp
           m_MethodName: Move
           m_Mode: 0
           m_Arguments:
@@ -643,6 +603,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &323369742788129819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750963950177078850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e95d139d15bf1e469e05afd2cee08a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mover1
+  paths:
+  - key: forward
+    directions:
+    - {x: 0, y: 1}
+    - {x: 0, y: 1}
+    - {x: 0, y: 1}
+  currentCell:
+    GridPosition: {x: 0, y: 0, z: 0}
+    IsAccessible: 0
+    IsSolid: 1
+  speed: 2
+  onStartPath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422814044693798105}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Moving
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCompletePath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422814044693798105}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: StopAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Moving
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9060169816900278723
 GameObject:
   m_ObjectHideFlags: 0

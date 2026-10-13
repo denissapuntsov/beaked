@@ -12,7 +12,7 @@ public class Listener : ChainableAction
 
     public UnityEvent<GridElement> onListeningStarted, onListeningComplete;
     
-    [HideInInspector] [SerializeField] private UnityEvent<ChainableAction, SoundItem> onAnySound;
+    [HideInInspector] public UnityEvent<ChainableAction, SoundItem> onAnySound;
     
     [SerializeField] private List<Reaction> reactions = new();
     

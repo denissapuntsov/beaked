@@ -53,7 +53,7 @@ public class Mover : ChainableAction
         }
         else
         {
-            move = transform.DOMove(path[index], distance / speed);
+            move = transform.DOBlendableMoveBy(path[index], distance / speed);
         }
 
         move.SetEase(Ease.Linear);

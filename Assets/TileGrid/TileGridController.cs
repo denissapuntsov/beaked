@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace LevelStructure
@@ -18,8 +19,26 @@ namespace LevelStructure
 
         public void Setup()
         {
+            DOTween.Init();
+            DOTween.KillAll();
             SetupGrid();
             AssignPlayerCell();
+            AssignSmartMoverCells();
+        }
+
+        private void AssignSmartMoverCells()
+        {
+            var smartMovers = FindObjectsByType<SmartMover>();
+            Debug.Log(smartMovers[0].name);
+            foreach (var smartMover in smartMovers)
+            {
+                var moverCell = TryGetCellAtLocation(smartMover.transform.position);
+                if (moverCell == null)
+                {
+                    Debug.Log($"{smartMover.name} has no cell at position {smartMover.transform.position}");
+                }
+                smartMover.currentCell = moverCell;
+            }
         }
 
         public void AnimateGridSetup(Action onComplete)
@@ -53,6 +72,7 @@ namespace LevelStructure
         {
             if (!_data) return;
             var playerCell = TryGetCellAtLocation(_data.gameObject.transform.position);
+            Debug.Log(playerCell.GridPosition);
             _data.CurrentCell = playerCell;
         }
 

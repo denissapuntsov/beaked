@@ -16,7 +16,7 @@ public class PlayerReactionStepState : FiniteStateMachine
     {
         base.Enter();
 
-        if (_data.soundHistory.Contains(_data.currentSound))
+        if (_data.soundHistory.Contains(_data.currentSound) || !_data.currentSound)
         {
             Complete();
             return;
