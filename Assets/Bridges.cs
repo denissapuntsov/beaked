@@ -1,17 +1,20 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using LevelStructure;
 using UnityEngine;
 
 public class Bridges : ChainableAction
 {
-    [SerializeField] private bool isUp = false;
-
     private Tweener _move;
+
+    [SerializeField] private List<Vector3> directions;
+    [SerializeField] private int startingDirectionIndex;
+    private int _positionIndex;
 
     private TileGridController _controller;
     
-    private GridElement[] _elements = new GridElement[]{};
+    private GridElement[] _elements = {};
 
     private void Awake()
     {
@@ -21,21 +24,20 @@ public class Bridges : ChainableAction
 
     private void Start()
     {
-        
+        _positionIndex = startingDirectionIndex;
         _move.Kill();
     }
 
     public void Switch(ChainableAction parent)
     {
-        var isUp = this.isUp;
-        this.isUp = !this.isUp;
         foreach (var element in _elements)
         {
             _controller.RemoveElement(element);
         }
         parent.AddAction(this);
         _move = transform
-            .DOMoveY(isUp ? -1 : 1, 1)
+            .DOMove(directions[_positionIndex], 1f)
+            .SetSpeedBased()
             .SetRelative(true)
             .SetEase(Ease.Linear)
             .OnComplete(Finish);
@@ -47,6 +49,16 @@ public class Bridges : ChainableAction
         {
             _controller.AddElement(element);
         }
+        
+        if (_positionIndex >= directions.Count - 1)
+        {
+            _positionIndex = 0;
+        }
+        else
+        {
+            _positionIndex++;
+        }
+        
         Complete();
     }
 }
