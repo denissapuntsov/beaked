@@ -29,7 +29,6 @@ public class CheckForInteractableState : GameState
                         return;
                 }
                 FoundInteractable = FindInteractable(cellToCheck);
-                Debug.Log(FoundInteractable);
                 Complete();
         }
 

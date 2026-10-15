@@ -49,7 +49,6 @@ public class BasicGridElementControls : GridElementControls
         var randomFactor = Random.Range(0.5f, 1.2f);
         var turnVector = turnDirection * (randomFactor * 5);
         
-        Debug.Log(turnVector);
         bodyPivot.DOBlendableLocalRotateBy(turnVector, 0.2f * randomFactor)
             .OnComplete(() =>
             {

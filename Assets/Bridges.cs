@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using DG.Tweening;
 using LevelStructure;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bridges : ChainableAction
 {
     private Tweener _move;
 
-    [SerializeField] private List<Vector3> directions;
-    [SerializeField] private int startingDirectionIndex;
-    private int _positionIndex;
+    [SerializeField] private List<MoveCommand> commands;
+    [SerializeField] private int startingCommandIndex;
+    private int _commandIndex;
 
     private TileGridController _controller;
     
@@ -24,7 +25,7 @@ public class Bridges : ChainableAction
 
     private void Start()
     {
-        _positionIndex = startingDirectionIndex;
+        _commandIndex = startingCommandIndex;
         _move.Kill();
     }
 
@@ -35,8 +36,10 @@ public class Bridges : ChainableAction
             _controller.RemoveElement(element);
         }
         parent.AddAction(this);
+        commands[_commandIndex].onStart?.Invoke(this);
+        
         _move = transform
-            .DOMove(directions[_positionIndex], 1f)
+            .DOMove(commands[_commandIndex].direction, commands[_commandIndex].speed)
             .SetSpeedBased()
             .SetRelative(true)
             .SetEase(Ease.Linear)
@@ -50,15 +53,25 @@ public class Bridges : ChainableAction
             _controller.AddElement(element);
         }
         
-        if (_positionIndex >= directions.Count - 1)
+        commands[_commandIndex].onFinish?.Invoke(this);
+        
+        if (_commandIndex == commands.Count - 1)
         {
-            _positionIndex = 0;
+            _commandIndex = 0;
         }
         else
         {
-            _positionIndex++;
+            _commandIndex++;
         }
         
         Complete();
     }
+}
+
+[Serializable]
+public class MoveCommand
+{
+    public Vector3 direction;
+    public float speed = 2;
+    public UnityEvent<ChainableAction> onStart, onFinish;
 }

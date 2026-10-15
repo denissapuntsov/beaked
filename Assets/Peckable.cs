@@ -20,11 +20,6 @@ public class Peckable : ChainableAction
     private void OnPeck(ChainableAction parent)
     {
         parent.AddAction(this);
-        if (onStart.GetPersistentEventCount() < 1)
-        {
-            Complete();
-            return;
-        }
         onStart?.Invoke(this);
         Invoke(nameof(React), timeToReact);
     }

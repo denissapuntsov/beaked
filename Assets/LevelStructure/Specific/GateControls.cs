@@ -42,7 +42,7 @@ public class GateControls : ChainableAction
         }
     }
 
-    public void Open(ChainableAction source)
+    private void Open(ChainableAction source)
     {
         if (IsOpen) return;
         onOpen?.Invoke();
@@ -58,7 +58,7 @@ public class GateControls : ChainableAction
             });
     }
 
-    public void Close(ChainableAction source)
+    private void Close(ChainableAction source)
     {
         foreach (var cell in invisibleWallClosed.cells)
         {

@@ -48,6 +48,7 @@ public class Listener : ChainableAction
 
         if (isTransmitter)
         {
+            Debug.Log(sound.name);
             onAnySound?.Invoke(this, sound);
         }
         else

@@ -2,6 +2,7 @@ using System;
 using LevelStructure;
 using UnityEngine;
 
+[RequireComponent(typeof(Listener))]
 public class Pipe : ChainableAction
 {
     [SerializeField] private Pipe pairedPipe;
@@ -16,7 +17,7 @@ public class Pipe : ChainableAction
     
     private Listener _listener;
 
-    private void Awake()
+    private void Start()
     {
         _gridElement = GetComponent<GridElement>();
         _gridController = FindAnyObjectByType<TileGridController>();

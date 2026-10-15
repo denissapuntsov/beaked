@@ -29,7 +29,6 @@ namespace LevelStructure
         private void AssignSmartMoverCells()
         {
             var smartMovers = FindObjectsByType<SmartMover>();
-            Debug.Log(smartMovers[0].name);
             foreach (var smartMover in smartMovers)
             {
                 var moverCell = TryGetCellAtLocation(smartMover.transform.position);
