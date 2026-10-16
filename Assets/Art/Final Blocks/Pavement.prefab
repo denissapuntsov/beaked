@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6990128245772109411, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_Name
-      value: Pavement Variant
+      value: Pavement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

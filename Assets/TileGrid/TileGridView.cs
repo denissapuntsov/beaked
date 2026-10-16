@@ -85,12 +85,19 @@ namespace LevelStructure
 
         private void DropNextGroup()
         {
-            Debug.Log(_groups.Count);
             if (_groups.Count == 0)
             {
                 _onGridAnimationComplete?.Invoke();
                 return;
             }
+            
+            if (_groups[0].Count == 0)
+            {
+                _groups.RemoveAt(0);
+                DropNextGroup();
+                return;
+            }
+            
             DropGroup(_groups[0]);
             _groups.RemoveAt(0);
         }
