@@ -10,100 +10,100 @@
     "Type": "Event",
     "GUID": "{D3EE6214-769C-4858-823C-AE535274BD53}",
     "Language": "SFX",
-    "Hash": "{E9EA0649-C961-2ECD-C451-7CC3D50B68D0}",
+    "Hash": "{F4B0DA87-AC6B-899A-5690-C77E327B3811}",
     "ObjectPath": "Play_Assembly",
     "ShortName": "Play_Assembly",
     "Path": "Event/Play_Assembly.bnk",
     "Media": [
      {
-      "Id": "24216472",
+      "Id": "56626688",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-004.wav",
-      "Path": "Media/24216472.wem",
-      "CachePath": "57/{57C25445-F098-8D60-3A73-00ED9FD36DB4}.wem"
+      "ShortName": "ASSEMBLY_V2-005.wav",
+      "Path": "Media/56626688.wem",
+      "CachePath": "C3/{C3765EDF-C5CF-6DB9-F97F-B37C751378A3}.wem"
      },
      {
-      "Id": "91640168",
+      "Id": "148789553",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-007.wav",
-      "Path": "Media/91640168.wem",
-      "CachePath": "05/{0556175D-AF47-0AC5-0AB4-5CEF7E47C75C}.wem"
+      "ShortName": "ASSEMBLY_V2-002.wav",
+      "Path": "Media/148789553.wem",
+      "CachePath": "2B/{2B001C65-1C76-E128-7CF4-4502E3640318}.wem"
      },
      {
-      "Id": "128083307",
+      "Id": "412948131",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-002.wav",
-      "Path": "Media/128083307.wem",
-      "CachePath": "F0/{F0CD8009-85DF-057F-137B-DFC87C57C013}.wem"
+      "ShortName": "ASSEMBLY_V2-003.wav",
+      "Path": "Media/412948131.wem",
+      "CachePath": "AE/{AEA2A1E9-2A93-4BA2-6D99-D4DFFC380FCC}.wem"
      },
      {
-      "Id": "235856096",
+      "Id": "429210104",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-008.wav",
-      "Path": "Media/235856096.wem",
-      "CachePath": "B6/{B61CD614-44AD-A044-7F7E-FF9687A09AFD}.wem"
+      "ShortName": "ASSEMBLY_V2-010.wav",
+      "Path": "Media/429210104.wem",
+      "CachePath": "81/{8173DEE9-8AD5-EFFC-69D8-F73922BE72B8}.wem"
      },
      {
-      "Id": "445343733",
+      "Id": "444777982",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-006.wav",
-      "Path": "Media/445343733.wem",
-      "CachePath": "CF/{CF57DBDD-6C9C-84FE-01D3-9B8FC399DB73}.wem"
+      "ShortName": "ASSEMBLY_V2-001.wav",
+      "Path": "Media/444777982.wem",
+      "CachePath": "FF/{FF1CDAD4-CBA4-DD4B-70AB-8BAEDB35A4D5}.wem"
      },
      {
-      "Id": "463456617",
+      "Id": "507634060",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-010.wav",
-      "Path": "Media/463456617.wem",
-      "CachePath": "95/{95A31261-BBEC-7770-2F76-7CEAFE195954}.wem"
+      "ShortName": "ASSEMBLY_V2-009.wav",
+      "Path": "Media/507634060.wem",
+      "CachePath": "D3/{D379FF20-518A-CCBD-7E62-828A4F4A2FEF}.wem"
      },
      {
-      "Id": "513776227",
+      "Id": "599211111",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-001.wav",
-      "Path": "Media/513776227.wem",
-      "CachePath": "BB/{BB0CB997-0D17-97EA-D184-AF1D9C507DC3}.wem"
+      "ShortName": "ASSEMBLY_V2-006.wav",
+      "Path": "Media/599211111.wem",
+      "CachePath": "E1/{E1ACB68A-A1CE-00D9-7A2A-085255864BFA}.wem"
      },
      {
-      "Id": "817490301",
+      "Id": "609222476",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-005.wav",
-      "Path": "Media/817490301.wem",
-      "CachePath": "FB/{FB16C0B4-9B92-2505-2791-603D2491756B}.wem"
+      "ShortName": "ASSEMBLY_V2-007.wav",
+      "Path": "Media/609222476.wem",
+      "CachePath": "86/{8664AED4-A2D4-5066-7A8A-98258FD5C240}.wem"
      },
      {
-      "Id": "946900962",
+      "Id": "756001834",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-003.wav",
-      "Path": "Media/946900962.wem",
-      "CachePath": "06/{06055F99-B974-7BBB-9C61-A245B9B3A057}.wem"
+      "ShortName": "ASSEMBLY_V2-008.wav",
+      "Path": "Media/756001834.wem",
+      "CachePath": "35/{3511ABA6-D370-57D4-68B1-A067474A3DAF}.wem"
      },
      {
-      "Id": "1002406814",
+      "Id": "788700100",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "ASSEMBLY_V1-009.wav",
-      "Path": "Media/1002406814.wem",
-      "CachePath": "0E/{0E326785-A659-E763-68B1-1EEB0F02A1A9}.wem"
+      "ShortName": "ASSEMBLY_V2-004.wav",
+      "Path": "Media/788700100.wem",
+      "CachePath": "CA/{CA5CF7C2-B123-9205-2456-62A5EC905936}.wem"
      }
     ],
     "Events": [
@@ -117,34 +117,34 @@
       "DurationMax": "1",
       "MediaRefs": [
        {
-        "Id": "24216472"
+        "Id": "56626688"
        },
        {
-        "Id": "91640168"
+        "Id": "148789553"
        },
        {
-        "Id": "128083307"
+        "Id": "412948131"
        },
        {
-        "Id": "235856096"
+        "Id": "429210104"
        },
        {
-        "Id": "445343733"
+        "Id": "444777982"
        },
        {
-        "Id": "463456617"
+        "Id": "507634060"
        },
        {
-        "Id": "513776227"
+        "Id": "599211111"
        },
        {
-        "Id": "817490301"
+        "Id": "609222476"
        },
        {
-        "Id": "946900962"
+        "Id": "756001834"
        },
        {
-        "Id": "1002406814"
+        "Id": "788700100"
        }
       ]
      }
@@ -159,6 +159,6 @@
     ]
    }
   ],
-  "FileHash": "{42061307-1637-E3CD-5CBD-C42AE9E1FACB}"
+  "FileHash": "{FA1403B5-8B91-F83A-40E2-F4C1917CD4F9}"
  }
 }

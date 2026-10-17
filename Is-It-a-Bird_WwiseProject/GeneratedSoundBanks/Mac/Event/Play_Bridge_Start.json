@@ -10,46 +10,46 @@
     "Type": "Event",
     "GUID": "{C82CBA8A-5B90-4D8D-A908-1F27F790C648}",
     "Language": "SFX",
-    "Hash": "{5D98DF26-F6DA-F8FB-139E-8C57D3941596}",
+    "Hash": "{50CEA15A-0F0D-59EE-8C25-210D3F3D8D55}",
     "ObjectPath": "Play_Bridge_Start",
     "ShortName": "Play_Bridge_Start",
     "Path": "Event/Play_Bridge_Start.bnk",
     "Media": [
      {
-      "Id": "155012697",
+      "Id": "112281503",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "BRIDGE_START_V1-001.wav",
-      "Path": "Media/155012697.wem",
-      "CachePath": "96/{9602D485-9A47-2EB9-9144-80EC82B37FF7}.wem"
+      "ShortName": "BRIDGE_START_V2-001.wav",
+      "Path": "Media/112281503.wem",
+      "CachePath": "CE/{CEDFA249-239C-0CEB-5273-DB5CE9B8FFA2}.wem"
      },
      {
-      "Id": "320714359",
+      "Id": "380215056",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "BRIDGE_START_V1-004.wav",
-      "Path": "Media/320714359.wem",
-      "CachePath": "10/{10FA24D0-437E-7EEF-A2EE-1B82906FD104}.wem"
+      "ShortName": "BRIDGE_START_V2-003.wav",
+      "Path": "Media/380215056.wem",
+      "CachePath": "90/{907E04B0-53E9-C6CD-AB2D-1E414371D071}.wem"
      },
      {
-      "Id": "685811730",
+      "Id": "471250677",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "BRIDGE_START_V1-003.wav",
-      "Path": "Media/685811730.wem",
-      "CachePath": "87/{8778D43E-8B89-C8B4-869F-AC277414CBE6}.wem"
+      "ShortName": "BRIDGE_START_V2-002.wav",
+      "Path": "Media/471250677.wem",
+      "CachePath": "A6/{A67BE53F-2108-131B-512C-370CC124593D}.wem"
      },
      {
-      "Id": "883478750",
+      "Id": "477549898",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "BRIDGE_START_V1-002.wav",
-      "Path": "Media/883478750.wem",
-      "CachePath": "1B/{1B457FBC-5DF8-7F83-A1EB-BF90528E0C31}.wem"
+      "ShortName": "BRIDGE_START_V2-004.wav",
+      "Path": "Media/477549898.wem",
+      "CachePath": "7D/{7DA36CB2-78CB-05AE-14EC-9836A6D67C7A}.wem"
      }
     ],
     "Events": [
@@ -63,22 +63,22 @@
       "DurationMax": "2",
       "MediaRefs": [
        {
-        "Id": "155012697"
+        "Id": "112281503"
        },
        {
-        "Id": "320714359"
+        "Id": "380215056"
        },
        {
-        "Id": "685811730"
+        "Id": "471250677"
        },
        {
-        "Id": "883478750"
+        "Id": "477549898"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{7D0FB0FD-A84C-7D11-04CC-99C8E6E1175C}"
+  "FileHash": "{5970072F-4817-56C1-A60F-4404020B66EB}"
  }
 }

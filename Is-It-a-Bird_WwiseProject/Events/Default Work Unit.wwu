@@ -19,7 +19,7 @@
 						<Action Name="" ID="{ACE4A52E-94DD-44A7-9C14-FE1EA13B9B49}" ShortID="629996188">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Button" ID="{FD9B3620-345A-4714-9DFC-07A692D851BF}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+									<ObjectRef Name="BUTTON_V2" ID="{0B04FA77-D633-4912-B681-E3F8D599341A}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

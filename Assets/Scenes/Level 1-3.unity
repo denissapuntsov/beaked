@@ -2109,11 +2109,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2122,7 +2126,7 @@ PrefabInstance:
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1783916888}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -2145,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Switch
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -2157,11 +2161,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
+      value: AudioEventTrigger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: Bridges, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: bridge start
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3750,6 +3758,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &957702866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3620238700401954625, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+  m_PrefabInstance: {fileID: 1983605873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
 --- !u!1001 &979124693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4557,6 +4576,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3757c3b8be1347bf05701b8079bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assemblyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   musicEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -4795,11 +4818,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -4808,7 +4835,7 @@ PrefabInstance:
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1327994652}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -4831,7 +4858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Switch
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -4843,11 +4870,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
+      value: AudioEventTrigger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: Bridges, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: bridge start
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4915,6 +4946,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4564077783496027120, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
   m_PrefabInstance: {fileID: 1327994650}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327994652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3620238700401954625, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+  m_PrefabInstance: {fileID: 1327994650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
 --- !u!1001 &1328074733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5893,6 +5935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507848088}
   - component: {fileID: 1507848089}
+  - component: {fileID: 1507848090}
   m_Layer: 0
   m_Name: Island (1)
   m_TagString: Untagged
@@ -5954,7 +5997,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1507848090}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: bridge stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: -1, z: 0}
     speed: 2
     onStart:
@@ -5962,8 +6017,38 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1507848090}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: bridge stop
+            m_BoolArgument: 0
+          m_CallState: 2
   startingCommandIndex: 0
+--- !u!114 &1507848090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507848087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: bridge stop
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 558463f70539c984aa9b42556f13449f, type: 2}
 --- !u!4 &1580331695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1661462347961145634, guid: 28faf405b0e08934a8683446e4308a77, type: 3}
@@ -7002,6 +7087,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4593713953433540315, guid: 5b577fd2f74d0564ba95784d4cf83c0f, type: 3}
   m_PrefabInstance: {fileID: 1770566439}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1783916888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3620238700401954625, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+  m_PrefabInstance: {fileID: 551436827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
 --- !u!1001 &1802213603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7454,11 +7550,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -7467,7 +7567,7 @@ PrefabInstance:
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 957702866}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -7490,7 +7590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Switch
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -7502,11 +7602,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
+      value: AudioEventTrigger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: Bridges, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
+      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: bridge start
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7924,6 +8028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117448164}
   - component: {fileID: 2117448165}
+  - component: {fileID: 2117448166}
   m_Layer: 0
   m_Name: WallGroup
   m_TagString: Untagged
@@ -7975,7 +8080,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2117448166}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: 0.5, z: 0}
     speed: 2
     onStart:
@@ -7983,7 +8100,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2117448166}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: 0.5, z: 0}
     speed: 2
     onStart:
@@ -7991,7 +8120,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2117448166}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: 0.5, z: 0}
     speed: 2
     onStart:
@@ -7999,7 +8140,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2117448166}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: 0.5, z: 0}
     speed: 2
     onStart:
@@ -8007,8 +8160,38 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2117448166}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   startingCommandIndex: 1
+--- !u!114 &2117448166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117448163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: stop
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 558463f70539c984aa9b42556f13449f, type: 2}
 --- !u!4 &2140944760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8152472861001680786, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}

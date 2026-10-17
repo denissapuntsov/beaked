@@ -1820,7 +1820,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="ASSEMBLY_V1-001" ID="{DF86F8D6-9BFB-45C6-982C-7C3A20C47F6D}" ShortID="656242111">
+						<Sound Name="ASSEMBLY_V2-005" ID="{EBA78089-B59D-4885-984A-A370A1DC6068}" ShortID="181999133">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1830,19 +1830,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-001" ID="{C6382BD4-4272-44E0-998F-B2147C1C0860}">
+								<AudioFileSource Name="ASSEMBLY_V2-005" ID="{CAC8761D-E0FE-4CC5-A352-2BF46CFD16A3}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-001.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-005.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="513776227"/>
+										<MediaID ID="56626688"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-001" ID="{C6382BD4-4272-44E0-998F-B2147C1C0860}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-005" ID="{CAC8761D-E0FE-4CC5-A352-2BF46CFD16A3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-002" ID="{AD7C3B32-324B-489C-8807-548028EA0E12}" ShortID="973977644">
+						<Sound Name="ASSEMBLY_V2-004" ID="{77364922-DDC1-46D6-B6E7-784F43F7F445}" ShortID="746935976">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1852,19 +1852,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-002" ID="{6FD53554-89B0-4E94-90E3-8944ED073709}">
+								<AudioFileSource Name="ASSEMBLY_V2-004" ID="{F0DA912A-BA6D-45C5-8C46-D1A8CF5F569F}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-002.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-004.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="128083307"/>
+										<MediaID ID="788700100"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-002" ID="{6FD53554-89B0-4E94-90E3-8944ED073709}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-004" ID="{F0DA912A-BA6D-45C5-8C46-D1A8CF5F569F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-003" ID="{01040D50-24CC-4A96-AEF6-DCE89A9C615D}" ShortID="472412996">
+						<Sound Name="ASSEMBLY_V2-003" ID="{89BFD86C-23AE-458A-ABE2-6E2BCDD00754}" ShortID="1032916051">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1874,19 +1874,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-003" ID="{196DE8B8-F26B-43D1-8324-75A771D79797}">
+								<AudioFileSource Name="ASSEMBLY_V2-003" ID="{5BFDCD84-EA60-488C-B06E-EFCC3EB276A8}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-003.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-003.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="946900962"/>
+										<MediaID ID="412948131"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-003" ID="{196DE8B8-F26B-43D1-8324-75A771D79797}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-003" ID="{5BFDCD84-EA60-488C-B06E-EFCC3EB276A8}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-004" ID="{7F9B1A0D-3142-4F02-8E92-2500EC062687}" ShortID="50369335">
+						<Sound Name="ASSEMBLY_V2-006" ID="{327715A6-E1B3-41FB-ACD3-EE10A5330CEB}" ShortID="528176539">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1896,19 +1896,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-004" ID="{0C98ADB5-AAA5-4813-B2AC-8CD9F7D5DC01}">
+								<AudioFileSource Name="ASSEMBLY_V2-006" ID="{F1A69591-6D5D-4718-B970-4E255124BF21}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-004.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-006.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="24216472"/>
+										<MediaID ID="599211111"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-004" ID="{0C98ADB5-AAA5-4813-B2AC-8CD9F7D5DC01}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-006" ID="{F1A69591-6D5D-4718-B970-4E255124BF21}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-005" ID="{0FFA1B27-016C-4962-A594-BCA1F7214978}" ShortID="299402640">
+						<Sound Name="ASSEMBLY_V2-007" ID="{1D43CFC2-A881-42C8-81A2-1EB063034446}" ShortID="819762678">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1918,19 +1918,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-005" ID="{07C3765A-3CEB-4BB8-87E4-942DE64A357C}">
+								<AudioFileSource Name="ASSEMBLY_V2-007" ID="{E85D458A-0629-4C45-8AD1-829618F22015}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-005.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-007.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="817490301"/>
+										<MediaID ID="609222476"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-005" ID="{07C3765A-3CEB-4BB8-87E4-942DE64A357C}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-007" ID="{E85D458A-0629-4C45-8AD1-829618F22015}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-006" ID="{09382948-B395-456E-A44A-E4B304FACD47}" ShortID="210300324">
+						<Sound Name="ASSEMBLY_V2-009" ID="{4236AD75-009E-47DC-B68D-F5CDCF9952FC}" ShortID="306908799">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1940,19 +1940,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-006" ID="{39D7BC94-2C25-48E8-B8D7-9FA8FAEDE070}">
+								<AudioFileSource Name="ASSEMBLY_V2-009" ID="{EF4210DB-F496-4D57-A257-CCAAB63B9C31}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-006.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-009.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="445343733"/>
+										<MediaID ID="507634060"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-006" ID="{39D7BC94-2C25-48E8-B8D7-9FA8FAEDE070}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-009" ID="{EF4210DB-F496-4D57-A257-CCAAB63B9C31}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-007" ID="{B4FA800F-9B5D-4EF8-9838-21001CBF0AFC}" ShortID="595115020">
+						<Sound Name="ASSEMBLY_V2-008" ID="{EB6661BE-6376-440A-B3A2-1E730087AF28}" ShortID="214975065">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1962,19 +1962,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-007" ID="{25C21685-B68A-46B4-8E3C-A7FF41889E26}">
+								<AudioFileSource Name="ASSEMBLY_V2-008" ID="{0BB0C2E1-7152-4DD1-BE94-E832FA9FAA89}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-007.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-008.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="91640168"/>
+										<MediaID ID="756001834"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-007" ID="{25C21685-B68A-46B4-8E3C-A7FF41889E26}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-008" ID="{0BB0C2E1-7152-4DD1-BE94-E832FA9FAA89}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-008" ID="{576AF8F8-CB61-432F-A72F-B74F3E45EBFD}" ShortID="622054002">
+						<Sound Name="ASSEMBLY_V2-001" ID="{A655BB76-DD22-42F3-B46D-637A60590FA7}" ShortID="627381911">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -1984,19 +1984,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-008" ID="{E469A9EA-D5E6-45D3-AEED-2B29263AE178}">
+								<AudioFileSource Name="ASSEMBLY_V2-001" ID="{B3EC07F4-792A-4467-AFA0-574C5F7DEE54}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-008.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="235856096"/>
+										<MediaID ID="444777982"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-008" ID="{E469A9EA-D5E6-45D3-AEED-2B29263AE178}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-001" ID="{B3EC07F4-792A-4467-AFA0-574C5F7DEE54}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-009" ID="{E4220C60-BBC9-4910-9E48-324321667092}" ShortID="117787290">
+						<Sound Name="ASSEMBLY_V2-002" ID="{E77DED78-58FC-47EA-AF0F-BD8C826159C9}" ShortID="817655803">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2006,19 +2006,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-009" ID="{A593E4DE-4C97-491B-8BEB-794DB56EE658}">
+								<AudioFileSource Name="ASSEMBLY_V2-002" ID="{2726E279-112A-4DE6-AAEF-830C29F83F8E}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-009.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-002.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1002406814"/>
+										<MediaID ID="148789553"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-009" ID="{A593E4DE-4C97-491B-8BEB-794DB56EE658}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-002" ID="{2726E279-112A-4DE6-AAEF-830C29F83F8E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="ASSEMBLY_V1-010" ID="{CE94DE3A-DBA0-4D0E-8B07-04FFE996884D}" ShortID="489288034">
+						<Sound Name="ASSEMBLY_V2-010" ID="{48DB6EAB-ABED-4CA1-A2F8-EE0CB9C00892}" ShortID="890698853">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2028,16 +2028,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ASSEMBLY_V1-010" ID="{2AA04633-BCF6-4B03-8E32-9CD502F8B435}">
+								<AudioFileSource Name="ASSEMBLY_V2-010" ID="{9280CD48-B78C-49CB-909A-DCE55DE663C2}">
 									<Language>SFX</Language>
-									<AudioFile>ASSEMBLY_V1-010.wav</AudioFile>
+									<AudioFile>ASSEMBLY_V2-010.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="463456617"/>
+										<MediaID ID="429210104"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ASSEMBLY_V1-010" ID="{2AA04633-BCF6-4B03-8E32-9CD502F8B435}" Platform="Linked"/>
+								<ActiveSource Name="ASSEMBLY_V2-010" ID="{9280CD48-B78C-49CB-909A-DCE55DE663C2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -2094,7 +2094,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="BRIDGE_START_V1-001" ID="{BDE1837D-C496-455B-BF66-7B9ADD586C10}" ShortID="63372635">
+						<Sound Name="BRIDGE_START_V2-001" ID="{2E7CF090-D5A8-42DE-8825-A80244C40E41}" ShortID="588628888">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2104,19 +2104,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_START_V1-001" ID="{89CD9AE3-BD37-40ED-9593-66A1B3FBEC2D}">
+								<AudioFileSource Name="BRIDGE_START_V2-001" ID="{18452D3A-D1C4-40EA-A74A-A7F9F3EF46D2}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_START_V1-001.wav</AudioFile>
+									<AudioFile>BRIDGE_START_V2-001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="155012697"/>
+										<MediaID ID="112281503"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_START_V1-001" ID="{89CD9AE3-BD37-40ED-9593-66A1B3FBEC2D}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_START_V2-001" ID="{18452D3A-D1C4-40EA-A74A-A7F9F3EF46D2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_START_V1-002" ID="{87CD3387-FDFF-411E-AF36-3B62534E9CD5}" ShortID="113925787">
+						<Sound Name="BRIDGE_START_V2-002" ID="{A2CB2F1C-08A8-4A1B-B09F-87EF8F2E55D6}" ShortID="964908018">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2126,19 +2126,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_START_V1-002" ID="{31F90934-1C36-4F96-A276-4B7271F68FB8}">
+								<AudioFileSource Name="BRIDGE_START_V2-002" ID="{4AE7CD56-AC9F-4094-8234-F344712DFEDF}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_START_V1-002.wav</AudioFile>
+									<AudioFile>BRIDGE_START_V2-002.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="883478750"/>
+										<MediaID ID="471250677"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_START_V1-002" ID="{31F90934-1C36-4F96-A276-4B7271F68FB8}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_START_V2-002" ID="{4AE7CD56-AC9F-4094-8234-F344712DFEDF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_START_V1-003" ID="{8BD09A2B-6A2E-454E-AEA3-1400672189E3}" ShortID="952869454">
+						<Sound Name="BRIDGE_START_V2-003" ID="{E4463D1E-50C0-48E9-A27B-E14194E19566}" ShortID="990593317">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2148,19 +2148,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_START_V1-003" ID="{CD690366-B117-4705-8258-CA2F784FB126}">
+								<AudioFileSource Name="BRIDGE_START_V2-003" ID="{054B9326-84E6-4F4A-8932-7E3677685E80}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_START_V1-003.wav</AudioFile>
+									<AudioFile>BRIDGE_START_V2-003.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="685811730"/>
+										<MediaID ID="380215056"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_START_V1-003" ID="{CD690366-B117-4705-8258-CA2F784FB126}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_START_V2-003" ID="{054B9326-84E6-4F4A-8932-7E3677685E80}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_START_V1-004" ID="{BAB489DE-C470-4A19-994C-C12E24542253}" ShortID="390790440">
+						<Sound Name="BRIDGE_START_V2-004" ID="{C41493F5-2218-4E12-BF7F-8D34615EE69A}" ShortID="230969572">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2170,16 +2170,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_START_V1-004" ID="{4BFA3B2F-4864-4F0A-BED8-6B01C44FC5A6}">
+								<AudioFileSource Name="BRIDGE_START_V2-004" ID="{2D780876-1FB0-4E07-BFDF-ADB4A1A61C7E}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_START_V1-004.wav</AudioFile>
+									<AudioFile>BRIDGE_START_V2-004.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="320714359"/>
+										<MediaID ID="477549898"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_START_V1-004" ID="{4BFA3B2F-4864-4F0A-BED8-6B01C44FC5A6}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_START_V2-004" ID="{2D780876-1FB0-4E07-BFDF-ADB4A1A61C7E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -2201,7 +2201,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="BRIDGE_STOP_V1-001" ID="{F5509275-01F5-48CD-B756-564FDBD15350}" ShortID="861233420">
+						<Sound Name="BRIDGE_STOP_V2-001" ID="{0668E022-5BF1-407E-9E17-730553D414A4}" ShortID="418485881">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2211,19 +2211,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_STOP_V1-001" ID="{C2C24072-6B7C-4498-87E8-DE28B48A78DC}">
+								<AudioFileSource Name="BRIDGE_STOP_V2-001" ID="{2AFA3B0D-47E8-4822-BD8B-EBFC382FBD27}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_STOP_V1-001.wav</AudioFile>
+									<AudioFile>BRIDGE_STOP_V2-001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="108637260"/>
+										<MediaID ID="479063333"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_STOP_V1-001" ID="{C2C24072-6B7C-4498-87E8-DE28B48A78DC}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_STOP_V2-001" ID="{2AFA3B0D-47E8-4822-BD8B-EBFC382FBD27}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_STOP_V1-002" ID="{38E997CA-EEA9-4CFE-8B88-4ACF5FB08100}" ShortID="678086398">
+						<Sound Name="BRIDGE_STOP_V2-003" ID="{A2867C91-7388-477B-9142-FD0930E6B857}" ShortID="123407683">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2233,19 +2233,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_STOP_V1-002" ID="{88F1EA17-0C00-42E8-994F-4247D2A878C1}">
+								<AudioFileSource Name="BRIDGE_STOP_V2-003" ID="{D6DAC3A7-B131-428F-B414-E28D03562FB0}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_STOP_V1-002.wav</AudioFile>
+									<AudioFile>BRIDGE_STOP_V2-003.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="845525503"/>
+										<MediaID ID="167825021"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_STOP_V1-002" ID="{88F1EA17-0C00-42E8-994F-4247D2A878C1}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_STOP_V2-003" ID="{D6DAC3A7-B131-428F-B414-E28D03562FB0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_STOP_V1-003" ID="{7486DC1B-8253-4E4F-9B88-648A17FDDEB5}" ShortID="67520619">
+						<Sound Name="BRIDGE_STOP_V2-004" ID="{BFCC1F6C-821A-48B9-8641-7EEB99F94648}" ShortID="364523373">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2255,19 +2255,19 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_STOP_V1-003" ID="{40BF011E-8CFE-4B0C-A89D-F3F4585A0B0D}">
+								<AudioFileSource Name="BRIDGE_STOP_V2-004" ID="{DEF818DD-BFF2-4F3C-93DA-7BCB33E28855}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_STOP_V1-003.wav</AudioFile>
+									<AudioFile>BRIDGE_STOP_V2-004.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="988636644"/>
+										<MediaID ID="723330333"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_STOP_V1-003" ID="{40BF011E-8CFE-4B0C-A89D-F3F4585A0B0D}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_STOP_V2-004" ID="{DEF818DD-BFF2-4F3C-93DA-7BCB33E28855}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BRIDGE_STOP_V1-004" ID="{DD3A9F83-8F05-4466-B2F9-91277ABD5FEF}" ShortID="439753583">
+						<Sound Name="BRIDGE_STOP_V2-002" ID="{9A4DBFC9-442B-45C6-BFFC-306051DF0032}" ShortID="129213817">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -2277,20 +2277,42 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="BRIDGE_STOP_V1-004" ID="{8E7BCADF-4944-4E0E-8BA1-B89606E3C1C3}">
+								<AudioFileSource Name="BRIDGE_STOP_V2-002" ID="{2CA307A7-F58E-4737-86ED-054D5CF479BF}">
 									<Language>SFX</Language>
-									<AudioFile>BRIDGE_STOP_V1-004.wav</AudioFile>
+									<AudioFile>BRIDGE_STOP_V2-002.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="92247359"/>
+										<MediaID ID="958664448"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="BRIDGE_STOP_V1-004" ID="{8E7BCADF-4944-4E0E-8BA1-B89606E3C1C3}" Platform="Linked"/>
+								<ActiveSource Name="BRIDGE_STOP_V2-002" ID="{2CA307A7-F58E-4737-86ED-054D5CF479BF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="BUTTON_V2" ID="{0B04FA77-D633-4912-B681-E3F8D599341A}" ShortID="546722998">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BUTTON_V2" ID="{D1C944C1-B2E8-4AB1-B966-AFB8CBCDC457}">
+							<Language>SFX</Language>
+							<AudioFile>BUTTON_V2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="149686912"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BUTTON_V2" ID="{D1C944C1-B2E8-4AB1-B966-AFB8CBCDC457}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>
