@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4141633669",
+    "Type": "Event",
+    "GUID": "{E82CE876-67D4-4167-BA87-797FDE7ED68E}",
+    "Language": "SFX",
+    "Hash": "{B839A710-F0F0-1E0C-8490-FD5402377FB5}",
+    "ObjectPath": "Reset_Assembly",
+    "ShortName": "Reset_Assembly",
+    "Path": "Event/Reset_Assembly.bnk",
+    "Events": [
+     {
+      "Id": "4141633669",
+      "Name": "Reset_Assembly",
+      "ObjectPath": "\\Events\\Default Work Unit\\Reset_Assembly",
+      "GUID": "{E82CE876-67D4-4167-BA87-797FDE7ED68E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0E0A792B-1F4D-2EA2-CEBF-BA40888BDC69}"
+ }
+}

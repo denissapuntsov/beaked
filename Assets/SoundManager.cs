@@ -2,11 +2,15 @@ using System;
 using UnityEngine;
 using LevelStructure;
 using AK.Wwise;
+using Event = AK.Wwise.Event;
 
 public class SoundManager : MonoBehaviour
 {
     private const string FootstepSwitch = "StepMaterial";
     private const string PeckSwitch = "PeckMaterial";
+    public static readonly string AssemblyEventName = "assembly";
+    
+    [SerializeField] private Event assemblyEvent;
 
     [SerializeField] private AK.Wwise.Event musicEvent;
     
@@ -39,9 +43,26 @@ public class SoundManager : MonoBehaviour
         sound.audioEvent.Post(source, (uint)AkCallbackType.AK_EndOfEvent, onFinishedSpeaking);
     }
 
+    public void PlaySound(string constEventName)
+    {
+        switch (constEventName)
+        {
+            default:
+                break;
+            case var s when s == AssemblyEventName:
+                assemblyEvent.Post(gameObject);
+                break;
+        }
+    }
+
     public void SetMusic(MusicMode mode)
     {
         musicEvent.Post(gameObject);
+    }
+
+    public void ResetAssembly()
+    {
+        AkUnitySoundEngine.PostEvent("Reset_Assembly", gameObject);
     }
 }
 

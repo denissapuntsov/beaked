@@ -762,6 +762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191452344}
   - component: {fileID: 191452343}
+  - component: {fileID: 191452345}
   m_Layer: 0
   m_Name: Bridge 3
   m_TagString: Untagged
@@ -789,7 +790,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 191452345}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   - direction: {x: 0, y: 3, z: 0}
     speed: 2
     onStart:
@@ -797,7 +810,19 @@ MonoBehaviour:
         m_Calls: []
     onFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 191452345}
+          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+          m_MethodName: Play
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: stop
+            m_BoolArgument: 0
+          m_CallState: 2
   startingCommandIndex: 0
 --- !u!4 &191452344
 Transform:
@@ -815,6 +840,24 @@ Transform:
   - {fileID: 1873352746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191452345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191452342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: stop
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: 558463f70539c984aa9b42556f13449f, type: 2}
 --- !u!1 &201602616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1407,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3478323085418142034, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
+      propertyPath: currentSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4886562514694158170, guid: ed7910cc80726f643bc4e0e59a152fce, type: 3}
       propertyPath: m_positionOffsetData.positionOffset.x
       value: 1
@@ -2386,7 +2433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffcfe4ecb8f2ace48a17e4a2fba4909e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSetupSkipped: 0
+  isSetupSkipped: 1
 --- !u!4 &849549312
 Transform:
   m_ObjectHideFlags: 0
@@ -5456,21 +5503,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 951444944807894837, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: a945150a55f24494cb6272320e955368, type: 2}
     - target: {fileID: 2016886998113660648, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: m_Name
       value: Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -5484,54 +5519,6 @@ PrefabInstance:
       propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1235799174}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Switch
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Switch
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Switch
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: Bridges, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202025924619511605, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
-      propertyPath: onFinish.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4564077783496027120, guid: 88b8aec05413a9e4a910bf966c229e3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.99999785

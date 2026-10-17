@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	394694740	Play_Bridge_Start			\Default Work Unit\Play_Bridge_Start	
+

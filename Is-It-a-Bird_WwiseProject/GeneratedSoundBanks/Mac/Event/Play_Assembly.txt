@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2781317322	Play_Assembly			\Default Work Unit\Play_Assembly	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	592843477	AssemblyPitch			\Default Work Unit\AssemblyPitch	
+

@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1916913224",
+    "Type": "Event",
+    "GUID": "{F32537B7-72E8-4599-A251-6F58DC4E92D3}",
+    "Language": "SFX",
+    "Hash": "{1D3435E4-A525-9615-7883-777F580D7555}",
+    "ObjectPath": "Play_Bridge_Stop",
+    "ShortName": "Play_Bridge_Stop",
+    "Path": "Event/Play_Bridge_Stop.bnk",
+    "Media": [
+     {
+      "Id": "92247359",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STOP_V1-004.wav",
+      "Path": "Media/92247359.wem",
+      "CachePath": "C2/{C25AF902-750F-37FE-448B-797255158F3B}.wem"
+     },
+     {
+      "Id": "108637260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STOP_V1-001.wav",
+      "Path": "Media/108637260.wem",
+      "CachePath": "D0/{D0E98EB1-B99F-1385-E18E-E0B8FF2B19A0}.wem"
+     },
+     {
+      "Id": "845525503",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STOP_V1-002.wav",
+      "Path": "Media/845525503.wem",
+      "CachePath": "3C/{3C4CE11D-F522-92C8-77D5-B632F8940C41}.wem"
+     },
+     {
+      "Id": "988636644",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STOP_V1-003.wav",
+      "Path": "Media/988636644.wem",
+      "CachePath": "1A/{1A7F0AA0-27B0-BFDC-D34F-901DBD1E150B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1916913224",
+      "Name": "Play_Bridge_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bridge_Stop",
+      "GUID": "{F32537B7-72E8-4599-A251-6F58DC4E92D3}",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "92247359"
+       },
+       {
+        "Id": "108637260"
+       },
+       {
+        "Id": "845525503"
+       },
+       {
+        "Id": "988636644"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DA26A99E-62A3-25FC-0E75-3811DD935BCB}"
+ }
+}

@@ -2597,6 +2597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3757c3b8be1347bf05701b8079bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assemblyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c287d61e3873db246ae25762df51fde2, type: 2}
   musicEvent:
     idInternal: 0
     valueGuidInternal: 

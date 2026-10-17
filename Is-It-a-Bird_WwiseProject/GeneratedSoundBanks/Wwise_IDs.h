@@ -13,7 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ASSEMBLY = 2781317322U;
         static const AkUniqueID PLAY_BEAKED_MUSICSKETCH_V1_JONAH_FULLMX_01 = 4154561170U;
+        static const AkUniqueID PLAY_BRIDGE_START = 394694740U;
+        static const AkUniqueID PLAY_BRIDGE_STOP = 1916913224U;
+        static const AkUniqueID PLAY_BUTTON = 2099555730U;
         static const AkUniqueID PLAY_CAR_MOVING = 115854669U;
         static const AkUniqueID PLAY_GATE_CLOSE = 1676603786U;
         static const AkUniqueID PLAY_GATE_OPEN = 4089264814U;
@@ -23,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_WHISTLE = 2693257580U;
         static const AkUniqueID PLAYER_STEP = 3461836331U;
         static const AkUniqueID PLAYER_TEST = 2791944829U;
+        static const AkUniqueID RESET_ASSEMBLY = 4141633669U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -54,6 +59,11 @@ namespace AK
         } // namespace STEPMATERIAL
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID ASSEMBLYPITCH = 592843477U;
+    } // namespace GAME_PARAMETERS
 
     namespace BUSSES
     {

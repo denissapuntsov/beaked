@@ -1,0 +1,164 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2781317322",
+    "Type": "Event",
+    "GUID": "{D3EE6214-769C-4858-823C-AE535274BD53}",
+    "Language": "SFX",
+    "Hash": "{E9EA0649-C961-2ECD-C451-7CC3D50B68D0}",
+    "ObjectPath": "Play_Assembly",
+    "ShortName": "Play_Assembly",
+    "Path": "Event/Play_Assembly.bnk",
+    "Media": [
+     {
+      "Id": "24216472",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-004.wav",
+      "Path": "Media/24216472.wem",
+      "CachePath": "57/{57C25445-F098-8D60-3A73-00ED9FD36DB4}.wem"
+     },
+     {
+      "Id": "91640168",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-007.wav",
+      "Path": "Media/91640168.wem",
+      "CachePath": "05/{0556175D-AF47-0AC5-0AB4-5CEF7E47C75C}.wem"
+     },
+     {
+      "Id": "128083307",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-002.wav",
+      "Path": "Media/128083307.wem",
+      "CachePath": "F0/{F0CD8009-85DF-057F-137B-DFC87C57C013}.wem"
+     },
+     {
+      "Id": "235856096",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-008.wav",
+      "Path": "Media/235856096.wem",
+      "CachePath": "B6/{B61CD614-44AD-A044-7F7E-FF9687A09AFD}.wem"
+     },
+     {
+      "Id": "445343733",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-006.wav",
+      "Path": "Media/445343733.wem",
+      "CachePath": "CF/{CF57DBDD-6C9C-84FE-01D3-9B8FC399DB73}.wem"
+     },
+     {
+      "Id": "463456617",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-010.wav",
+      "Path": "Media/463456617.wem",
+      "CachePath": "95/{95A31261-BBEC-7770-2F76-7CEAFE195954}.wem"
+     },
+     {
+      "Id": "513776227",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-001.wav",
+      "Path": "Media/513776227.wem",
+      "CachePath": "BB/{BB0CB997-0D17-97EA-D184-AF1D9C507DC3}.wem"
+     },
+     {
+      "Id": "817490301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-005.wav",
+      "Path": "Media/817490301.wem",
+      "CachePath": "FB/{FB16C0B4-9B92-2505-2791-603D2491756B}.wem"
+     },
+     {
+      "Id": "946900962",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-003.wav",
+      "Path": "Media/946900962.wem",
+      "CachePath": "06/{06055F99-B974-7BBB-9C61-A245B9B3A057}.wem"
+     },
+     {
+      "Id": "1002406814",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ASSEMBLY_V1-009.wav",
+      "Path": "Media/1002406814.wem",
+      "CachePath": "0E/{0E326785-A659-E763-68B1-1EEB0F02A1A9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2781317322",
+      "Name": "Play_Assembly",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Assembly",
+      "GUID": "{D3EE6214-769C-4858-823C-AE535274BD53}",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "24216472"
+       },
+       {
+        "Id": "91640168"
+       },
+       {
+        "Id": "128083307"
+       },
+       {
+        "Id": "235856096"
+       },
+       {
+        "Id": "445343733"
+       },
+       {
+        "Id": "463456617"
+       },
+       {
+        "Id": "513776227"
+       },
+       {
+        "Id": "817490301"
+       },
+       {
+        "Id": "946900962"
+       },
+       {
+        "Id": "1002406814"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "592843477",
+      "Name": "AssemblyPitch",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\AssemblyPitch",
+      "GUID": "{7A19C2A5-906B-4011-8D99-FE1C987A6BD8}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{42061307-1637-E3CD-5CBD-C42AE9E1FACB}"
+ }
+}

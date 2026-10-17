@@ -14,6 +14,86 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Button" ID="{A4E4C701-4644-4173-ABAB-4BECC8C17999}">
+					<ChildrenList>
+						<Action Name="" ID="{ACE4A52E-94DD-44A7-9C14-FE1EA13B9B49}" ShortID="629996188">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Button" ID="{FD9B3620-345A-4714-9DFC-07A692D851BF}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bridge_Start" ID="{C82CBA8A-5B90-4D8D-A908-1F27F790C648}">
+					<ChildrenList>
+						<Action Name="" ID="{24F28111-29AF-4D49-8893-6BF1B256D89F}" ShortID="536551476">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge Start" ID="{FF0D2116-D908-4550-82A7-1B7EC2B9A102}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bridge_Stop" ID="{F32537B7-72E8-4599-A251-6F58DC4E92D3}">
+					<ChildrenList>
+						<Action Name="" ID="{760CD731-A364-467B-A73A-5693088F845D}" ShortID="352025729">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge Stop" ID="{E944B8EB-6557-42D7-B106-5C41BD928A2B}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A26EE59D-BF48-421A-BA01-578DF73032A8}" ShortID="368239704">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge Start" ID="{FF0D2116-D908-4550-82A7-1B7EC2B9A102}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Assembly" ID="{D3EE6214-769C-4858-823C-AE535274BD53}">
+					<ChildrenList>
+						<Action Name="" ID="{96A4759E-FF01-4C5E-AC1F-02EB8B1F7EBD}" ShortID="262729292">
+							<PropertyList>
+								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AssemblyPitch" ID="{7A19C2A5-906B-4011-8D99-FE1C987A6BD8}" WorkUnitID="{81A34B51-A0B2-4BB4-B29B-9A9B3FD19B24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CF5C4140-1442-4D86-9712-130E428F824A}" ShortID="421586173">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Assembly" ID="{6D579AF0-1117-4C8B-A04D-2F5EE92E72F2}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reset_Assembly" ID="{E82CE876-67D4-4167-BA87-797FDE7ED68E}">
+					<ChildrenList>
+						<Action Name="" ID="{C35442F1-7EA2-4E64-83A9-C6E26FBAFB32}" ShortID="779533084">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AssemblyPitch" ID="{7A19C2A5-906B-4011-8D99-FE1C987A6BD8}" WorkUnitID="{81A34B51-A0B2-4BB4-B29B-9A9B3FD19B24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

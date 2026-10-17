@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4141633669	Reset_Assembly			\Default Work Unit\Reset_Assembly	
+

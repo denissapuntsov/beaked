@@ -111,11 +111,12 @@ namespace LevelStructure
                 element.transform
                     .DOBlendableMoveBy(
                         new Vector3(0, -_offsets[element], 0),
-                        50f)
+                        20f)
                     .SetSpeedBased(true)
-                    .SetEase(Ease.OutBack, 0.5f)
+                    .SetEase(Ease.OutBack, 0f)
                     .OnComplete(() =>
                     {
+                        SoundManager.instance.PlaySound(SoundManager.AssemblyEventName);
                         element.transform.position = _startingPositions[element];
                         map[element] = true;
                         if (!map.Values.Contains(false))
