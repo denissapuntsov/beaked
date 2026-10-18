@@ -59,11 +59,6 @@ public class SoundManager : MonoBehaviour
     {
         musicEvent.Post(gameObject);
     }
-
-    public void ResetAssembly()
-    {
-        AkUnitySoundEngine.PostEvent("Reset_Assembly", gameObject);
-    }
 }
 
 public enum MusicMode
