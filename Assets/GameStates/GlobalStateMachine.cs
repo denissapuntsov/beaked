@@ -33,7 +33,6 @@ public class GlobalStateMachine : FiniteStateMachine
 
       private void HandleSetupStateComplete()
       {
-            SoundManager.instance.ResetAssembly();
             SoundManager.instance.SetMusic(MusicMode.Gameplay);
             ChangeState(GameplayStateMachine);
       }
