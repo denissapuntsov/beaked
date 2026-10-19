@@ -808,6 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a258e4c924af3f48b3524352bdeb41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundHistory: []
   currentSound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
   currentCell:
     GridPosition: {x: 0, y: 0, z: 0}
@@ -945,7 +946,7 @@ MonoBehaviour:
   usePositionOffsetData: 0
   m_positionOffsetData:
     KeepMe: 0
-    positionOffset: {x: 0.5, y: 0, z: -0.5}
+    positionOffset: {x: 0, y: 0, z: 0}
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
