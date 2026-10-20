@@ -533,11 +533,13 @@ GameObject:
   - component: {fileID: 737192907841646234}
   - component: {fileID: 5544097400170188773}
   - component: {fileID: 8930260475279797007}
-  - component: {fileID: 4378074459683658588}
   - component: {fileID: 7458845980406296586}
   - component: {fileID: 2649529152451712518}
   - component: {fileID: 1132577005715697365}
   - component: {fileID: 3898294210517657613}
+  - component: {fileID: 347965913192893862}
+  - component: {fileID: 9157916867922824949}
+  - component: {fileID: 741249833568627062}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -608,60 +610,6 @@ MonoBehaviour:
       idInternal: 0
       valueGuidInternal: 
       WwiseObjectReference: {fileID: 11400000, guid: c89ff8d5e9f1f104e935b4a7aa8562b2, type: 2}
---- !u!114 &4378074459683658588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8619940371461499670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb8a3a558f8f0448a46074482c2ccfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bridges
-  commands:
-  - direction: {x: 0, y: 0, z: -2}
-    speed: 2
-    onStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8930260475279797007}
-          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: move
-            m_BoolArgument: 0
-          m_CallState: 2
-    onFinish:
-      m_PersistentCalls:
-        m_Calls: []
-  - direction: {x: 0, y: 0, z: 2}
-    speed: 2
-    onStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 8930260475279797007}
-          m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: move
-            m_BoolArgument: 0
-          m_CallState: 2
-    onFinish:
-      m_PersistentCalls:
-        m_Calls: []
-  startingCommandIndex: 0
 --- !u!114 &7458845980406296586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,10 +677,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicGridElementControls
   bodyPivot: {fileID: 8861702391893533111}
-  westMovement: {x: 1, y: 0, z: 0}
-  southMovement: {x: 0, y: 0, z: -1}
-  eastMovement: {x: -1, y: 0, z: 0}
-  northMovement: {x: 0, y: 0, z: 1}
+  westMovement: {x: 3, y: 0, z: 0}
+  southMovement: {x: 0, y: 0, z: -3}
+  eastMovement: {x: -3, y: 0, z: 0}
+  northMovement: {x: 0, y: 0, z: 3}
 --- !u!114 &3898294210517657613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +696,79 @@ MonoBehaviour:
   nativeSound: {fileID: 11400000, guid: 556d4bbfeb0fda24498565630aca20c2, type: 2}
   OnSoundStarted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 347965913192893862}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Honk
+          m_BoolArgument: 0
+        m_CallState: 2
   OnSoundComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 347965913192893862}
+        m_TargetAssemblyTypeName: AnimationControls, Assembly-CSharp
+        m_MethodName: StopAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &347965913192893862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619940371461499670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe7dcc91729bb340a17739700e9dd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationControls
+  animator: {fileID: 9157916867922824949}
+--- !u!95 &9157916867922824949
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619940371461499670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04ef1f09725eca74c9fc581200aae7fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &741249833568627062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619940371461499670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd359587292cc3f4a96ee7f806284e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarControls
+  paths: []

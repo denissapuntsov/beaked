@@ -13,12 +13,17 @@ public class Bridges : ChainableAction
     [SerializeField] private int startingCommandIndex;
     private int _commandIndex;
 
+    private bool _carriesPlayer;
+
+    private PlayerData _data;
+
     private TileGridController _controller;
     
     private GridElement[] _elements = {};
 
     private void Awake()
     {
+        _data = FindAnyObjectByType<PlayerData>();
         _controller = FindAnyObjectByType<TileGridController>();
         _elements = GetComponentsInChildren<GridElement>();
     }
@@ -37,6 +42,19 @@ public class Bridges : ChainableAction
         }
         parent.AddAction(this);
         commands[_commandIndex].onStart?.Invoke(this);
+
+        foreach (var element in _elements)
+        {
+            foreach (var cell in element.cells)
+            {
+                if (_data.CurrentCell.GridPosition == cell.GridPosition)
+                {
+                    _controller.RemoveElement(_data.gridElement);
+                    _data.transform.SetParent(transform);
+                    _carriesPlayer = true;
+                }
+            }
+        }
         
         _move = transform
             .DOMove(commands[_commandIndex].direction, commands[_commandIndex].speed)
@@ -51,6 +69,14 @@ public class Bridges : ChainableAction
         foreach (var element in _elements)
         {
             _controller.AddElement(element);
+        }
+        
+        if (_carriesPlayer)
+        {
+            _data.transform.SetParent(transform.root);
+            _controller.AddElement(_data.gridElement);
+            _controller.AssignPlayerCell();
+            _carriesPlayer = false;
         }
         
         commands[_commandIndex].onFinish?.Invoke(this);

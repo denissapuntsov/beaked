@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b997401dac8a6c418375263fc363897, type: 3}
-  m_Name: Radio_Demon
-  m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  range: 4
-  sprite: {fileID: 21300000, guid: 4a70191674297ca4e98a01ec347ad0fc, type: 3}
+  m_Name: Horn
+  m_EditorClassIdentifier: Assembly-CSharp::SoundItem
+  audioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 72f3fb288591ffb4aa3bde0459043ca7, type: 2}
+  reactionDelay: 0

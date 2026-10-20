@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2956245481",
+    "Type": "Event",
+    "GUID": "{35816947-DC6B-426F-851B-1E41AA24B2AC}",
+    "Language": "SFX",
+    "Hash": "{FC84E402-65A7-B0AC-940F-8CB999C15B41}",
+    "ObjectPath": "Play_Horn",
+    "ShortName": "Play_Horn",
+    "Path": "Event/Play_Horn.bnk",
+    "Media": [
+     {
+      "Id": "97700333",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "HORN_V1-001.wav",
+      "Path": "Media/97700333.wem",
+      "CachePath": "F2/{F2A9D81E-7D13-348B-25B9-C22F9903F2E0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2956245481",
+      "Name": "Play_Horn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Horn",
+      "GUID": "{35816947-DC6B-426F-851B-1E41AA24B2AC}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "97700333"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EC6752DE-FA97-3624-D717-4DDA38DC4F75}"
+ }
+}

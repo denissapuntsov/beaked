@@ -86,10 +86,10 @@ public class SmartMover : ChainableAction
             if (nextCell is not { IsAccessible: true, IsSolid: true }) continue;
             if (f != 0)
             {
-                JumpToCell(nextCell);
+                MoveToCell(nextCell);
                 return;
             }
-            MoveToCell(nextCell);
+            JumpToCell(nextCell);
             return;
         }
         _controller.AddElement(_gridElement);
@@ -102,7 +102,7 @@ public class SmartMover : ChainableAction
         _jump?.Kill();
         cell.IsAccessible = false;
         _jump = transform
-            .DOJump(cell.GridPosition, 0.5f, 1, speed / 4)
+            .DOJump(cell.GridPosition, 0.4f, 1, speed / 4)
             .SetSpeedBased()
             .SetAutoKill()
             .SetEase(Ease.Linear)
@@ -128,7 +128,6 @@ public class SmartMover : ChainableAction
             .SetEase(Ease.Linear)
             .OnComplete(() =>
             {
-                
                 currentCell.IsAccessible = true;
                 currentCell = cell;
                 MoveToNextNodeInPath();

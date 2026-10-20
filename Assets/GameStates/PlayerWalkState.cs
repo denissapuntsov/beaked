@@ -69,13 +69,15 @@ public class PlayerWalkState : GameState
         //_controller.RemoveElement(_data.gridElement);
         cell.IsAccessible = false;
         _controller.BounceCell(_data.CurrentCell);
-            
+        
         _move = _data.gameObject.transform
             .DOJump(cell.GridPosition, 0.3f, 1, 1 / _data.speed)
             .SetAutoKill()
             .SetEase(_data.jumpCurve)
             .OnComplete(() =>
             {
+                _controller.RemoveElement(_data.gridElement);
+                _controller.AddElement(_data.gridElement);
                 _data.CurrentCell.IsAccessible = true;
                 
                 //_controller.AddElement(_data.gridElement);

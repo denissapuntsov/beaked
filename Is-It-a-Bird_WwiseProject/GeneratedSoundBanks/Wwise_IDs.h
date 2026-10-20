@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID PLAY_GATE_CLOSE = 1676603786U;
         static const AkUniqueID PLAY_GATE_OPEN = 4089264814U;
         static const AkUniqueID PLAY_HONK = 2486471960U;
+        static const AkUniqueID PLAY_HORN = 2956245481U;
         static const AkUniqueID PLAY_PECK_RANDOM = 3013440353U;
         static const AkUniqueID PLAY_PECK_SWITCH = 3320958968U;
         static const AkUniqueID PLAY_WHISTLE = 2693257580U;

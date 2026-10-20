@@ -2313,6 +2313,402 @@
 						<ActiveSource Name="BUTTON_V2" ID="{D1C944C1-B2E8-4AB1-B966-AFB8CBCDC457}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="BELL_V1-002" ID="{C05848A4-B458-4F19-942F-820412777A4F}" ShortID="612465171">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BELL_V1-002" ID="{BB049044-EF32-44AF-89BA-7E8EEB034692}">
+							<Language>SFX</Language>
+							<AudioFile>BELL_V1-002.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="691433812"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BELL_V1-002" ID="{BB049044-EF32-44AF-89BA-7E8EEB034692}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_HEAVY_V1-001" ID="{989E7BD0-8499-432F-B412-84EB5260B2A1}" ShortID="160856712">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_HEAVY_V1-001" ID="{660247A9-29A5-453F-A85B-89FE76BB12CE}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_HEAVY_V1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="295679558"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_HEAVY_V1-001" ID="{660247A9-29A5-453F-A85B-89FE76BB12CE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_HEAVY_V1-002" ID="{2AF4008C-505D-47C4-8E1B-B55147F2DC3D}" ShortID="712569369">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_HEAVY_V1-002" ID="{81DD1999-71B9-4B84-8534-63A1F8A52DEC}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_HEAVY_V1-002.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="513216514"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_HEAVY_V1-002" ID="{81DD1999-71B9-4B84-8534-63A1F8A52DEC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_HEAVY_V1-003" ID="{864DD8FB-65BB-4EE3-9AFE-E1A71F40E16C}" ShortID="939955659">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_HEAVY_V1-003" ID="{74C89CD5-C7E3-4533-9BB5-8CECD375FED2}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_HEAVY_V1-003.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="645522489"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_HEAVY_V1-003" ID="{74C89CD5-C7E3-4533-9BB5-8CECD375FED2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_HEAVY_V1-004" ID="{EA16895B-2AAB-4E33-A9B9-84EDED39C9BA}" ShortID="583406780">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_HEAVY_V1-004" ID="{6C332149-C89F-46BF-A128-0730A75FF59B}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_HEAVY_V1-004.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="160729532"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_HEAVY_V1-004" ID="{6C332149-C89F-46BF-A128-0730A75FF59B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_STEP_V1-001" ID="{F2DDC36D-0772-4888-8470-FE2C4C0CA6DB}" ShortID="714767295">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_STEP_V1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1056780850"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_STEP_V1-002" ID="{B779A089-1036-4838-ACE8-E9240620014F}" ShortID="746517559">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_STEP_V1-002.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="727222901"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_STEP_V1-004" ID="{02E03FC4-AD28-4A85-8780-9A938B15E9D6}" ShortID="1066013877">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_STEP_V1-004.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1023646562"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Horn" ID="{3ED5AE6A-51EA-496B-90EC-A0C1212A2CAB}" ShortID="233117600">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HORN_V1-001" ID="{E4A11AC8-448A-45C9-9439-9DBD20E4930E}">
+							<Language>SFX</Language>
+							<AudioFile>HORN_V1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="97700333"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="HORN_V1-001" ID="{E4A11AC8-448A-45C9-9439-9DBD20E4930E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="HORN_V1-002" ID="{2B16242B-5C87-4939-B4AC-9888D1DA0F78}" ShortID="945490948">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HORN_V1-002" ID="{E192EB82-6E31-4AFA-9C07-A0F328CD5C82}">
+							<Language>SFX</Language>
+							<AudioFile>HORN_V1-002.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="201491577"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="HORN_V1-002" ID="{E192EB82-6E31-4AFA-9C07-A0F328CD5C82}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="HORN_V1-003" ID="{69EFC780-EE12-4215-A3D1-CB8544B41E31}" ShortID="162590768">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HORN_V1-003" ID="{FDF8C9A3-C4A7-4CA0-8E70-324B8C9FF775}">
+							<Language>SFX</Language>
+							<AudioFile>HORN_V1-003.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="878569010"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="HORN_V1-003" ID="{FDF8C9A3-C4A7-4CA0-8E70-324B8C9FF775}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WHISTLE_TUBE_V1" ID="{563B0BB3-C837-461D-9E97-1EA9073CFF31}" ShortID="56855467">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WHISTLE_TUBE_V1" ID="{C48EDBAD-244F-44E0-89AF-FA8419FCF2EC}">
+							<Language>SFX</Language>
+							<AudioFile>WHISTLE_TUBE_V1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="124740461"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="WHISTLE_TUBE_V1" ID="{C48EDBAD-244F-44E0-89AF-FA8419FCF2EC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BELL_V1-001" ID="{43DB7A9E-AC3F-4979-BC3E-8E46C33425AE}" ShortID="266049581">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BELL_V1-001" ID="{EEEEEDBB-01EE-40C9-8B1F-7DD093AA9A3C}">
+							<Language>SFX</Language>
+							<AudioFile>BELL_V1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="154471013"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BELL_V1-001" ID="{EEEEEDBB-01EE-40C9-8B1F-7DD093AA9A3C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BELL_V1-003" ID="{48CD5B73-17AC-4493-B984-7259E3E79ED1}" ShortID="736168689">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BELL_V1-003" ID="{FD0BE305-FA39-47F9-807C-63B5255742E6}">
+							<Language>SFX</Language>
+							<AudioFile>BELL_V1-003.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="290776619"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BELL_V1-003" ID="{FD0BE305-FA39-47F9-807C-63B5255742E6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="BRIDGE_STEP_V1-003" ID="{E62FD32C-8274-4574-8FC0-877563B2A2FF}" ShortID="484332026">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}">
+							<Language>SFX</Language>
+							<AudioFile>BRIDGE_STEP_V1-003.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="16282868"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WHISTLE_BIRD_V1-001" ID="{71541E73-2EE8-46D8-8B8B-69691AD43122}" ShortID="471491132">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WHISTLE_BIRD_V1-001" ID="{808CFAC5-2E01-4060-AF08-E80B54ED1C77}">
+							<Language>SFX</Language>
+							<AudioFile>WHISTLE_BIRD_V1-001.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="574532058"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="WHISTLE_BIRD_V1-001" ID="{808CFAC5-2E01-4060-AF08-E80B54ED1C77}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WHISTLE_BIRD_V1-002" ID="{A0D1FE9C-4C6A-4CF5-B834-F38BABEF9876}" ShortID="704645296">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WHISTLE_BIRD_V1-002" ID="{9BD2E63E-1504-49F2-8880-F9FD273DFF60}">
+							<Language>SFX</Language>
+							<AudioFile>WHISTLE_BIRD_V1-002.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="708396795"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="WHISTLE_BIRD_V1-002" ID="{9BD2E63E-1504-49F2-8880-F9FD273DFF60}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="WHISTLE_BIRD_V1-003" ID="{2DB835A2-6D50-45B5-A8A5-842A33C9DC3C}" ShortID="960665011">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="WHISTLE_BIRD_V1-003" ID="{35972835-A2B4-4A52-B6BC-C7B54B808151}">
+							<Language>SFX</Language>
+							<AudioFile>WHISTLE_BIRD_V1-003.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="637475334"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="WHISTLE_BIRD_V1-003" ID="{35972835-A2B4-4A52-B6BC-C7B54B808151}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

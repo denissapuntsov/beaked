@@ -1832,6 +1832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1856132939831286293, guid: e61efe8b914df0940abdb9b067b71a9d, type: 3}
+      propertyPath: m_Name
+      value: Curved Grass Bright 1 (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 3034930765662760649, guid: e61efe8b914df0940abdb9b067b71a9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -1871,10 +1875,6 @@ PrefabInstance:
     - target: {fileID: 3034930765662760649, guid: e61efe8b914df0940abdb9b067b71a9d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1856132939831286293, guid: e61efe8b914df0940abdb9b067b71a9d, type: 3}
-      propertyPath: m_Name
-      value: Curved Grass Bright 1 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 6980394469406387153, guid: e61efe8b914df0940abdb9b067b71a9d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3976,8 +3976,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187053153}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.26663238, y: 0.37941405, z: -0.115824535, w: 0.8783718}
-  m_LocalPosition: {x: -1.83, y: 3.23, z: -0.86}
+  m_LocalRotation: {x: 0.27704915, y: 0.28791043, z: -0.08804495, w: 0.9124689}
+  m_LocalPosition: {x: -2.52, y: 4.76, z: -3.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

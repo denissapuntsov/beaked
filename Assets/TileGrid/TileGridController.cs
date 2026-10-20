@@ -67,7 +67,7 @@ namespace LevelStructure
             AddElement(gridElement);
         }
 
-        private void AssignPlayerCell()
+        public void AssignPlayerCell()
         {
             if (!_data) return;
             var playerCell = TryGetCellAtLocation(_data.gameObject.transform.position);

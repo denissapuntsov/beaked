@@ -4,90 +4,140 @@ using DG.Tweening;
 using LevelStructure;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using Sequence = DG.Tweening.Sequence;
 
-public class CarControls : GridElementControls
+public class CarControls : ChainableAction
 {
-    [SerializeField] private bool isByGate;
-    public List<GridElement> tilesToCheckForward, tilesToCheckBackward;
-    private GateControls _gateControls;
-    [SerializeField] private Transform carBody;
+    [SerializeField] private List<CarPath> paths = new List<CarPath>();
+    [SerializeField] private float speed = 2;
+    
+    private Dictionary<string, CarPath> _paths = new ();
 
-    [SerializeField] private Mover forward, backward;
+    private CarPath _currentPath;
+    private TileGridController _controller;
 
-    public void Move(ChainableAction source)
+    private Tweener _move;
+
+    private int _currentNodeIndex;
+
+    private Cell _rear, _front;
+
+    private GridElement _element;
+
+    private void Start()
     {
-        if (!isByGate)
+        _controller = FindAnyObjectByType<TileGridController>();
+        _element = GetComponent<GridElement>();
+        if (paths.Count > 0)
         {
-            MoveForward(source);
+            _currentPath = paths[0];
+        }    
+
+        foreach (CarPath path in paths)
+        {
+            _paths.Add(path.key, path);
+        }
+
+        ReassignFrontAndBack();
+    }
+
+    private void ReassignFrontAndBack()
+    {
+        _front = _element.cells[0];
+        _rear = _element.cells[1];
+        if (_element.cells[1].GridPosition.x > _element.cells[0].GridPosition.x ||
+            _element.cells[1].GridPosition.z > _element.cells[0].GridPosition.z)
+        {
+            _front = _element.cells[1];
+            _rear = _element.cells[0];
+        }
+    }
+
+    public void SetPath(string key)
+    {
+        _paths.TryGetValue(key, out _currentPath);
+        _currentNodeIndex = 0;
+    }
+
+    public void Move(ChainableAction parent)
+    {
+        parent.AddAction(this);
+        if (!IsPathFree())
+        {
+            Complete();
         }
         else
         {
-            MoveBackward(source);
+            _currentPath.onStartPath?.Invoke(this);
+            MoveToNextNodeInPath();
+            Complete();
         }
     }
 
-    private void MoveForward(ChainableAction source)
+    private void MoveToNextNodeInPath()
     {
-        foreach (var element in tilesToCheckForward)
+        _controller.RemoveElement(_element);
+        Debug.Log("moving");
+        int index = _currentNodeIndex;
+        if (index == _currentPath.directions.Count)
         {
-            foreach (var cell in element.cells)
-            {
-                if (CheckCell(cell.GridPosition))
-                {
-                    MoveBackward(source);
-                    return;
-                }
-            }
+            _controller.AddElement(_element);
+            ReassignFrontAndBack();
+            _currentPath.onFinishPath?.Invoke(this);
+            Complete();
+            return;
         }
-
-        source.AddAction(this);
-        forward.Move(this);
-        OnComplete += action =>
-        {
-            isByGate = true;
-        };
-    }
-
-    public override void ReactToPeck(ChainableAction parent)
-    {
-        parent.AddAction(this);
+        _currentNodeIndex++;
         
-        var turnDirection = Data.orientation switch
-        {
-            Orientation.North => new Vector3(0, 0, 1),
-            Orientation.East => new Vector3(-1, 0, 0),
-            Orientation.South => new Vector3(0, 0, -1),
-            Orientation.West => new Vector3(1, 0, 0),
-            _ => throw new ArgumentOutOfRangeException()
-        };
-
-        var turnVector = turnDirection * 5;
-
-        carBody.DOBlendableLocalRotateBy(turnVector, 0.2f)
-            .OnComplete(() => { carBody.DOBlendableLocalRotateBy(-turnVector, 0.4f); });
-    }
-
-    private void MoveBackward(ChainableAction source)
-    {
-        foreach (var element in tilesToCheckBackward)
-        {
-            foreach (var cell in element.cells)
-            {
-                if (CheckCell(cell.GridPosition))
-                {
-                    return;
-                }
-            }
-        }
+        var nextDirection = new Vector3Int((int)_currentPath.directions[index].x, 0, (int)_currentPath.directions[index].y);
         
-        source.AddAction(this);
-        backward.Move(this);
-        OnComplete += action => isByGate = false;
+        Debug.Log(nextDirection);
+        _move = transform
+            .DOMove(nextDirection, speed)
+            .SetRelative()
+            .SetSpeedBased()
+            .SetAutoKill()
+            .SetEase(Ease.Linear)
+            .OnComplete(MoveToNextNodeInPath);
     }
-    
-    private bool CheckCell(Vector3 cellPosition)
+
+    private bool IsPathFree()
     {
-        return Data?.CurrentCell.GridPosition == cellPosition;
+        var lastCellCheckedCoordinates = _front.GridPosition;
+        foreach (Vector2 node in _currentPath.directions)
+        {
+            var nextCellOffset = new Vector3Int((int)node.x, 0, (int)node.y);
+            var zeroCell = _front;
+            if (nextCellOffset.x < 0 || nextCellOffset.z < 0)
+            {
+                zeroCell = _rear;
+            }
+
+            if (zeroCell == _rear && lastCellCheckedCoordinates == _front.GridPosition)
+            {
+                lastCellCheckedCoordinates = _rear.GridPosition;
+            }
+            
+            var nextCell = _controller.TryGetCellAtLocation(nextCellOffset + lastCellCheckedCoordinates);
+            
+            if (nextCell != null)
+            {
+                Debug.Log($"path is blocked at {nextCellOffset + lastCellCheckedCoordinates}! by {_controller.GetElementFromCell(nextCell)}");
+                return false;
+            }
+
+            lastCellCheckedCoordinates += nextCellOffset;
+        }
+
+        return true;
     }
+}
+
+[Serializable]
+public class CarPath
+{
+    public string key;
+    public List<Vector2> directions;
+    public UnityEvent<ChainableAction> onStartPath, onFinishPath;
 }

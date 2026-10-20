@@ -2550,8 +2550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187053153}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.26663238, y: 0.37941405, z: -0.115824535, w: 0.8783718}
-  m_LocalPosition: {x: -1.99, y: 3.4, z: -2.05}
+  m_LocalRotation: {x: 0.27704915, y: 0.28791043, z: -0.08804495, w: 0.9124689}
+  m_LocalPosition: {x: -2.22, y: 3.87, z: -3.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2696,6 +2696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f3757c3b8be1347bf05701b8079bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assemblyEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   musicEvent:
     idInternal: 0
     valueGuidInternal: 

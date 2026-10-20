@@ -94,6 +94,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Horn" ID="{35816947-DC6B-426F-851B-1E41AA24B2AC}">
+					<ChildrenList>
+						<Action Name="" ID="{23587B4C-A890-444D-AC1F-549D7EEF6056}" ShortID="1026051214">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Horn" ID="{3ED5AE6A-51EA-496B-90EC-A0C1212A2CAB}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
