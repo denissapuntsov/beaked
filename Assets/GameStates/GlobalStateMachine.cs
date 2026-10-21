@@ -29,11 +29,11 @@ public class GlobalStateMachine : FiniteStateMachine
       {
             base.Enter();
             ChangeState(SetupStateMachine);
+            SoundManager.instance.SetMusic(MusicMode.Chapter1);
       }
 
       private void HandleSetupStateComplete()
       {
-            SoundManager.instance.SetMusic(MusicMode.Gameplay);
             ChangeState(GameplayStateMachine);
       }
 

@@ -58,7 +58,9 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 
     public void OnMenu(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        if (!context.started) return;
+        ExitState = ExitState.Pause;
+        Complete();
     }
 
     public override void Exit()
@@ -75,5 +77,6 @@ public enum ExitState
     Speaking,
     Interacting,
     Walking,
+    Pause,
     None
 }

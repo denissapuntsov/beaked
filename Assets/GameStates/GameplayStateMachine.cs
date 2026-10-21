@@ -11,6 +11,8 @@ public class GameplayStateMachine : FiniteStateMachine
     
     public PlayerReactionStepState PlayerReactionStepState { get; protected set; }
     
+    public PauseStepState PauseStepState { get; protected set; }
+    
     #endregion
     
     public GameplayStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
@@ -29,6 +31,11 @@ public class GameplayStateMachine : FiniteStateMachine
         {
             OnComplete = HandlePlayerReactionStepComplete
         };
+
+        PauseStepState = new PauseStepState(data, actions)
+        {
+            OnComplete = HandlePauseStepComplete
+        };
     }
 
     public override void Enter()
@@ -42,8 +49,16 @@ public class GameplayStateMachine : FiniteStateMachine
     private void HandlePlayerStepStateComplete()
     {
         // analyse the world to see if our action has reached a Peckable or a Listener
-        WorldReactionStepState.EntryState = PlayerStepState.ExitState;
-        ChangeState(WorldReactionStepState);
+
+        if (PlayerStepState.ExitState == ExitState.Pause)
+        {
+            ChangeState(PauseStepState);
+        }
+        else
+        {
+            WorldReactionStepState.EntryState = PlayerStepState.ExitState;
+            ChangeState(WorldReactionStepState);
+        }
     }
     
     private void HandleWorldReactionStepComplete()
@@ -55,6 +70,11 @@ public class GameplayStateMachine : FiniteStateMachine
     private void HandlePlayerReactionStepComplete()
     {
         // have we reached the end?
+        ChangeState(PlayerStepState);
+    }
+
+    private void HandlePauseStepComplete()
+    {
         ChangeState(PlayerStepState);
     }
     

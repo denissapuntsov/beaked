@@ -10,18 +10,21 @@ namespace LevelStructure
         private TileGridModel _model;
         private TileGridView _view;
         private PlayerData _data;
+        private FakePlayer _fakePlayer;
         public Dictionary<Cell, GridElement> CellToElementMap { get; private set; } = new();
 
         private void Awake()
         {
             _data = FindAnyObjectByType<PlayerData>();
+            _fakePlayer = FindAnyObjectByType<FakePlayer>();
         }
 
         public void Setup()
         {
             DOTween.Init();
-            DOTween.KillAll();
+            //DOTween.KillAll();
             SetupGrid();
+            _fakePlayer.gameObject.SetActive(false);
             AssignPlayerCell();
             AssignSmartMoverCells();
         }
@@ -40,9 +43,16 @@ namespace LevelStructure
             }
         }
 
-        public void AnimateGridSetup(Action onComplete)
+        public void Animate(Action onComplete)
         {
-            _view.AnimateGrid(onComplete);
+            AnimateFakePlayer(onComplete);
+        }
+
+        private void AnimateFakePlayer(Action onComplete)
+        {
+            _fakePlayer.gameObject.SetActive(true);
+            _fakePlayer.onAnimationEnd.AddListener(() => onComplete?.Invoke());
+            _fakePlayer.GetComponent<AnimationControls>().PlayAnimation("Setup");
         }
 
         private void SetupGrid()

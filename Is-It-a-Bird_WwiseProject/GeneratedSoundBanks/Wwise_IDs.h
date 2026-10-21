@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAY_PECK_RANDOM = 3013440353U;
         static const AkUniqueID PLAY_PECK_SWITCH = 3320958968U;
         static const AkUniqueID PLAY_WHISTLE = 2693257580U;
+        static const AkUniqueID PLAY_WHISTLE_PIPE = 4248420719U;
         static const AkUniqueID PLAYER_STEP = 3461836331U;
         static const AkUniqueID PLAYER_TEST = 2791944829U;
         static const AkUniqueID RESET_ASSEMBLY = 4141633669U;

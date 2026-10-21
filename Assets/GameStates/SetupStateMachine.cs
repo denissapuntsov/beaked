@@ -31,11 +31,6 @@ public class SetupStateMachine : FiniteStateMachine
 
         private void HandleSetupGridComplete()
         {
-                if (_isSetupSkipped)
-                {
-                        Complete();
-                        return;
-                }
                 ChangeState(AnimateGridState);
         }
         

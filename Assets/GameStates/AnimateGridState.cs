@@ -17,7 +17,7 @@ public class AnimateGridState : FiniteStateMachine
         public override void Enter()
         {
                 base.Enter();
-                _controller.AnimateGridSetup(OnGridAnimationComplete);
+                _controller.Animate(OnGridAnimationComplete);
         }
 
         private void HandleGridAnimationComplete()

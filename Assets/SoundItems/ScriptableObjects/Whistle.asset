@@ -16,5 +16,12 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6e1557b4087f9ea41b37cd2af55d8f2a, type: 2}
-  range: 1
-  sprite: {fileID: 0}
+  playerEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  pipeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 37b57983eeb906f42b99251db2a749a3, type: 2}
+  reactionDelay: 0

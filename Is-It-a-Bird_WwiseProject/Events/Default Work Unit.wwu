@@ -105,6 +105,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Whistle_Pipe" ID="{E4165577-E031-42EA-99E2-DE50B48A78AF}">
+					<ChildrenList>
+						<Action Name="" ID="{00441D60-C2DE-4F43-9256-48FFAD8CB6E8}" ShortID="692733616">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WHISTLE_TUBE_V1" ID="{563B0BB3-C837-461D-9E97-1EA9073CFF31}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Bridge_Step" ID="{C79792E9-4B9F-44BD-A1BB-BB8C962266BC}">
+					<ChildrenList>
+						<Action Name="" ID="{3F301A1B-B610-4B0F-9754-060131E3C5F9}" ShortID="431383265">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bridge_Step" ID="{76002812-92D8-4519-BCA2-D97C29F18314}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

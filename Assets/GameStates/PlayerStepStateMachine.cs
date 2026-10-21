@@ -51,6 +51,10 @@ public class PlayerStepStateMachine : FiniteStateMachine
                         case ExitState.Interacting:
                                 ChangeState(PlayerInteractState);
                                 break;
+                        case ExitState.Pause:
+                                ExitState = ExitState.Pause;
+                                Complete();
+                                break;
                 }
         }
 

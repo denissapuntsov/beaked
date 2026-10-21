@@ -2423,72 +2423,6 @@
 						<ActiveSource Name="BRIDGE_HEAVY_V1-004" ID="{6C332149-C89F-46BF-A128-0730A75FF59B}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="BRIDGE_STEP_V1-001" ID="{F2DDC36D-0772-4888-8470-FE2C4C0CA6DB}" ShortID="714767295">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}">
-							<Language>SFX</Language>
-							<AudioFile>BRIDGE_STEP_V1-001.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1056780850"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="BRIDGE_STEP_V1-002" ID="{B779A089-1036-4838-ACE8-E9240620014F}" ShortID="746517559">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}">
-							<Language>SFX</Language>
-							<AudioFile>BRIDGE_STEP_V1-002.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="727222901"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="BRIDGE_STEP_V1-004" ID="{02E03FC4-AD28-4A85-8780-9A938B15E9D6}" ShortID="1066013877">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}">
-							<Language>SFX</Language>
-							<AudioFile>BRIDGE_STEP_V1-004.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1023646562"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Horn" ID="{3ED5AE6A-51EA-496B-90EC-A0C1212A2CAB}" ShortID="233117600">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -2566,6 +2500,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="WHISTLE_TUBE_V1" ID="{C48EDBAD-244F-44E0-89AF-FA8419FCF2EC}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.816841134562252"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.62967798697014"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>WHISTLE_TUBE_V1.wav</AudioFile>
 							<MediaIDList>
@@ -2619,28 +2558,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="BELL_V1-003" ID="{FD0BE305-FA39-47F9-807C-63B5255742E6}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="BRIDGE_STEP_V1-003" ID="{E62FD32C-8274-4574-8FC0-877563B2A2FF}" ShortID="484332026">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}">
-							<Language>SFX</Language>
-							<AudioFile>BRIDGE_STEP_V1-003.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="16282868"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="WHISTLE_BIRD_V1-001" ID="{71541E73-2EE8-46D8-8B8B-69691AD43122}" ShortID="471491132">
@@ -2709,6 +2626,106 @@
 						<ActiveSource Name="WHISTLE_BIRD_V1-003" ID="{35972835-A2B4-4A52-B6BC-C7B54B808151}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Bridge_Step" ID="{76002812-92D8-4519-BCA2-D97C29F18314}" ShortID="658665390">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="BRIDGE_STEP_V1-001" ID="{F2DDC36D-0772-4888-8470-FE2C4C0CA6DB}" ShortID="714767295">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}">
+									<Language>SFX</Language>
+									<AudioFile>BRIDGE_STEP_V1-001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1056780850"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BRIDGE_STEP_V1-001" ID="{7847F6F9-27DB-4359-80F6-5741235368B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BRIDGE_STEP_V1-002" ID="{B779A089-1036-4838-ACE8-E9240620014F}" ShortID="746517559">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}">
+									<Language>SFX</Language>
+									<AudioFile>BRIDGE_STEP_V1-002.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="727222901"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BRIDGE_STEP_V1-002" ID="{64419CA6-DFB5-43FC-BB53-D1F83F7AE494}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BRIDGE_STEP_V1-003" ID="{E62FD32C-8274-4574-8FC0-877563B2A2FF}" ShortID="484332026">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}">
+									<Language>SFX</Language>
+									<AudioFile>BRIDGE_STEP_V1-003.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="16282868"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BRIDGE_STEP_V1-003" ID="{1EB1A216-8C69-4359-BF4C-B11D9C8E80E5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BRIDGE_STEP_V1-004" ID="{02E03FC4-AD28-4A85-8780-9A938B15E9D6}" ShortID="1066013877">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}">
+									<Language>SFX</Language>
+									<AudioFile>BRIDGE_STEP_V1-004.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1023646562"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BRIDGE_STEP_V1-004" ID="{981C9FAC-8713-41C6-A55C-5D8F6BA174D5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

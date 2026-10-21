@@ -26,6 +26,8 @@ public class SoundManager : MonoBehaviour
         { 
             Destroy(gameObject);
         }
+        
+        musicEvent.Post(gameObject);
     }
 
     public void SetFootstepMaterial(StepMaterial material)
@@ -36,7 +38,12 @@ public class SoundManager : MonoBehaviour
     public void SetPeckMaterial(PeckMaterial material)
     {
         AkUnitySoundEngine.SetSwitch(PeckSwitch, material.ToString(), gameObject);
-    } 
+    }
+
+    public void PlaySoundPipe(SoundItem sound, GameObject source, AkCallbackManager.EventCallback onFinishedSpeaking)
+    {
+        sound.pipeEvent.Post(source, (uint)AkCallbackType.AK_EndOfEvent, onFinishedSpeaking);
+    }
 
     public void PlaySound(SoundItem sound, GameObject source, AkCallbackManager.EventCallback onFinishedSpeaking)
     { 
@@ -57,11 +64,26 @@ public class SoundManager : MonoBehaviour
 
     public void SetMusic(MusicMode mode)
     {
-        musicEvent.Post(gameObject);
+        switch (mode)
+        {
+            case MusicMode.Chapter1:
+                break;
+            case MusicMode.Chapter2:
+                break;
+            case MusicMode.Chapter3:
+                break;
+        }
+    }
+
+    public void ResetAssembly()
+    {
+        AkUnitySoundEngine.PostEvent("Reset_Assembly", gameObject);
     }
 }
 
 public enum MusicMode
 {
-    Gameplay
+    Chapter1,
+    Chapter2,
+    Chapter3
 }

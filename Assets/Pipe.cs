@@ -40,7 +40,7 @@ public class Pipe : ChainableAction
         _target = GetListenerInFront();
         _sound = sound;
         onSoundReceived?.Invoke();
-        SoundManager.instance.PlaySound(_sound, SoundManager.instance.gameObject, TriggerListener);
+        SoundManager.instance.PlaySoundPipe(_sound, SoundManager.instance.gameObject, TriggerListener);
     }
 
     private void TriggerListener(object inCookie, AkCallbackType inType, AkCallbackInfo inInfo)
