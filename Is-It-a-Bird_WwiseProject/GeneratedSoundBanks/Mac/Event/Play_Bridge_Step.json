@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1816247478",
+    "Type": "Event",
+    "GUID": "{C79792E9-4B9F-44BD-A1BB-BB8C962266BC}",
+    "Language": "SFX",
+    "Hash": "{91960626-3171-3C1C-17A5-AB477A2F939F}",
+    "ObjectPath": "Play_Bridge_Step",
+    "ShortName": "Play_Bridge_Step",
+    "Path": "Event/Play_Bridge_Step.bnk",
+    "Media": [
+     {
+      "Id": "16282868",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STEP_V1-003.wav",
+      "Path": "Media/16282868.wem",
+      "CachePath": "64/{644665B4-0CEC-2B56-96E4-8826B2DD8A69}.wem"
+     },
+     {
+      "Id": "727222901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STEP_V1-002.wav",
+      "Path": "Media/727222901.wem",
+      "CachePath": "84/{84236B6E-C7CE-517B-4572-AE2C49EB1B82}.wem"
+     },
+     {
+      "Id": "1023646562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STEP_V1-004.wav",
+      "Path": "Media/1023646562.wem",
+      "CachePath": "F3/{F3AAC103-3695-9122-4CCF-789928FB1469}.wem"
+     },
+     {
+      "Id": "1056780850",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BRIDGE_STEP_V1-001.wav",
+      "Path": "Media/1056780850.wem",
+      "CachePath": "D2/{D2C44AF6-B4FC-CC7F-79C1-923130EA2A09}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1816247478",
+      "Name": "Play_Bridge_Step",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bridge_Step",
+      "GUID": "{C79792E9-4B9F-44BD-A1BB-BB8C962266BC}",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "16282868"
+       },
+       {
+        "Id": "727222901"
+       },
+       {
+        "Id": "1023646562"
+       },
+       {
+        "Id": "1056780850"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3DBE887D-6E52-367D-921C-1C0C93E6E00E}"
+ }
+}

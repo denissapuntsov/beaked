@@ -38,23 +38,23 @@ public class Bridges : ChainableAction
     {
         foreach (var element in _elements)
         {
-            _controller.RemoveElement(element);
-        }
-        parent.AddAction(this);
-        commands[_commandIndex].onStart?.Invoke(this);
-
-        foreach (var element in _elements)
-        {
             foreach (var cell in element.cells)
             {
                 if (_data.CurrentCell.GridPosition == cell.GridPosition)
                 {
-                    _controller.RemoveElement(_data.gridElement);
+                    //_controller.RemoveElement(_data.gridElement);
                     _data.transform.SetParent(transform);
                     _carriesPlayer = true;
                 }
             }
         }
+        
+        foreach (var element in GetComponentsInChildren<GridElement>())
+        {
+            _controller.RemoveElement(element);
+        }
+        parent.AddAction(this);
+        commands[_commandIndex].onStart?.Invoke(this);
         
         _move = transform
             .DOMove(commands[_commandIndex].direction, commands[_commandIndex].speed)
@@ -66,7 +66,7 @@ public class Bridges : ChainableAction
 
     private void Finish()
     {
-        foreach (var element in _elements)
+        foreach (var element in GetComponentsInChildren<GridElement>())
         {
             _controller.AddElement(element);
         }
@@ -74,7 +74,7 @@ public class Bridges : ChainableAction
         if (_carriesPlayer)
         {
             _data.transform.SetParent(transform.root);
-            _controller.AddElement(_data.gridElement);
+            //_controller.AddElement(_data.gridElement);
             _controller.AssignPlayerCell();
             _carriesPlayer = false;
         }

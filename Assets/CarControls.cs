@@ -71,7 +71,7 @@ public class CarControls : ChainableAction
         {
             _currentPath.onStartPath?.Invoke(this);
             MoveToNextNodeInPath();
-            Complete();
+            //Complete();
         }
     }
 

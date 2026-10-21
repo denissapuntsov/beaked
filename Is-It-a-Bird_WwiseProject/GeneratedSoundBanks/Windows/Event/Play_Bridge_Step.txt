@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1816247478	Play_Bridge_Step			\Default Work Unit\Play_Bridge_Step	
+

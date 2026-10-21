@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_ASSEMBLY = 2781317322U;
         static const AkUniqueID PLAY_BEAKED_MUSICSKETCH_V1_JONAH_FULLMX_01 = 4154561170U;
         static const AkUniqueID PLAY_BRIDGE_START = 394694740U;
+        static const AkUniqueID PLAY_BRIDGE_STEP = 1816247478U;
         static const AkUniqueID PLAY_BRIDGE_STOP = 1916913224U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
         static const AkUniqueID PLAY_CAR_MOVING = 115854669U;
