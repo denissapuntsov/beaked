@@ -84,7 +84,7 @@ public class SmartMover : ChainableAction
             nextCell = _controller.TryGetCellAtLocation(nextCellDirection + currentCell.GridPosition + new Vector3(0, f, 0));
             //TileGrid.instance.GetCellAt(nextTileCoordinates + _data.CurrentCell.gridPosition + new Vector3(0, f, 0), out var nextCell);
             if (nextCell is not { IsAccessible: true, IsSolid: true }) continue;
-            if (f != 0)
+            if (f == 0)
             {
                 MoveToCell(nextCell);
                 return;

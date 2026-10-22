@@ -1,4 +1,5 @@
 using LevelStructure;
+using UnityEngine.SceneManagement;
 
 public class GlobalStateMachine : FiniteStateMachine
 {
@@ -19,7 +20,7 @@ public class GlobalStateMachine : FiniteStateMachine
                   OnComplete = HandleGameplayerStateComplete
             };
 
-            LevelCompleteStateMachine = new LevelCompleteStateMachine()
+            LevelCompleteStateMachine = new LevelCompleteStateMachine(controller)
             {
                   OnComplete = HandleLevelCompleteStateComplete
             };
@@ -28,7 +29,11 @@ public class GlobalStateMachine : FiniteStateMachine
       public override void Enter()
       {
             base.Enter();
-            ChangeState(SetupStateMachine);
+            if (SceneManager.GetActiveScene().name is not "MainMenu" and not "Ch2Transition" and not "Ch3Transition" and not "Credits")
+            {
+                  ChangeState(SetupStateMachine);
+            }
+            
             SoundManager.instance.SetMusic(MusicMode.Chapter1);
       }
 

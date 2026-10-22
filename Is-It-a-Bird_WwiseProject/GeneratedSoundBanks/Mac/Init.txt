@@ -1,3 +1,13 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1259221826	Ch1_Mix			\Default Work Unit\Ch1_Mix	
+
+State	ID	Name	State Group			Notes
+	141331488	Lvl3	Ch1_Mix			
+	141331489	Lvl2	Ch1_Mix			
+	141331490	Lvl1	Ch1_Mix			
+	141331495	Lvl4	Ch1_Mix			
+	748895195	None	Ch1_Mix			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
 

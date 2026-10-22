@@ -24,7 +24,7 @@ namespace LevelStructure
             DOTween.Init();
             //DOTween.KillAll();
             SetupGrid();
-            _fakePlayer.gameObject.SetActive(false);
+            _fakePlayer?.gameObject.SetActive(false);
             AssignPlayerCell();
             AssignSmartMoverCells();
         }
@@ -45,14 +45,41 @@ namespace LevelStructure
 
         public void Animate(Action onComplete)
         {
-            AnimateFakePlayer(onComplete);
+            AnimateWorldUp(onComplete);
         }
 
-        private void AnimateFakePlayer(Action onComplete)
+        public void AnimateWorldUp(Action onComplete)
+        {
+            var world = FindAnyObjectByType<World>();
+            if (world == null)
+            {
+                AnimateFakePlayerUp(onComplete);
+            }
+            world.Setup(() => AnimateFakePlayerUp(onComplete));
+        }
+
+        private void AnimateFakePlayerUp(Action onComplete)
         {
             _fakePlayer.gameObject.SetActive(true);
-            _fakePlayer.onAnimationEnd.AddListener(() => onComplete?.Invoke());
+            _fakePlayer.onSetupAnimationEnd.AddListener(() => onComplete?.Invoke());
             _fakePlayer.GetComponent<AnimationControls>().PlayAnimation("Setup");
+        }
+
+        public void AnimateWorldDown(Action onComplete)
+        {
+            var world =  FindAnyObjectByType<World>();
+            if (world == null)
+            {
+                AnimateFakePlayerDown(onComplete);
+            }
+            world.Breakdown(() => AnimateFakePlayerDown(onComplete));
+        }
+
+        private void AnimateFakePlayerDown(Action onComplete)
+        {
+            _fakePlayer.gameObject.SetActive(true);
+            _fakePlayer.onBreakdownAnimationEnd.AddListener(() => onComplete?.Invoke());
+            _fakePlayer.GetComponent<AnimationControls>().PlayAnimation("Fall");
         }
 
         private void SetupGrid()

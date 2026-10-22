@@ -6,12 +6,15 @@ public class Sign : Interactable
 {
     public UnityEvent onComplete;
 
+    public UnityEvent onPecked;
+
     public void Complete()
     {
         onComplete?.Invoke();
     }
     
-    public void CompleteLevel() => GameManager.instance.CompleteLevel();
-    
-    public void NextLevel() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void NextLevel()
+    {
+        onPecked?.Invoke();
+    }
 }

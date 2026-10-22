@@ -23,6 +23,10 @@ using UnityEngine.Events;
         public void OnPeck()
         {
             onPeck?.Invoke(this);
+            if (onPeck?.GetPersistentEventCount() == 0)
+            {
+                Complete();
+            }
         }
 
         public void OnListen(SoundItem sound)

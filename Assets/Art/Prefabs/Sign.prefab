@@ -165,6 +165,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1292704306247609729}
+        m_TargetAssemblyTypeName: Sign, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4554325444883441893
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,11 +362,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b60c4c8bab4715545b36646493ebf38d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 893eafa28c601d24cb53b45dc0517731, type: 2}
+      objectReference: {fileID: 2100000, guid: 1ccb91585c7d80f4e8a4ac840a372604, type: 2}
     - target: {fileID: -1461304994638716399, guid: b60c4c8bab4715545b36646493ebf38d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 893eafa28c601d24cb53b45dc0517731, type: 2}
+      objectReference: {fileID: 2100000, guid: 1ccb91585c7d80f4e8a4ac840a372604, type: 2}
     - target: {fileID: 919132149155446097, guid: b60c4c8bab4715545b36646493ebf38d, type: 3}
       propertyPath: m_Name
       value: Sign_End

@@ -792,11 +792,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8db61aa4a2a21fd47883ecb2961bc670, type: 2}
+      objectReference: {fileID: 2100000, guid: 5090688a39b6c7e428c58a6a3ec29fc1, type: 2}
     - target: {fileID: -7511558181221131132, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8db61aa4a2a21fd47883ecb2961bc670, type: 2}
+      objectReference: {fileID: 2100000, guid: 5090688a39b6c7e428c58a6a3ec29fc1, type: 2}
     - target: {fileID: 919132149155446097, guid: d23f5ead392bf7f408f1ed70139da7e7, type: 3}
       propertyPath: m_Name
       value: park_ranger_head 1

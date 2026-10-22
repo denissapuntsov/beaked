@@ -26,8 +26,6 @@ public class SoundManager : MonoBehaviour
         { 
             Destroy(gameObject);
         }
-        
-        musicEvent.Post(gameObject);
     }
 
     public void SetFootstepMaterial(StepMaterial material)

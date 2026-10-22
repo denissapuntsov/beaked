@@ -1,16 +1,25 @@
+using LevelStructure;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelCompleteStateMachine : FiniteStateMachine
 {
-        public LevelCompleteStateMachine() : base()
+        private TileGridController _controller;
+        
+        public LevelCompleteStateMachine(TileGridController controller) : base()
         {
-                
+                _controller = controller;
         }
 
         public override void Enter()
         {
                 Debug.Log("Level Complete");
-                SceneManager.LoadScene("Scenes/TransitionScreen");
+                _controller.AnimateWorldDown(LoadNextLevel);
+        }
+
+        private void LoadNextLevel()
+        {
+                LevelManager.instance.LoadLevel();
+                Complete();
         }
 }

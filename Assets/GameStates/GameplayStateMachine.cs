@@ -69,7 +69,11 @@ public class GameplayStateMachine : FiniteStateMachine
 
     private void HandlePlayerReactionStepComplete()
     {
-        // have we reached the end?
+        if (LevelManager.instance.IsWin)
+        {
+            Complete();
+            return;
+        }
         ChangeState(PlayerStepState);
     }
 

@@ -3,10 +3,25 @@ using UnityEngine.Events;
 
 public class FakePlayer : MonoBehaviour
 {
-    public UnityEvent onAnimationEnd;
-    
-    public void Complete()
+    public UnityEvent onSetupAnimationEnd, onBreakdownAnimationStart, onBreakdownAnimationEnd;
+
+    public void OnEnable()
     {
-        onAnimationEnd.Invoke();
+        transform.localRotation = GetComponentInParent<PlayerData>().meshAnimator.transform.localRotation;
+    }
+    
+    public void StartBreakdown()
+    {
+        onBreakdownAnimationStart?.Invoke();
+    }
+    
+    public void CompleteSetup()
+    {
+        onSetupAnimationEnd?.Invoke();
+    }
+
+    public void CompleteBreakdown()
+    {
+        onBreakdownAnimationEnd?.Invoke();
     }
 }

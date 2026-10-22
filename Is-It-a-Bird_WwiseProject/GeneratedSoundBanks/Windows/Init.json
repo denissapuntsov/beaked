@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{046395A2-E5BA-DDCD-5ED5-DCD3D1D890FF}",
+    "Hash": "{C01B5691-2FE8-B69A-977E-3F61E999C2FE}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -48,6 +48,46 @@
       "Name": "AssemblyPitch",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\AssemblyPitch",
       "GUID": "{7A19C2A5-906B-4011-8D99-FE1C987A6BD8}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1259221826",
+      "Name": "Ch1_Mix",
+      "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix",
+      "GUID": "{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}",
+      "States": [
+       {
+        "Id": "141331488",
+        "Name": "Lvl3",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl3",
+        "GUID": "{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"
+       },
+       {
+        "Id": "141331489",
+        "Name": "Lvl2",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl2",
+        "GUID": "{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"
+       },
+       {
+        "Id": "141331490",
+        "Name": "Lvl1",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl1",
+        "GUID": "{39C9B1BF-C4B1-4441-8425-9934F4148B89}"
+       },
+       {
+        "Id": "141331495",
+        "Name": "Lvl4",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl4",
+        "GUID": "{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\None",
+        "GUID": "{314B8CB3-81E9-4426-8576-5FFE51234E45}"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
@@ -118,6 +158,6 @@
     ]
    }
   ],
-  "FileHash": "{8396A045-A638-7F90-4C8E-031A23323D22}"
+  "FileHash": "{036F8B67-690F-B0A5-8B40-4DF480E607DF}"
  }
 }

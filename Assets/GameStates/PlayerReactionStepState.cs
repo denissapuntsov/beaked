@@ -19,7 +19,6 @@ public class PlayerReactionStepState : FiniteStateMachine
         if (_data.soundHistory.Contains(_data.currentSound) || !_data.currentSound)
         {
             Complete();
-            return;
         }
         else
         {

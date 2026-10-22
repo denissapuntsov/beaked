@@ -10,7 +10,7 @@ public class CameraMovement : MonoBehaviour
     private void Awake()
     {
         _startingPosition = transform.position;
-        transform.position = _startingPosition - new Vector3(0, 0.05f, 0);
-        _move = transform.DOMove(_startingPosition + new Vector3(0, 0.05f, 0), 3f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+        transform.position = _startingPosition - new Vector3(0, 0.07f, 0);
+        _move = transform.DOMove(_startingPosition + new Vector3(0, 0.07f, 0), 3f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
     }
 }

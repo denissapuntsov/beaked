@@ -33,6 +33,24 @@ namespace AK
         static const AkUniqueID RESET_ASSEMBLY = 4141633669U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace CH1_MIX
+        {
+            static const AkUniqueID GROUP = 1259221826U;
+
+            namespace STATE
+            {
+                static const AkUniqueID LVL1 = 141331490U;
+                static const AkUniqueID LVL2 = 141331489U;
+                static const AkUniqueID LVL3 = 141331488U;
+                static const AkUniqueID LVL4 = 141331495U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace CH1_MIX
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
         namespace PECKMATERIAL

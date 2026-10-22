@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E4165577-E031-42EA-99E2-DE50B48A78AF}",
     "Language": "SFX",
-    "Hash": "{29A70598-52D3-7011-0707-2A75F3A87A71}",
+    "Hash": "{0A47F7C9-0EB7-9051-C5BF-1B6D7ED3FE62}",
     "ObjectPath": "Play_Whistle_Pipe",
     "ShortName": "Play_Whistle_Pipe",
     "Path": "Event/Play_Whistle_Pipe.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "WHISTLE_TUBE_V1.wav",
       "Path": "Media/124740461.wem",
-      "CachePath": "C9/{C9CB3FAA-F744-DB81-9A2C-E7A3FC897085}.wem"
+      "CachePath": "85/{859C1F20-B2A6-346E-84FB-0E841C1AE536}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{4AE2FB27-70BC-FBBD-5828-A91D7ED039DF}"
+  "FileHash": "{E32999D8-F587-128B-C1E4-E979B35896DA}"
  }
 }
