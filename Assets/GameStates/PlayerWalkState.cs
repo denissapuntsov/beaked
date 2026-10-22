@@ -11,16 +11,19 @@ public class PlayerWalkState : GameState
     private PlayerData _data;
     private TileGridController _controller;
     private Tween _move;
+    private MenuCanvas _menuCanvas;
     
-    public PlayerWalkState(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
+    public PlayerWalkState(PlayerInputActions actions, PlayerData data, TileGridController controller, MenuCanvas menuCanvas) : base()
     {
         _actions = actions;
         _data = data;
         _controller = controller;
+        _menuCanvas = menuCanvas;
     }
     
     public override void Enter()
     {
+        _menuCanvas.SetVisibility(false, false);
         _actions.Player.Walk.performed += OnWalk;
         var walkInput = new Vector2(Mathf.Ceil(_data.walkInput.x), Mathf.Ceil(_data.walkInput.y));
         TryCellAtInput(walkInput);

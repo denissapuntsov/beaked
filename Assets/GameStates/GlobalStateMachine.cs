@@ -8,19 +8,24 @@ public class GlobalStateMachine : FiniteStateMachine
       public GameplayStateMachine GameplayStateMachine { get; protected set; }
       public LevelCompleteStateMachine LevelCompleteStateMachine { get; protected set; }
       
-      public GlobalStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller, bool isSetupSkipped)
+      public GlobalStateMachine(
+            PlayerInputActions actions, 
+            PlayerData data, 
+            TileGridController controller, 
+            bool isSetupSkipped, 
+            MenuCanvas menuCanvas)
       {
-            SetupStateMachine = new SetupStateMachine(controller, isSetupSkipped)
+            SetupStateMachine = new SetupStateMachine(controller, isSetupSkipped, menuCanvas)
             {
                   OnComplete = HandleSetupStateComplete
             };
 
-            GameplayStateMachine = new GameplayStateMachine(actions, data, controller)
+            GameplayStateMachine = new GameplayStateMachine(actions, data, controller, menuCanvas)
             {
                   OnComplete = HandleGameplayerStateComplete
             };
 
-            LevelCompleteStateMachine = new LevelCompleteStateMachine(controller)
+            LevelCompleteStateMachine = new LevelCompleteStateMachine(controller, menuCanvas)
             {
                   OnComplete = HandleLevelCompleteStateComplete
             };
@@ -29,12 +34,15 @@ public class GlobalStateMachine : FiniteStateMachine
       public override void Enter()
       {
             base.Enter();
-            if (SceneManager.GetActiveScene().name is not "MainMenu" and not "Ch2Transition" and not "Ch3Transition" and not "Credits")
+            if (SceneManager.GetActiveScene().name 
+                is not "MainMenu" 
+                and not "Ch1Transition" 
+                and not "Ch2Transition" 
+                and not "Ch3Transition" 
+                and not "Credits")
             {
                   ChangeState(SetupStateMachine);
             }
-            
-            SoundManager.instance.SetMusic(MusicMode.Chapter1);
       }
 
       private void HandleSetupStateComplete()

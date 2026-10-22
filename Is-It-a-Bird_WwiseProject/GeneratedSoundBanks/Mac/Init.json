@@ -86,6 +86,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\None",
         "GUID": "{314B8CB3-81E9-4426-8576-5FFE51234E45}"
+       },
+       {
+        "Id": "2716678721",
+        "Name": "Victory",
+        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Victory",
+        "GUID": "{4C3C9628-2A66-4098-84DA-8E17506B7605}"
        }
       ]
      }
@@ -158,6 +164,6 @@
     ]
    }
   ],
-  "FileHash": "{5E84C4F3-F12B-A4E5-89E9-94A7C499F324}"
+  "FileHash": "{BD6D3AC3-DFD9-3994-EDC9-ADB579C16745}"
  }
 }

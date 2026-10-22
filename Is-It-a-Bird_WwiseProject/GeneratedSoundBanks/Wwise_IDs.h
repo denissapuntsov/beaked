@@ -46,6 +46,7 @@ namespace AK
                 static const AkUniqueID LVL3 = 141331488U;
                 static const AkUniqueID LVL4 = 141331495U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VICTORY = 2716678721U;
             } // namespace STATE
         } // namespace CH1_MIX
 

@@ -5,16 +5,19 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 {
     private PlayerInputActions _actions;
     private PlayerData _data;
+    private MenuCanvas _menuCanvas;
     public ExitState ExitState { get; private set; }
     
-    public PlayerIdleState(PlayerInputActions actions, PlayerData data) : base()
+    public PlayerIdleState(PlayerInputActions actions, PlayerData data, MenuCanvas menuCanvas) : base()
     {
         _actions = actions;
         _data = data;
+        _menuCanvas = menuCanvas;
     }
 
     public override void Enter()
     {
+        _menuCanvas.SetVisibility(true, true);
         _actions.Player.Enable();
         _actions.Player.SetCallbacks(this);
     }

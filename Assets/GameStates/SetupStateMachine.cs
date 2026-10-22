@@ -8,7 +8,7 @@ public class SetupStateMachine : FiniteStateMachine
         public SetupGridState SetupGridState { get; protected set; }
         public AnimateGridState AnimateGridState { get; protected set; }
         
-        public SetupStateMachine(TileGridController controller, bool isSkipped) : base()
+        public SetupStateMachine(TileGridController controller, bool isSkipped, MenuCanvas menuCanvas) : base()
         {
                 _isSetupSkipped = isSkipped;
                 

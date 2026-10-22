@@ -4,15 +4,18 @@ using NewTiles;
 public class PlayerSpeakState : GameState
 {
     private PlayerData _data;
-    public PlayerSpeakState(PlayerData data) : base()
+    private MenuCanvas _menuCanvas;
+    public PlayerSpeakState(PlayerData data, MenuCanvas menuCanvas) : base()
     {
         _data = data;
+        _menuCanvas = menuCanvas;
     }
 
     private bool _isAnimationOver, _isSoundOver;
 
     public override void Enter()
     {
+        _menuCanvas.SetVisibility(true, false);
         _isAnimationOver = false;
         _isSoundOver = false;
         base.Enter();

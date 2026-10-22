@@ -3,20 +3,36 @@ using UnityEngine;
 
 public class MenuCanvas : MonoBehaviour
 {
+    [SerializeField] private CanvasGroup peck, speak;
 
-    public static MenuCanvas instance;
+    private bool _isPecking = false;
 
-    private void Awake()
+    public bool IsPecking
     {
-        if (instance == null)
+        get => _isPecking;
+        set
         {
-            instance = this;
+            _isPecking = value;
+            peck.alpha = value ? 0.5f : 1f;
         }
-        else if (instance != this)
+    }
+    
+    private bool _isSpeaking = false;
+
+    public bool IsSpeaking
+    {
+        get => _isSpeaking;
+        set
         {
-            Destroy(gameObject);
+            _isSpeaking = value;
+            speak.alpha = value ? 0.5f : 1f;
         }
-        DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetVisibility(bool doPeck, bool doSpeak)
+    {
+        IsPecking = doPeck;
+        IsSpeaking = doSpeak;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

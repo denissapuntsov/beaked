@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] [InspectorName("Skip Setup animation?")] private bool isSetupSkipped = false;
     private PlayerData _data;
     private TileGridController _gridController;
+    private MenuCanvas _menuCanvas;
     
     private PlayerInputActions _actions;
     private GlobalStateMachine _globalStateMachine;
@@ -38,7 +39,8 @@ public class GameManager : MonoBehaviour
     {
         _gridController = FindAnyObjectByType<TileGridController>();
         _data = FindAnyObjectByType<PlayerData>();
-        _globalStateMachine = new GlobalStateMachine(_actions, _data, _gridController, isSetupSkipped);
+        _menuCanvas = FindAnyObjectByType<MenuCanvas>();
+        _globalStateMachine = new GlobalStateMachine(_actions, _data, _gridController, isSetupSkipped, _menuCanvas);
         _globalStateMachine.Enter();
     }
 

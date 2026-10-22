@@ -15,9 +15,11 @@ public class GameplayStateMachine : FiniteStateMachine
     
     #endregion
     
-    public GameplayStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
+    private MenuCanvas _menuCanvas;
+    
+    public GameplayStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller, MenuCanvas menuCanvas) : base()
     {
-        PlayerStepState = new PlayerStepStateMachine(actions, data, controller)
+        PlayerStepState = new PlayerStepStateMachine(actions, data, controller, menuCanvas)
         {
             OnComplete = HandlePlayerStepStateComplete
         };
@@ -36,6 +38,8 @@ public class GameplayStateMachine : FiniteStateMachine
         {
             OnComplete = HandlePauseStepComplete
         };
+        
+        _menuCanvas = menuCanvas;
     }
 
     public override void Enter()
@@ -49,6 +53,8 @@ public class GameplayStateMachine : FiniteStateMachine
     private void HandlePlayerStepStateComplete()
     {
         // analyse the world to see if our action has reached a Peckable or a Listener
+        
+        _menuCanvas.SetVisibility(false, false);
 
         if (PlayerStepState.ExitState == ExitState.Pause)
         {
@@ -63,6 +69,7 @@ public class GameplayStateMachine : FiniteStateMachine
     
     private void HandleWorldReactionStepComplete()
     {
+        _menuCanvas.SetVisibility(false, false);
         // if the player has a new sound, react to acquisition
         ChangeState(PlayerReactionStepState);
     }
