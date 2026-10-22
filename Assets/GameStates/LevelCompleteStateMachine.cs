@@ -7,10 +7,9 @@ public class LevelCompleteStateMachine : FiniteStateMachine
         private TileGridController _controller;
         private MenuCanvas _menuCanvas;
         
-        public LevelCompleteStateMachine(TileGridController controller, MenuCanvas menuCanvas) : base()
+        public LevelCompleteStateMachine(TileGridController controller) : base()
         {
                 _controller = controller;
-                _menuCanvas = menuCanvas;
         }
 
         public override void Enter()

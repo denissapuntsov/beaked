@@ -16,8 +16,17 @@ public class PlayerData : MonoBehaviour
     #region Interactions
 
     [Header("Interactions")] 
-    
-    public SoundItem currentSound;
+    private SoundItem _currentSound;
+
+    public SoundItem CurrentSound
+    {
+        get => _currentSound;
+        set
+        {
+            _currentSound = value;
+            FindAnyObjectByType<MenuCanvas>().SetVisibility(true, _currentSound != null);
+        }
+    }
         
         //public Interactable FocusedInteractable => nearbyInteractables[^1];
         //public List<Interactable> nearbyInteractables;
@@ -62,7 +71,12 @@ public class PlayerData : MonoBehaviour
             meshAnimator.Play(Animator.StringToHash(value.ToString()), 0, 0);
         }
     }
-        
+
+    private void Awake()
+    {
+        CurrentSound = null;
+    }
+
     #endregion
 }
 

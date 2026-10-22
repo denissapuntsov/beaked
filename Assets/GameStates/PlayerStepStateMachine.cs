@@ -10,24 +10,24 @@ public class PlayerStepStateMachine : FiniteStateMachine
         public PlayerSpeakState PlayerSpeakState { get; protected set; }
         public PlayerInteractState PlayerInteractState { get; protected set; }
         
-        public PlayerStepStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller, MenuCanvas menuCanvas) : base()
+        public PlayerStepStateMachine(PlayerInputActions actions, PlayerData data, TileGridController controller) : base()
         {
-                PlayerIdleState = new PlayerIdleState(actions, data, menuCanvas)
+                PlayerIdleState = new PlayerIdleState(actions, data)
                 {
                         OnComplete = HandlePlayerIdleStateComplete
                 };
 
-                PlayerWalkState = new PlayerWalkState(actions, data, controller, menuCanvas)
+                PlayerWalkState = new PlayerWalkState(actions, data, controller)
                 {
                         OnComplete = HandlePlayerWalkStateComplete
                 };
 
-                PlayerSpeakState = new PlayerSpeakState(data, menuCanvas)
+                PlayerSpeakState = new PlayerSpeakState(data)
                 {
                         OnComplete = HandlePlayerSpeakStateComplete
                 };
 
-                PlayerInteractState = new PlayerInteractState(data, menuCanvas)
+                PlayerInteractState = new PlayerInteractState(data)
                 {
                         OnComplete = HandlePlayerInteractStateComplete
                 };

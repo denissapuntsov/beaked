@@ -1,102 +1,105 @@
 using System;
 using System.Collections.Generic;
+using AK.Wwise;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private Page initialPage;
-    private GameObject _currentSelection;
-    
-    private Page _activePage;
+    [SerializeField] private GameObject playButton, credits, creditsButton, backButton, mainGroup;
 
-    public Page ActivePage
+    private MenuType _selection;
+
+    [SerializeField] private UnityEvent onSwitchSelection;
+    
+    public MenuType Selection
     {
-        get => _activePage;
+        get => _selection;
         set
         {
-            _activePage = value;
-            //EventSystem.current.SetSelectedGameObject(value ? _activePage.Selectables[0].gameObject : null);
-            //_currentSelection = EventSystem.current.currentSelectedGameObject;
+            _selection = value;
+            switch (value)
+            {
+                case MenuType.Play:
+                    playButton.SetActive(true);
+                    creditsButton.SetActive(false);
+                    break;
+                case MenuType.Credits:
+                    creditsButton.SetActive(true);
+                    playButton.SetActive(false);
+                    break;
+                case MenuType.Main:
+                    creditsButton.SetActive(false);
+                    playButton.SetActive(false);
+                    break;
+            }
         }
     }
-    
-    public static MenuManager instance;
-    
-    private Stack<Page> _stack;
+
+    public MenuType currentMenu;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-
-        Setup();
-        
-        _stack = new Stack<Page>();
+        currentMenu = MenuType.Main;
+        Selection = MenuType.Play;
     }
 
-    private void Setup()
+    public void OnNavigate(InputAction.CallbackContext context)
     {
-        foreach (var page in GetComponentsInChildren<Page>())
+        if (context.started)
         {
-            page.gameObject.SetActive(false);
+            SwitchSelection();
         }
     }
-    
-    public void OnMenu(InputAction.CallbackContext context)
+
+    public void SwitchSelection()
     {
-        if (!context.started) return;
-        if (!ActivePage)
+        Debug.Log("switching selection");
+        if (currentMenu == MenuType.Main)
         {
-            if (!initialPage) return;
-            Time.timeScale = 0;
-            Push(initialPage);
-            return;
+            onSwitchSelection?.Invoke();
+            Selection = Selection == MenuType.Play ? MenuType.Credits : MenuType.Play;
         }
-        Pop();
     }
 
     public void OnSubmit(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (!ActivePage || _currentSelection) return;
-        _currentSelection.GetComponent<Selectable>().Select();
-    }
-    
-    public void Push(Page page)
-    {
-        ActivePage?.gameObject.SetActive(false);
-        if (!_stack.Contains(page))
-        {
-            _stack.Push(page);
-        }
-        ActivePage = page;
-        ActivePage.gameObject.SetActive(true);
+        SwitchMenus();
     }
 
-    public void Pop()
+    public void SwitchMenus()
     {
-        var page = _stack.Pop();
-        page.gameObject.SetActive(false);
-        ActivePage = null;
-        
-        if (_stack.Count == 0)
+        if (currentMenu == MenuType.Main)
         {
-            Time.timeScale = 1;
-            _stack = new Stack<Page>();
+            if (Selection == MenuType.Credits)
+            {
+                mainGroup.SetActive(false);
+                credits.SetActive(true);
+                Selection = MenuType.Main;
+                currentMenu = MenuType.Credits;
+            }
         }
-        else
+        else if (currentMenu == MenuType.Credits)
         {
-            ActivePage = _stack.Peek();
+            mainGroup.SetActive(true);
+            credits.SetActive(false);
+            currentMenu = MenuType.Main;
+            Selection = MenuType.Credits;
+        }
+        else if (currentMenu == MenuType.Play)
+        {
+            Debug.Log("Starting Game!");
         }
     }
+}
+
+public enum MenuType
+{
+    Main,
+    Credits,
+    Play
 }

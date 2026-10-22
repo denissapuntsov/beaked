@@ -13,7 +13,10 @@ public class MenuCanvas : MonoBehaviour
         set
         {
             _isPecking = value;
-            peck.alpha = value ? 0.5f : 1f;
+            if (peck)
+            {
+                peck.alpha = value ? 1f : 0.5f;
+            }
         }
     }
     
@@ -25,7 +28,10 @@ public class MenuCanvas : MonoBehaviour
         set
         {
             _isSpeaking = value;
-            speak.alpha = value ? 0.5f : 1f;
+            if (speak)
+            {
+                speak.alpha = value ? 1f : 0.5f;
+            }
         }
     }
 

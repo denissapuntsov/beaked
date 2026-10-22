@@ -15,17 +15,17 @@ public class GlobalStateMachine : FiniteStateMachine
             bool isSetupSkipped, 
             MenuCanvas menuCanvas)
       {
-            SetupStateMachine = new SetupStateMachine(controller, isSetupSkipped, menuCanvas)
+            SetupStateMachine = new SetupStateMachine(controller, isSetupSkipped)
             {
                   OnComplete = HandleSetupStateComplete
             };
 
-            GameplayStateMachine = new GameplayStateMachine(actions, data, controller, menuCanvas)
+            GameplayStateMachine = new GameplayStateMachine(actions, data, controller)
             {
                   OnComplete = HandleGameplayerStateComplete
             };
 
-            LevelCompleteStateMachine = new LevelCompleteStateMachine(controller, menuCanvas)
+            LevelCompleteStateMachine = new LevelCompleteStateMachine(controller)
             {
                   OnComplete = HandleLevelCompleteStateComplete
             };

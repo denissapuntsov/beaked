@@ -736,6 +736,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8003701811137764915, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1257903088}
     - target: {fileID: 8772240131655582036, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
       propertyPath: m_Name
       value: Main Canvas
@@ -2137,6 +2141,11 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!95 &1257903088 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7531001881389729659, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+  m_PrefabInstance: {fileID: 593703118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1371961002
 PrefabInstance:
   m_ObjectHideFlags: 0

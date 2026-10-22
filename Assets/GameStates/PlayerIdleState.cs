@@ -5,19 +5,16 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 {
     private PlayerInputActions _actions;
     private PlayerData _data;
-    private MenuCanvas _menuCanvas;
     public ExitState ExitState { get; private set; }
     
-    public PlayerIdleState(PlayerInputActions actions, PlayerData data, MenuCanvas menuCanvas) : base()
+    public PlayerIdleState(PlayerInputActions actions, PlayerData data) : base()
     {
         _actions = actions;
         _data = data;
-        _menuCanvas = menuCanvas;
     }
 
     public override void Enter()
     {
-        _menuCanvas.SetVisibility(true, true);
         _actions.Player.Enable();
         _actions.Player.SetCallbacks(this);
     }
@@ -34,7 +31,7 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
         {
             return;
         }
-        if (!_data.currentSound) return;
+        if (!_data.CurrentSound) return;
         ExitState = ExitState.Speaking;
         Complete();
     }

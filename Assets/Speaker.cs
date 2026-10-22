@@ -33,7 +33,7 @@ public class Speaker : ChainableAction
         var neighboringCells = GetNeighboringCells(out var isNearPlayer);
         if (isNearPlayer)
         {
-            _playerData.currentSound = nativeSound;
+            _playerData.CurrentSound = nativeSound;
         }
         
         _neighboringListeners = FindListeners(neighboringCells);

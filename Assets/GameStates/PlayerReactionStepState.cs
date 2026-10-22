@@ -16,13 +16,13 @@ public class PlayerReactionStepState : FiniteStateMachine
     {
         base.Enter();
 
-        if (_data.soundHistory.Contains(_data.currentSound) || !_data.currentSound)
+        if (_data.soundHistory.Contains(_data.CurrentSound) || !_data.CurrentSound)
         {
             Complete();
         }
         else
         {
-            _data.soundHistory.Add(_data.currentSound);
+            _data.soundHistory.Add(_data.CurrentSound);
             _data.AnimationState = PlayerAnimationState.Learning;
             Sequence animationDelay = DOTween.Sequence();
             animationDelay.AppendInterval(0.85f);

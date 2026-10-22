@@ -17,7 +17,7 @@ public class TriggerListenerState : GameState
     public override void Enter()
     {
         Listener.OnComplete += HandleListenerComplete;
-        Listener.Trigger(_data.currentSound);
+        Listener.Trigger(_data.CurrentSound);
     }
 
     private void HandleListenerComplete(ChainableAction listener)

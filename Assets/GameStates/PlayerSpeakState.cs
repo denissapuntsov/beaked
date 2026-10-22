@@ -4,25 +4,22 @@ using NewTiles;
 public class PlayerSpeakState : GameState
 {
     private PlayerData _data;
-    private MenuCanvas _menuCanvas;
-    public PlayerSpeakState(PlayerData data, MenuCanvas menuCanvas) : base()
+    public PlayerSpeakState(PlayerData data) : base()
     {
         _data = data;
-        _menuCanvas = menuCanvas;
     }
 
     private bool _isAnimationOver, _isSoundOver;
 
     public override void Enter()
     {
-        _menuCanvas.SetVisibility(true, false);
         _isAnimationOver = false;
         _isSoundOver = false;
         base.Enter();
         _data.AnimationState = PlayerAnimationState.Speaking;
-        SoundManager.instance.PlaySound(_data.currentSound, _data.gameObject, HandleSoundComplete);
+        SoundManager.instance.PlaySound(_data.CurrentSound, _data.gameObject, HandleSoundComplete);
         Sequence animationDelay = DOTween.Sequence();
-        animationDelay.AppendInterval(_data.currentSound.reactionDelay);
+        animationDelay.AppendInterval(_data.CurrentSound.reactionDelay);
         animationDelay.OnComplete(() =>
         {
             _isAnimationOver = true;
