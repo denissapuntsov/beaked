@@ -18,6 +18,7 @@ public class PauseStepState : FiniteStateMachine, PlayerInputActions.IUIActions
                 _inputActions.UI.Enable();
                 _inputActions.UI.AddCallbacks(this);
                 Debug.Log("pause");
+                MenuCanvas.instance.SetPause(true);
                 Time.timeScale = 0;
         }
 
@@ -27,16 +28,20 @@ public class PauseStepState : FiniteStateMachine, PlayerInputActions.IUIActions
                 _inputActions.UI.Disable();
                 _inputActions.UI.RemoveCallbacks(this);
                 Time.timeScale = 1;
+                MenuCanvas.instance.SetPause(false);
         }
 
         public void OnNavigate(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                if (context.started)
+                {
+                        MenuCanvas.instance.Navigate();
+                }
         }
 
         public void OnSubmit(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnCancel(InputAction.CallbackContext context)
@@ -47,36 +52,36 @@ public class PauseStepState : FiniteStateMachine, PlayerInputActions.IUIActions
 
         public void OnPoint(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnClick(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnRightClick(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnMiddleClick(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnScrollWheel(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnTrackedDevicePosition(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 
         public void OnTrackedDeviceOrientation(InputAction.CallbackContext context)
         {
-                throw new System.NotImplementedException();
+                
         }
 }

@@ -58,9 +58,7 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 
     public void OnMenu(InputAction.CallbackContext context)
     {
-        if (!context.started) return;
-        ExitState = ExitState.Pause;
-        Complete();
+        return;
     }
 
     public override void Exit()
