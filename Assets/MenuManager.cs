@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject playButton, credits, creditsButton, backButton, mainGroup;
+    [SerializeField] private GameObject playButton, credits, exitButton, creditsButton, backButton, mainGroup;
 
     private MenuType _selection;
 
@@ -27,10 +27,17 @@ public class MenuManager : MonoBehaviour
                 case MenuType.Play:
                     playButton.SetActive(true);
                     creditsButton.SetActive(false);
+                    exitButton.SetActive(false);
                     break;
                 case MenuType.Credits:
                     creditsButton.SetActive(true);
                     playButton.SetActive(false);
+                    exitButton.SetActive(false);
+                    break;
+                case MenuType.Exit:
+                    creditsButton.SetActive(false);
+                    playButton.SetActive(false);
+                    exitButton.SetActive(true);
                     break;
                 case MenuType.Main:
                     creditsButton.SetActive(false);
@@ -46,30 +53,58 @@ public class MenuManager : MonoBehaviour
     {
         currentMenu = MenuType.Main;
         Selection = MenuType.Play;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnNavigate(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            SwitchSelection();
+            var direction = context.ReadValue<Vector2>();
+            SwitchSelection(direction.y);
         }
     }
 
-    public void SwitchSelection()
+    public void SwitchSelection(float direction)
     {
         Debug.Log("switching selection");
-        if (currentMenu == MenuType.Main)
+
+        if (currentMenu != MenuType.Main) return;
+        
+        onSwitchSelection?.Invoke();
+
+        if (Selection == MenuType.Play)
         {
-            onSwitchSelection?.Invoke();
-            Selection = Selection == MenuType.Play ? MenuType.Credits : MenuType.Play;
+            if (direction < 0)
+            {
+                Selection = MenuType.Credits;
+            }
+        }
+        else if (Selection == MenuType.Credits)
+        {
+            Selection = direction > 0 ? MenuType.Play : MenuType.Exit;
+        }
+        else if (Selection == MenuType.Exit)
+        {
+            if (direction > 0)
+            {
+                Selection = MenuType.Credits;
+            }
         }
     }
 
     public void OnSubmit(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        SwitchMenus();
+        if (Selection == MenuType.Exit)
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SwitchMenus();
+        }
     }
 
     public void SwitchMenus()
@@ -103,5 +138,6 @@ public enum MenuType
 {
     Main,
     Credits,
-    Play
+    Play,
+    Exit
 }

@@ -1,11 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MenuCanvas : MonoBehaviour
 {
     [SerializeField] private CanvasGroup peck, speak;
 
     private bool _isPecking = false;
+
+    public UnityEvent onSwitch;
 
     public GameObject pauseGroup, gameplayGroup;
     public GameObject resume, exit;
@@ -53,16 +57,29 @@ public class MenuCanvas : MonoBehaviour
 
     public void SetPause(bool newIsPaused)
     {
-        pauseGroup.SetActive(isPaused);
-        gameplayGroup.SetActive(!isPaused);
+        isPaused = newIsPaused;
+        
+        pauseGroup?.SetActive(isPaused);
+        gameplayGroup?.SetActive(!isPaused);
         activeButton = isPaused ? resume : null;
     }
 
     public void Navigate()
     {
+        onSwitch?.Invoke();
         activeButton.SetActive(false);
         activeButton = activeButton == resume ? exit : resume;
         activeButton.SetActive(true);
+    }
+
+    public void Submit()
+    {
+        onSwitch?.Invoke();
+        if (activeButton == exit)
+        {
+            SceneManager.LoadScene(0);
+        }
+        PauseManager.instance.Toggle();
     }
 
     public void SetVisibility(bool doPeck, bool doSpeak)

@@ -112,7 +112,15 @@ namespace LevelStructure
             _data.CurrentCell = playerCell;
         }
 
-        public Cell TryGetCellAtLocation(Vector3 location) => _model.TryGetCellAtLocation(location);
+        public Cell TryGetCellAtLocation(Vector3 location)
+        {
+            var roundedLocation = new Vector3 (
+                (float)Math.Round(location.x, 2),
+                (float)Math.Round(location.y, 2),
+                (float)Math.Round(location.z, 2));
+            return _model.TryGetCellAtLocation(roundedLocation);
+        }
+
 
         public GridElement GetElementFromCell(Cell cell)
         {

@@ -417,7 +417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e199ca1eb852e1b42be62ef4f03dad8e, type: 2}
   m_sharedMaterial: {fileID: 1465914127004884022, guid: e199ca1eb852e1b42be62ef4f03dad8e, type: 2}
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 9075237863437507012}
   - component: {fileID: 5206695450695396312}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: MenuSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,7 +1650,7 @@ GameObject:
   - component: {fileID: 1476912299437666448}
   - component: {fileID: 7196553627285005068}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: ResumeSelect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2606,6 +2606,8 @@ GameObject:
   - component: {fileID: 2013311932468815466}
   - component: {fileID: 8003701811137764915}
   - component: {fileID: 7531001881389729659}
+  - component: {fileID: 6525856742082054095}
+  - component: {fileID: 4862866673860487091}
   m_Layer: 5
   m_Name: Main Canvas
   m_TagString: Untagged
@@ -2712,10 +2714,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   peck: {fileID: 3745327580865185707}
   speak: {fileID: 3117293789915042763}
+  onSwitch:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4862866673860487091}
+        m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: switch
+          m_BoolArgument: 0
+        m_CallState: 2
   pauseGroup: {fileID: 2209312656635771626}
   gameplayGroup: {fileID: 4212280937704395398}
-  resume: {fileID: 774164393095269858}
-  exit: {fileID: 4879411198841559945}
+  resume: {fileID: 5305500151155533195}
+  exit: {fileID: 3957070684723489369}
   activeButton: {fileID: 0}
   isPaused: 0
 --- !u!114 &8003701811137764915
@@ -2753,6 +2770,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6525856742082054095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772240131655582036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcffb221c5e013e4d9c23ab09be15048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &4862866673860487091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772240131655582036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: switch
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: fc1659f4ed9001d49a909c01d5e09025, type: 2}
 --- !u!1 &8951934286806659350
 GameObject:
   m_ObjectHideFlags: 0

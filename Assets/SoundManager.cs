@@ -66,7 +66,12 @@ public class SoundManager : MonoBehaviour
                 break;
         }
 
-        musicEvent?.Post(gameObject);
+        if (musicEvent.WwiseObjectReference != null)
+        {
+            AkUnitySoundEngine.StopAll();
+        }
+        
+        musicEvent?.Post(instance.gameObject);
     }
 
     public void SetFootstepMaterial(StepMaterial material)

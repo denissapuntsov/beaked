@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private TileGridController _gridController;
     private MenuCanvas _menuCanvas;
     
-    private PlayerInputActions _actions;
+    public PlayerInputActions Actions { get; private set; }
     private GlobalStateMachine _globalStateMachine;
     
     private void Awake()
@@ -27,11 +27,14 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
     {
-        _actions = new PlayerInputActions();
+        Actions = new PlayerInputActions();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
         _gridController = FindAnyObjectByType<TileGridController>();
         _data = FindAnyObjectByType<PlayerData>();
         _menuCanvas = FindAnyObjectByType<MenuCanvas>();
-        _globalStateMachine = new GlobalStateMachine(_actions, _data, _gridController, isSetupSkipped, _menuCanvas);
+        _globalStateMachine = new GlobalStateMachine(Actions, _data, _gridController, isSetupSkipped, _menuCanvas);
         _globalStateMachine.Enter();
     }
 

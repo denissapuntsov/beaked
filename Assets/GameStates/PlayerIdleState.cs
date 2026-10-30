@@ -58,6 +58,7 @@ public class PlayerIdleState : GameState, PlayerInputActions.IPlayerActions
 
     public void OnMenu(InputAction.CallbackContext context)
     {
+        PauseManager.instance.Toggle();
         return;
     }
 
