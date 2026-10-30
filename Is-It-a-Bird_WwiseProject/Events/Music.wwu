@@ -1,6 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{ECEE7E86-CB3E-422C-91E5-9D0F322CF3ED}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Music" ID="{ECEE7E86-CB3E-422C-91E5-9D0F322CF3ED}" PersistMode="Standalone"/>
+		<WorkUnit Name="Music" ID="{ECEE7E86-CB3E-422C-91E5-9D0F322CF3ED}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Menu" ID="{AD98FF21-7F09-4F9F-AA24-67043E24A8E8}">
+					<ChildrenList>
+						<Action Name="" ID="{1EDAC5E1-5A12-4054-9D8E-6C65A457DE5B}" ShortID="1019099895">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{4D9A461E-CBA4-4A28-8229-AB08C7E51174}" ShortID="636225111">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Harmony" ID="{0A14829C-7512-4CD7-8B93-1921FD3408B6}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_1" ID="{D7FBFC4C-01FF-46AE-8EDF-5350CB56B5F2}">
+					<ChildrenList>
+						<Action Name="" ID="{4BAA08F5-191A-4A6C-BFCD-5E3F3D05F3D2}" ShortID="706583325">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{FF63CA92-2127-407B-A723-857437DCD0A3}" ShortID="639771056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="New Sequence Container" ID="{0C3BE556-B37B-4E2B-BC9A-9DC843ED7BDD}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_2" ID="{C9F30DE6-E4BF-4EB1-8A9D-52FE932E3E7A}">
+					<ChildrenList>
+						<Action Name="" ID="{073EB0D5-B5A0-42E5-B8AB-4E6B3B354E99}" ShortID="803907508">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{35489531-A46F-4954-9E9A-9EB9C9124B25}" ShortID="218936658">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Beats" ID="{196FA954-D52F-4447-AE4D-C449AF153378}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{97A6318F-9C39-4FA8-BBAF-AE2241F71708}" ShortID="841621478">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Harmony" ID="{0A14829C-7512-4CD7-8B93-1921FD3408B6}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FAFFE9F-75F3-4008-B9F4-51A1C5A45DCB}" ShortID="177318726">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Melody" ID="{168DEF1C-6967-44D8-A81E-46371FAFBBA3}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Lvl_3" ID="{902C7B38-2A9F-4E7C-AE5F-B391276C5ED4}">
+					<ChildrenList>
+						<Action Name="" ID="{67B5C21B-84F8-4E16-A07A-1B662AC6653A}" ShortID="175593439">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{56E537D6-673B-450A-B367-F80A5593670C}" ShortID="667230493">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl3_Accompaniment" ID="{A0C9677A-8CFA-4B8B-9257-EFB573AC0FDD}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7DC8C38-9F46-4C9B-B002-CE640D27C2B1}" ShortID="273097259">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl3_Melody" ID="{01A0A1E6-ED38-48CC-A05E-8533C9969C91}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Final_1" ID="{78B9EFF6-089D-400D-9E29-D58196AF60AA}">
+					<ChildrenList>
+						<Action Name="" ID="{84128C63-7AAE-4C24-AA24-4E2E2EBF713B}" ShortID="483478276">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{142DF6DB-9B10-422B-B298-54B1AE4FFBD2}" ShortID="957231796">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="IIAB_Lvl1_VIcotryLoopBars1and2" ID="{85336A1F-3AF6-431B-BD72-2B6A8BC637F8}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Final_2" ID="{56C4CF55-6BC2-4FB4-B2AA-13CF4238897D}">
+					<ChildrenList>
+						<Action Name="" ID="{B494C46B-4430-47A7-80A2-949B175D36DB}" ShortID="465592513">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{7CD888D6-F0F9-41B7-BE90-957418F22D0F}" ShortID="496679806">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy" ID="{81E6E0CD-3945-453F-AB08-5E49D3F568A6}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Final_3" ID="{F96A6E0F-6757-4C06-A3BF-8CE0F67D8710}">
+					<ChildrenList>
+						<Action Name="" ID="{025B7826-7A4A-4C67-B975-40B4F16A7CAA}" ShortID="204082786">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{EAD5236D-BD97-4AAD-A7FE-BD52BEE05DF3}" ShortID="105391829">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting" ID="{31FE2C28-4D80-44CB-BA3A-3FE714F38010}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

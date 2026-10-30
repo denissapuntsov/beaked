@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2152580024",
+    "Type": "Event",
+    "GUID": "{D7FBFC4C-01FF-46AE-8EDF-5350CB56B5F2}",
+    "Language": "SFX",
+    "Hash": "{4398C78A-202B-58B6-AE8E-C53D710DCC40}",
+    "ObjectPath": "Play_Lvl_1",
+    "ShortName": "Play_Lvl_1",
+    "Path": "Event/Play_Lvl_1.bnk",
+    "Media": [
+     {
+      "Id": "545021481",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl1_FullMix.wav",
+      "Path": "Media/545021481.wem",
+      "CachePath": "D2/{D2173157-C6ED-C3D3-437C-53F97FFC07D2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2152580024",
+      "Name": "Play_Lvl_1",
+      "ObjectPath": "\\Events\\Music\\Play_Lvl_1",
+      "GUID": "{D7FBFC4C-01FF-46AE-8EDF-5350CB56B5F2}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "545021481"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6B82257B-726D-0263-8752-98D40E0B9EB3}"
+ }
+}

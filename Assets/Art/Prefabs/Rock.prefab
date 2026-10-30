@@ -51,7 +51,7 @@ MonoBehaviour:
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 1
   elementType: 1
-  stepMaterial: 0
+  stepMaterial: 3
   cells:
   - GridPosition: {x: 1, y: 2.5, z: 2}
     IsAccessible: 1
@@ -68,26 +68,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8c7400328db684ea39f953e6e2f90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  preReactionTime: 0.6
-  interactableMaterial: 1
-  onPreInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4744013340826939053}
-        m_TargetAssemblyTypeName: AudioEventTrigger, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: peck
-          m_BoolArgument: 0
-        m_CallState: 2
-  onInteract:
+  onPeck:
     m_PersistentCalls:
       m_Calls: []
+  onListen:
+    m_PersistentCalls:
+      m_Calls: []
+  preReactionTime: 0.6
+  interactableMaterial: 1
 --- !u!114 &4744013340826939053
 MonoBehaviour:
   m_ObjectHideFlags: 0

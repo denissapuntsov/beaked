@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2320561083",
+    "Type": "Event",
+    "GUID": "{C8831032-9292-4BAF-97C9-65E0643F1C0E}",
+    "Language": "SFX",
+    "Hash": "{753897ED-ACFA-5089-898C-F2AD588697FD}",
+    "ObjectPath": "Play_CAR_HORN_TUBE_V1",
+    "ShortName": "Play_CAR_HORN_TUBE_V1",
+    "Path": "Event/Play_CAR_HORN_TUBE_V1.bnk",
+    "Media": [
+     {
+      "Id": "1058857754",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "CAR_HORN_TUBE_V1.wav",
+      "Path": "Media/1058857754.wem",
+      "CachePath": "35/{35A39FFA-569A-AAF2-61B4-13D73ADF05DC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2320561083",
+      "Name": "Play_CAR_HORN_TUBE_V1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CAR_HORN_TUBE_V1",
+      "GUID": "{C8831032-9292-4BAF-97C9-65E0643F1C0E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8791627",
+      "DurationMax": "0.8791627",
+      "MediaRefs": [
+       {
+        "Id": "1058857754"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E8FE60FA-6594-E747-F154-7188E4A7333B}"
+ }
+}

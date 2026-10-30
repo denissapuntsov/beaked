@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5eb566ff9818040b4225e2117e0098, type: 3}
+  m_Name: 78B9EFF6-089D-400D-9E29-D58196AF60AA
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Play_Final_1
+  id: 3257453126
+  guid: 78B9EFF6-089D-400D-9E29-D58196AF60AA
+  IsInUserDefinedSoundBank: 0

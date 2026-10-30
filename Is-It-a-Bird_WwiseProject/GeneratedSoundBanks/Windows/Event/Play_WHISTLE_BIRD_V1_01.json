@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1118388660",
+    "Type": "Event",
+    "GUID": "{B1A315DB-B9E5-43D4-B042-97E0BFEAA1B5}",
+    "Language": "SFX",
+    "Hash": "{AF338681-785A-DCBF-9D0F-5B7B61D97F6E}",
+    "ObjectPath": "Play_WHISTLE_BIRD_V1_01",
+    "ShortName": "Play_WHISTLE_BIRD_V1_01",
+    "Path": "Event/Play_WHISTLE_BIRD_V1_01.bnk",
+    "Media": [
+     {
+      "Id": "574532058",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WHISTLE_BIRD_V1-001.wav",
+      "Path": "Media/574532058.wem",
+      "CachePath": "BF/{BFB398AA-C0E0-A362-9CB1-1027315A1728}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1118388660",
+      "Name": "Play_WHISTLE_BIRD_V1_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_WHISTLE_BIRD_V1_01",
+      "GUID": "{B1A315DB-B9E5-43D4-B042-97E0BFEAA1B5}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.45833334",
+      "DurationMax": "0.45833334",
+      "MediaRefs": [
+       {
+        "Id": "574532058"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A3E19619-F427-20F1-3303-631ACB410951}"
+ }
+}

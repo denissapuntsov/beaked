@@ -57,29 +57,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Assembly" ID="{D3EE6214-769C-4858-823C-AE535274BD53}">
-					<ChildrenList>
-						<Action Name="" ID="{96A4759E-FF01-4C5E-AC1F-02EB8B1F7EBD}" ShortID="262729292">
-							<PropertyList>
-								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="25"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AssemblyPitch" ID="{7A19C2A5-906B-4011-8D99-FE1C987A6BD8}" WorkUnitID="{81A34B51-A0B2-4BB4-B29B-9A9B3FD19B24}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{CF5C4140-1442-4D86-9712-130E428F824A}" ShortID="421586173">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Assembly" ID="{6D579AF0-1117-4C8B-A04D-2F5EE92E72F2}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Reset_Assembly" ID="{E82CE876-67D4-4167-BA87-797FDE7ED68E}">
 					<ChildrenList>
 						<Action Name="" ID="{C35442F1-7EA2-4E64-83A9-C6E26FBAFB32}" ShortID="779533084">
@@ -122,6 +99,101 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Bridge_Step" ID="{76002812-92D8-4519-BCA2-D97C29F18314}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_GRAD_Game_Beaked_Lvl1_Accompaniment" ID="{BEA10743-A870-4E0B-9A28-A677E456B76A}">
+					<ChildrenList>
+						<Action Name="" ID="{D6B731CC-C46C-4596-93A9-4CFA32F21869}" ShortID="132603441">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl1_Accompaniment" ID="{1F2884A2-68D2-4B6E-87A5-1035FA65E5D0}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B475EB4-13C4-476F-85DE-70D0F56FDB0D}" ShortID="977371319">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GRAD_Game_Beaked_Lvl1_Melody" ID="{74D43E10-7F40-4FB9-8F62-EBA85BC241BE}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CAR_HORN_BIRD_V1_001" ID="{0CCB7E77-6416-4B3C-99A6-C75570EAED8C}">
+					<ChildrenList>
+						<Action Name="" ID="{504B7A05-E046-4F5B-9D04-1CD18044E0C3}" ShortID="71746534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CAR_HORN_BIRD_V1-001" ID="{1D0A9867-0364-46EB-91F0-F8E8A559ED72}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WHISTLE_BIRD_V1_001" ID="{E8F64975-425E-4844-92C7-378E925E2EE1}">
+					<ChildrenList>
+						<Action Name="" ID="{FE4D0604-6764-4EFD-8954-F10A7BE0CF06}" ShortID="874224924">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WHISTLE_BIRD_V1-001" ID="{71541E73-2EE8-46D8-8B8B-69691AD43122}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WHISTLE_TUBE_V1" ID="{61FF6733-A19F-478D-97DD-4F5B50E8E750}">
+					<ChildrenList>
+						<Action Name="" ID="{CE51EE19-C778-441D-8818-1170B4D7ABAD}" ShortID="890723602">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WHISTLE_TUBE_V1" ID="{563B0BB3-C837-461D-9E97-1EA9073CFF31}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WHISTLE_BIRD_V1_01" ID="{B1A315DB-B9E5-43D4-B042-97E0BFEAA1B5}">
+					<ChildrenList>
+						<Action Name="" ID="{9A857040-BE76-46E5-A37F-FA910D5C5E5B}" ShortID="572744099">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WHISTLE_BIRD_V1-001" ID="{71541E73-2EE8-46D8-8B8B-69691AD43122}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CAR_HORN_TUBE_V1" ID="{C8831032-9292-4BAF-97C9-65E0643F1C0E}">
+					<ChildrenList>
+						<Action Name="" ID="{3538E1D5-BC6E-4962-ADAD-24FC9C2A2E88}" ShortID="179466874">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CAR_HORN_TUBE_V1" ID="{C9AAD13C-8D88-421F-A6A9-8B7AD597D0A0}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PipeRotate" ID="{042E4F2E-FCFC-431E-B27A-F8B987267F8F}">
+					<ChildrenList>
+						<Action Name="" ID="{57058EF4-872D-4D5D-8396-3638941351DC}" ShortID="829463171">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PipeRotate" ID="{C9DD9ADD-355F-450D-9D4F-57360E4E6C1B}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_wood_button_normalised" ID="{5AADF69C-4BEB-49A7-8426-5DD05CB93C92}">
+					<ChildrenList>
+						<Action Name="" ID="{12325E93-5846-4009-8C3C-2E814C3986BE}" ShortID="352190565">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wood button normalised" ID="{FC15E2BD-AE4F-407A-88F1-EA7DFAA976F1}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

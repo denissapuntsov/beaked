@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3257453125",
+    "Type": "Event",
+    "GUID": "{56C4CF55-6BC2-4FB4-B2AA-13CF4238897D}",
+    "Language": "SFX",
+    "Hash": "{634916D9-D494-DAE5-BDB9-85226931B25A}",
+    "ObjectPath": "Play_Final_2",
+    "ShortName": "Play_Final_2",
+    "Path": "Event/Play_Final_2.bnk",
+    "Media": [
+     {
+      "Id": "576536434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy.wav",
+      "Path": "Media/576536434.wem",
+      "CachePath": "CE/{CE405065-3270-0561-7FF1-BFC2297297A5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3257453125",
+      "Name": "Play_Final_2",
+      "ObjectPath": "\\Events\\Music\\Play_Final_2",
+      "GUID": "{56C4CF55-6BC2-4FB4-B2AA-13CF4238897D}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.0704165",
+      "DurationMax": "5.0704165",
+      "MediaRefs": [
+       {
+        "Id": "576536434"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{07EEF1AE-DA2D-56B6-5012-DA85EC106092}"
+ }
+}

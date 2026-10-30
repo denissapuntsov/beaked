@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{627A35A9-335A-4D7E-A9DB-C8B863B1649B}",
     "Language": "SFX",
-    "Hash": "{F3AD3385-DAD4-26B6-FF8A-3798E71934D1}",
+    "Hash": "{5016D265-EC4B-7EC3-6F49-5877B7FABC7A}",
     "ObjectPath": "Player_Step",
     "ShortName": "Player_Step",
     "Path": "Event/Player_Step.bnk",
@@ -413,6 +413,6 @@
     ]
    }
   ],
-  "FileHash": "{5113BA06-5F0B-F088-FCA2-A2184B4B7C93}"
+  "FileHash": "{B243967D-356C-A6DC-C1CD-0848033A0684}"
  }
 }

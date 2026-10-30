@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{FABC6E2F-17A7-4328-A4E0-B34F9E4D0982}",
     "Language": "SFX",
-    "Hash": "{B2D2A391-CD3E-773B-B62A-D2904E0DC372}",
+    "Hash": "{7FE4B97F-F0FF-137D-6EF4-58D07860FF0F}",
     "ObjectPath": "Play_Car_Moving",
     "ShortName": "Play_Car_Moving",
     "Path": "Event/Play_Car_Moving.bnk",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{53241078-5823-EEB6-E298-236AE930D104}"
+  "FileHash": "{ED482F96-8042-EE38-EA56-6B7437556DBB}"
  }
 }

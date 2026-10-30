@@ -19,7 +19,7 @@ MonoBehaviour:
   playerEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 0c2d160068eb27642aa21b080a1edd7d, type: 2}
   pipeEvent:
     idInternal: 0
     valueGuidInternal: 

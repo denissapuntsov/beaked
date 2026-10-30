@@ -38,7 +38,15 @@
 						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_FullMx" ID="{D30181B9-06E0-402C-93AC-DD40377A08AD}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<MusicPlaylistContainer Name="New Music Playlist Container" ID="{3B06AFDA-4183-459C-B2B5-6B68DF591347}" ShortID="376176294">
+				<Sound Name="GRAD_Game_Beaked_Lvl3_Accompaniment" ID="{A0C9677A-8CFA-4B8B-9257-EFB573AC0FDD}" ShortID="767735440">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
@@ -46,52 +54,460 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
 						</Reference>
-						<Reference Name="PlaylistRoot">
-							<Custom>
-								<MusicPlaylistItem Name="" ID="{53B5B400-1C1B-4114-B03B-7F28897AB317}" ShortID="755410545">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{DC5325F7-6C26-4A23-A096-4B5D87927467}" ShortID="313318773">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="0"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Segment">
-													<ObjectRef Name="Level 1" ID="{97730E04-9C79-477F-90EC-AC41BD9761C0}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
-												</Reference>
-											</ReferenceList>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
-							</Custom>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl3_Accompaniment" ID="{626C58F6-B7E0-4F86-BEAB-94E6A4912B56}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl3_Accompaniment.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="116903295"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl3_Accompaniment" ID="{626C58F6-B7E0-4F86-BEAB-94E6A4912B56}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl3_Melody" ID="{01A0A1E6-ED38-48CC-A05E-8533C9969C91}" ShortID="588155522">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
 						</Reference>
-						<Reference Name="TransitionRoot">
-							<Custom>
-								<MusicTransition Name="Root" ID="{F2A8FFF3-5E82-4D27-A9FF-9F38BEEB5C38}">
-									<PropertyList>
-										<Property Name="IsFolder" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{D9B3D6CF-C96C-48DC-93D3-A16DF615FE5F}">
-											<PropertyList>
-												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
-												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</ChildrenList>
-									<TransitionInfo/>
-								</MusicTransition>
-							</Custom>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="Level 1" ID="{97730E04-9C79-477F-90EC-AC41BD9761C0}" ShortID="826966714">
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl3_Melody" ID="{000BC214-E478-4A93-9694-6DA73DD1869F}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl3_Melody.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="54863164"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl3_Melody" ID="{000BC214-E478-4A93-9694-6DA73DD1869F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl2_Melody" ID="{168DEF1C-6967-44D8-A81E-46371FAFBBA3}" ShortID="745445564">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl2_Melody" ID="{93323EBE-9B1F-4A9A-9E32-C9DF7EF4CC0A}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl2_Melody.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="980953147"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl2_Melody" ID="{93323EBE-9B1F-4A9A-9E32-C9DF7EF4CC0A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{7148A3C5-1D7A-400F-B15B-A74D22031B6C}" ShortID="983090715">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{8BF87CDC-D62C-4D69-B50E-0D19FB7640A8}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_Bass.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="537819873"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{8BF87CDC-D62C-4D69-B50E-0D19FB7640A8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{CBE1B44C-4D6E-471B-A65A-E2A809606A02}" ShortID="407798875">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{1C7918D9-1E72-4ABB-8A48-8910175E335B}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="391844976"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{1C7918D9-1E72-4ABB-8A48-8910175E335B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{224E10F3-5103-4922-9FE0-0EA7BA163A3A}" ShortID="172185128">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{24C46328-ADD5-4727-9A91-A2DB15BB053E}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="456083142"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{24C46328-ADD5-4727-9A91-A2DB15BB053E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{22F71AE6-8828-4D9F-8E14-C97C15768E72}" ShortID="126403602">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{40150D16-E9FE-482A-9E58-5771ED7E6BFC}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_Perc.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="327486844"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{40150D16-E9FE-482A-9E58-5771ED7E6BFC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{96681A80-3705-403F-980E-07D5D2654B82}" ShortID="107849467">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{E5906990-8412-492B-AD6B-41A44C8FD3DE}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="416063636"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{E5906990-8412-492B-AD6B-41A44C8FD3DE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl2_Beats" ID="{196FA954-D52F-4447-AE4D-C449AF153378}" ShortID="13473931">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl2_Beats" ID="{E767F881-ACAF-405A-ADFA-BE94425E3D8B}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl2_Beats.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="795021750"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl2_Beats" ID="{E767F881-ACAF-405A-ADFA-BE94425E3D8B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{3C05B892-71D4-4D78-8644-BD17AC199982}" ShortID="381569387">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{E96316A6-75A3-4BE6-BF83-82C9C6FEEF43}">
+							<Language>SFX</Language>
+							<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="800324113"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{E96316A6-75A3-4BE6-BF83-82C9C6FEEF43}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Level 1" ID="{F50FD765-4BE2-4CDF-822A-6ABD9B5E3258}" ShortID="315868535">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+				</RandomSequenceContainer>
+				<Sound Name="GRAD_Game_Beaked_Lvl2_Harmony" ID="{0A14829C-7512-4CD7-8B93-1921FD3408B6}" ShortID="988059786">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl2_Harmony" ID="{894F223E-94B0-4FE3-BE3F-C9BAE8EAEABE}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl2_Harmony.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="795625336"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl2_Harmony" ID="{894F223E-94B0-4FE3-BE3F-C9BAE8EAEABE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting" ID="{31FE2C28-4D80-44CB-BA3A-3FE714F38010}" ShortID="81202079">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting" ID="{0470C3C6-CF0F-43E7-84CC-32FAA74E3884}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl2_Toy_VictorySting.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1051164385"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting" ID="{0470C3C6-CF0F-43E7-84CC-32FAA74E3884}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy" ID="{81E6E0CD-3945-453F-AB08-5E49D3F568A6}" ShortID="489004183">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy" ID="{579E1D99-90ED-4D77-B525-93AC09A15F59}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="576536434"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl2_Toy_VictorySting_ActualToy" ID="{579E1D99-90ED-4D77-B525-93AC09A15F59}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="IIAB_Lvl1_VIcotryLoopBars1and2" ID="{85336A1F-3AF6-431B-BD72-2B6A8BC637F8}" ShortID="283830767">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="IIAB_Lvl1_VIcotryLoopBars1and2" ID="{D28CC1CB-120A-4ACD-A956-660F0AF32488}">
+							<Language>SFX</Language>
+							<AudioFile>IIAB_Lvl1_VIcotryLoopBars1and2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="682854915"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="IIAB_Lvl1_VIcotryLoopBars1and2" ID="{D28CC1CB-120A-4ACD-A956-660F0AF32488}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl1_Accompaniment" ID="{1F2884A2-68D2-4B6E-87A5-1035FA65E5D0}" ShortID="50591017">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl1_Accompaniment" ID="{2AC69C0D-DEFD-4B5B-94F8-4E28DB1F9558}">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="83824.8312695722"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl1_Accompaniment.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="782227873"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl1_Accompaniment" ID="{2AC69C0D-DEFD-4B5B-94F8-4E28DB1F9558}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="GRAD_Game_Beaked_Lvl1_Melody" ID="{74D43E10-7F40-4FB9-8F62-EBA85BC241BE}" ShortID="308724479">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="GRAD_Game_Beaked_Lvl1_Melody" ID="{E3C4E198-6A7F-454A-A65B-B7504C30DEE9}">
+							<Language>SFX</Language>
+							<AudioFile>GRAD_Game_Beaked_Lvl1_Melody.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="732470841"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="GRAD_Game_Beaked_Lvl1_Melody" ID="{E3C4E198-6A7F-454A-A65B-B7504C30DEE9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="New Sequence Container" ID="{0C3BE556-B37B-4E2B-BC9A-9DC843ED7BDD}" ShortID="589461445">
+					<PropertyList>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D26B76A7-4C1E-4955-A255-3FB28380C16E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="GRAD_Game_Beaked_Lvl1_FullMix" ID="{9446BDF2-500D-4018-85CC-6831D3A95539}" ShortID="781157784">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -102,949 +518,31 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Bass" ID="{06D0971D-4438-4748-92DA-E2387B3F67D0}" ShortID="324494256">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{F30D6153-EF21-43AB-B35A-EFB752B053C4}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{B1C83F3B-B860-40CC-BC7C-46A70CB83D00}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_Bass.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="537819873"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{7D4C9814-C540-42A3-887D-9F17ECBAFFBA}" ShortID="580538915">
-													<PropertyList>
-														<Property Name="MusicSyncType" Type="int32" Value="3"/>
-													</PropertyList>
-												</StateGroupInfo>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{2D243E85-8FE3-4FA0-B417-6531891E3CE5}" ShortID="713790701"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{5CD62400-E8C3-4095-B3AA-C0DE199FB568}" ShortID="529673225"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{5E835AAD-815A-48EA-808E-07AF3EBBBDFC}" ShortID="724263553"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{1C8FC423-3147-4457-AC29-2A7DD0B4C490}" ShortID="288153245"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{F3DA3A41-BC96-499D-BB81-D4BCB384D46A}" ShortID="480939624"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{0EDCE963-258F-4FF8-8051-6A5ED77BA7D2}" ShortID="134117021"/>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{7A201613-34BC-4902-9C69-00574935C81E}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{CCD7F161-9657-470B-99C4-8659C22A6718}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375.00000000001"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280225"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_Bass" ID="{B1C83F3B-B860-40CC-BC7C-46A70CB83D00}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{B6021FF1-7882-4821-B8C8-91377789DEF8}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{24B59F4F-ACC9-4E41-B2D4-0CCA290B56AC}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{390F4C8F-FF40-4575-8C00-67B4FF86884B}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="MainFlute" ID="{91D6C629-F0E2-4CE9-9949-B62D05A32589}" ShortID="833869852">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{AE0165C1-697A-4321-B8CB-8211966D8868}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{A64D8C0E-918A-4E59-A0AF-51AB46B07D74}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="416063636"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{DD2F1E77-3797-499C-B74F-CC710D8B06E5}" ShortID="299052115"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{834FBDEF-294F-42C1-A5AB-E463453A243A}" ShortID="818627977"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{A6D96065-F225-4C40-BDEE-496BF3A578A6}" ShortID="735992180"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{159450DF-F026-4DEA-90C2-2BF784D79CF5}" ShortID="880631105"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{79CA5609-E62C-4535-AEB8-3178FBF97FAB}" ShortID="582711280"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{48BA4D3C-38F8-4DB6-B2C4-99D9B2E0360F}" ShortID="784575449">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{7A21A2DD-D130-4AF2-A4D1-C467FB799B40}" ShortID="251911485">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{ADDC2B3C-A682-4044-8500-3A89EE2880A2}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{E8771232-EE40-41E2-B765-178B80A7C84A}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280225"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_MainFluteTheme" ID="{A64D8C0E-918A-4E59-A0AF-51AB46B07D74}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{466868B8-5FB4-4240-AA35-22BA080C05F7}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{4474CA4A-EE1D-4A82-BFAE-CCC44B6F763B}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{A0CCC42B-4156-435A-B10C-5D05F20044F7}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="Perc" ID="{12969437-2BA5-4634-9476-9BD52CA20C9F}" ShortID="878348936">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{C1C6B97A-867F-4B8A-AE0B-D69DD1EC60DE}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{322576D3-AAB8-4692-A469-4544285576C3}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_Perc.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="327486844"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{A3F04E2C-2E39-4F28-8D3F-EA61DF2EBD5C}" ShortID="680899849"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{C11033F8-3D43-4CD6-8343-D8A3B578A94D}" ShortID="917442357"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{633D9F69-3192-4305-8A99-1F9F4290B101}" ShortID="798482902"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{EAFB6ACB-38A8-4048-94D9-9319C8574536}" ShortID="990313448"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{E6D8230F-A1D4-496C-B65C-84625D54E4F0}" ShortID="1023783331"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{6A62E2FB-18A2-4D97-B1F4-9E0B169C7AAF}" ShortID="100081361">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{F40DF9DA-5233-4AE6-91B3-FBBC3E306E25}" ShortID="618176992"/>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{8C9152A5-C049-4F98-B930-1B59DE244803}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{3C98AB81-F361-47B3-86F0-C250EBC57FA2}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000.0000000001"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280226"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_Perc" ID="{322576D3-AAB8-4692-A469-4544285576C3}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{262B74AF-4BEF-4B40-BF00-05F9A298056F}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{8972F228-948D-4E52-8249-B6DCAB562D32}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{8725CB64-648A-4B61-9015-D4B5B9D27502}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="Wood" ID="{79F6D0A5-58A5-4901-A36B-8B123506B610}" ShortID="993642947">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{C6B6C864-BF40-4087-B711-AB8C9CCA12BB}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{D33D213A-3297-4065-B132-AAEE9CBB32D9}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="456083142"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{29D38BEE-0747-451A-A2E7-26D9AAB88673}" ShortID="403175569"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{E5A21248-3891-4432-84A2-BE97C0115949}" ShortID="47756432"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{E67033A4-359A-4D15-8FBF-E9A0C663EA39}" ShortID="964849293"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{BDAC8384-EB32-4C4B-B5CA-255DEBA96833}" ShortID="1061034051"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{3B7D5872-13DC-45C0-AD02-15A5443D6CB4}" ShortID="315481650"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{B67142DF-4160-4413-8D21-E5FA1E394A0B}" ShortID="1005854836"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{72C7282C-7102-44DF-9E4F-BAFAFB2F90F0}" ShortID="321182017"/>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{C56430A1-DC40-46B7-83B6-1D2EA5C7ECA0}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{3D7B3CE6-AAC5-4D72-A921-5953251B2BB9}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375.00000000001"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280225"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_WoodenRepetition" ID="{D33D213A-3297-4065-B132-AAEE9CBB32D9}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{7466FC5B-F56E-4666-B28C-EBAB88EF1C46}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{F7C1DD11-E93F-4EC4-94D5-4B265382C539}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{20F02EFF-50A4-4A69-A13E-5E8DEFED92F1}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>-0.06378</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="Whine" ID="{4DB983C7-902A-4F08-AE06-0EF79A10C6C2}" ShortID="697875484">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{12DB2163-5E52-44EC-96E9-08FB2D8F549F}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{9E17C8AD-6AB9-4836-846E-19896C7719F8}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="391844976"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{8C72238A-206F-405E-9330-0AAFA49A7B4B}" ShortID="304573746"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{FC6B93A7-2CBE-43E1-B7F6-18C1FC04B51D}" ShortID="180366418"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{EFA937F1-FE74-4C4C-94AF-94DC8A661A37}" ShortID="994738965">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{7D2DA3C7-A99B-4AA8-8455-0F29F4126D0D}" ShortID="511753260">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{E630315C-0DFF-433C-B606-49D606791866}" ShortID="438061746"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{CFEF9E90-1AAD-4DEA-B457-AC7AE4B70A2F}" ShortID="369050965">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{7843063D-09DA-4588-B28B-17FBB8B64753}" ShortID="861523097">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{D5C69CE3-2C7F-42F6-A94B-8DAB748EDC98}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{95278AF5-6683-4C11-987C-57F8F2E85A19}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280225"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteLongs" ID="{9E17C8AD-6AB9-4836-846E-19896C7719F8}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{7D9DCD4B-4730-4585-AC6A-AC9580FD35E1}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{F7AABEB1-0104-4C6B-8D76-41B1DDF721AE}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{FA6AB842-15FF-48D3-B1DB-2862AE92088E}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="Flute Shorts" ID="{25534B3D-C2C2-4DF5-947F-F3F63C475F7B}" ShortID="845565871">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4609FB6C-1DB7-4EE8-B31B-8C671BCE2533}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{65D15BBB-AAEF-4130-ACC7-D3DD8A887444}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{55274A4D-4D08-43C1-A13F-41C612EB676E}">
-											<Language>SFX</Language>
-											<AudioFile>Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="800324113"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<StateInfo>
-										<StateGroupList>
-											<StateGroupInfo>
-												<StateGroupRef Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}"/>
-												<StateGroupInfo Name="" ID="{01C0E5D2-0011-4DB2-819C-7D9A6DE0DA2F}" ShortID="821400363"/>
-											</StateGroupInfo>
-										</StateGroupList>
-										<CustomStateList>
-											<CustomState>
-												<StateRef Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
-												<CustomState Name="" ID="{D6F000C5-01A6-418F-9912-9849E0DFDE31}" ShortID="983276750"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
-												<CustomState Name="" ID="{5A1CB2DC-7F56-4B98-9A41-02DF83FF0F17}" ShortID="31546670">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-												<CustomState Name="" ID="{7D6781C2-22C8-4CC3-B2DF-54205B005929}" ShortID="1045057634">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
-												<CustomState Name="" ID="{90787218-58C6-45DF-B690-BE52A03029CB}" ShortID="840153451"/>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
-												<CustomState Name="" ID="{8608B86E-0198-46B5-AA03-CB1D29A463E7}" ShortID="935341933">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-											<CustomState>
-												<StateRef Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
-												<CustomState Name="" ID="{C3A097CF-3BE9-4A5E-B455-CF3CDD76315A}" ShortID="160381040">
-													<PropertyList>
-														<Property Name="Volume" Type="Real64" Value="-108"/>
-													</PropertyList>
-												</CustomState>
-											</CustomState>
-										</CustomStateList>
-									</StateInfo>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{E50CC1CC-4B29-404D-915A-C3939133FA44}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{75B3DEE1-8015-42A2-99EC-D1CE4AF66659}">
-															<PropertyList>
-																<Property Name="BeginTrimOffset" Type="Real64" Value="3375"/>
-																<Property Name="EndTrimOffset" Type="Real64" Value="71000"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																<Property Name="PlayAt" Type="Real64" Value="3696.92941280225"/>
-															</PropertyList>
-															<AudioSourceRef Name="Beaked_MusicSketch_V1_Jonah_Stem_FluteShorts" ID="{55274A4D-4D08-43C1-A13F-41C612EB676E}"/>
-															<PropertyCurveList>
-																<PropertyCurve PropertyName="Highpass">
-																	<Curve Name="" ID="{942343BC-D3AC-4F90-A40D-AB7D26A7C49E}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Lowpass">
-																	<Curve Name="" ID="{DA473677-96FE-449C-84A8-AFF28702E467}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="1"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-																<PropertyCurve PropertyName="Volume">
-																	<Curve Name="" ID="{4628963B-3C9E-4E01-8F53-17C89A6BCEAB}">
-																		<PropertyList>
-																			<Property Name="Flags" Type="int32" Value="3"/>
-																		</PropertyList>
-																		<PointList>
-																			<Point>
-																				<XPos>3.375</XPos>
-																				<YPos>0</YPos>
-																				<Flags>5</Flags>
-																			</Point>
-																			<Point>
-																				<XPos>71</XPos>
-																				<YPos>0</YPos>
-																				<Flags>37</Flags>
-																			</Point>
-																		</PointList>
-																	</Curve>
-																</PropertyCurve>
-															</PropertyCurveList>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
+								<AudioFileSource Name="GRAD_Game_Beaked_Lvl1_FullMix" ID="{834DDEFD-D240-41EA-B27A-95C25F0FAF19}">
+									<Language>SFX</Language>
+									<AudioFile>GRAD_Game_Beaked_Lvl1_FullMix.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="545021481"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<MusicCue Name="Entry Cue" ID="{68F1009B-9ED5-4094-AFB7-869C2E624193}">
-										<PropertyList>
-											<Property Name="TimeMs" Type="Real64" Value="7071.93213196878"/>
-										</PropertyList>
-									</MusicCue>
-									<MusicCue Name="Exit Cue" ID="{8708A6C7-2E9B-4C91-B495-4EBE0A43220D}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="74696.9294128022"/>
-										</PropertyList>
-									</MusicCue>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
+							<ActiveSourceList>
+								<ActiveSource Name="GRAD_Game_Beaked_Lvl1_FullMix" ID="{834DDEFD-D240-41EA-B27A-95C25F0FAF19}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-				</MusicPlaylistContainer>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<PluginInnerObject Name="" ID="{C570C0CD-BF62-4366-A17E-73363BCB8959}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+								<ReferenceList>
+									<Reference Name="PlaylistObject">
+										<ObjectRef Name="GRAD_Game_Beaked_Lvl1_FullMix" ID="{9446BDF2-500D-4018-85CC-6831D3A95539}" WorkUnitID="{2069369A-507C-463F-9975-FD6F984662E6}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

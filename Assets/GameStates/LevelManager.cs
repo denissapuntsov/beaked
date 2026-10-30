@@ -35,6 +35,12 @@ public class LevelManager : MonoBehaviour
         private void ProcessNewScene(Scene scene, LoadSceneMode mode)
         {
                 IsWin = false;
+                LocateSign();
+        }
+
+        public void LocateSign()
+        {
+                IsWin = false;
                 if (_sign)
                 {
                         _sign.onPecked.RemoveListener(OnSignPecked);

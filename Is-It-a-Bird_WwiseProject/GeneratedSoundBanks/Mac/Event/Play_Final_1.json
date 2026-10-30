@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3257453126",
+    "Type": "Event",
+    "GUID": "{78B9EFF6-089D-400D-9E29-D58196AF60AA}",
+    "Language": "SFX",
+    "Hash": "{DDAA42C8-ED45-31D9-C3CB-7D7124936DFF}",
+    "ObjectPath": "Play_Final_1",
+    "ShortName": "Play_Final_1",
+    "Path": "Event/Play_Final_1.bnk",
+    "Media": [
+     {
+      "Id": "682854915",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "IIAB_Lvl1_VIcotryLoopBars1and2.wav",
+      "Path": "Media/682854915.wem",
+      "CachePath": "FD/{FD56775C-33DB-B1EB-89FA-002E5B2989CB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3257453126",
+      "Name": "Play_Final_1",
+      "ObjectPath": "\\Events\\Music\\Play_Final_1",
+      "GUID": "{78B9EFF6-089D-400D-9E29-D58196AF60AA}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.3820417",
+      "DurationMax": "3.3820417",
+      "MediaRefs": [
+       {
+        "Id": "682854915"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{48A97059-32B8-8782-3FB9-890CA12141AF}"
+ }
+}

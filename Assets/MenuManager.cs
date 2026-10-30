@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -73,6 +74,7 @@ public class MenuManager : MonoBehaviour
 
     public void SwitchMenus()
     {
+        onSwitchSelection?.Invoke();
         if (currentMenu == MenuType.Main)
         {
             if (Selection == MenuType.Credits)
@@ -82,6 +84,10 @@ public class MenuManager : MonoBehaviour
                 Selection = MenuType.Main;
                 currentMenu = MenuType.Credits;
             }
+            else
+            {
+                SceneManager.LoadScene(1);
+            }
         }
         else if (currentMenu == MenuType.Credits)
         {
@@ -89,10 +95,6 @@ public class MenuManager : MonoBehaviour
             credits.SetActive(false);
             currentMenu = MenuType.Main;
             Selection = MenuType.Credits;
-        }
-        else if (currentMenu == MenuType.Play)
-        {
-            Debug.Log("Starting Game!");
         }
     }
 }

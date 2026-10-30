@@ -13,21 +13,35 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_ASSEMBLY = 2781317322U;
         static const AkUniqueID PLAY_BEAKED_MUSICSKETCH_V1_JONAH_FULLMX_01 = 4154561170U;
         static const AkUniqueID PLAY_BRIDGE_START = 394694740U;
         static const AkUniqueID PLAY_BRIDGE_STEP = 1816247478U;
         static const AkUniqueID PLAY_BRIDGE_STOP = 1916913224U;
         static const AkUniqueID PLAY_BUTTON = 2099555730U;
+        static const AkUniqueID PLAY_CAR_HORN_BIRD_V1_001 = 3736946186U;
+        static const AkUniqueID PLAY_CAR_HORN_TUBE_V1 = 2320561083U;
         static const AkUniqueID PLAY_CAR_MOVING = 115854669U;
+        static const AkUniqueID PLAY_FINAL_1 = 3257453126U;
+        static const AkUniqueID PLAY_FINAL_2 = 3257453125U;
+        static const AkUniqueID PLAY_FINAL_3 = 3257453124U;
         static const AkUniqueID PLAY_GATE_CLOSE = 1676603786U;
         static const AkUniqueID PLAY_GATE_OPEN = 4089264814U;
+        static const AkUniqueID PLAY_GRAD_GAME_BEAKED_LVL1_ACCOMPANIMENT = 300928338U;
         static const AkUniqueID PLAY_HONK = 2486471960U;
         static const AkUniqueID PLAY_HORN = 2956245481U;
+        static const AkUniqueID PLAY_LVL_1 = 2152580024U;
+        static const AkUniqueID PLAY_LVL_2 = 2152580027U;
+        static const AkUniqueID PLAY_LVL_3 = 2152580026U;
+        static const AkUniqueID PLAY_MENU = 1278378707U;
         static const AkUniqueID PLAY_PECK_RANDOM = 3013440353U;
         static const AkUniqueID PLAY_PECK_SWITCH = 3320958968U;
+        static const AkUniqueID PLAY_PIPEROTATE = 3634225051U;
         static const AkUniqueID PLAY_WHISTLE = 2693257580U;
+        static const AkUniqueID PLAY_WHISTLE_BIRD_V1_001 = 2775740382U;
+        static const AkUniqueID PLAY_WHISTLE_BIRD_V1_01 = 1118388660U;
         static const AkUniqueID PLAY_WHISTLE_PIPE = 4248420719U;
+        static const AkUniqueID PLAY_WHISTLE_TUBE_V1 = 3639889959U;
+        static const AkUniqueID PLAY_WOOD_BUTTON_NORMALISED = 2355853617U;
         static const AkUniqueID PLAYER_STEP = 3461836331U;
         static const AkUniqueID PLAYER_TEST = 2791944829U;
         static const AkUniqueID RESET_ASSEMBLY = 4141633669U;
@@ -35,25 +49,56 @@ namespace AK
 
     namespace STATES
     {
-        namespace CH1_MIX
+        namespace CHAPTERS
         {
-            static const AkUniqueID GROUP = 1259221826U;
+            static const AkUniqueID GROUP = 1183684843U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CHAPTER1 = 1183684777U;
+                static const AkUniqueID CHAPTER2 = 1183684778U;
+                static const AkUniqueID CHAPTER2INTRO = 3075505320U;
+                static const AkUniqueID CHAPTER3 = 1183684779U;
+                static const AkUniqueID CHAPTER3INTRO = 1929629135U;
+                static const AkUniqueID END = 529726532U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace CHAPTERS
+
+        namespace MUSIC_LEVELS
+        {
+            static const AkUniqueID GROUP = 2209143460U;
 
             namespace STATE
             {
                 static const AkUniqueID LVL1 = 141331490U;
                 static const AkUniqueID LVL2 = 141331489U;
                 static const AkUniqueID LVL3 = 141331488U;
-                static const AkUniqueID LVL4 = 141331495U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID VICTORY = 2716678721U;
             } // namespace STATE
-        } // namespace CH1_MIX
+        } // namespace MUSIC_LEVELS
 
     } // namespace STATES
 
     namespace SWITCHES
     {
+        namespace CHAPTER
+        {
+            static const AkUniqueID GROUP = 3370370056U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CH1 = 1100459749U;
+                static const AkUniqueID CH2 = 1100459750U;
+                static const AkUniqueID CH2INTRO = 3912230932U;
+                static const AkUniqueID CH3 = 1100459751U;
+                static const AkUniqueID CH3INTRO = 2895782475U;
+                static const AkUniqueID END = 529726532U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace SWITCH
+        } // namespace CHAPTER
+
         namespace PECKMATERIAL
         {
             static const AkUniqueID GROUP = 733203937U;

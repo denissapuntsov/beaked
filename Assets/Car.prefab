@@ -629,7 +629,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   preReactionTime: 0
-  interactableMaterial: 0
+  interactableMaterial: 2
 --- !u!114 &2649529152451712518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,3 +772,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarControls
   paths: []
+  speed: 2

@@ -881,6 +881,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539876161360133829, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
+      propertyPath: stepMaterial
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539876161360133829, guid: 5bf92b21fe91b704b9bf473d71fa551a, type: 3}
       propertyPath: cells.Array.size
       value: 2
       objectReference: {fileID: 0}

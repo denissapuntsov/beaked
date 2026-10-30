@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2320561083	Play_CAR_HORN_TUBE_V1			\Default Work Unit\Play_CAR_HORN_TUBE_V1	
+

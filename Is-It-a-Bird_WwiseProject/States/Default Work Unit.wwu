@@ -3,14 +3,24 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{31AA4AA1-B012-4CD3-A5C2-905A38BA6682}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Ch1_Mix" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}">
+				<StateGroup Name="Music_Levels" ID="{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}">
 					<ChildrenList>
 						<State Name="None" ID="{314B8CB3-81E9-4426-8576-5FFE51234E45}"/>
 						<State Name="Lvl1" ID="{39C9B1BF-C4B1-4441-8425-9934F4148B89}"/>
 						<State Name="Lvl2" ID="{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"/>
 						<State Name="Lvl3" ID="{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"/>
-						<State Name="Lvl4" ID="{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"/>
 						<State Name="Victory" ID="{4C3C9628-2A66-4098-84DA-8E17506B7605}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Chapters" ID="{BA295059-57B6-4B02-B6E6-76850F537046}">
+					<ChildrenList>
+						<State Name="None" ID="{7F4A97C7-530A-4690-BA28-217EA14AAD6C}"/>
+						<State Name="Chapter1" ID="{2EEC2C0A-F2A1-4AB9-A4DF-145D600876DF}"/>
+						<State Name="Chapter2Intro" ID="{F49035E9-B02C-4832-9B43-1753AFEA1476}"/>
+						<State Name="Chapter2" ID="{5B496AE7-7421-44D3-837D-EADD83B1ADCD}"/>
+						<State Name="Chapter3Intro" ID="{518C2445-7545-4911-89DF-BDC84773038B}"/>
+						<State Name="Chapter3" ID="{B6EADF59-CA2A-478E-9A4C-7359D3270A5E}"/>
+						<State Name="End" ID="{59DF2E30-2B57-44F5-8F5E-4A1FEFEC4E12}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

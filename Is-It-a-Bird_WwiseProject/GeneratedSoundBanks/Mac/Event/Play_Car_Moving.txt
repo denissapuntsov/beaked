@@ -1,3 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
-	115854669	Play_Car_Moving			\Default Work Unit\Play_Car_Moving	
+	115854669	Play_Car_Moving			\SFX\Play_Car_Moving	
 

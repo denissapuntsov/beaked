@@ -19,9 +19,9 @@ MonoBehaviour:
   playerEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 2c8ac372e2901f844abd3b6a3601052a, type: 2}
   pipeEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3ad4ce4203d76c746a41055c7c8674a2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c22bf91304ec53848a4b16ce7da825ac, type: 2}
   reactionDelay: 0

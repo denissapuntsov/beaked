@@ -1,0 +1,58 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "300928338",
+    "Type": "Event",
+    "GUID": "{BEA10743-A870-4E0B-9A28-A677E456B76A}",
+    "Language": "SFX",
+    "Hash": "{B30A8C9B-1FA1-2A16-649C-0F9043BB832F}",
+    "ObjectPath": "Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
+    "ShortName": "Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
+    "Path": "Event/Play_GRAD_Game_Beaked_Lvl1_Accompaniment.bnk",
+    "Media": [
+     {
+      "Id": "732470841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl1_Melody.wav",
+      "Path": "Media/732470841.wem",
+      "CachePath": "AC/{AC17710D-4A58-5549-8D40-9ED3C3EEA8C3}.wem"
+     },
+     {
+      "Id": "782227873",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl1_Accompaniment.wav",
+      "Path": "Media/782227873.wem",
+      "CachePath": "12/{12156AF6-3950-31C5-C8C4-E56992C7DF86}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "300928338",
+      "Name": "Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
+      "GUID": "{BEA10743-A870-4E0B-9A28-A677E456B76A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "732470841"
+       },
+       {
+        "Id": "782227873"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DBA3BC9A-73A6-CDD5-878D-6CE38385A8EA}"
+ }
+}

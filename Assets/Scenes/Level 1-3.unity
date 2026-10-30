@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (5)
@@ -500,6 +504,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (3)
@@ -952,6 +960,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (25)
@@ -1793,6 +1805,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (2)
@@ -2077,6 +2093,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (23)
@@ -2631,6 +2651,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (21)
@@ -2696,6 +2720,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (9)
@@ -3310,6 +3338,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117448164}
     m_Modifications:
+    - target: {fileID: 1102670015179111728, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
+      propertyPath: stepMaterial
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2794629744753500347, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3901,11 +3933,31 @@ MonoBehaviour:
   assemblyEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  musicEvent:
+    WwiseObjectReference: {fileID: 11400000, guid: c287d61e3873db246ae25762df51fde2, type: 2}
+  ch1:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b9ab9d2e332f39343adf78fe64c98ab7, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8c52788bd0a5f36478483c98cf8dfc44, type: 2}
+  ch2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c3591b0a1f4eab640ab665c90f09267d, type: 2}
+  ch3:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 13e5cc337dc119546a48d349ec4f3020, type: 2}
+  ch2Intro:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e35ca14c8329d084ca052c6b7a42af15, type: 2}
+  ch3Intro:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 06bfa179c7d5bef4693a1e435a07171d, type: 2}
+  menu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eff63a180ad476b44bda97921e372d79, type: 2}
 --- !u!4 &1243103769
 Transform:
   m_ObjectHideFlags: 0
@@ -3962,6 +4014,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (22)
@@ -4241,6 +4297,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (4)
@@ -4625,6 +4685,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117448164}
     m_Modifications:
+    - target: {fileID: 1102670015179111728, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
+      propertyPath: stepMaterial
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2794629744753500347, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5476,6 +5540,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c22c5f0d08be888498e3ae198ad39c1f, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (6)
@@ -6014,6 +6082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pavement
       objectReference: {fileID: 0}
+    - target: {fileID: 905199042006045713, guid: 5b577fd2f74d0564ba95784d4cf83c0f, type: 3}
+      propertyPath: stepMaterial
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4593713953433540315, guid: 5b577fd2f74d0564ba95784d4cf83c0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -6087,6 +6159,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (20)
@@ -6338,6 +6414,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117448164}
     m_Modifications:
+    - target: {fileID: 1102670015179111728, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
+      propertyPath: stepMaterial
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2794629744753500347, guid: 3b5f1a66ce1fa974ab572406f1a99652, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6456,6 +6536,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9020ff332b8ee664ab799dc4d6d0cd0d, type: 2}
+    - target: {fileID: 4786387302968886616, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
+      propertyPath: stepMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4945351293455050445, guid: 67bd1992694d30c439ed467059f6b71a, type: 3}
       propertyPath: m_Name
       value: Tile Grass Bright (24)

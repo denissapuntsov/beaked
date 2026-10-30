@@ -17,7 +17,7 @@ public class PlayerSpeakState : GameState
         _isSoundOver = false;
         base.Enter();
         _data.AnimationState = PlayerAnimationState.Speaking;
-        SoundManager.instance.PlaySound(_data.CurrentSound, _data.gameObject, HandleSoundComplete);
+        SoundManager.instance.PlaySoundBird(_data.CurrentSound, _data.gameObject, HandleSoundComplete);
         Sequence animationDelay = DOTween.Sequence();
         animationDelay.AppendInterval(_data.CurrentSound.reactionDelay);
         animationDelay.OnComplete(() =>

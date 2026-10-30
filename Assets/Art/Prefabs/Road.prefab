@@ -139,6 +139,10 @@ PrefabInstance:
       value: Road
       objectReference: {fileID: 0}
     - target: {fileID: 7479405525233657334, guid: 69f92965f6cd884438f7aa32c6d7e5e9, type: 3}
+      propertyPath: stepMaterial
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 69f92965f6cd884438f7aa32c6d7e5e9, type: 3}
       propertyPath: blockMaterial
       value: 3
       objectReference: {fileID: 0}

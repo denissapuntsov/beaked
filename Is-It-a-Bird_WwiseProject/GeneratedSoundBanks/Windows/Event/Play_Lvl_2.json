@@ -1,0 +1,70 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2152580027",
+    "Type": "Event",
+    "GUID": "{C9F30DE6-E4BF-4EB1-8A9D-52FE932E3E7A}",
+    "Language": "SFX",
+    "Hash": "{1208D0E9-EE41-6176-3940-84A266071860}",
+    "ObjectPath": "Play_Lvl_2",
+    "ShortName": "Play_Lvl_2",
+    "Path": "Event/Play_Lvl_2.bnk",
+    "Media": [
+     {
+      "Id": "795021750",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Beats.wav",
+      "Path": "Media/795021750.wem",
+      "CachePath": "A8/{A82B260F-35C7-401E-75D3-4AFBC0FC7ADC}.wem"
+     },
+     {
+      "Id": "795625336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Harmony.wav",
+      "Path": "Media/795625336.wem",
+      "CachePath": "6E/{6EAB9624-D0A6-31B6-1936-303F19EB5BA5}.wem"
+     },
+     {
+      "Id": "980953147",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Melody.wav",
+      "Path": "Media/980953147.wem",
+      "CachePath": "63/{63A876D8-9825-E496-CEAE-74348DDF8589}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2152580027",
+      "Name": "Play_Lvl_2",
+      "ObjectPath": "\\Events\\Music\\Play_Lvl_2",
+      "GUID": "{C9F30DE6-E4BF-4EB1-8A9D-52FE932E3E7A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "795021750"
+       },
+       {
+        "Id": "795625336"
+       },
+       {
+        "Id": "980953147"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6BE1A1CD-F396-378A-B4F0-02073DBEBEF5}"
+ }
+}

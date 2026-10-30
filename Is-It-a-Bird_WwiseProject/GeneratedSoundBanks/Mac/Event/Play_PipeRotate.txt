@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3634225051	Play_PipeRotate			\Default Work Unit\Play_PipeRotate	
+

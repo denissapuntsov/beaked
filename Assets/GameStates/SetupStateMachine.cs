@@ -32,6 +32,7 @@ public class SetupStateMachine : FiniteStateMachine
         private void HandleSetupGridComplete()
         {
                 ChangeState(AnimateGridState);
+                LevelManager.instance.LocateSign();
         }
         
         private void HandleAnimateGridComplete()

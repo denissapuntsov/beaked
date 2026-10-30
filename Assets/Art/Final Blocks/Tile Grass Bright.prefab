@@ -62,7 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6990128245772109411, guid: 69f92965f6cd884438f7aa32c6d7e5e9, type: 3}
       propertyPath: m_Name
-      value: Grass (Tile) (11)
+      value: Tile Grass Bright
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 69f92965f6cd884438f7aa32c6d7e5e9, type: 3}
+      propertyPath: stepMaterial
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7479405525233657334, guid: 69f92965f6cd884438f7aa32c6d7e5e9, type: 3}
       propertyPath: blockMaterial

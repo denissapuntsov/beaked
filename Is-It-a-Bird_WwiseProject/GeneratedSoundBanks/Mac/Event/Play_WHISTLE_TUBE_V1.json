@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3639889959",
+    "Type": "Event",
+    "GUID": "{61FF6733-A19F-478D-97DD-4F5B50E8E750}",
+    "Language": "SFX",
+    "Hash": "{C3341DB9-A146-AB63-932E-C9FB25C3521E}",
+    "ObjectPath": "Play_WHISTLE_TUBE_V1",
+    "ShortName": "Play_WHISTLE_TUBE_V1",
+    "Path": "Event/Play_WHISTLE_TUBE_V1.bnk",
+    "Media": [
+     {
+      "Id": "1055640136",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WHISTLE_TUBE_V1.wav",
+      "Path": "Media/1055640136.wem",
+      "CachePath": "89/{89153C27-2C0B-AEC6-BC60-55B912FFCCD7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3639889959",
+      "Name": "Play_WHISTLE_TUBE_V1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_WHISTLE_TUBE_V1",
+      "GUID": "{61FF6733-A19F-478D-97DD-4F5B50E8E750}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.2083335",
+      "DurationMax": "4.2083335",
+      "MediaRefs": [
+       {
+        "Id": "1055640136"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{37C3C791-F3D4-DACB-CE34-A1A0D15BE768}"
+ }
+}

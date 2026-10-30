@@ -1,12 +1,20 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	1259221826	Ch1_Mix			\Default Work Unit\Ch1_Mix	
+	1183684843	Chapters			\Default Work Unit\Chapters	
+	2209143460	Music_Levels			\Default Work Unit\Music_Levels	
 
 State	ID	Name	State Group			Notes
-	141331488	Lvl3	Ch1_Mix			
-	141331489	Lvl2	Ch1_Mix			
-	141331490	Lvl1	Ch1_Mix			
-	141331495	Lvl4	Ch1_Mix			
-	748895195	None	Ch1_Mix			
+	529726532	End	Chapters			
+	748895195	None	Chapters			
+	1183684777	Chapter1	Chapters			
+	1183684778	Chapter2	Chapters			
+	1183684779	Chapter3	Chapters			
+	1929629135	Chapter3Intro	Chapters			
+	3075505320	Chapter2Intro	Chapters			
+	141331488	Lvl3	Music_Levels			
+	141331489	Lvl2	Music_Levels			
+	141331490	Lvl1	Music_Levels			
+	748895195	None	Music_Levels			
+	2716678721	Victory	Music_Levels			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	

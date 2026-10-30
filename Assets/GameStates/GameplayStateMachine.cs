@@ -35,6 +35,7 @@ public class GameplayStateMachine : FiniteStateMachine
     public override void Enter()
     {
         base.Enter();
+        MenuCanvas.instance.gameplayGroup.SetActive(true);
         ChangeState(PlayerStepState);
     }
 
@@ -58,6 +59,7 @@ public class GameplayStateMachine : FiniteStateMachine
     {
         if (LevelManager.instance.IsWin)
         {
+            MenuCanvas.instance.gameplayGroup.SetActive(false);
             Complete();
             return;
         }

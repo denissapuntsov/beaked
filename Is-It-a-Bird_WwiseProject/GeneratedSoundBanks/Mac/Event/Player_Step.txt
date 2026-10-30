@@ -1,5 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3461836331	Player_Step			\Default Work Unit\Player_Step	
+	3461836331	Player_Step			\SFX\Player_Step	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3205339368	StepMaterial			\Default Work Unit\StepMaterial	

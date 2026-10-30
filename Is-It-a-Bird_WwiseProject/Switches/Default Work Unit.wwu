@@ -19,6 +19,17 @@
 						<Switch Name="Metal" ID="{8E466659-A7CA-40CD-830E-39F8C742CEBE}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Chapter" ID="{396E5C0C-BC52-4C98-84B2-E0740B92FB0F}">
+					<ChildrenList>
+						<Switch Name="Ch1" ID="{B3485796-2CD3-40C2-8243-704C218A2E45}"/>
+						<Switch Name="Ch2" ID="{CD66D991-9D8A-491A-947E-CEC06E7AC936}"/>
+						<Switch Name="Menu" ID="{D79130DF-D992-467C-A1FE-9AE2F5ABD308}"/>
+						<Switch Name="Ch2Intro" ID="{95054ADC-5C84-41C0-98E6-B404EEF66FF4}"/>
+						<Switch Name="Ch3" ID="{694746BF-DDA9-4A26-A73C-A4C47942BB25}"/>
+						<Switch Name="Ch3Intro" ID="{F639BB16-7A5E-431B-975A-DD449EE1F7A9}"/>
+						<Switch Name="End" ID="{0B672D42-B6BA-44BB-9FB8-06BA1D505F56}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

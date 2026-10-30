@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3257453124",
+    "Type": "Event",
+    "GUID": "{F96A6E0F-6757-4C06-A3BF-8CE0F67D8710}",
+    "Language": "SFX",
+    "Hash": "{F3B0D6B9-259C-BB3E-87E7-05397A28F7AB}",
+    "ObjectPath": "Play_Final_3",
+    "ShortName": "Play_Final_3",
+    "Path": "Event/Play_Final_3.bnk",
+    "Media": [
+     {
+      "Id": "1051164385",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Toy_VictorySting.wav",
+      "Path": "Media/1051164385.wem",
+      "CachePath": "E2/{E2B65665-849D-CE3C-0168-B8E6F550DFA7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3257453124",
+      "Name": "Play_Final_3",
+      "ObjectPath": "\\Events\\Music\\Play_Final_3",
+      "GUID": "{F96A6E0F-6757-4C06-A3BF-8CE0F67D8710}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.4929376",
+      "DurationMax": "5.4929376",
+      "MediaRefs": [
+       {
+        "Id": "1051164385"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4F3A0CB6-67A3-B7F6-F3E3-365E247D5051}"
+ }
+}

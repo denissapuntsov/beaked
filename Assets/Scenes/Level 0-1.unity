@@ -460,12 +460,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2209312656635771626, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2013311932468815466, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: exit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013311932468815466, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: resume
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013311932468815466, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: pauseGroup
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4212280937704395398, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699765612766137710, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: m_text
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7217671084247023548, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
@@ -552,8 +564,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8772240131655582036, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2209312656635771626, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b9d4a4ddd23ff74a8a3cdb33296c4a4, type: 3}
@@ -1149,10 +1166,30 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c287d61e3873db246ae25762df51fde2, type: 2}
-  musicEvent:
+  ch1:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b9ab9d2e332f39343adf78fe64c98ab7, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8c52788bd0a5f36478483c98cf8dfc44, type: 2}
+  ch2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c3591b0a1f4eab640ab665c90f09267d, type: 2}
+  ch3:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 13e5cc337dc119546a48d349ec4f3020, type: 2}
+  ch2Intro:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e35ca14c8329d084ca052c6b7a42af15, type: 2}
+  ch3Intro:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 06bfa179c7d5bef4693a1e435a07171d, type: 2}
+  menu:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eff63a180ad476b44bda97921e372d79, type: 2}
 --- !u!4 &1243103769
 Transform:
   m_ObjectHideFlags: 0
@@ -2519,6 +2556,10 @@ PrefabInstance:
     - target: {fileID: 1413000307104590880, guid: 4f72c663afa04fc4b8b2f63f659b16c5, type: 3}
       propertyPath: m_Name
       value: Grass (Tile) (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537486016245534645, guid: 4f72c663afa04fc4b8b2f63f659b16c5, type: 3}
+      propertyPath: stepMaterial
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2745489716568657279, guid: 4f72c663afa04fc4b8b2f63f659b16c5, type: 3}
       propertyPath: m_LocalPosition.x

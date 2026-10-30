@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{4DF16A71-04B8-8454-41B9-812FA2A9C61F}",
+    "Hash": "{27CF775B-5098-F88B-39C4-C12028D39553}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -52,45 +52,89 @@
     ],
     "StateGroups": [
      {
-      "Id": "1259221826",
-      "Name": "Ch1_Mix",
-      "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix",
+      "Id": "1183684843",
+      "Name": "Chapters",
+      "ObjectPath": "\\States\\Default Work Unit\\Chapters",
+      "GUID": "{BA295059-57B6-4B02-B6E6-76850F537046}",
+      "States": [
+       {
+        "Id": "529726532",
+        "Name": "End",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\End",
+        "GUID": "{59DF2E30-2B57-44F5-8F5E-4A1FEFEC4E12}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\None",
+        "GUID": "{7F4A97C7-530A-4690-BA28-217EA14AAD6C}"
+       },
+       {
+        "Id": "1183684777",
+        "Name": "Chapter1",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\Chapter1",
+        "GUID": "{2EEC2C0A-F2A1-4AB9-A4DF-145D600876DF}"
+       },
+       {
+        "Id": "1183684778",
+        "Name": "Chapter2",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\Chapter2",
+        "GUID": "{5B496AE7-7421-44D3-837D-EADD83B1ADCD}"
+       },
+       {
+        "Id": "1183684779",
+        "Name": "Chapter3",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\Chapter3",
+        "GUID": "{B6EADF59-CA2A-478E-9A4C-7359D3270A5E}"
+       },
+       {
+        "Id": "1929629135",
+        "Name": "Chapter3Intro",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\Chapter3Intro",
+        "GUID": "{518C2445-7545-4911-89DF-BDC84773038B}"
+       },
+       {
+        "Id": "3075505320",
+        "Name": "Chapter2Intro",
+        "ObjectPath": "\\States\\Default Work Unit\\Chapters\\Chapter2Intro",
+        "GUID": "{F49035E9-B02C-4832-9B43-1753AFEA1476}"
+       }
+      ]
+     },
+     {
+      "Id": "2209143460",
+      "Name": "Music_Levels",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Levels",
       "GUID": "{82600F58-9CAE-47C8-BFF2-2A25E4415FEF}",
       "States": [
        {
         "Id": "141331488",
         "Name": "Lvl3",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl3",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Levels\\Lvl3",
         "GUID": "{E46A7877-4F4E-43C1-A728-5F5F3C5AE316}"
        },
        {
         "Id": "141331489",
         "Name": "Lvl2",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl2",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Levels\\Lvl2",
         "GUID": "{09B76E93-3542-4D69-AFBD-E782FA8ABADD}"
        },
        {
         "Id": "141331490",
         "Name": "Lvl1",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl1",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Levels\\Lvl1",
         "GUID": "{39C9B1BF-C4B1-4441-8425-9934F4148B89}"
-       },
-       {
-        "Id": "141331495",
-        "Name": "Lvl4",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Lvl4",
-        "GUID": "{A48A47A4-1DC1-4128-8686-D1AA0A60A6C6}"
        },
        {
         "Id": "748895195",
         "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Levels\\None",
         "GUID": "{314B8CB3-81E9-4426-8576-5FFE51234E45}"
        },
        {
         "Id": "2716678721",
         "Name": "Victory",
-        "ObjectPath": "\\States\\Default Work Unit\\Ch1_Mix\\Victory",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Levels\\Victory",
         "GUID": "{4C3C9628-2A66-4098-84DA-8E17506B7605}"
        }
       ]
@@ -160,10 +204,60 @@
         "GUID": "{8116B1E8-AAAB-4AD8-99D0-B6120B6410B1}"
        }
       ]
+     },
+     {
+      "Id": "3370370056",
+      "Name": "Chapter",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Chapter",
+      "GUID": "{396E5C0C-BC52-4C98-84B2-E0740B92FB0F}",
+      "Switches": [
+       {
+        "Id": "529726532",
+        "Name": "End",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\End",
+        "GUID": "{0B672D42-B6BA-44BB-9FB8-06BA1D505F56}"
+       },
+       {
+        "Id": "1100459749",
+        "Name": "Ch1",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Ch1",
+        "GUID": "{B3485796-2CD3-40C2-8243-704C218A2E45}"
+       },
+       {
+        "Id": "1100459750",
+        "Name": "Ch2",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Ch2",
+        "GUID": "{CD66D991-9D8A-491A-947E-CEC06E7AC936}"
+       },
+       {
+        "Id": "1100459751",
+        "Name": "Ch3",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Ch3",
+        "GUID": "{694746BF-DDA9-4A26-A73C-A4C47942BB25}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Menu",
+        "GUID": "{D79130DF-D992-467C-A1FE-9AE2F5ABD308}"
+       },
+       {
+        "Id": "2895782475",
+        "Name": "Ch3Intro",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Ch3Intro",
+        "GUID": "{F639BB16-7A5E-431B-975A-DD449EE1F7A9}"
+       },
+       {
+        "Id": "3912230932",
+        "Name": "Ch2Intro",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Chapter\\Ch2Intro",
+        "GUID": "{95054ADC-5C84-41C0-98E6-B404EEF66FF4}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{BD6D3AC3-DFD9-3994-EDC9-ADB579C16745}"
+  "FileHash": "{92318EBA-7966-259A-DD30-4A6CC43056FA}"
  }
 }

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3736946186",
+    "Type": "Event",
+    "GUID": "{0CCB7E77-6416-4B3C-99A6-C75570EAED8C}",
+    "Language": "SFX",
+    "Hash": "{DE01A8E9-69E5-D0C1-76A3-42928CD30F03}",
+    "ObjectPath": "Play_CAR_HORN_BIRD_V1_001",
+    "ShortName": "Play_CAR_HORN_BIRD_V1_001",
+    "Path": "Event/Play_CAR_HORN_BIRD_V1_001.bnk",
+    "Media": [
+     {
+      "Id": "456712228",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "CAR_HORN_BIRD_V1-001.wav",
+      "Path": "Media/456712228.wem",
+      "CachePath": "EC/{EC03999E-D7C1-E76A-99D0-D1A22650ED51}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3736946186",
+      "Name": "Play_CAR_HORN_BIRD_V1_001",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CAR_HORN_BIRD_V1_001",
+      "GUID": "{0CCB7E77-6416-4B3C-99A6-C75570EAED8C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5833333",
+      "DurationMax": "0.5833333",
+      "MediaRefs": [
+       {
+        "Id": "456712228"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BC44CE2C-5679-A928-970F-CA942644F69C}"
+ }
+}

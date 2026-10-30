@@ -1,0 +1,58 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2152580026",
+    "Type": "Event",
+    "GUID": "{902C7B38-2A9F-4E7C-AE5F-B391276C5ED4}",
+    "Language": "SFX",
+    "Hash": "{FE8A7C71-33C3-07E8-90D7-CF82A27411AD}",
+    "ObjectPath": "Play_Lvl_3",
+    "ShortName": "Play_Lvl_3",
+    "Path": "Event/Play_Lvl_3.bnk",
+    "Media": [
+     {
+      "Id": "54863164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl3_Melody.wav",
+      "Path": "Media/54863164.wem",
+      "CachePath": "D1/{D1DB780C-7002-FD97-E2B5-601AB5ADF09D}.wem"
+     },
+     {
+      "Id": "116903295",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl3_Accompaniment.wav",
+      "Path": "Media/116903295.wem",
+      "CachePath": "27/{27EDF90E-D5E1-C4B5-31EC-2DE4FE68BF98}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2152580026",
+      "Name": "Play_Lvl_3",
+      "ObjectPath": "\\Events\\Music\\Play_Lvl_3",
+      "GUID": "{902C7B38-2A9F-4E7C-AE5F-B391276C5ED4}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "54863164"
+       },
+       {
+        "Id": "116903295"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{887EA910-F642-AFD4-71E3-F16193521939}"
+ }
+}

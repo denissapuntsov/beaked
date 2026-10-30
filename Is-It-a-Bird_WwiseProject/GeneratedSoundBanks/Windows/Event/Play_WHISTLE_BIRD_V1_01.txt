@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1118388660	Play_WHISTLE_BIRD_V1_01			\Default Work Unit\Play_WHISTLE_BIRD_V1_01	
+

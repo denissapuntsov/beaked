@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{E4165577-E031-42EA-99E2-DE50B48A78AF}",
     "Language": "SFX",
-    "Hash": "{0A47F7C9-0EB7-9051-C5BF-1B6D7ED3FE62}",
+    "Hash": "{30774ECB-D3B3-CEDB-CE4F-9EAB755B9641}",
     "ObjectPath": "Play_Whistle_Pipe",
     "ShortName": "Play_Whistle_Pipe",
     "Path": "Event/Play_Whistle_Pipe.bnk",
     "Media": [
      {
-      "Id": "124740461",
+      "Id": "1055640136",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
       "ShortName": "WHISTLE_TUBE_V1.wav",
-      "Path": "Media/124740461.wem",
-      "CachePath": "85/{859C1F20-B2A6-346E-84FB-0E841C1AE536}.wem"
+      "Path": "Media/1055640136.wem",
+      "CachePath": "89/{89153C27-2C0B-AEC6-BC60-55B912FFCCD7}.wem"
      }
     ],
     "Events": [
@@ -32,17 +32,17 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Whistle_Pipe",
       "GUID": "{E4165577-E031-42EA-99E2-DE50B48A78AF}",
       "DurationType": "OneShot",
-      "DurationMin": "1.629678",
-      "DurationMax": "1.629678",
+      "DurationMin": "4.2083335",
+      "DurationMax": "4.2083335",
       "MediaRefs": [
        {
-        "Id": "124740461"
+        "Id": "1055640136"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{E32999D8-F587-128B-C1E4-E979B35896DA}"
+  "FileHash": "{023AC498-AD3F-A5A8-C105-6D099B35E07A}"
  }
 }

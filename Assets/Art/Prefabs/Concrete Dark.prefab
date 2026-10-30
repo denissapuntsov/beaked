@@ -18,31 +18,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 2.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -0.00000047683716
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710665
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6089958002453342012, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -59,6 +59,50 @@ PrefabInstance:
     - target: {fileID: 6990128245772109411, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: m_Name
       value: Concrete Dark
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: stepMaterial
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[0].IsSolid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[1].IsSolid
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[0].IsAccessible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[0].GridPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[0].GridPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[0].GridPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[1].GridPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[1].GridPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: cells.Array.data[1].GridPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7581967099954380355, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

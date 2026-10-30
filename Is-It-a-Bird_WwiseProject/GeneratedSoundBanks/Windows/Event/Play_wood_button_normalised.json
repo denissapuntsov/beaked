@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2355853617",
+    "Type": "Event",
+    "GUID": "{5AADF69C-4BEB-49A7-8426-5DD05CB93C92}",
+    "Language": "SFX",
+    "Hash": "{EE84106F-A4DA-9CF7-29C3-C97DA44231AD}",
+    "ObjectPath": "Play_wood_button_normalised",
+    "ShortName": "Play_wood_button_normalised",
+    "Path": "Event/Play_wood_button_normalised.bnk",
+    "Media": [
+     {
+      "Id": "360814238",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "wood button normalised.wav",
+      "Path": "Media/360814238.wem",
+      "CachePath": "83/{83060609-0B74-BDA4-AEFD-7C3DED2AE822}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2355853617",
+      "Name": "Play_wood_button_normalised",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_wood_button_normalised",
+      "GUID": "{5AADF69C-4BEB-49A7-8426-5DD05CB93C92}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.021162827",
+      "DurationMax": "0.02666349",
+      "MediaRefs": [
+       {
+        "Id": "360814238"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{580C8B57-D5AA-DFDB-266D-F783E9EBE7AF}"
+ }
+}

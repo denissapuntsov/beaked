@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1278378707",
+    "Type": "Event",
+    "GUID": "{AD98FF21-7F09-4F9F-AA24-67043E24A8E8}",
+    "Language": "SFX",
+    "Hash": "{01D9F964-C851-74D2-778C-0934C6FF478D}",
+    "ObjectPath": "Play_Menu",
+    "ShortName": "Play_Menu",
+    "Path": "Event/Play_Menu.bnk",
+    "Media": [
+     {
+      "Id": "795625336",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "GRAD_Game_Beaked_Lvl2_Harmony.wav",
+      "Path": "Media/795625336.wem",
+      "CachePath": "6E/{6EAB9624-D0A6-31B6-1936-303F19EB5BA5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1278378707",
+      "Name": "Play_Menu",
+      "ObjectPath": "\\Events\\Music\\Play_Menu",
+      "GUID": "{AD98FF21-7F09-4F9F-AA24-67043E24A8E8}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "795625336"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0DADF31F-E9E4-544B-7DA5-D5213A145A9F}"
+ }
+}

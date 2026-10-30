@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete Light
       objectReference: {fileID: 0}
+    - target: {fileID: 7479405525233657334, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
+      propertyPath: stepMaterial
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7581967099954380355, guid: 8d81b6c44c15ef448bb5e27b06e50c47, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
