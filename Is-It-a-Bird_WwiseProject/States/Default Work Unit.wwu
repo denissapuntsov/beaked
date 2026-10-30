@@ -23,6 +23,16 @@
 						<State Name="End" ID="{59DF2E30-2B57-44F5-8F5E-4A1FEFEC4E12}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Paused" ID="{C7D54B90-42BD-4B29-BCCB-5B7C0D6D4914}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.2"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{25ACBD7A-D05C-436F-B303-6608B1B0188F}"/>
+						<State Name="Yes" ID="{7DB649B0-0F42-417F-A4DF-98A279089B7B}"/>
+						<State Name="No" ID="{9CB72A69-429C-4348-8583-3279C9814CE7}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

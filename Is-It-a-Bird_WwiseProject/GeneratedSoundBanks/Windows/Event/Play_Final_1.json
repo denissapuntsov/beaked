@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{78B9EFF6-089D-400D-9E29-D58196AF60AA}",
     "Language": "SFX",
-    "Hash": "{DDAA42C8-ED45-31D9-C3CB-7D7124936DFF}",
+    "Hash": "{5481A5C2-A023-A4FE-8A69-872FD6CA8D24}",
     "ObjectPath": "Play_Final_1",
     "ShortName": "Play_Final_1",
     "Path": "Event/Play_Final_1.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{B83A64C0-6BAD-A7C0-CEA8-761AE2E89495}"
+  "FileHash": "{490CA3A6-D511-CFFB-E935-D6D0FCCD3052}"
  }
 }

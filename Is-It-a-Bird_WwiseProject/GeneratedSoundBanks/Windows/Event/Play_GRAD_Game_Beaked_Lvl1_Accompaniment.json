@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BEA10743-A870-4E0B-9A28-A677E456B76A}",
     "Language": "SFX",
-    "Hash": "{B30A8C9B-1FA1-2A16-649C-0F9043BB832F}",
+    "Hash": "{8C15226B-258F-0CB7-8FA4-C1703AAAA17F}",
     "ObjectPath": "Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
     "ShortName": "Play_GRAD_Game_Beaked_Lvl1_Accompaniment",
     "Path": "Event/Play_GRAD_Game_Beaked_Lvl1_Accompaniment.bnk",
@@ -53,6 +53,6 @@
     ]
    }
   ],
-  "FileHash": "{3977FA2F-3671-AD16-D7FD-FFF9DEB433A7}"
+  "FileHash": "{3E2B2F47-BCAE-9A8B-7CC8-77D8FC1B4EEB}"
  }
 }

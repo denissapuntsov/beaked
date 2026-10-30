@@ -1,0 +1,60 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "470304396",
+    "Type": "Event",
+    "GUID": "{E94C3DEA-D42B-4EA1-86AA-CC0F4C744E92}",
+    "Language": "SFX",
+    "Hash": "{C6AF0EB0-7C5F-8192-1827-98679EB709BE}",
+    "ObjectPath": "Play_Alert",
+    "ShortName": "Play_Alert",
+    "Path": "Event/Play_Alert.bnk",
+    "Media": [
+     {
+      "Id": "411256752",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Alerted Lower 2 normalised.wav",
+      "Path": "Media/411256752.wem",
+      "CachePath": "16/{16B18BBE-0C22-94B7-0F2E-F3EEF7B8662C}.wem"
+     },
+     {
+      "Id": "689715223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Alerted Lower normalised.wav",
+      "Path": "Media/689715223.wem",
+      "CachePath": "FB/{FB195529-4295-F107-667E-29D77BE6DA61}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "470304396",
+      "Name": "Play_Alert",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Alert",
+      "GUID": "{E94C3DEA-D42B-4EA1-86AA-CC0F4C744E92}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.324586",
+      "DurationMax": "0.37501132",
+      "MediaRefs": [
+       {
+        "Id": "411256752"
+       },
+       {
+        "Id": "689715223"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AE957078-2AB6-5334-BDFA-68FE1DBFF5CB}"
+ }
+}

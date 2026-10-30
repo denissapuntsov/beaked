@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ALERT = 470304396U;
         static const AkUniqueID PLAY_BEAKED_MUSICSKETCH_V1_JONAH_FULLMX_01 = 4154561170U;
         static const AkUniqueID PLAY_BRIDGE_START = 394694740U;
         static const AkUniqueID PLAY_BRIDGE_STEP = 1816247478U;
@@ -79,6 +80,18 @@ namespace AK
             } // namespace STATE
         } // namespace MUSIC_LEVELS
 
+        namespace PAUSED
+        {
+            static const AkUniqueID GROUP = 319258907U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace STATE
+        } // namespace PAUSED
+
     } // namespace STATES
 
     namespace SWITCHES
@@ -135,6 +148,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
+        static const AkUniqueID MUSIC_BUS = 3127962312U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

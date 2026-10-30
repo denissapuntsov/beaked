@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{ECB737E2-F52B-486E-86A6-4D318CEBC7AD}",
     "Language": "SFX",
-    "Hash": "{56C93A5C-98FE-7ECC-AEF8-CDA9586E5CC3}",
+    "Hash": "{BD446538-00FE-CD4F-B1C5-68D7F2ECEAAC}",
     "ObjectPath": "Play_Peck_Random",
     "ShortName": "Play_Peck_Random",
     "Path": "Event/Play_Peck_Random.bnk",
@@ -139,6 +139,6 @@
     ]
    }
   ],
-  "FileHash": "{06BAAD4C-C0FB-7EF1-0B7E-9C77852FF66F}"
+  "FileHash": "{C0F38056-2913-ABAE-6185-32D82DC6ECE0}"
  }
 }

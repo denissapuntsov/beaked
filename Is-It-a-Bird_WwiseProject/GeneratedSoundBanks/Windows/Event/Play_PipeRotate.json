@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{042E4F2E-FCFC-431E-B27A-F8B987267F8F}",
     "Language": "SFX",
-    "Hash": "{6363712F-6028-6970-5BE6-B03C1486E9D0}",
+    "Hash": "{3661324A-4D66-DF0A-F6D3-569EEAAA43A2}",
     "ObjectPath": "Play_PipeRotate",
     "ShortName": "Play_PipeRotate",
     "Path": "Event/Play_PipeRotate.bnk",
@@ -79,6 +79,6 @@
     ]
    }
   ],
-  "FileHash": "{76848195-EAEC-5964-C060-EA2CB4571F03}"
+  "FileHash": "{DDCB29F8-EF86-B773-DF70-4604EE46781C}"
  }
 }

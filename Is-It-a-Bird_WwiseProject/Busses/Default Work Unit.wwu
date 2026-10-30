@@ -10,6 +10,39 @@
 						</Reference>
 					</ReferenceList>
 				</Bus>
+				<Bus Name="Music Bus" ID="{BA278203-268A-4A76-B1D5-2C75A5C411DF}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{E8F8057A-863E-4F7C-9947-AC84B1D56CA1}" WorkUnitID="{98C5E76A-24C8-488F-95D2-D6CC6CD643BC}"/>
+						</Reference>
+					</ReferenceList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Paused" ID="{C7D54B90-42BD-4B29-BCCB-5B7C0D6D4914}"/>
+								<StateGroupInfo Name="" ID="{8B608A86-213D-49E9-9547-4A4FF236F643}" ShortID="237110711"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Yes" ID="{7DB649B0-0F42-417F-A4DF-98A279089B7B}"/>
+								<CustomState Name="" ID="{7F987894-47AA-4C2F-A9B5-616A9669756B}" ShortID="905256950">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="No" ID="{9CB72A69-429C-4348-8583-3279C9814CE7}"/>
+								<CustomState Name="" ID="{12A4612E-86A7-4884-948C-24AD20B4E77A}" ShortID="1045892365"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{25ACBD7A-D05C-436F-B303-6608B1B0188F}"/>
+								<CustomState Name="" ID="{448A8E3F-2EAB-4C48-9578-EDE51562CCE6}" ShortID="784657705"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

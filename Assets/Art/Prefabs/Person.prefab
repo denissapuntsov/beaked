@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 1422814044693798105}
   - component: {fileID: 11746507791971643}
   - component: {fileID: 323369742788129819}
+  - component: {fileID: 3960084284284771492}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -656,6 +657,24 @@ MonoBehaviour:
           m_StringArgument: Moving
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3960084284284771492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750963950177078850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0402e6d2729057345b857b5c183bd650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventTrigger
+  audioEvents:
+  - name: alert
+    audioEvent:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 11400000, guid: d63b3396f61618145bbfc9adcb302489, type: 2}
 --- !u!1 &9060169816900278723
 GameObject:
   m_ObjectHideFlags: 0

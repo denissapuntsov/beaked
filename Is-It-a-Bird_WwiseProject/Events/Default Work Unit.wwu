@@ -199,6 +199,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Alert" ID="{E94C3DEA-D42B-4EA1-86AA-CC0F4C744E92}">
+					<ChildrenList>
+						<Action Name="" ID="{6E55F431-F01B-4A0B-A577-3225A224BFDF}" ShortID="817103115">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alert" ID="{63644036-93C1-4594-949D-5FC24AE22595}" WorkUnitID="{562E411A-170F-4C5B-ACBF-988C9D69DE1B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

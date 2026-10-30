@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{0111C99D-7A20-4DFC-8B53-AD1865F46B76}",
     "Language": "SFX",
-    "Hash": "{CAB70845-D646-A42F-5E49-9070947E5147}",
+    "Hash": "{D7CA7B20-E976-42A2-D7F8-D81774D3796A}",
     "ObjectPath": "Play_Peck_Switch",
     "ShortName": "Play_Peck_Switch",
     "Path": "Event/Play_Peck_Switch.bnk",
@@ -295,6 +295,6 @@
     ]
    }
   ],
-  "FileHash": "{22F413A8-39D7-518B-B0FD-027BA60B784C}"
+  "FileHash": "{928611B3-D1E7-2139-9B11-BF4CEF9C7114}"
  }
 }

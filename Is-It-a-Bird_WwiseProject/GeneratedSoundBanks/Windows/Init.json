@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6F02D3B2-071E-7D34-9C40-4C60A1C90524}",
+    "Hash": "{923A7FDE-079A-7AF6-37E7-BD8F63B080F1}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -40,6 +40,12 @@
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3127962312",
+      "Name": "Music Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Music Bus",
+      "GUID": "{BA278203-268A-4A76-B1D5-2C75A5C411DF}"
      }
     ],
     "GameParameters": [
@@ -51,6 +57,32 @@
      }
     ],
     "StateGroups": [
+     {
+      "Id": "319258907",
+      "Name": "Paused",
+      "ObjectPath": "\\States\\Default Work Unit\\Paused",
+      "GUID": "{C7D54B90-42BD-4B29-BCCB-5B7C0D6D4914}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Paused\\None",
+        "GUID": "{25ACBD7A-D05C-436F-B303-6608B1B0188F}"
+       },
+       {
+        "Id": "979470758",
+        "Name": "Yes",
+        "ObjectPath": "\\States\\Default Work Unit\\Paused\\Yes",
+        "GUID": "{7DB649B0-0F42-417F-A4DF-98A279089B7B}"
+       },
+       {
+        "Id": "1668749452",
+        "Name": "No",
+        "ObjectPath": "\\States\\Default Work Unit\\Paused\\No",
+        "GUID": "{9CB72A69-429C-4348-8583-3279C9814CE7}"
+       }
+      ]
+     },
      {
       "Id": "1183684843",
       "Name": "Chapters",
@@ -258,6 +290,6 @@
     ]
    }
   ],
-  "FileHash": "{42C3874E-C319-0937-F63C-97BB0998B8A4}"
+  "FileHash": "{8A2B77C6-0598-9162-BCE3-53402E715CB0}"
  }
 }

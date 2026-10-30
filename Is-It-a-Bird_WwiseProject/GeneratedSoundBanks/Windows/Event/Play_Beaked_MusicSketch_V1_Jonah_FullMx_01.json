@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{673C6178-47BC-4064-85A6-EA5DB5AC67AF}",
     "Language": "SFX",
-    "Hash": "{95441207-0D64-4765-92A2-7BC7477945D6}",
+    "Hash": "{9B8FAD17-47AB-050A-C493-316A95A815D9}",
     "ObjectPath": "Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
     "ShortName": "Play_Beaked_MusicSketch_V1_Jonah_FullMx_01",
     "Path": "Event/Play_Beaked_MusicSketch_V1_Jonah_FullMx_01.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{C39E6EF6-D960-B801-5EC6-2ACDFA46BCC2}"
+  "FileHash": "{CA185A75-CC38-54B3-C960-ED606F7B6BE7}"
  }
 }

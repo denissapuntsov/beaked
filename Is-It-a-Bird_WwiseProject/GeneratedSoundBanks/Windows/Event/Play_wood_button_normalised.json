@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5AADF69C-4BEB-49A7-8426-5DD05CB93C92}",
     "Language": "SFX",
-    "Hash": "{EE84106F-A4DA-9CF7-29C3-C97DA44231AD}",
+    "Hash": "{6B4F9425-4FB5-C8A3-86B1-0ABA32842BFF}",
     "ObjectPath": "Play_wood_button_normalised",
     "ShortName": "Play_wood_button_normalised",
     "Path": "Event/Play_wood_button_normalised.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{580C8B57-D5AA-DFDB-266D-F783E9EBE7AF}"
+  "FileHash": "{6EE58E47-1C09-54B3-3C93-33AEADBD1126}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D7FBFC4C-01FF-46AE-8EDF-5350CB56B5F2}",
     "Language": "SFX",
-    "Hash": "{4398C78A-202B-58B6-AE8E-C53D710DCC40}",
+    "Hash": "{08EA0F66-8867-7E6E-659E-B7E7097A93F0}",
     "ObjectPath": "Play_Lvl_1",
     "ShortName": "Play_Lvl_1",
     "Path": "Event/Play_Lvl_1.bnk",
@@ -41,6 +41,6 @@
     ]
    }
   ],
-  "FileHash": "{6B82257B-726D-0263-8752-98D40E0B9EB3}"
+  "FileHash": "{575E78AE-3185-1630-DECD-419F36832CDB}"
  }
 }
