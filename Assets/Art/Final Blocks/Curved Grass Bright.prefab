@@ -50,7 +50,7 @@ MonoBehaviour:
   <IsSolid>k__BackingField: 1
   <IsClimbable>k__BackingField: 1
   elementType: 0
-  stepMaterial: 0
+  stepMaterial: 2
   cells:
   - GridPosition: {x: -1, y: 0, z: 0}
     IsAccessible: 1
